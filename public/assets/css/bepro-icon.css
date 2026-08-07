@@ -1,0 +1,297 @@
+@font-face {
+  font-family: 'Bepro';
+  src:  url('../fonts/Bepro.eot');
+  src:  url('../fonts/Bepro.eot#iefix') format('embedded-opentype'),
+    url('../fonts/Bepro.ttf') format('truetype'),
+    url('../fonts/Bepro.woff') format('woff'),
+    url('../images/Bepro.svg#Bepro') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="bpro-"], [class*=" bpro-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Bepro' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bpro-long-right-arrow:before {
+  content: "\e941";
+}
+.bpro-long-left-arrow:before {
+  content: "\e942";
+}
+.bpro-coffee-cup-2:before {
+  content: "\e93e";
+}
+.bpro-idea-3:before {
+  content: "\e93f";
+}
+.bpro-smily:before {
+  content: "\e940";
+}
+.bpro-d:before {
+  content: "\e900";
+}
+.bpro-active-arrow-left:before {
+  content: "\e901";
+}
+.bpro-active-arrow-right:before {
+  content: "\e902";
+}
+.bpro-Add-to-cart-icon:before {
+  content: "\e903";
+}
+.bpro-analytics:before {
+  content: "\e904";
+}
+.bpro-analytics-2:before {
+  content: "\e905";
+}
+.bpro-analytics-3:before {
+  content: "\e906";
+}
+.bpro-arrow-board:before {
+  content: "\e907";
+}
+.bpro-bike-insurance:before {
+  content: "\e908";
+}
+.bpro-browser:before {
+  content: "\e909";
+}
+.bpro-browser-2:before {
+  content: "\e90a";
+}
+.bpro-browser-edit:before {
+  content: "\e90b";
+}
+.bpro-car:before {
+  content: "\e90c";
+}
+.bpro-car-insurance:before {
+  content: "\e90d";
+}
+.bpro-chart:before {
+  content: "\e90e";
+}
+.bpro-check-list:before {
+  content: "\e90f";
+}
+.bpro-clock:before {
+  content: "\e910";
+}
+.bpro-coffee-cup:before {
+  content: "\e911";
+}
+.bpro-consultation:before {
+  content: "\e912";
+}
+.bpro-Cube-layer:before {
+  content: "\e913";
+}
+.bpro-dashboard:before {
+  content: "\e914";
+}
+.bpro-database:before {
+  content: "\e915";
+}
+.bpro-decorating:before {
+  content: "\e916";
+}
+.bpro-development:before {
+  content: "\e917";
+}
+.bpro-diagram:before {
+  content: "\e918";
+}
+.bpro-email-1:before {
+  content: "\e919";
+}
+.bpro-home-insurance:before {
+  content: "\e91a";
+}
+.bpro-idea:before {
+  content: "\e91b";
+}
+.bpro-idea-2:before {
+  content: "\e91c";
+}
+.bpro-insurance-card:before {
+  content: "\e91d";
+}
+.bpro-interview:before {
+  content: "\e91e";
+}
+.bpro-keyword:before {
+  content: "\e91f";
+}
+.bpro-laptop:before {
+  content: "\e920";
+}
+.bpro-location:before {
+  content: "\e921";
+}
+.bpro-mail:before {
+  content: "\e922";
+}
+.bpro-mail-2:before {
+  content: "\e923";
+}
+.bpro-mail-3:before {
+  content: "\e924";
+}
+.bpro-marketing:before {
+  content: "\e925";
+}
+.bpro-megaphone:before {
+  content: "\e926";
+}
+.bpro-motorbike:before {
+  content: "\e927";
+}
+.bpro-partners-icons-12:before {
+  content: "\e928";
+}
+.bpro-phone-call-1:before {
+  content: "\e929";
+}
+.bpro-phone-ringing:before {
+  content: "\e92a";
+}
+.bpro-pie-chart:before {
+  content: "\e92b";
+}
+.bpro-pie-chart-2:before {
+  content: "\e92c";
+}
+.bpro-play:before {
+  content: "\e92d";
+}
+.bpro-presentation-2:before {
+  content: "\e92e";
+}
+.bpro-puzzle:before {
+  content: "\e92f";
+}
+.bpro-puzzle-2:before {
+  content: "\e930";
+}
+.bpro-question:before {
+  content: "\e931";
+}
+.bpro-recommended:before {
+  content: "\e932";
+}
+.bpro-Search:before {
+  content: "\e933";
+}
+.bpro-search-icon:before {
+  content: "\e934";
+}
+.bpro-search-impression:before {
+  content: "\e935";
+}
+.bpro-sketch:before {
+  content: "\e936";
+}
+.bpro-skyline:before {
+  content: "\e937";
+}
+.bpro-upstairs:before {
+  content: "\e938";
+}
+.bpro-users:before {
+  content: "\e939";
+}
+.bpro-viber:before {
+  content: "\e93a";
+}
+.bpro-waiter:before {
+  content: "\e93b";
+}
+.bpro-winning:before {
+  content: "\e93c";
+}
+.bpro-Wishlist-icon:before {
+  content: "\e93d";
+}
+
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot');
+  src:  url('../fonts/icomoon.eot#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../images/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-local_9:before {
+  content: "\e900";
+}
+.icon-local_11:before {
+  content: "\e901";
+}
+.icon-Wemseu01:before {
+  content: "\e902";
+}
+.icon-XjxC7N01:before {
+  content: "\e903";
+}
+.icon-utBlv01:before {
+  content: "\e904";
+}
+.icon-gGaLLZ01:before {
+  content: "\e905";
+}
+.icon-local_1-1:before {
+  content: "\e906";
+}
+.icon-local_1:before {
+  content: "\e907";
+}
+.icon-local_3-1:before {
+  content: "\e908";
+}
+.icon-local_3:before {
+  content: "\e909";
+}
+.icon-local_5:before {
+  content: "\e90a";
+}
+.icon-local_7-1:before {
+  content: "\e90b";
+}
+.icon-local_7:before {
+  content: "\e90c";
+}
