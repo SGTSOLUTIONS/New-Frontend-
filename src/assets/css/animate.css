@@ -7,7 +7,9 @@
  *
  * Copyright (c) 2019 Daniel Eden
  */
-
+.logo{
+  width: 150px;
+}
 @-webkit-keyframes bounce {
   from,
   20%,
