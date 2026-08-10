@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Import all images
 import slider1 from '../assets/images/slider/1_4.jpg';
-import slider2 from '../assets/images/slider/1_5.png';
+import slider2 from '../assets/images/slider/1_5.jpeg';
 import service1 from '../assets/images/service/1.jpg';
 import service2 from '../assets/images/service/2.jpg';
 import service3 from '../assets/images/service/3.jpg';

@@ -34,7 +34,7 @@ function Header() {
                                             <a href="#">Home</a>
                                         </li>
                                         <li className="menu-item">
-                                            <a href="#">Service</a>  
+                                            <Link to="/service">Service</Link>
                                         </li>
                                         {/* Rest of your menu items... */}
                                     </ul>
@@ -73,12 +73,12 @@ function Header() {
                                 <div className="col-lg-12 text-center">
                                     <div className="popup_search_form">
                                         <form method="get" action="#" autoComplete="off">
-                                            <input 
-                                                autoComplete="off" 
-                                                type="search" 
-                                                name="s" 
-                                                id="s" 
-                                                placeholder="Type Words and Hit Enter" 
+                                            <input
+                                                autoComplete="off"
+                                                type="search"
+                                                name="s"
+                                                id="s"
+                                                placeholder="Type Words and Hit Enter"
                                             />
                                             <button type="submit">
                                                 <i className="twi-search1"></i>
