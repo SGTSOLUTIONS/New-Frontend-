@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Import Google Fonts from @fontsource
 import '@fontsource/poppins';
@@ -127,9 +128,9 @@ const teamMembers = [
 const testimonials = [
   {
     id: 1,
-    name: 'Matt Sanchzi',
+    name: 'Coimbatore City Municipal Corporation',
     role: 'ThemeForest Exclusive',
-    text: 'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites. We are committed to providing our customers with exceptional service.',
+    text: 'SGT Solutions successfully delivered the comprehensive Property Survey Mapping project for Coimbatore City Municipal Corporation. By deploying their proprietary Spatial Revenue Intelligence System (SRIS), they accurately mapped urban property boundaries andintegrated spatial data seamlessly. Their technology has been highly effective inidentifying previously unassessed commercial structures and verifying built-up areavariations.',
     img: testimonial1
   },
   {
@@ -301,7 +302,7 @@ const Service = () => {
           padding: 24px 24px 26px;
           text-align: center;
           background: rgba(0, 0, 0, 0.25);
-    border-radius: 0 0 15px 15px;
+          border-radius: 0 0 15px 15px;
         }
 
         .service_item_01 .ibMeta {
@@ -913,7 +914,6 @@ const Service = () => {
           }
           .service_item_01 .sitem_con {
             padding: 16px 14px 20px;
-            
           }
           .service_item_01 h3 {
             font-size: 16px;
@@ -1085,7 +1085,7 @@ const Service = () => {
                   <div className="ibMeta">
                     <i className={`fas ${service.icon}`}></i>
                   </div>
-                  <h3><a href={service.link}>{service.title}</a></h3>
+                  <h3><Link to={service.link}>{service.title}</Link></h3>
                   <p>{service.description}</p>
                 </div>
               </div>
@@ -1093,9 +1093,9 @@ const Service = () => {
           </div>
 
           <div className="text-center mt-5">
-            <a href="/services" className="berpo_btn">
+            <Link to="/services" className="berpo_btn">
               Explore All Services <i className="fas fa-arrow-right" style={{ marginLeft: '8px' }}></i>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -1115,27 +1115,15 @@ const Service = () => {
                 <li><i className="fas fa-check-circle"></i> Custom web & mobile mapping</li>
                 <li><i className="fas fa-check-circle"></i> LiDAR & photogrammetry processing</li>
               </ul>
-              <a href="/contact" className="berpo_btn">Get a Consultation</a>
+              <Link to="/contact" className="berpo_btn">Get a Consultation</Link>
             </div>
             <div className="achievement-image">
               <img src={achievementImg} alt="Achievement" />
               <div className="client-badge">
                 <h2>80<sup>+</sup></h2>
-                <h5>Global Partners</h5>
+                <h5>Global Partnxers</h5>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== CLIENTS ===== */}
-      <section className="section-padding-sm">
-        <div className="container">
-          <div className="client-grid">
-            <div className="client-logo-item"><img src={clientLogo1} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo2} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo3} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo4} alt="Client" /></div>
           </div>
         </div>
       </section>
@@ -1175,7 +1163,7 @@ const Service = () => {
                 <div className="text-col">
                   <h2 className="secTitle" style={{ fontSize: '28px' }}>Scalable <span>GIS</span> for Business</h2>
                   <p>Our spatial intelligence solutions help businesses optimize operations, track assets, and visualize data in real-time.</p>
-                  <a href="/contact" className="berpo_btn" style={{ marginTop: '16px' }}>Learn More</a>
+                  <Link to="/contact" className="berpo_btn" style={{ marginTop: '16px' }}>Learn More</Link>
                 </div>
                 <div className="img-col">
                   <img src={aboutImg} alt="GIS Business" />
@@ -1187,7 +1175,7 @@ const Service = () => {
                 <div className="text-col">
                   <h2 className="secTitle" style={{ fontSize: '28px' }}>Revenue <span>Intelligence</span></h2>
                   <p>Leverage spatial data for property tax assessment, revenue forecasting, and asset valuation with centimeter-level accuracy.</p>
-                  <a href="/contact" className="berpo_btn" style={{ marginTop: '16px' }}>Explore</a>
+                  <Link to="/contact" className="berpo_btn" style={{ marginTop: '16px' }}>Explore</Link>
                 </div>
                 <div className="img-col">
                   <img src={aboutImg} alt="Financial GIS" />
@@ -1199,7 +1187,7 @@ const Service = () => {
                 <div className="text-col">
                   <h2 className="secTitle" style={{ fontSize: '28px' }}>Global <span>GIS</span> Solutions</h2>
                   <p>From multinational infrastructure projects to cross-border asset mapping — our solutions scale across regions and industries.</p>
-                  <a href="/contact" className="berpo_btn" style={{ marginTop: '16px' }}>Contact Us</a>
+                  <Link to="/contact" className="berpo_btn" style={{ marginTop: '16px' }}>Contact Us</Link>
                 </div>
                 <div className="img-col">
                   <img src={aboutImg} alt="Global GIS" />
@@ -1221,7 +1209,7 @@ const Service = () => {
             {teamMembers.map(member => (
               <div className="team_01" key={member.id}>
                 <img src={member.img} alt={member.name} />
-                <h3><a href="/team">{member.name}</a></h3>
+                <h3><Link to="/team">{member.name}</Link></h3>
                 <p>{member.role}</p>
                 <div className="tm_social">
                   <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -1245,7 +1233,7 @@ const Service = () => {
             <div>
               <div className="accordion">
                 {[
-                  { id: 1, q: 'Why choose our GIS solutions?', a: 'We combine cutting-edge technology with deep domain expertise to deliver accurate, actionable spatial intelligence.' },
+                  { id: 1, q: 'Why choose our SGT solutions?', a: 'We combine cutting-edge technology with deep domain expertise to deliver accurate, actionable spatial intelligence.' },
                   { id: 2, q: 'How do we ensure data accuracy?', a: 'We use high-precision LiDAR, DGPS, and photogrammetry with rigorous quality control at every stage.' },
                   { id: 3, q: 'What industries do we serve?', a: 'Urban planning, agriculture, real estate, infrastructure, environmental monitoring, and government.' }
                 ].map((item) => (
@@ -1295,36 +1283,6 @@ const Service = () => {
         </div>
       </section>
 
-      {/* ===== BLOG ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Insights</div>
-            <h2 className="secTitle">Latest <span>Articles</span></h2>
-          </div>
-          <div className="blog-grid">
-            {blogs.map(blog => (
-              <div className="blogItem01" key={blog.id}>
-                <div className="blogThumb">
-                  <img src={blog.img} alt={blog.title} />
-                </div>
-                <div className="blogContent">
-                  <a className="bmeta" href="/blog"><i className="far fa-calendar-alt"></i> {blog.date}</a>
-                  <h3><a href="/blog">{blog.title}</a></h3>
-                  <div className="bpcon">
-                    <a className="author" href="/blog">
-                      <img src={blog.authorImg} alt={blog.author} />
-                      {blog.author}
-                    </a>
-                    <a href="/blog"><i className="far fa-comment"></i></a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ===== CTA ===== */}
       <section className="section-padding bg-dark">
         <div className="container">
@@ -1336,7 +1294,7 @@ const Service = () => {
               <p style={{ color: '#b0b0c8', margin: '16px 0 24px', maxWidth: '90%' }}>
                 Ready to transform your spatial data into strategic advantage?
               </p>
-              <a href="/contact" className="berpo_btn">Start a Project</a>
+              <Link to="/contact" className="berpo_btn">Start a Project</Link>
             </div>
             <div className="cta-images">
               <img src={ctaImg1} alt="CTA" />
