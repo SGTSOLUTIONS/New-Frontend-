@@ -500,6 +500,7 @@ const responsiveStyles = `
   }
 `;
 
+
 const Home = () => {
   return (
     <>
@@ -678,14 +679,14 @@ const Home = () => {
           <div className="row">
             <div className="col-xl-12 text-center">
               <div className="subTitle">Services</div>
-              <h2 className="secTitle">Core Level Values and <br /> Mazaing Services.</h2>
+              <h2 className="secTitle">What We Do <br /> Our Geospatial & Digital Services </h2>
             </div>
           </div>
         </div>
       </section>
       <section className="service_section_01 pb-5">
         <div className="container largeContainer">
-          <div className="row">
+          <div className="row p-3">
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -695,8 +696,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-key"></i>
                   </div>
-                  <h3><a href="single-service.html">Advanced Analytic</a></h3>
-                  <p>Move with a great</p>
+                  <h3><a href="single-service.html">Web GIS</a></h3>
+                  <p>Web-based mapping portals for land records and asset tracking.</p>
                 </div>
               </div>
             </div>
@@ -709,8 +710,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-chart-line"></i>
                   </div>
-                  <h3><a href="single-service.html">Corporate Finance</a></h3>
-                  <p>Move with a great</p>
+                  <h3><a href="single-service.html">Spatial Revenue Intelligence</a></h3>
+                  <p>Digitize buildings and parcels from aerial imagery.</p>
                 </div>
               </div>
             </div>
@@ -723,15 +724,15 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-handshake"></i>
                   </div>
-                  <h3><a href="single-service.html">Business Consultation</a></h3>
-                  <p>Move with a great</p>
+                  <h3><a href="single-service.html">Drone & DGPS Survey</a></h3>
+                  <p>Centimeter-level accuracy for property mapping.</p>
                 </div>
               </div>
             </div>
           </div>
           <div className="row mt-4">
             <div className="col-lg-12 text-center">
-              <div className="qu_link">Stop wasting time and Money on Finance. <a href="javascript:void(0);">Explore Company</a></div>
+              <div className="qu_link">From Web GIS and drone surveys to spatial analytics, we help organizations turn location data into actionable insights. <a href="javascript:void(0);">Explore Company</a></div>
             </div>
           </div>
         </div>
@@ -743,22 +744,22 @@ const Home = () => {
         <div className="container largeContainer">
           <div className="row align-items-center">
             <div className="col-xl-5 col-lg-6">
-              <div className="subTitle">Just a Consultancy</div>
-              <h2 className="secTitle">We are Certified Financial Experts</h2>
+              <div className="subTitle">GEOSPATIAL EXPERTISE</div>
+              <h2 className="secTitle">Turning Location Data Into Real-World Solutions</h2>
               <p>
-                We craft unique digital experiences. With more than 7<br /> years of expertise we design.
+                We combine GIS, remote sensing, surveying, drone technology, and spatial analytics to deliver accurate<br /> information for better planning and decision-making.
               </p>
               <ul className="listItem withbg">
-                <li><span><i className="twi-check-circle"></i>Innovative Approach Consultancy</span></li>
-                <li><span><i className="twi-check-circle"></i>Flexibile Involvement Consultancy</span></li>
-                <li><span><i className="twi-check-circle"></i>Personal Manager Consultancy</span></li>
+                <li><span><i className="twi-check-circle"></i>Accurate GIS & Mapping Solutions</span></li>
+                <li><span><i className="twi-check-circle"></i>Drone & DGPS Surveying</span></li>
+                <li><span><i className="twi-check-circle"></i>Spatial Data & Remote Sensing</span></li>
               </ul>
               <a className="berpo_btn" href="contact.html">
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
-                <span className="bp-text">Contact Now</span>
+                <span className="bp-text">Explore Our Services</span>
               </a>
             </div>
             <div className="col-xl-7 col-lg-6">
@@ -774,8 +775,8 @@ const Home = () => {
                   boxShadow: '0 5px 20px rgba(0,0,0,0.1)',
                   textAlign: 'center'
                 }}>
-                  <h2><span className="counter">80</span><sup>+</sup></h2>
-                  <h5>Partners in world wide</h5>
+                  <h2><span className="counter">10</span><sup>+</sup></h2>
+                  <h5>GEOSPATIAL SERVICES</h5>
                 </div>
               </div>
             </div>
