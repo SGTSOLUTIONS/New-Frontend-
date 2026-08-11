@@ -694,7 +694,7 @@ const Home = () => {
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
-                    <i className="fas fa-key"></i>
+                    <i className="fas fa-globe"></i>
                   </div>
                   <h3><a href="single-service.html">Web GIS</a></h3>
                   <p>Web-based mapping portals for land records and asset tracking.</p>
