@@ -976,7 +976,8 @@
 }
 .sitem_con{
     position: relative;
-    padding: 22px 3px 23px 105px;
+    padding: 30px 3px 23px 105px;
+    height: 200px;
 }
 .ibMeta{
     font-size: 50px;

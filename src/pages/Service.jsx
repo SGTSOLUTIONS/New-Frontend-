@@ -1,12 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 // Import Google Fonts from @fontsource
 import '@fontsource/poppins';
@@ -138,21 +131,21 @@ const testimonials = [
     id: 1,
     name: 'Coimbatore City Municipal Corporation',
     role: 'ThemeForest Exclusive',
-    text: 'SGT Solutions successfully delivered the comprehensive Property Survey Mapping project for Coimbatore City Municipal Corporation. By deploying their proprietary Spatial Revenue Intelligence System (SRIS), they accurately mapped urban property boundaries and integrated spatial data seamlessly. Their technology has been highly effective in identifying previously unassessed commercial structures and verifying built-up area variations.',
+    text: 'SGT Solutions successfully delivered the comprehensive Property Survey Mapping project for Coimbatore City Municipal Corporation. By deploying their proprietary Spatial Revenue Intelligence System (SRIS), they accurately mapped urban property boundaries andintegrated spatial data seamlessly. Their technology has been highly effective inidentifying previously unassessed commercial structures and verifying built-up areavariations.',
     img: testimonial1
   },
   {
     id: 2,
     name: 'Institute for Water Studies',
     role: 'Envato Author',
-    text: 'SGT Solutions completed extensive spatial mapping and water quality analysis for the Institute for Water Studies, Chennai. Using geospatial logy, they tracked water bodies and aquifer profiles, while lab-based indexin measured critical chemical parameters and contamination trends. Their work provided reliable datasets, significantly aiding research and water resource management initiatives.',
+    text: 'SGT Solutions completed extensive spatial mapping and waterquality analysis for the Institute for Water Studies, Chennai. Using geospatiallogy, they tracked water bodies and aquifer profiles, while lab-based indexin measured critical chemical parameters and contamination trends. Their work providedreliable datasets, significantly aiding research and water resource managementinitiatives.',
     img: testimonial2
   },
-  {
+   {
     id: 3,
     name: 'Marutham Foundation',
     role: 'Envato Author',
-    text: 'SGT Solutions has been a vital technical partner for the Marutham Foundation. Their advanced GIS analysis and hydro-spatial mapping helped track ecological degradation, siltation levels, and natural inlet channels across project zones. Dr. Saravani and her team successfully bridged cutting-edge technology with grassroots environmental restoration, optimizing rainwater harvesting catchments for water body renovation initiatives.',
+    text: 'SGT Solutions has been a vital technical partner for the Marutham Foundation. Their advanced GIS analysis and hydro-spatial mapping helped trackecological degradation, siltation levels, and natural inlet channels across projectzones. Dr. Saravani and her team successfully bridged cutting-edge technology withgrassroots environmental restoration, optimizing rainwater harvesting catchments forwater body renovation initiatives.',
     img: testimonial3
   }
 ];
@@ -185,71 +178,12 @@ const blogs = [
 ];
 
 const Service = () => {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeTab, setActiveTab] = useState('financial');
   const [openAccordion, setOpenAccordion] = useState(1);
 
   const toggleAccordion = (id) => {
     setOpenAccordion(openAccordion === id ? null : id);
-  };
-
-  // Function to equalize heights of testimonial cards
-  const equalizeHeights = () => {
-    const slides = document.querySelectorAll('.testimonial-slide');
-    let maxHeight = 0;
-    
-    // Reset heights to auto first
-    slides.forEach(slide => {
-      const card = slide.querySelector('.testimonial-card');
-      if (card) {
-        card.style.height = 'auto';
-      }
-    });
-
-    // Find max height
-    slides.forEach(slide => {
-      const card = slide.querySelector('.testimonial-card');
-      if (card) {
-        const height = card.offsetHeight;
-        if (height > maxHeight) maxHeight = height;
-      }
-    });
-
-    // Apply max height to all cards
-    slides.forEach(slide => {
-      const card = slide.querySelector('.testimonial-card');
-      if (card) {
-        card.style.height = maxHeight + 'px';
-      }
-    });
-  };
-
-  // Effect to run after component mounts and updates
-  useEffect(() => {
-    // Initial equalization
-    const timeoutId = setTimeout(equalizeHeights, 300);
-
-    // Equalize on window resize
-    const handleResize = () => {
-      clearTimeout(timeoutId);
-      setTimeout(equalizeHeights, 200);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  // Equalize when component updates
-  useEffect(() => {
-    setTimeout(equalizeHeights, 100);
-  }, [activeTab]);
-
-  // Handle slide change
-  const handleSlideChange = () => {
-    setTimeout(equalizeHeights, 100);
   };
 
   return (
@@ -336,7 +270,7 @@ const Service = () => {
         .service-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 28px;
+          gap: 50px;
           margin-top: 40px;
         }
 
@@ -373,8 +307,9 @@ const Service = () => {
         }
 
         .service_item_01 .sitem_con {
-          padding: 25px 30px 30px;
           text-align: center;
+          background: rgba(0, 0, 0, 0.25);
+          border-radius: 0 0 15px 15px;
         }
 
         .service_item_01 .ibMeta {
@@ -389,6 +324,7 @@ const Service = () => {
           font-size: 26px;
           color: #bb0b0b;
           transition: 0.3s;
+          position: sticky;
           background: #fff;
           box-shadow: 0 4px 15px rgba(187, 11, 11, 0.12);
         }
@@ -663,23 +599,11 @@ const Service = () => {
         }
 
         /* ===== TESTIMONIALS ===== */
-        .testimonial-swiper-wrapper {
-          position: relative;
+        .testimonial-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
           margin-top: 30px;
-          padding: 0 50px;
-        }
-
-        .testimonial-swiper {
-          overflow: hidden;
-        }
-
-        .testimonial-slide {
-          height: auto;
-        }
-
-        .testimonial-card {
-          height: 100%;
-          display: flex;
         }
 
         .testiItem01 {
@@ -687,21 +611,12 @@ const Service = () => {
           padding: 30px 28px;
           border-radius: 16px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          transition: all 0.3s ease;
-        }
-
-        .testiItem01:hover {
-          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
         }
 
         .testiItem01 h5 {
           font-size: 18px;
           font-weight: 600;
           margin-bottom: 10px;
-          color: #0a1922;
         }
 
         .testiItem01 .quotation {
@@ -709,7 +624,6 @@ const Service = () => {
           color: #4a4a62;
           font-style: italic;
           line-height: 1.8;
-          flex: 1;
         }
 
         .ts_author {
@@ -717,8 +631,6 @@ const Service = () => {
           align-items: center;
           gap: 16px;
           margin-top: 18px;
-          padding-top: 18px;
-          border-top: 1px solid #f0f0f5;
         }
 
         .ts_author img {
@@ -731,8 +643,6 @@ const Service = () => {
         .ts_author h5 {
           margin: 0;
           font-size: 17px;
-          font-weight: 600;
-          color: #0a1922;
         }
 
         .ts_author span {
@@ -740,77 +650,28 @@ const Service = () => {
           font-size: 14px;
         }
 
-        /* Swiper Navigation */
-        .swiper-button-prev,
-        .swiper-button-next {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 40px;
-          height: 40px;
-          background: #fff;
-          border-radius: 50%;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        .testimonial-controls {
           display: flex;
-          align-items: center;
           justify-content: center;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          z-index: 10;
-          color: #1a1a2e;
+          gap: 12px;
+          margin-top: 24px;
+        }
+
+        .testimonial-controls button {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
           border: none;
-          outline: none;
-        }
-
-        .swiper-button-prev {
-          left: 0;
-        }
-
-        .swiper-button-next {
-          right: 0;
-        }
-
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
-          background: #bb0b0b;
-          color: #fff;
-          box-shadow: 0 4px 20px rgba(187, 11, 11, 0.2);
-        }
-
-        .swiper-button-prev i,
-        .swiper-button-next i {
-          font-size: 16px;
-        }
-
-        .swiper-button-prev.swiper-button-disabled,
-        .swiper-button-next.swiper-button-disabled {
-          opacity: 0.3;
-          cursor: not-allowed;
-        }
-
-        /* Pagination */
-        .swiper-pagination {
-          position: relative;
-          margin-top: 20px;
-          display: flex;
-          justify-content: center;
-          gap: 8px;
-        }
-
-        .swiper-pagination-bullet {
-          width: 10px;
-          height: 10px;
           background: #d0d0dd;
-          border-radius: 50%;
-          display: inline-block;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: 0.3s;
+          padding: 0;
         }
 
-        .swiper-pagination-bullet-active {
+        .testimonial-controls button.active {
           background: #bb0b0b;
-          width: 30px;
-          border-radius: 10px;
+          width: 36px;
+          border-radius: 20px;
         }
 
         /* ===== ACCORDION ===== */
@@ -1006,14 +867,6 @@ const Service = () => {
           width: 100%;
         }
 
-        .mt-5 {
-          margin-top: 40px;
-        }
-
-        .text-center {
-          text-align: center;
-        }
-
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
           .service-grid {
@@ -1024,6 +877,9 @@ const Service = () => {
           }
           .blog-grid {
             grid-template-columns: repeat(2, 1fr);
+          }
+          .testimonial-grid {
+            grid-template-columns: 1fr;
           }
           .achievement-wrap {
             flex-direction: column;
@@ -1064,7 +920,7 @@ const Service = () => {
             height: 150px;
           }
           .service_item_01 .sitem_con {
-            padding: 20px 16px 22px;
+            padding: 22px 35px 23px 105px;
           }
           .service_item_01 h3 {
             font-size: 16px;
@@ -1116,6 +972,9 @@ const Service = () => {
             padding: 12px 28px;
             font-size: 14px;
           }
+          .testiItem01 {
+            padding: 20px 18px;
+          }
           .accordion-header {
             font-size: 14px;
             padding: 14px 16px;
@@ -1141,37 +1000,6 @@ const Service = () => {
           }
           .blogContent h3 {
             font-size: 16px;
-          }
-          
-          .testimonial-swiper-wrapper {
-            padding: 0 35px;
-          }
-          
-          .swiper-button-prev,
-          .swiper-button-next {
-            width: 32px;
-            height: 32px;
-          }
-          
-          .swiper-button-prev i,
-          .swiper-button-next i {
-            font-size: 12px;
-          }
-          
-          .testiItem01 {
-            padding: 20px 18px;
-          }
-          
-          .testiItem01 h5 {
-            font-size: 16px;
-          }
-          
-          .testiItem01 .quotation {
-            font-size: 14px;
-          }
-          
-          .ts_author h5 {
-            font-size: 15px;
           }
         }
 
@@ -1202,24 +1030,8 @@ const Service = () => {
             padding: 10px 22px;
             font-size: 13px;
           }
-          
-          .testimonial-swiper-wrapper {
-            padding: 0 25px;
-          }
-          
-          .swiper-button-prev,
-          .swiper-button-next {
-            width: 28px;
-            height: 28px;
-          }
-          
-          .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-          }
-          
-          .swiper-pagination-bullet-active {
-            width: 24px;
+          .testimonial-grid {
+            gap: 20px;
           }
         }
       `}</style>
@@ -1316,7 +1128,7 @@ const Service = () => {
               <img src={achievementImg} alt="Achievement" />
               <div className="client-badge">
                 <h2>80<sup>+</sup></h2>
-                <h5>Global Partners</h5>
+                <h5>Global Partnxers</h5>
               </div>
             </div>
           </div>
@@ -1417,131 +1229,63 @@ const Service = () => {
         </div>
       </section>
 
-      {/* ===== TESTIMONIALS WITH SWIPER ===== */}
+      {/* ===== TESTIMONIALS + ACCORDION ===== */}
       <section className="section-padding">
         <div className="container">
           <div className="text-center">
             <div className="subTitle">Testimonials</div>
             <h2 className="secTitle">What Our <span>Clients</span> Say</h2>
           </div>
+          <div className="testimonial-grid">
+            <div>
+              <div className="accordion">
+                {[
+                  { id: 1, q: 'Why choose our SGT solutions?', a: 'We combine cutting-edge technology with deep domain expertise to deliver accurate, actionable spatial intelligence.' },
+                  { id: 2, q: 'How do we ensure data accuracy?', a: 'We use high-precision LiDAR, DGPS, and photogrammetry with rigorous quality control at every stage.' },
+                  { id: 3, q: 'What industries do we serve?', a: 'Urban planning, agriculture, real estate, infrastructure, environmental monitoring, and government.' }
+                ].map((item) => (
+                  <div className="accordion-item" key={item.id}>
+                    <button 
+                      className={`accordion-header ${openAccordion === item.id ? 'active' : ''}`}
+                      onClick={() => toggleAccordion(item.id)}
+                    >
+                      <span><i className="fas fa-question-circle"></i> {item.q}</span>
+                      <span className="arrow"><i className="fas fa-chevron-down"></i></span>
+                    </button>
+                    <div className={`accordion-body ${openAccordion === item.id ? 'open' : ''}`}>
+                      {item.a}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-          <div className="testimonial-swiper-wrapper">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              loop={true}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-                dynamicBullets: false,
-              }}
-              navigation={{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              }}
-              breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-              }}
-              spaceBetween={30}
-              onSlideChange={handleSlideChange}
-              onInit={() => setTimeout(equalizeHeights, 300)}
-              onResize={() => setTimeout(equalizeHeights, 200)}
-              className="testimonial-swiper"
-            >
-              {testimonials.map((testimonial) => (
-                <SwiperSlide key={testimonial.id} className="testimonial-slide">
-                  <div className="testimonial-card">
-                    <div className="testiItem01">
-                      <h5>Exceptional Service</h5>
-                      <p className="quotation">"{testimonial.text}"</p>
-                      <div className="ts_author">
-                        <img src={testimonial.img} alt={testimonial.name} />
-                        <div>
-                          <h5>{testimonial.name}</h5>
-                          <span>{testimonial.role}</span>
-                        </div>
+            <div>
+              {testimonials.map((t, idx) => (
+                <div key={t.id} style={{ display: activeTestimonial === idx ? 'block' : 'none' }}>
+                  <div className="testiItem01">
+                    <h5>Exceptional Service</h5>
+                    <p className="quotation">"{t.text}"</p>
+                    <div className="ts_author">
+                      <img src={t.img} alt={t.name} />
+                      <div>
+                        <h5>{t.name}</h5>
+                        <span>{t.role}</span>
                       </div>
                     </div>
                   </div>
-                </SwiperSlide>
+                </div>
               ))}
-            </Swiper>
-
-            <div className="swiper-button-prev">
-              <i className="fas fa-chevron-left"></i>
-            </div>
-            <div className="swiper-button-next">
-              <i className="fas fa-chevron-right"></i>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== ACCORDION ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">FAQ</div>
-            <h2 className="secTitle">Frequently Asked <span>Questions</span></h2>
-          </div>
-          <div className="accordion" style={{ maxWidth: '800px', margin: '30px auto 0' }}>
-            {[
-              { id: 1, q: 'Why choose our SGT solutions?', a: 'We combine cutting-edge technology with deep domain expertise to deliver accurate, actionable spatial intelligence.' },
-              { id: 2, q: 'How do we ensure data accuracy?', a: 'We use high-precision LiDAR, DGPS, and photogrammetry with rigorous quality control at every stage.' },
-              { id: 3, q: 'What industries do we serve?', a: 'Urban planning, agriculture, real estate, infrastructure, environmental monitoring, and government.' }
-            ].map((item) => (
-              <div className="accordion-item" key={item.id}>
-                <button 
-                  className={`accordion-header ${openAccordion === item.id ? 'active' : ''}`}
-                  onClick={() => toggleAccordion(item.id)}
-                >
-                  <span><i className="fas fa-question-circle"></i> {item.q}</span>
-                  <span className="arrow"><i className="fas fa-chevron-down"></i></span>
-                </button>
-                <div className={`accordion-body ${openAccordion === item.id ? 'open' : ''}`}>
-                  {item.a}
-                </div>
+              <div className="testimonial-controls">
+                {testimonials.map((_, idx) => (
+                  <button 
+                    key={idx}
+                    className={activeTestimonial === idx ? 'active' : ''}
+                    onClick={() => setActiveTestimonial(idx)}
+                  />
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== BLOG ===== */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Our Blog</div>
-            <h2 className="secTitle">Latest <span>Insights</span></h2>
-          </div>
-          <div className="blog-grid">
-            {blogs.map(blog => (
-              <div className="blogItem01" key={blog.id}>
-                <div className="blogThumb">
-                  <img src={blog.img} alt={blog.title} />
-                </div>
-                <div className="blogContent">
-                  <span className="bmeta"><i className="fas fa-calendar-alt"></i> {blog.date}</span>
-                  <h3><Link to={`/blog/${blog.id}`}>{blog.title}</Link></h3>
-                  <div className="bpcon">
-                    <div className="author">
-                      <img src={blog.authorImg} alt={blog.author} />
-                      <span>{blog.author}</span>
-                    </div>
-                    <Link to={`/blog/${blog.id}`}><i className="fas fa-arrow-right"></i></Link>
-                  </div>
-                </div>
-              </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
