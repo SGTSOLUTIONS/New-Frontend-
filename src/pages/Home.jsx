@@ -700,7 +700,7 @@ const Home = () => {
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
-                      <span className="bp-text">Get Services</span>
+                      <span className="bp-text">EXPLORE OUR SERVICES</span>
                     </a>
                   </div>
                 </div>
@@ -769,7 +769,7 @@ const Home = () => {
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
-                      <span className="bp-text">Get Services</span>
+                      <span className="bp-text">DISCOVER MORE</span>
                     </a>
                   </div>
                 </div>
