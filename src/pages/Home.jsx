@@ -708,7 +708,7 @@ const Home = () => {
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
-                    <i className="fas fa-chart-line"></i>
+                    <i className="fas fa-map-marked-alt"></i>
                   </div>
                   <h3><a href="single-service.html">Spatial Revenue Intelligence</a></h3>
                   <p>Digitize buildings and parcels from aerial imagery.</p>
@@ -790,7 +790,7 @@ const Home = () => {
         <div className="container largeContainer">
           <div className="row align-items-center">
             <div className="col-6 col-md-3 text-center mb-4 mb-md-0 client-logo-item">
-              <a href="javascript:void(0);"><img src={clientLogo1} alt="" className="img-fluid" style={{ maxHeight: '80px', objectFit: 'contain' }} /></a>
+              <a href="javascript:void(0);"><img src={clientLogo1} alt="" className="img-fluid" style={{ maxHeight: '150px', objectFit: 'contain' }} /></a>
             </div>
             <div className="col-6 col-md-3 text-center mb-4 mb-md-0 client-logo-item">
               <a href="javascript:void(0);"><img src={clientLogo2} alt="" className="img-fluid" style={{ maxHeight: '80px', objectFit: 'contain' }} /></a>
@@ -811,8 +811,8 @@ const Home = () => {
         <div className="container largeContainer">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <div className="subTitle">We Have added a new exciting feature in v2.0</div>
-              <h2 className="secTitle">Organizations Realize the Benefits <br /> Forming Work Teams.</h2>
+              <div className="subTitle">GEOSPATIAL TECHNOLOGY</div>
+              <h2 className="secTitle">Turning Location Data Into Smarter Decisions <br />Smarter Decisions.</h2>
               <a href="https://player.vimeo.com/video/213907368?h=3685456d6c" className="popup_video" style={{
                 display: 'inline-block',
                 width: '80px',
