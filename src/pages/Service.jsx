@@ -135,9 +135,16 @@ const testimonials = [
   },
   {
     id: 2,
-    name: 'Mark Smith',
+    name: 'Institute for Water Studies',
     role: 'Envato Author',
-    text: 'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites. We are committed to providing our customers with exceptional service.',
+    text: 'SGT Solutions completed extensive spatial mapping and waterquality analysis for the Institute for Water Studies, Chennai. Using geospatiallogy, they tracked water bodies and aquifer profiles, while lab-based indexin measured critical chemical parameters and contamination trends. Their work providedreliable datasets, significantly aiding research and water resource managementinitiatives.',
+    img: testimonial2
+  },
+   {
+    id: 3,
+    name: 'Marutham Foundation',
+    role: 'Envato Author',
+    text: 'SGT Solutions has been a vital technical partner for the Marutham Foundation. Their advanced GIS analysis and hydro-spatial mapping helped trackecological degradation, siltation levels, and natural inlet channels across projectzones. Dr. Saravani and her team successfully bridged cutting-edge technology withgrassroots environmental restoration, optimizing rainwater harvesting catchments forwater body renovation initiatives.',
     img: testimonial2
   }
 ];
