@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 // Import Google Fonts from @fontsource
 import '@fontsource/poppins';
@@ -42,6 +42,8 @@ import blogAuthor3 from '../assets/images/blog/a3.jpg';
 import ctaImg1 from '../assets/images/home1/3.png';
 import ctaImg2 from '../assets/images/home1/4.png';
 
+// Import video
+import videoFile from '../assets/images/video.mp4';
 
 // Add responsive CSS
 const responsiveStyles = `
@@ -498,10 +500,124 @@ const responsiveStyles = `
     color: #999;
     font-size: 14px;
   }
+
+  /* Video Section Styles */
+  .video-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    background: #000;
+    cursor: pointer;
+  }
+
+  .video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .video-wrapper .play-button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .video-wrapper .play-button-overlay .play-icon {
+    width: 80px;
+    height: 80px;
+    background: #bb0b0b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    box-shadow: 0 0 0 15px rgba(187, 11, 11, 0.3);
+  }
+
+  .video-wrapper .play-button-overlay .play-icon:hover {
+    transform: scale(1.1);
+    background: #a00a0a;
+    box-shadow: 0 0 0 20px rgba(187, 11, 11, 0.4);
+  }
+
+  .video-wrapper .play-button-overlay .play-icon i {
+    color: #fff;
+    font-size: 35px;
+    margin-left: 5px;
+  }
+
+  .video-wrapper .play-button-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .video-wrapper:hover .play-button-overlay:not(.hidden) {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .video-wrapper .play-button-overlay .play-icon {
+      width: 60px;
+      height: 60px;
+    }
+    .video-wrapper .play-button-overlay .play-icon i {
+      font-size: 25px;
+    }
+    .video-wrapper .play-button-overlay .play-icon {
+      box-shadow: 0 0 0 10px rgba(187, 11, 11, 0.3);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .video-wrapper .play-button-overlay .play-icon {
+      width: 50px;
+      height: 50px;
+    }
+    .video-wrapper .play-button-overlay .play-icon i {
+      font-size: 20px;
+    }
+    .video-wrapper .play-button-overlay .play-icon {
+      box-shadow: 0 0 0 8px rgba(187, 11, 11, 0.3);
+    }
+  }
 `;
 
 
 const Home = () => {
+  const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (video.paused) {
+        video.play();
+        setIsPlaying(true);
+      } else {
+        video.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
+
+  const handleVideoEnd = () => {
+    setIsPlaying(false);
+  };
+
   return (
     <>
       {/* Inject responsive styles */}
@@ -550,7 +666,7 @@ const Home = () => {
                       marginBottom: '10px'
                     }}
                   >
-                    <span className="bg">Consulting Business</span>
+                    <span className="bg">GEOSPATIAL & DIGITAL SOLUTIONS</span>
                   </div>
                   <h1
                     className="headFont"
@@ -562,7 +678,7 @@ const Home = () => {
                       marginBottom: '20px'
                     }}
                   >
-                    Start Your Upcoming Modern <span style={{ color: '#bb0b0b' }}>Consulting</span>
+                    Mapping the World.<span style={{ color: '#bb0b0b' }}>Solutions.</span>
                   </h1>
                   <p
                     style={{
@@ -573,7 +689,7 @@ const Home = () => {
                       marginBottom: '30px'
                     }}
                   >
-                    Aliquam malesuada bibendum arcu vitae elementum curabitur vitae ven. Pellentesque pulvinar elementum habitant morbi tristique.
+                    We deliver innovative geospatial solutions that transform location data into accurate, actionable insights. From GIS and aerial mapping to drone surveys and spatial intelligence, we help organizations make better decisions.
                   </p>
                   <div className="btn-wrapper">
                     <a
@@ -619,7 +735,7 @@ const Home = () => {
                       marginBottom: '10px'
                     }}
                   >
-                    <span className="bg">Consulting Business</span>
+                    <span className="bg">SGT SOLUTIONS</span>
                   </div>
                   <h1
                     className="headFont"
@@ -631,7 +747,7 @@ const Home = () => {
                       marginBottom: '20px'
                     }}
                   >
-                    Start Your Upcoming Modern <span style={{ color: '#bb0b0b' }}>Consulting</span>
+                    Map Better.Decide<span style={{ color: '#bb0b0b' }}>Smarter.</span>
                   </h1>
                   <p
                     style={{
@@ -642,7 +758,7 @@ const Home = () => {
                       marginBottom: '30px'
                     }}
                   >
-                    Aliquam malesuada bibendum arcu vitae elementum curabitur vitae ven. Pellentesque pulvinar elementum habitant morbi tristique.
+                    Advanced GIS, surveying, mapping, and spatial intelligence solutions designed for a connected world.
                   </p>
                   <div className="btn-wrapper">
                     <a
@@ -807,25 +923,35 @@ const Home = () => {
       {/* Client Logo End */}
 
       {/* Video Section Start */} 
-      <section className="videoSection01 py-5" style={{ background: '#f8f9fa' }}>
+      <section className="videoSection01 py-5" style={{ background: '#bdcfe0' }}>
         <div className="container largeContainer">
           <div className="row">
             <div className="col-lg-12 text-center">
               <div className="subTitle">GEOSPATIAL TECHNOLOGY</div>
-              <h2 className="secTitle">Turning Location Data Into Smarter Decisions <br />Smarter Decisions.</h2>
-              <a href="https://player.vimeo.com/video/213907368?h=3685456d6c" className="popup_video" style={{
-                display: 'inline-block',
-                width: '80px',
-                height: '80px',
-                lineHeight: '80px',
-                background: '#bb0b0b',
-                color: '#fff',
-                borderRadius: '50%',
-                fontSize: '30px',
-                marginTop: '30px',
-                transition: 'all 0.3s ease',
-                textDecoration: 'none'
-              }}><i className="twi-play"></i></a>
+              <h2 className="secTitle">Turning Location Data Into Smarter Decisions</h2>
+              
+              {/* Custom Video Player with Clickable Play Icon */}
+              <div className="video-wrapper" onClick={togglePlay}>
+                <video 
+                  ref={videoRef}
+                  playsInline
+                  style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+                  poster={slider1}
+                  onEnded={handleVideoEnd}
+                  onPause={() => setIsPlaying(false)}
+                  onPlay={() => setIsPlaying(true)}
+                >
+                  <source src={videoFile} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                
+                {/* Play Button Overlay */}
+                <div className={`play-button-overlay ${isPlaying ? 'hidden' : ''}`}>
+                  <div className="play-icon">
+                    <i className="fas fa-play"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -839,13 +965,13 @@ const Home = () => {
             <div className="col-lg-12">
               <ul className="nav beproTab justify-content-center flex-wrap" id="beproTab" role="tablist">
                 <li role="presentation" className="nav-item">
-                  <a id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="false" className="nav-link">Business Growth</a>
+                  <a id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="false" className="nav-link">GIS & MAPPING</a>
                 </li>
                 <li role="presentation" className="nav-item">
-                  <a className="nav-link active" id="financial-tab" data-toggle="tab" href="#financial" role="tab" aria-controls="financial" aria-selected="true">Financial Advice</a>
+                  <a className="nav-link active" id="financial-tab" data-toggle="tab" href="#financial" role="tab" aria-controls="financial" aria-selected="true">SURVEYING & DATA</a>
                 </li>
                 <li role="presentation" className="nav-item">
-                  <a id="global-tab" data-toggle="tab" href="#global" role="tab" aria-controls="global" aria-selected="false" className="nav-link">Global Solutions</a>
+                  <a id="global-tab" data-toggle="tab" href="#global" role="tab" aria-controls="global" aria-selected="false" className="nav-link">SPATIAL INTELLIGENCE</a>
                 </li>
               </ul>
               <div className="tab-content mt-4">
@@ -853,16 +979,16 @@ const Home = () => {
                   <div className="beproTabCon">
                     <div className="row align-items-center">
                       <div className="col-md-6">
-                        <h2 className="secTitle">Digital Marketing Allows Big Companies</h2>
+                        <h2 className="secTitle">Geospatial Solutions for a Smarter World</h2>
                         <p>
-                          We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites,  We are committed to providing our customers with exceptional service.
+                          We transform location data into accurate, actionable insights. From GIS and aerial mapping to drone surveys and spatial analysis, SGT Solutions helps organizations understand their environment and make better decisions.
                         </p>
                         <a className="berpo_btn" href="contact.html">
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
-                          <span className="bp-text">Contact Us</span>
+                          <span className="bp-text">EXPLORE OUR SERVICES</span>
                         </a>
                       </div>
                       <div className="col-md-6">
@@ -875,16 +1001,16 @@ const Home = () => {
                   <div className="beproTabCon">
                     <div className="row align-items-center">
                       <div className="col-md-6">
-                        <h2 className="secTitle">Digital Marketing Allows Big Companies</h2>
+                        <h2 className="secTitle">Geospatial Solutions for a Smarter World</h2>
                         <p>
-                          We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites,  We are committed to providing our customers with exceptional service.
+                          We transform location data into accurate, actionable insights. From GIS and aerial mapping to drone surveys and spatial analysis, SGT Solutions helps organizations understand their environment and make better decisions.
                         </p>
                         <a className="berpo_btn" href="contact.html">
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
-                          <span className="bp-text">Contact Us</span>
+                          <span className="bp-text">EXPLORE OUR SERVICES</span>
                         </a>
                       </div>
                       <div className="col-md-6">
@@ -897,7 +1023,7 @@ const Home = () => {
                   <div className="beproTabCon">
                     <div className="row align-items-center">
                       <div className="col-md-6">
-                        <h2 className="secTitle">Digital Marketing Allows Big Companies</h2>
+                        <h2 className="secTitle">Geospatial Solutions for a Smarter World</h2>
                         <p>
                           We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites,  We are committed to providing our customers with exceptional service.
                         </p>
@@ -906,7 +1032,7 @@ const Home = () => {
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
-                          <span className="bp-text">Contact Us</span>
+                          <span className="bp-text">EXPLORE OUR SERVICES</span>
                         </a>
                       </div>
                       <div className="col-md-6">
