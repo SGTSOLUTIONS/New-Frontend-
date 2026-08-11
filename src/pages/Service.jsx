@@ -12,8 +12,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import slider1 from '../assets/images/slider/1_4.jpg';
 import slider2 from '../assets/images/slider/1_5.jpeg';
 
-// Service images - using your existing images
-// If you have specific images for each service, replace these with the correct paths
+// Service images
 import service1 from '../assets/images/service/1.jpg';
 import service2 from '../assets/images/service/2.jpg';
 import service3 from '../assets/images/service/3.jpg';
@@ -39,7 +38,10 @@ import blogAuthor3 from '../assets/images/blog/a3.jpg';
 import ctaImg1 from '../assets/images/home1/3.png';
 import ctaImg2 from '../assets/images/home1/4.png';
 
-// Service data with images - using your existing images
+// Background image
+import servicesBg from '../assets/images/service/services-bg.jpg';
+
+// Service data
 const services = [
   {
     id: 1,
@@ -296,8 +298,11 @@ const Service = () => {
         }
 
         .service_item_01 .sitem_con {
-          padding: 22px 24px 26px;
+          padding: 24px 24px 26px;
           text-align: center;
+          background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/background.jpg");
         }
 
         .service_item_01 .ibMeta {
@@ -312,7 +317,7 @@ const Service = () => {
           font-size: 26px;
           color: #bb0b0b;
           transition: 0.3s;
-          position: relative;
+          position: sticky;
           background: #fff;
           box-shadow: 0 4px 15px rgba(187, 11, 11, 0.12);
         }
@@ -856,112 +861,87 @@ const Service = () => {
         }
 
         /* ===== RESPONSIVE ===== */
-
-        /* Tablets */
         @media (max-width: 1024px) {
           .service-grid {
             grid-template-columns: repeat(2, 1fr);
           }
-
           .team-grid {
             grid-template-columns: repeat(2, 1fr);
           }
-
           .blog-grid {
             grid-template-columns: repeat(2, 1fr);
           }
-
           .testimonial-grid {
             grid-template-columns: 1fr;
           }
-
           .achievement-wrap {
             flex-direction: column;
           }
-
           .cta-wrap {
             flex-direction: column;
           }
-
           .tab-content-inner {
             flex-direction: column;
           }
-
           .secTitle {
             font-size: 32px;
           }
-
           .service_item_01 .siThumb {
             height: 180px;
           }
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
           .container {
             padding: 0 16px;
           }
-
           .section-padding {
             padding: 50px 0;
           }
-
           .secTitle {
             font-size: 26px;
           }
-
           .subTitle {
             font-size: 11px;
             letter-spacing: 1.8px;
           }
-
           .service-grid {
             grid-template-columns: 1fr 1fr;
             gap: 16px;
           }
-
           .service_item_01 .siThumb {
             height: 150px;
           }
-
           .service_item_01 .sitem_con {
             padding: 16px 14px 20px;
           }
-
           .service_item_01 h3 {
             font-size: 16px;
           }
-
           .service_item_01 p {
             font-size: 13px;
           }
-
           .service_item_01 .ibMeta {
             width: 50px;
             height: 50px;
             font-size: 20px;
             margin: -30px auto 12px;
           }
-
           .client-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
           }
-
           .team-grid {
             grid-template-columns: 1fr 1fr;
             gap: 16px;
           }
-
           .blog-grid {
             grid-template-columns: 1fr;
           }
-
           .beproTab .nav-link {
             padding: 8px 18px;
             font-size: 13px;
           }
-
           .client-badge {
             position: relative;
             bottom: auto;
@@ -969,101 +949,80 @@ const Service = () => {
             margin-top: -20px;
             padding: 16px 20px;
           }
-
           .client-badge h2 {
             font-size: 32px;
           }
-
           .cta-content h2 {
             font-size: 34px;
           }
-
           .cta-content h3 {
             font-size: 26px;
           }
-
           .cta-content h4 {
             font-size: 18px;
           }
-
           .berpo_btn {
             padding: 12px 28px;
             font-size: 14px;
           }
-
           .testiItem01 {
             padding: 20px 18px;
           }
-
           .accordion-header {
             font-size: 14px;
             padding: 14px 16px;
           }
-
           .accordion-body {
             font-size: 14px;
             padding: 0 16px 16px;
           }
-
           .ts_author img {
             width: 50px;
             height: 50px;
           }
-
           .team_01 {
             padding: 14px 10px;
           }
-
           .team_01 h3 {
             font-size: 15px;
           }
-
           .tm_social a {
             width: 32px;
             height: 32px;
             font-size: 12px;
           }
-
           .blogContent h3 {
             font-size: 16px;
           }
         }
 
-        /* Small phones */
         @media (max-width: 480px) {
           .service-grid {
             grid-template-columns: 1fr;
             gap: 16px;
           }
-
           .service_item_01 .siThumb {
             height: 200px;
           }
-
           .team-grid {
             grid-template-columns: 1fr 1fr;
             gap: 12px;
           }
-
           .client-grid {
             grid-template-columns: 1fr 1fr;
             gap: 16px;
           }
-
           .secTitle {
             font-size: 22px;
           }
-
           .beproTab .nav-link {
             padding: 6px 14px;
             font-size: 12px;
           }
-
           .berpo_btn {
             padding: 10px 22px;
             font-size: 13px;
           }
-
           .testimonial-grid {
             gap: 20px;
           }
@@ -1071,12 +1030,47 @@ const Service = () => {
       `}</style>
 
       {/* ===== SERVICES SECTION ===== */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center"><br /><br /><br /><br />
-            <div className="subTitle">Our Expertise</div>
-            <h2 className="secTitle">Core Geospatial <span>Services</span></h2>
-            <p style={{ color: '#5a5a72', maxWidth: '620px', margin: '0 auto 10px' }}>
+      <section className="section-padding" style={{ 
+        position: 'relative', 
+        overflow: 'hidden',
+        backgroundColor: '#0a1922'
+      }}>
+        {servicesBg && (
+          <div
+            className="background_img"
+            style={{
+              backgroundImage: `url(${servicesBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              zIndex: 0
+            }}
+          />
+        )}
+        
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0, 0, 0, 0.6)',
+            zIndex: 1
+          }}
+        />
+
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="text-center"><br /><br /><br /> <br />
+            <div className="subTitle" style={{ color: '#ff6b6b' }}>Our Expertise</div>
+            <h2 className="secTitle" style={{ color: '#ffffff' }}>
+              Core Geospatial <span style={{ color: '#bb0b0b' }}>Services</span>
+            </h2>
+            <p style={{ color: '#d0d0dd' }}>
               Delivering precise, data-driven solutions for modern mapping and asset management.
             </p>
           </div>
@@ -1248,7 +1242,6 @@ const Service = () => {
             <h2 className="secTitle">What Our <span>Clients</span> Say</h2>
           </div>
           <div className="testimonial-grid">
-            {/* Left: Accordion */}
             <div>
               <div className="accordion">
                 {[
@@ -1272,7 +1265,6 @@ const Service = () => {
               </div>
             </div>
 
-            {/* Right: Testimonial carousel */}
             <div>
               {testimonials.map((t, idx) => (
                 <div key={t.id} style={{ display: activeTestimonial === idx ? 'block' : 'none' }}>

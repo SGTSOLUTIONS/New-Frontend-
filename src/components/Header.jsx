@@ -31,7 +31,7 @@ function Header() {
                                 <nav className="mainMenu">
                                     <ul>
                                         <li className="menu-item">
-                                            <a href="#">Home</a>
+                                            <Link to="/">Home</Link>
                                         </li>
                                         <li className="menu-item">
                                             <Link to="/service">Service</Link>
