@@ -976,7 +976,7 @@
 }
 .sitem_con{
     position: relative;
-    padding: 22px 30px 23px 105px;
+    padding: 22px 3px 23px 105px;
 }
 .ibMeta{
     font-size: 50px;
@@ -1912,6 +1912,7 @@ select::-ms-input-placeholder{
 .testimonialslider01.owl-carousel{
     position: relative;
     padding: 40px 0 0 7px;
+    
 }
 .testiItem01{
     position: relative;
@@ -2644,6 +2645,7 @@ select::-ms-input-placeholder{
     margin: -15px;
     padding: 15px;
     width: calc(100% + 30px);
+    webkit-transform: translate3d(0, 0, 0);
 }
 .serviceSlider .owl-item.active .service_item_03 {
     box-shadow: 0px 9px 35px 0px rgba(33, 37, 41, 0.07);
