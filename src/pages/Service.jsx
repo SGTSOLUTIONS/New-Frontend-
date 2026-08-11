@@ -300,9 +300,8 @@ const Service = () => {
         .service_item_01 .sitem_con {
           padding: 24px 24px 26px;
           text-align: center;
-          background-image:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/background.jpg");
+          background: rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 15px 15px;
         }
 
         .service_item_01 .ibMeta {
@@ -914,6 +913,7 @@ const Service = () => {
           }
           .service_item_01 .sitem_con {
             padding: 16px 14px 20px;
+            
           }
           .service_item_01 h3 {
             font-size: 16px;
