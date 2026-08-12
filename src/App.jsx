@@ -14,6 +14,7 @@ import DroneSurvey from "./pages/services/DroneSurvey";
 import Mapping2D from "./pages/services/Mapping2D";
 import Consultancy from "./pages/services/Consultancy";
 import WebDevelopment from "./pages/services/WebDevelopment";
+import About from './pages/about';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
       {/* Services list with MainLayout */}
       <Route path="/services" element={<MainLayout />}>
         <Route index element={<Service />} />
+      </Route>
+      <Route path="/about" element={<MainLayout />}>
+        <Route index element={<About />} />
       </Route>
       
       {/* Redirect /service to /services */}

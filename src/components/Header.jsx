@@ -37,7 +37,7 @@ function Header() {
                                             <Link to="/service">Service</Link>
                                         </li>
                                         <li className="menu-item">
-                                            <Link to="/">About</Link>
+                                            <Link to="/about">About</Link>
                                         </li>
                                         <li className="menu-item">
                                             <Link to="/">contact</Link>
