@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import Service from './pages/Service';
+import About from "./pages/About";  // Capital A
 
 // Import all service detail pages
 import WebGis from "./pages/services/WebGis";
@@ -14,7 +15,6 @@ import DroneSurvey from "./pages/services/DroneSurvey";
 import Mapping2D from "./pages/services/Mapping2D";
 import Consultancy from "./pages/services/Consultancy";
 import WebDevelopment from "./pages/services/WebDevelopment";
-import About from './pages/about';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
       <Route path="/services" element={<MainLayout />}>
         <Route index element={<Service />} />
       </Route>
-      <Route path="/about" element={<MainLayout />}>
+      <Route path="about" element={<MainLayout />}>
         <Route index element={<About />} />
       </Route>
       

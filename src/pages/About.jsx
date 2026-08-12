@@ -1,12 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import bg from '../assets/images/bg/bannergg.jpg'
 
 const About = () => {
   const testimonialRef = useRef(null);
   const clientRef = useRef(null);
+  const [activeFaq, setActiveFaq] = useState('ma_collapes_02');
 
   useEffect(() => {
-    // Initialize Owl Carousel for testimonials
     if (window.$ && testimonialRef.current) {
       window.$('.testimonialslider02').owlCarousel({
         items: 1,
@@ -18,7 +19,6 @@ const About = () => {
       });
     }
 
-    // Initialize Owl Carousel for clients
     if (window.$ && clientRef.current) {
       window.$('.client-slider').owlCarousel({
         items: 4,
@@ -35,7 +35,6 @@ const About = () => {
       });
     }
 
-    // Initialize accordion
     if (window.$) {
       window.$('.collapse').on('show.bs.collapse', function () {
         window.$(this).closest('.card').addClass('activeBg');
@@ -45,12 +44,10 @@ const About = () => {
       });
     }
 
-    // Initialize popup video
     if (window.$ && window.lightcase) {
       window.$('.popup_video').lightcase();
     }
 
-    // Cleanup
     return () => {
       if (window.$ && testimonialRef.current) {
         window.$('.testimonialslider02').trigger('destroy.owl.carousel');
@@ -61,182 +58,136 @@ const About = () => {
     };
   }, []);
 
-  // Service data
+  const toggleFaq = (faqId) => {
+    setActiveFaq(activeFaq === faqId ? '' : faqId);
+  };
+
   const services = [
     {
       id: 1,
-      icon: 'assets/images/service/4.png',
+      icon: '',
       title: 'Flexible Solutions',
-      description:
-        'We develop the relationships that Into underpin the next phase in your Teen organisation\'s growth.',
+      description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
       link: '/single-service',
     },
     {
       id: 2,
-      icon: 'assets/images/service/5.png',
+      icon: '',
       title: 'Premium Contact',
-      description:
-        'We develop the relationships that Into underpin the next phase in your Teen organisation\'s growth.',
+      description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
       link: '/single-service',
     },
     {
       id: 3,
-      icon: 'assets/images/service/6.png',
+      icon: '',
       title: 'Creative Idea',
-      description:
-        'We develop the relationships that Into underpin the next phase in your Teen organisation\'s growth.',
+      description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
       link: '/single-service',
     },
   ];
 
-  // Team data
   const team = [
-    {
-      id: 1,
-      name: 'Arnika Sorkar',
-      role: 'Web Designer',
-      image: 'assets/images/team/1.jpg',
-    },
-    {
-      id: 2,
-      name: 'Georgie Haynes',
-      role: 'Web Developer',
-      image: 'assets/images/team/2.jpg',
-    },
-    {
-      id: 3,
-      name: 'Jizz Merkel',
-      role: 'Business Expert',
-      image: 'assets/images/team/3.jpg',
-    },
+    { id: 1, name: 'Arnika Sorkar', role: 'Web Designer', image: '' },
+    { id: 2, name: 'Georgie Haynes', role: 'Web Developer', image: '' },
+    { id: 3, name: 'Jizz Merkel', role: 'Business Expert', image: '' },
   ];
 
-  // Testimonial data
   const testimonials = [
     {
       id: 1,
-      avatar: 'assets/images/home2/t1.png',
+      avatar: '',
       text: "Ash's tactics & books have helped me a lot in my understanding on how social media advertising works.I can say that he is one of the best development professionals i have dealt with so far. His experience is great & he is such a great & pleasant person to work with as he understands what you are",
       author: 'Akshit Singh Dutt',
       role: 'Digital Marketing Manager',
     },
     {
       id: 2,
-      avatar: 'assets/images/home1/t1.png',
+      avatar: '',
       text: "Ash's tactics & books have helped me a lot in my understanding on how social media advertising works.I can say that he is one of the best development professionals i have dealt with so far. His experience is great & he is such a great & pleasant person to work with as he understands what you are",
       author: 'Matt Sanchzi',
       role: 'ThemeForest Exclusive',
     },
     {
       id: 3,
-      avatar: 'assets/images/home1/t2.png',
+      avatar: '',
       text: "Ash's tactics & books have helped me a lot in my understanding on how social media advertising works.I can say that he is one of the best development professionals i have dealt with so far. His experience is great & he is such a great & pleasant person to work with as he understands what you are",
       author: 'Billi Stanlake',
       role: 'ThemeForest Reviewer',
     },
   ];
 
-  // FAQ data
   const faqs = [
     {
       id: 'ma_collapes_01',
       question: 'Wte Have added a new exciting feature in v2.0',
-      answer:
-        'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
-      show: false,
+      answer: 'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
     },
     {
       id: 'ma_collapes_02',
       question: 'how Consultancy Experts Work?',
-      answer:
-        'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
-      show: true,
+      answer: 'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
     },
     {
       id: 'ma_collapes_03',
       question: 'Wte Have added a new exciting feature in v2.0',
-      answer:
-        'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
-      show: false,
+      answer: 'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
     },
   ];
 
-  const [activeFaq, setActiveFaq] = React.useState('ma_collapes_02');
-
-  const toggleFaq = (faqId) => {
-    setActiveFaq(activeFaq === faqId ? '' : faqId);
-  };
-
-  // Client logos
-  const clients = [
-    'assets/images/client-logo/9.png',
-    'assets/images/client-logo/10.png',
-    'assets/images/client-logo/11.png',
-    'assets/images/client-logo/12.png',
-  ];
+  const clients = ['', '', '', ''];
 
   return (
     <>
-      {/* Page Banner */}
       <section
         className="page_banner"
-        style={{ backgroundImage: 'url(assets/images/bg/banner.jpg)' }}
+        style={{
+          backgroundImage:  `url(${bg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight: '300px',
+        }}
       >
-        <div className="overlay"></div>
+     
+        
+    <div className="overlay"></div>
+
+    
         <div className="container largeContainer">
           <div className="row">
             <div className="col-md-12 text-center">
               <h2 className="banner-title">About Page</h2>
-              <p className="breadcrumbs">
-                <Link to="/">Home</Link>
-                <span>-</span>Pages<span>-</span>About Us 01
-              </p>
+         
             </div>
           </div>
+          
         </div>
-      </section>
-
-      {/* About Start */}
+          
+</section>
       <section className="aboutPageSection01">
         <div className="container largeContainer">
           <div className="row">
             <div className="col-lg-5">
               <div className="subTitle">Who We Are</div>
               <h2 className="secTitle">Custom IT Solutions for You Business</h2>
-              <p>
-                Since 2007 we have been a visionary and a reliable software
-                engineering partner for world-class brands. We are a boutique
-                digital transformation consultancy.
-              </p>
+              <p>Since 2007 we have been a visionary and a reliable software engineering partner for world-class brands. We are a boutique digital transformation consultancy.</p>
               <ul className="listItem">
-                <li>
-                  <i className="twi-check-circle"></i>Innovative Approach
-                  Consultancy
-                </li>
-                <li>
-                  <i className="twi-check-circle"></i>Flexibile Involvement
-                  Consultancy
-                </li>
-                <li>
-                  <i className="twi-check-circle"></i>Personal Manager
-                  Consultancy
-                </li>
+                <li><i className="twi-check-circle"></i>Innovative Approach Consultancy</li>
+                <li><i className="twi-check-circle"></i>Flexibile Involvement Consultancy</li>
+                <li><i className="twi-check-circle"></i>Personal Manager Consultancy</li>
               </ul>
               <Link className="berpo_btn with_icon04" to="/service1">
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
-                <span className="bp-text">
-                  Read More<i className="twi-arrow-right"></i>
-                </span>
+                <span className="bp-text">Read More<i className="twi-arrow-right"></i></span>
               </Link>
             </div>
             <div className="col-lg-7">
               <div className="abpageThumb">
-                <img src="assets/images/about/1.jpg" alt="" />
+                <img src="/assets/images/about/1.jpg" alt="" />
                 <div className="abInner">
-                  <img src="assets/images/about/2.jpg" alt="" />
+                  <img src="/assets/images/about/2.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -244,7 +195,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Services Start */}
       <section className="service_section_09">
         <div className="container largeContainer">
           <div className="row">
@@ -258,11 +208,9 @@ const About = () => {
               <div className="col-lg-4 col-md-6" key={service.id}>
                 <div className="service_item_10">
                   <div className="ibMeta">
-                    <img src={service.icon} alt="" />
+                    <img src="/assets/images/service/4.jpg" alt="" />
                   </div>
-                  <h3>
-                    <Link to={service.link}>{service.title}</Link>
-                  </h3>
+                  <h3><Link to={service.link}>{service.title}</Link></h3>
                   <p>{service.description}</p>
                   <Link className="srm" to={service.link}>
                     <i className="twi-arrow-right1"></i>
@@ -274,22 +222,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Video Section Start */}
       <section className="abvideoSection videoSection01">
         <div className="container largeContainer">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <div className="subTitle">
-                We Have added a new exciting feature in v2.0
-              </div>
-              <h2 className="secTitle">
-                Organizations Realize the Benefits <br />
-                Forming Work Teams.
-              </h2>
-              <a
-                href="https://player.vimeo.com/video/213907368?h=3685456d6c"
-                className="popup_video vbtn02"
-              >
+              <div className="subTitle">We Have added a new exciting feature in v2.0</div>
+              <h2 className="secTitle">Organizations Realize the Benefits <br /> Forming Work Teams.</h2>
+              <a href="https://player.vimeo.com/video/213907368?h=3685456d6c" className="popup_video vbtn02">
                 <i className="bpro-play"></i>
               </a>
             </div>
@@ -297,7 +236,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="abFa1Section">
         <div className="container largeContainer">
           <div className="row">
@@ -307,19 +245,14 @@ const About = () => {
                 <h2 className="secTitle">Bepro FAQ</h2>
                 <div className="accordion bepAccordion" id="befAccordion01">
                   {faqs.map((faq, index) => (
-                    <div
-                      className={`card ${activeFaq === faq.id ? 'activeBg' : ''}`}
-                      key={faq.id}
-                    >
+                    <div className={`card ${activeFaq === faq.id ? 'activeBg' : ''}`} key={faq.id}>
                       <div className="faqInner">
                         <div className="card-header" id={`ma_ac_${index + 1}`}>
                           <h2 className="mb-0">
                             <button
                               type="button"
                               onClick={() => toggleFaq(faq.id)}
-                              className={
-                                activeFaq === faq.id ? '' : 'collapsed'
-                              }
+                              className={activeFaq === faq.id ? '' : 'collapsed'}
                               aria-expanded={activeFaq === faq.id}
                             >
                               <i>{index + 1}.</i> {faq.question}
@@ -344,23 +277,19 @@ const About = () => {
             <div className="col-lg-6">
               <div className="faqThumb">
                 <div className="withborder"></div>
-                <img src="assets/images/about/3.jpg" alt="" />
+                <img src="/assets/images/about/3.jpg" alt="" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Team Start */}
       <section className="teamSection01 abtmPad">
         <div className="container largeContainer">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <div className="subTitle">Our Memebers</div>
-              <h2 className="secTitle">
-                Meet Our Latest <br />
-                Team Member
-              </h2>
+              <div className="subTitle">Our Members</div>
+              <h2 className="secTitle">Meet Our Latest <br /> Team Member</h2>
             </div>
           </div>
           <div className="row">
@@ -368,22 +297,14 @@ const About = () => {
               <div className="col-lg-4 col-md-6" key={member.id}>
                 <div className="team_01 text-center">
                   <div className="tm_thumb">
-                    <img src={member.image} alt={member.name} />
+                    <img src="/assets/images/team/1.jpg" alt={member.name} />
                     <div className="tm_social">
-                      <a href="https://www.facebook.com/">
-                        <i className="twi-facebook-square"></i>Facebook
-                      </a>
-                      <a href="https://twitter.com/">
-                        <i className="twi-twitter"></i>Twitter
-                      </a>
-                      <a href="https://linkedin.com/">
-                        <i className="twi-youtube"></i>Youtube
-                      </a>
+                      <a href="https://www.facebook.com/"><i className="twi-facebook-square"></i>Facebook</a>
+                      <a href="https://twitter.com/"><i className="twi-twitter"></i>Twitter</a>
+                      <a href="https://linkedin.com/"><i className="twi-youtube"></i>Youtube</a>
                     </div>
                   </div>
-                  <h3>
-                    <Link to="/single-team">{member.name}</Link>
-                  </h3>
+                  <h3><Link to="/single-team">{member.name}</Link></h3>
                   <p>{member.role}</p>
                 </div>
               </div>
@@ -392,7 +313,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Testimonial Start */}
       <section className="testimonialSection02 abTest01">
         <div className="container largeContainer">
           <div className="row">
@@ -401,15 +321,12 @@ const About = () => {
                 {testimonials.map((testimonial) => (
                   <div className="testiItem02" key={testimonial.id}>
                     <div className="quote">
-                      <img src="assets/images/home2/quote.png" alt="" />
+                      <img src="/assets/images/home2/quote.jpg" alt="" />
                     </div>
-                    <img src={testimonial.avatar} alt="" />
+                    <img src="/assets/images/home2/t1.jpg" alt="" />
                     <p className="quotation">{testimonial.text}</p>
                     <div className="ts_author">
-                      <h5>
-                        {testimonial.author},
-                        <span>{testimonial.role}</span>
-                      </h5>
+                      <h5>{testimonial.author}, <span>{testimonial.role}</span></h5>
                     </div>
                   </div>
                 ))}
@@ -419,15 +336,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* Client Logo Start */}
       <section className="clientSection03">
         <div className="container largeContainer">
           <div className="row">
             <div className="col-lg-12">
               <div className="client-slider owl-carousel" ref={clientRef}>
-                {clients.map((client, index) => (
+                {[1, 2, 3, 4].map((item, index) => (
                   <a href="javascript:void(0);" key={index}>
-                    <img src={client} alt="" />
+                    <img src={`/assets/images/client-logo/${9 + index}.png`} alt="" />
                   </a>
                 ))}
               </div>

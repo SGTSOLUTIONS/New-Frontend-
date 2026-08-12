@@ -10346,12 +10346,12 @@ input[type="checkbox"]:checked ~ span:before {
 /------------------------------------------------------*/
 /*--- Page Banner ---*/
 .page_banner{
-    min-height: 631px;
-    position: relative;
+    min-height: 1000px;
+    position:center;
     background-size: cover;
     background-color: #1d1d1d;
     overflow: hidden;
-    padding: 342px 0px 120px;
+    padding: 392px 50px 190px;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -10359,10 +10359,10 @@ input[type="checkbox"]:checked ~ span:before {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 200px;
     content: '';
-    background: rgba(29, 29, 29, .74);
+
 }
 .page_banner .containier{
     position: relative;
