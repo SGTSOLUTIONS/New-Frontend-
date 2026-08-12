@@ -33,6 +33,7 @@ import team2 from '../assets/images/team/2.jpg';
 import team3 from '../assets/images/team/3.jpg';
 import testimonial1 from '../assets/images/home1/t1.jpg';
 import testimonial2 from '../assets/images/home1/t2.jpeg';
+import testimonial3 from '../assets/images/home1/t3.jpeg';
 import blog1 from '../assets/images/blog/1.jpg';
 import blog2 from '../assets/images/blog/2.jpg';
 import blog3 from '../assets/images/blog/3.jpg';
@@ -812,7 +813,7 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-globe"></i>
                   </div>
-                  <h3><a href="single-service.html">Web GIS</a></h3>
+                  <h3><a href='/services/web-gis'>Web GIS</a></h3>
                   <p>Web-based mapping portals for land records and asset tracking.</p>
                 </div>
               </div>
@@ -826,7 +827,7 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
-                  <h3><a href="single-service.html">Spatial Revenue Intelligence</a></h3>
+                  <h3><a href='/services/geo-property'>Spatial Revenue Intelligence</a></h3>
                   <p>Digitize buildings and parcels from aerial imagery.</p>
                 </div>
               </div>
@@ -840,7 +841,7 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-handshake"></i>
                   </div>
-                  <h3><a href="single-service.html">Drone & DGPS Survey</a></h3>
+                  <h3><a href='/services/drone-survey'>Drone & DGPS Survey</a></h3>
                   <p>Centimeter-level accuracy for property mapping.</p>
                 </div>
               </div>
@@ -1168,115 +1169,138 @@ const Home = () => {
       </section>
       {/* Team End */}
 
-      {/* Testimonial Start */}
-      <section className="testimonialSection01 py-5" style={{ background: '#f8f9fa' }}>
-        <div className="container largeContainer">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <div className="subTitle">testimonial</div>
-              <h2 className="secTitle">What Our Clients Say</h2>
+{/* Testimonial Start */}
+<section className="testimonialSection01 py-5" style={{ background: '#f8f9fa' }}>
+  <div className="container largeContainer">
+    <div className="row">
+      <div className="col-lg-12 text-center">
+        <div className="subTitle">testimonial</div>
+        <h2 className="secTitle">What Our Clients Say</h2>
+      </div>
+    </div>
+    <div className="row mt-4">
+      <div className="col-md-6">
+        <div className="accordion bepAccordion" id="befAccordion01">
+          <div className="card">
+            <div className="card-header" id="ma_ac_01">
+              <h2 className="mb-0">
+                <button className="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_01" data-aria-expanded="false" data-aria-controls="ma_collapes_01">
+                  <i>1.</i> Why Choose Our Sgt Solutions?
+                  <span></span>
+                </button>
+              </h2>
             </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-md-6">
-              <div className="accordion bepAccordion" id="befAccordion01">
-                <div className="card">
-                  <div className="card-header" id="ma_ac_01">
-                    <h2 className="mb-0">
-                      <button className="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_01" data-aria-expanded="false" data-aria-controls="ma_collapes_01">
-                        <i>1.</i> Why Choose Our Sgt Solutions?
-                        <span></span>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="ma_collapes_01" className="collapse" aria-labelledby="ma_ac_01" data-parent="#befAccordion01">
-                    <div className="card-body">
-                      We combine cutting-edge technology with deep domain expertise to deliver accurate, actionable spatial intelligence.
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="ma_ac_02">
-                    <h2 className="mb-0">
-                      <button type="button" data-toggle="collapse" data-target="#ma_collapes_02" data-aria-expanded="true" data-aria-controls="ma_collapes_02">
-                        <i>2.</i> How Do We Ensure Accuracy
-                        <span></span>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="ma_collapes_02" className="collapse show" aria-labelledby="ma_ac_02" data-parent="#befAccordion01">
-                    <div className="card-body">
-                      We use high-precision LiDAR, DGPS, and photogrammetry with rigorous quality control at every stage.
-                    </div>
-                  </div>
-                </div>
-                <div className="card">
-                  <div className="card-header" id="ma_ac_03">
-                    <h2 className="mb-0">
-                      <button className="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_03" data-aria-expanded="false" data-aria-controls="ma_collapes_03">
-                        <i>3.</i> What Industries Do We Serve?
-                        <span></span>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="ma_collapes_03" className="collapse" aria-labelledby="ma_ac_03" data-parent="#befAccordion01">
-                    <div className="card-body">
-                      Urban planning, agriculture, real estate, infrastructure, environmental monitoring, and government.
-                    </div>
-                  </div>
-                </div>
+            <div id="ma_collapes_01" className="collapse" aria-labelledby="ma_ac_01" data-parent="#befAccordion01">
+              <div className="card-body">
+                We combine cutting-edge technology with deep domain expertise to deliver accurate, actionable spatial intelligence.
               </div>
             </div>
-            <div className="col-md-6">
-              <div
-                id="testimonialCarousel"
-                className="carousel slide"
-                data-ride="carousel"
-                data-interval="4000"
-                data-pause="false"
-              >
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
-                      <h5>Exceptional Service</h5>
-                      <p className="quotation">
-                       "SGT Solutions successfully delivered the comprehensive Property Survey Mapping project for Coimbatore City Municipal Corporation.By deploying their proprietary Spatial Revenue Intelligence System (SRIS), they accurately mapped urban property boundaries andintegrated spatial data seamlessly. Their technology has been highly effective inidentifying previously unassessed commercial structures and verifying built-up areavariations."
-                      </p>
-                      <div className="ts_author">
-                        <img src={testimonial1} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover' }} />
-                        <div>
-                          <h5>Coimbatore City Municipal Corporation</h5>
-                          <span>ThemeForest Exclusive</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
-                      <h5>Provide Awesome Customer</h5>
-                      <p className="quotation">
-                        "SGT Solutions has been a vital technical partner for the Marutham Foundation. Their advanced GIS analysis and hydro-spatial mapping helped trackecological degradation, siltation levels, and natural inlet channels across projectzones.Dr. Saravani and her team successfully bridged cutting-edge technology withgrassroots environmental restoration, optimizing rainwater harvesting catchments forwater body renovation initiatives."
-                      </p>
-                      <div className="ts_author">
-                        <img src={testimonial2} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover' }} />
-                        <div>
-                          <h5>Marutham Foundation</h5>
-                          <span>Envato Author</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <ol className="carousel-indicators" style={{ position: 'relative', marginTop: '20px' }}>
-                  <li data-target="#testimonialCarousel" data-slide-to="0" className="active" style={{ width: '12px', height: '12px', borderRadius: '50%' }}></li>
-                  <li data-target="#testimonialCarousel" data-slide-to="1" style={{ width: '12px', height: '12px', borderRadius: '50%' }}></li>
-                </ol>
+          </div>
+          <div className="card">
+            <div className="card-header" id="ma_ac_02">
+              <h2 className="mb-0">
+                <button type="button" data-toggle="collapse" data-target="#ma_collapes_02" data-aria-expanded="true" data-aria-controls="ma_collapes_02">
+                  <i>2.</i> How Do We Ensure Accuracy
+                  <span></span>
+                </button>
+              </h2>
+            </div>
+            <div id="ma_collapes_02" className="collapse show" aria-labelledby="ma_ac_02" data-parent="#befAccordion01">
+              <div className="card-body">
+                We use high-precision LiDAR, DGPS, and photogrammetry with rigorous quality control at every stage.
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-header" id="ma_ac_03">
+              <h2 className="mb-0">
+                <button className="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_03" data-aria-expanded="false" data-aria-controls="ma_collapes_03">
+                  <i>3.</i> What Industries Do We Serve?
+                  <span></span>
+                </button>
+              </h2>
+            </div>
+            <div id="ma_collapes_03" className="collapse" aria-labelledby="ma_ac_03" data-parent="#befAccordion01">
+              <div className="card-body">
+                Urban planning, agriculture, real estate, infrastructure, environmental monitoring, and government.
               </div>
             </div>
           </div>
         </div>
-      </section>
-      {/* Why Choose End */}
+      </div>
+      <div className="col-md-6">
+        <div
+          id="testimonialCarousel"
+          className="carousel slide"
+          data-ride="carousel"
+          data-interval="4000"
+          data-pause="false"
+        >
+          <div className="carousel-inner">
+            {/* Testimonial 1 */}
+            <div className="carousel-item active">
+              <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
+                <h5>Exceptional Service</h5>
+                <p className="quotation">
+                  "SGT Solutions successfully delivered the comprehensive Property Survey Mapping project for Coimbatore City Municipal Corporation.By deploying their proprietary Spatial Revenue Intelligence System (SRIS), they accurately mapped urban property boundaries andintegrated spatial data seamlessly. Their technology has been highly effective inidentifying previously unassessed commercial structures and verifying built-up areavariations."
+                </p>
+                <div className="ts_author">
+                  <img src={testimonial1} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover' }} />
+                  <div>
+                    <h5>Coimbatore City Municipal Corporation</h5>
+                    <span>Government Partner</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Testimonial 2 */}
+            <div className="carousel-item">
+              <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
+                <h5>Environmental Excellence</h5>
+                <p className="quotation">
+                  "SGT Solutions has been a vital technical partner for the Marutham Foundation. Their advanced GIS analysis and hydro-spatial mapping helped trackecological degradation, siltation levels, and natural inlet channels across projectzones.Dr. Saravani and her team successfully bridged cutting-edge technology withgrassroots environmental restoration, optimizing rainwater harvesting catchments forwater body renovation initiatives."
+                </p>
+                <div className="ts_author">
+                  <img src={testimonial2} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover' }} />
+                  <div>
+                    <h5>Marutham Foundation</h5>
+                    <span>Environmental Partner</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Testimonial 3 - NEW */}
+            <div className="carousel-item">
+              <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
+                <h5>Exceptional Service</h5>
+                <p className="quotation">
+                 "SGT Solutions completed extensive spatial mapping and waterquality analysis for the Institute for Water Studies, Chennai. Using geospatiallogy, they tracked water bodies and aquifer profiles, while lab-based indexin measured critical chemical parameters and contamination trends. Their work providedreliable datasets, significantly aiding research and water resource managementinitiatives."
+                </p>
+                <div className="ts_author">
+                  <img src={testimonial3} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover' }} />
+                  <div>
+                    <h5>Institute for Water Studies</h5>
+                    <span>Government Agency</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Carousel Indicators - Updated to 3 */}
+          <ol className="carousel-indicators" style={{ position: 'relative', marginTop: '20px' }}>
+            <li data-target="#testimonialCarousel" data-slide-to="0" className="active" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#bb0b0b', border: 'none' }}></li>
+            <li data-target="#testimonialCarousel" data-slide-to="1" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ccc', border: 'none' }}></li>
+            <li data-target="#testimonialCarousel" data-slide-to="2" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ccc', border: 'none' }}></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/* Testimonial End */}
 
       {/* Blog Start */}
       <section className="blogSectiont01 py-5">
