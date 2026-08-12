@@ -57,8 +57,19 @@ const responsiveStyles = `
     .hero-content {
       padding: 0 5% !important;
     }
-  }
+  } .testiItem01 .quotation {
+      font-size: 16px !important;
+    }
+      .carousel-testimonial {
+  height: 400px;
+  overflow: hidden;
+}
 
+.carousel-testimonial img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
   @media (max-width: 991.98px) {
     .hero-content h1 {
       font-size: 42px !important;
@@ -208,7 +219,7 @@ const responsiveStyles = `
       font-size: 18px !important;
     }
     .testiItem01 .quotation {
-      font-size: 14px !important;
+      font-size: 1px !important;
     }
     .ts_author img {
       width: 60px !important;
@@ -1238,7 +1249,7 @@ const Home = () => {
         >
           <div className="carousel-inner">
             {/* Testimonial 1 */}
-            <div className="carousel-item active">
+            <div className="carousel-item  carousel-testimonial active">
               <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
                 <h5>Exceptional Service</h5>
                 <p className="quotation">
@@ -1255,7 +1266,7 @@ const Home = () => {
             </div>
             
             {/* Testimonial 2 */}
-            <div className="carousel-item">
+            <div className="carousel-item carousel-testimonial">
               <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
                 <h5>Environmental Excellence</h5>
                 <p className="quotation">
@@ -1272,7 +1283,7 @@ const Home = () => {
             </div>
             
             {/* Testimonial 3 - NEW */}
-            <div className="carousel-item">
+            <div className="carousel-item carousel-testimonial">
               <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
                 <h5>Exceptional Service</h5>
                 <p className="quotation">
@@ -1307,8 +1318,8 @@ const Home = () => {
         <div className="container largeContainer">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <div className="subTitle">Daily News</div>
-              <h2 className="secTitle">Latest News</h2>
+              <div className="subTitle">GEOSPATIAL INSIGHTS</div>
+              <h2 className="secTitle">Latest Geospatial Insights</h2>
             </div>
           </div>
           <div className="row mt-4">
@@ -1318,8 +1329,8 @@ const Home = () => {
                   <img src={blog1} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>20 March, 2021</a>
-                  <h3><a href="single-blog.html">Italic Mountains, she had a last view back</a></h3>
+                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>12 August, 2026</a>
+                  <h3><a href="single-blog.html">How GIS Is Transforming Modern Property Mapping</a></h3>
                   <div className="bpcon">
                     <a className="author" href="blog1.html"><img src={blogAuthor1} alt="" />Keesler Smith</a>
                     <a href="single-blog.html"><i className="twi-comment2"></i></a>
@@ -1333,8 +1344,8 @@ const Home = () => {
                   <img src={blog2} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>20 March, 2021</a>
-                  <h3><a href="single-blog.html">Styles come and go. Design language not a style.</a></h3>
+                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>5 August, 2026</a>
+                  <h3><a href="single-blog.html">The Role of Drones in Modern Land Surveying</a></h3>
                   <div className="bpcon">
                     <a className="author" href="blog1.html"><img src={blogAuthor2} alt="" />Keesler Smith</a>
                     <a href="single-blog.html"><i className="twi-comment2"></i></a>
@@ -1348,8 +1359,8 @@ const Home = () => {
                   <img src={blog3} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>20 March, 2021</a>
-                  <h3><a href="single-blog.html">Dharma Home Suites at Novia offers fully</a></h3>
+                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>28 July, 2026</a>
+                  <h3><a href="single-blog.html">Turning Aerial Imagery Into Actionable Insights</a></h3>
                   <div className="bpcon">
                     <a className="author" href="blog1.html"><img src={blogAuthor3} alt="" />Keesler Smith</a>
                     <a href="single-blog.html"><i className="twi-comment2"></i></a>

@@ -170,7 +170,7 @@
 .clientSection01{
 	position: relative;
 	z-index: 2;
-	margin-top: -60px;
+	/* margin-top: -60px; */
 }
 .pricingSection01{
 	position: relative;
@@ -182,9 +182,9 @@
 	background: url(../images/5_1.jpg) no-repeat top center / cover;
 }
 .videoSection01 .subTitle{
-	color: #dadada;
+	color: #181616;
 	font-size: 19px;
-	font-weight: 400;
+	font-weight: 500;
 	text-transform: none;
 	margin: 0 0 26px;
 }
