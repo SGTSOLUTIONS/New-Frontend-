@@ -6,8 +6,8 @@ function SearchPopup(){
             <div className="container largeContainer">
                 <div className="row">
                     <div className="col-md-9">
-                        <p><i className="bpro-mail-2"></i><a href="#">Mail: info@gmail.com</a></p>
-                        <p><i className="bpro-phone-ringing"></i><a href="tel:+1245698909">Phone: + 124 569 89 09</a></p>
+                        <p><i className="bpro-mail-2"></i><a href="#">sgtsolutionsinfo@gmail.com</a></p>
+                        <p><i className="bpro-phone-ringing"></i><a href="tel:+1245698909">Phone: +91 89031 38792</a></p>
                     </div>
                     <div className="col-md-3">
                         <div className="topsocial">
