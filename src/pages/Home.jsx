@@ -907,7 +907,7 @@ const Home = () => {
         <div className="container largeContainer">
           <div className="row align-items-center">
             <div className="col-6 col-md-3 text-center mb-4 mb-md-0 client-logo-item">
-              <a href="javascript:void(0);"><img src={clientLogo1} alt="" className="img-fluid" style={{ maxHeight: '150px', objectFit: 'contain' }} /></a>
+              <a href="javascript:void(0);"><img src={clientLogo1} alt="" className="img-fluid" style={{ maxHeight: '80px', objectFit: 'contain' }} /></a>
             </div>
             <div className="col-6 col-md-3 text-center mb-4 mb-md-0 client-logo-item">
               <a href="javascript:void(0);"><img src={clientLogo2} alt="" className="img-fluid" style={{ maxHeight: '80px', objectFit: 'contain' }} /></a>
