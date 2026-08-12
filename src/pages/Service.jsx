@@ -525,7 +525,7 @@ const Service = () => {
 
         .tab-content-inner .img-col img {
           border-radius: 16px;
-          width: 100%;
+          width: 200%;
         }
 
         /* ===== TEAM ===== */
@@ -1205,30 +1205,7 @@ const Service = () => {
         </div>
       </section>
 
-      {/* ===== TEAM ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Our Team</div>
-            <h2 className="secTitle">Meet the <span>Experts</span></h2>
-          </div>
-          <div className="team-grid">
-            {teamMembers.map(member => (
-              <div className="team_01" key={member.id}>
-                <img src={member.img} alt={member.name} />
-                <h3><Link to="/team">{member.name}</Link></h3>
-                <p>{member.role}</p>
-                <div className="tm_social">
-                  <a href="#"><i className="fab fa-facebook-f"></i></a>
-                  <a href="#"><i className="fab fa-twitter"></i></a>
-                  <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* ===== TESTIMONIALS + ACCORDION ===== */}
       <section className="section-padding">
         <div className="container">
