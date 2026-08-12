@@ -224,7 +224,7 @@ const Service = () => {
 
         /* ===== TYPOGRAPHY ===== */
         .subTitle {
-          font-size: 13px;
+          font-size: 17px;
           letter-spacing: 2.5px;
           text-transform: uppercase;
           color: #bb0b0b;
@@ -241,7 +241,8 @@ const Service = () => {
         }
 
         .secTitle span {
-          color: #bb0b0b;
+          color: #0f0f0f;
+          font-weight: 400;
         }
 
         /* ===== BUTTONS ===== */
@@ -250,7 +251,7 @@ const Service = () => {
           background: #bb0b0b;
           color: #ffffff;
           font-weight: 600;
-          padding: 14px 38px;
+          padding: 1px 38px;
           border-radius: 50px;
           font-size: 15px;
           border: none;
@@ -364,7 +365,8 @@ const Service = () => {
         }
 
         .bg-light {
-          background: #f8f9fc;
+          background: #189144;
+          background-color: rgb(84, 32, 49) !important;
         }
 
         .bg-dark {
@@ -422,14 +424,16 @@ const Service = () => {
         }
 
         .listItem li {
-          padding: 6px 0;
-          font-size: 15px;
-          color: #2a2a42;
+          padding: 12.5pxS;
+          font-size: 16.5px;
+          color: #d6d6e3;
+         
         }
 
         .listItem li i {
           color: #bb0b0b;
-          margin-right: 10px;
+          margin-right: 12px;
+          padding:10px;
         }
 
         /* ===== CLIENTS ===== */
@@ -912,6 +916,9 @@ const Service = () => {
             font-size: 11px;
             letter-spacing: 1.8px;
           }
+        .subTitle h1 {
+    color: red;
+}
           .service-grid {
             grid-template-columns: 1fr 1fr;
             gap: 16px;
@@ -1112,9 +1119,9 @@ const Service = () => {
         <div className="container">
           <div className="achievement-wrap">
             <div className="achievement-content">
-              <div className="subTitle">Our Impact</div>
+              <div className="subTitle"><h1 >Our Impact</h1> </div>
               <h2 className="secTitle">Delivering <span>Geospatial</span> Excellence</h2>
-              <p style={{ color: '#4a4a62', marginBottom: '16px' }}>
+              <p style={{ color: '#f4f4fc', marginBottom: '16px' }}>
                 With over 7 years of expertise, we provide innovative GIS solutions that empower organizations to make data-driven decisions.
               </p>
               <ul className="listItem">
@@ -1127,8 +1134,8 @@ const Service = () => {
             <div className="achievement-image">
               <img src={achievementImg} alt="Achievement" />
               <div className="client-badge">
-                <h2>80<sup>+</sup></h2>
-                <h5>Global Partnxers</h5>
+                <h2>10<sup>+</sup></h2>
+                <h5>Years Experience</h5>
               </div>
             </div>
           </div>
