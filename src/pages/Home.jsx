@@ -1099,7 +1099,7 @@ const Home = () => {
                     <a href="https://linkedin.com/" style={{ background: '#fff', padding: '5px 10px', borderRadius: '5px', textDecoration: 'none', color: '#333', fontSize: '12px' }}><i className="twi-youtube"></i>Youtube</a>
                   </div>
                 </div>
-                <h3 className="mt-3"><a href="single-team.html" style={{ color: '#333', textDecoration: 'none' }}>Arnika Sorkar</a></h3>
+                <h3 className="mt-3"><a href="single-team.html" style={{ color: '#333', textDecoration: 'none' }}>Mohana</a></h3>
                 <p style={{ color: '#999' }}>Web Designer</p>
               </div>
             </div>
@@ -1123,7 +1123,7 @@ const Home = () => {
                     <a href="https://linkedin.com/" style={{ background: '#fff', padding: '5px 10px', borderRadius: '5px', textDecoration: 'none', color: '#333', fontSize: '12px' }}><i className="twi-youtube"></i>Youtube</a>
                   </div>
                 </div>
-                <h3 className="mt-3"><a href="single-team.html" style={{ color: '#333', textDecoration: 'none' }}>Georgie Haynes</a></h3>
+                <h3 className="mt-3"><a href="single-team.html" style={{ color: '#333', textDecoration: 'none' }}>Sheikh</a></h3>
                 <p style={{ color: '#999' }}>Web Developer</p>
               </div>
             </div>
@@ -1147,7 +1147,7 @@ const Home = () => {
                     <a href="https://linkedin.com/" style={{ background: '#fff', padding: '5px 10px', borderRadius: '5px', textDecoration: 'none', color: '#333', fontSize: '12px' }}><i className="twi-youtube"></i>Youtube</a>
                   </div>
                 </div>
-                <h3 className="mt-3"><a href="single-team.html" style={{ color: '#333', textDecoration: 'none' }}>Jizz Merkel</a></h3>
+                <h3 className="mt-3"><a href="single-team.html" style={{ color: '#333', textDecoration: 'none' }}>Nithish</a></h3>
                 <p style={{ color: '#999' }}>Business Expert</p>
               </div>
             </div>
@@ -1171,7 +1171,7 @@ const Home = () => {
                     <a href="https://linkedin.com/" style={{ background: '#fff', padding: '5px 10px', borderRadius: '5px', textDecoration: 'none', color: '#333', fontSize: '12px' }}><i className="twi-youtube"></i>Youtube</a>
                   </div>
                 </div>
-                <h3 className="mt-3"><a href="single-team.html" style={{ color: '#333', textDecoration: 'none' }}>Arnika Sorkar</a></h3>
+                <h3 className="mt-3"><a href="single-team.html" style={{ color: '#333', textDecoration: 'none' }}>Gayathiri</a></h3>
                 <p style={{ color: '#999' }}>Web Designer</p>
               </div>
             </div>
