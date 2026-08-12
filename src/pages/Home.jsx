@@ -1173,7 +1173,7 @@ const Home = () => {
         <div className="container largeContainer">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <div className="subTitle">Faqs & testimonial</div>
+              <div className="subTitle">testimonial</div>
               <h2 className="secTitle">What Our Clients Say</h2>
             </div>
           </div>
@@ -1184,14 +1184,14 @@ const Home = () => {
                   <div className="card-header" id="ma_ac_01">
                     <h2 className="mb-0">
                       <button className="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_01" data-aria-expanded="false" data-aria-controls="ma_collapes_01">
-                        <i>1.</i> Wte Have added a new exciting feature in v2.0
+                        <i>1.</i> Why Choose Our Sgt Solutions?
                         <span></span>
                       </button>
                     </h2>
                   </div>
                   <div id="ma_collapes_01" className="collapse" aria-labelledby="ma_ac_01" data-parent="#befAccordion01">
                     <div className="card-body">
-                      We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites,  We are committed to providing our customers
+                      We combine cutting-edge technology with deep domain expertise to deliver accurate, actionable spatial intelligence.
                     </div>
                   </div>
                 </div>
@@ -1199,14 +1199,14 @@ const Home = () => {
                   <div className="card-header" id="ma_ac_02">
                     <h2 className="mb-0">
                       <button type="button" data-toggle="collapse" data-target="#ma_collapes_02" data-aria-expanded="true" data-aria-controls="ma_collapes_02">
-                        <i>2.</i> how Consultancy Experts Work?
+                        <i>2.</i> How Do We Ensure Accuracy
                         <span></span>
                       </button>
                     </h2>
                   </div>
                   <div id="ma_collapes_02" className="collapse show" aria-labelledby="ma_ac_02" data-parent="#befAccordion01">
                     <div className="card-body">
-                      We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites,  We are committed to providing our customers
+                      We use high-precision LiDAR, DGPS, and photogrammetry with rigorous quality control at every stage.
                     </div>
                   </div>
                 </div>
@@ -1214,14 +1214,14 @@ const Home = () => {
                   <div className="card-header" id="ma_ac_03">
                     <h2 className="mb-0">
                       <button className="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_03" data-aria-expanded="false" data-aria-controls="ma_collapes_03">
-                        <i>3.</i> Wte Have added a new exciting feature in v2.0
+                        <i>3.</i> What Industries Do We Serve?
                         <span></span>
                       </button>
                     </h2>
                   </div>
                   <div id="ma_collapes_03" className="collapse" aria-labelledby="ma_ac_03" data-parent="#befAccordion01">
                     <div className="card-body">
-                      We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites,  We are committed to providing our customers
+                      Urban planning, agriculture, real estate, infrastructure, environmental monitoring, and government.
                     </div>
                   </div>
                 </div>
@@ -1238,14 +1238,14 @@ const Home = () => {
                 <div className="carousel-inner">
                   <div className="carousel-item active">
                     <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
-                      <h5>Provide Awesome Customer</h5>
+                      <h5>Exceptional Service</h5>
                       <p className="quotation">
-                        We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites,  We are committed to providing our customers with exceptional service.
+                       "SGT Solutions successfully delivered the comprehensive Property Survey Mapping project for Coimbatore City Municipal Corporation.By deploying their proprietary Spatial Revenue Intelligence System (SRIS), they accurately mapped urban property boundaries andintegrated spatial data seamlessly. Their technology has been highly effective inidentifying previously unassessed commercial structures and verifying built-up areavariations."
                       </p>
                       <div className="ts_author">
                         <img src={testimonial1} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover' }} />
                         <div>
-                          <h5>Matt Sanchzi</h5>
+                          <h5>Coimbatore City Municipal Corporation</h5>
                           <span>ThemeForest Exclusive</span>
                         </div>
                       </div>
@@ -1255,12 +1255,12 @@ const Home = () => {
                     <div className="testiItem01" style={{ background: '#fff', padding: '30px', borderRadius: '10px' }}>
                       <h5>Provide Awesome Customer</h5>
                       <p className="quotation">
-                        We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites,  We are committed to providing our customers with exceptional service.
+                        "SGT Solutions has been a vital technical partner for the Marutham Foundation. Their advanced GIS analysis and hydro-spatial mapping helped trackecological degradation, siltation levels, and natural inlet channels across projectzones.Dr. Saravani and her team successfully bridged cutting-edge technology withgrassroots environmental restoration, optimizing rainwater harvesting catchments forwater body renovation initiatives."
                       </p>
                       <div className="ts_author">
                         <img src={testimonial2} alt="" style={{ width: '70px', height: '70px', borderRadius: '50%', objectFit: 'cover' }} />
                         <div>
-                          <h5>Mark Smith</h5>
+                          <h5>Marutham Foundation</h5>
                           <span>Envato Author</span>
                         </div>
                       </div>
