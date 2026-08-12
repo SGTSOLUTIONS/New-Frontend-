@@ -120,7 +120,7 @@
 .logo img{
     height: 66px;
     width: auto;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 .mainMenu{
     position: relative;

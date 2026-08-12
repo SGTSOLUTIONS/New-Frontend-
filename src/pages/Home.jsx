@@ -667,7 +667,7 @@ const Home = () => {
                       marginBottom: '10px'
                     }}
                   >
-                    <span className="bg">GEOSPATIAL & DIGITAL SOLUTIONS</span>
+                   <br /><br /> <span className="bg">GEOSPATIAL & DIGITAL SOLUTIONS</span>
                   </div>
                   <h1
                     className="headFont"
@@ -679,7 +679,7 @@ const Home = () => {
                       marginBottom: '20px'
                     }}
                   >
-                    Mapping the World.<span style={{ color: '#bb0b0b' }}>Solutions.</span>
+                  Mapping the World.Building Smarter<span style={{ color: '#bb0b0b' }}> Solutions.</span>
                   </h1>
                   <p
                     style={{
@@ -736,7 +736,7 @@ const Home = () => {
                       marginBottom: '10px'
                     }}
                   >
-                    <span className="bg">SGT SOLUTIONS</span>
+                   <br /> <span className="bg">SGT SOLUTIONS</span>
                   </div>
                   <h1
                     className="headFont"
@@ -748,14 +748,14 @@ const Home = () => {
                       marginBottom: '20px'
                     }}
                   >
-                    Map Better.Decide<span style={{ color: '#bb0b0b' }}>Smarter.</span>
+                     See More. Map Better.<span style={{ color: '#bb0b0b' }}>Decide Smarter.</span>
                   </h1>
                   <p
                     style={{
                       color: '#d9d9d9',
                       fontSize: '18px',
                       fontWeight: 400,
-                      lineHeight: '28px',
+                      lineHeight: '26px',
                       marginBottom: '30px'
                     }}
                   >
