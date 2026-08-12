@@ -1989,8 +1989,8 @@ select::-ms-input-placeholder{
 .blogItem01{
     position: relative;
     background: #fbfbfb;
-    margin: 0 0 30px;
-    border-radius:  0 0 3px 3px;
+    margin: 0 0 35px;
+    border-radius:  20px;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
@@ -2000,6 +2000,14 @@ select::-ms-input-placeholder{
     -webkit-box-shadow: 0px 5px 29px 0px rgba(0, 0, 0, 0.06);
     -moz-box-shadow:    0px 5px 29px 0px rgba(0, 0, 0, 0.06);
     box-shadow:         0px 5px 29px 0px rgba(0, 0, 0, 0.06);
+}
+
+.blogItem01:hover h3 {
+  color: #bb0b0b;
+}
+
+.blogItem01:hover h3 a {
+  color: #bb0b0b;
 }
 .blogThumb{
     position: relative;
@@ -10346,12 +10354,12 @@ input[type="checkbox"]:checked ~ span:before {
 /------------------------------------------------------*/
 /*--- Page Banner ---*/
 .page_banner{
-    min-height: 1000px;
-    position:center;
+    min-height: 631px;
+    position: relative;
     background-size: cover;
     background-color: #1d1d1d;
     overflow: hidden;
-    padding: 392px 50px 190px;
+    padding: 342px 0px 120px;
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -10359,10 +10367,10 @@ input[type="checkbox"]:checked ~ span:before {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     content: '';
-
+    background: rgba(29, 29, 29, .74);
 }
 .page_banner .containier{
     position: relative;

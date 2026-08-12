@@ -1331,10 +1331,7 @@ const Home = () => {
                 <div className="blogContent">
                   <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>12 August, 2026</a>
                   <h3><a href="single-blog.html">How GIS Is Transforming Modern Property Mapping</a></h3>
-                  <div className="bpcon">
-                    <a className="author" href="blog1.html"><img src={blogAuthor1} alt="" />Keesler Smith</a>
-                    <a href="single-blog.html"><i className="twi-comment2"></i></a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -1346,10 +1343,7 @@ const Home = () => {
                 <div className="blogContent">
                   <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>5 August, 2026</a>
                   <h3><a href="single-blog.html">The Role of Drones in Modern Land Surveying</a></h3>
-                  <div className="bpcon">
-                    <a className="author" href="blog1.html"><img src={blogAuthor2} alt="" />Keesler Smith</a>
-                    <a href="single-blog.html"><i className="twi-comment2"></i></a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -1361,10 +1355,7 @@ const Home = () => {
                 <div className="blogContent">
                   <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>28 July, 2026</a>
                   <h3><a href="single-blog.html">Turning Aerial Imagery Into Actionable Insights</a></h3>
-                  <div className="bpcon">
-                    <a className="author" href="blog1.html"><img src={blogAuthor3} alt="" />Keesler Smith</a>
-                    <a href="single-blog.html"><i className="twi-comment2"></i></a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -1379,9 +1370,9 @@ const Home = () => {
           <div className="row align-items-center">
             <div className="col-md-5">
               <div className="ctaCon">
-                <h4><span style={{ color: '#bb0b0b' }}>We're</span>Creative</h4>
-                <h2 style={{ fontSize: '48px', fontWeight: 700 }}>Business</h2>
-                <h3 style={{ fontSize: '36px', fontWeight: 700 }}><span style={{ color: '#bb0b0b' }}>Solutions</span> Agency</h3>
+                <h4><span style={{ color: '#bb0b0b' }}>Mapping</span>Data.</h4>
+                <h2 style={{ fontSize: '48px', fontWeight: 700 }}>Creating</h2>
+                <h3 style={{ fontSize: '36px', fontWeight: 700 }}><span style={{ color: '#bb0b0b' }}></span> Impact</h3>
                 <a className="berpo_btn" href="contact.html" style={{ marginTop: '20px' }}>
                   <span className="bp-shape"></span>
                   <span className="bp-shape"></span>
