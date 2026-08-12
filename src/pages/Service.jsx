@@ -240,10 +240,7 @@ const Service = () => {
           margin-bottom: 12px;
         }
 
-        .secTitle span {
-          color: #0f0f0f;
-          font-weight: 400;
-        }
+     
 
         /* ===== BUTTONS ===== */
         .berpo_btn {
@@ -1120,7 +1117,7 @@ const Service = () => {
           <div className="achievement-wrap">
             <div className="achievement-content">
               <div className="subTitle"><h1 >Our Impact</h1> </div>
-              <h2 className="secTitle">Delivering <span>Geospatial</span> Excellence</h2>
+              <h2 className="secTitle">Delivering Geospatial Excellence</h2>
               <p style={{ color: '#f4f4fc', marginBottom: '16px' }}>
                 With over 7 years of expertise, we provide innovative GIS solutions that empower organizations to make data-driven decisions.
               </p>

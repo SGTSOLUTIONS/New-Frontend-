@@ -107,7 +107,7 @@
 .navbar01{
     justify-content: space-between;
     display: flex;
-    background: #fff;
+    background: white;
     border-radius: 3px;
     padding: 0 40px;
 }
@@ -124,7 +124,7 @@
 }
 .mainMenu{
     position: relative;
-    padding: 0 0 0 32px;
+    padding: 0 0 0 270px;
 }
 .mainMenu ul{
     position: relative;

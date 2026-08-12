@@ -36,6 +36,12 @@ function Header() {
                                         <li className="menu-item">
                                             <Link to="/service">Service</Link>
                                         </li>
+                                        <li className="menu-item">
+                                            <Link to="/">About</Link>
+                                        </li>
+                                        <li className="menu-item">
+                                            <Link to="/">contact</Link>
+                                        </li>
                                         {/* Rest of your menu items... */}
                                     </ul>
                                 </nav>
