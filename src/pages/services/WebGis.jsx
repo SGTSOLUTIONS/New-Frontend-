@@ -43,6 +43,10 @@ import servicesBg from '../../assets/images/service/services-bg.jpg';
 import webGisHero from '../../assets/images/web-gis/hero.jpg';
 import webGisFeature1 from '../../assets/images/web-gis/feature1.jpg';
 import webGisFeature2 from '../../assets/images/web-gis/feature2.jpg';
+import webGisFeature3 from '../../assets/images/web-gis/feature3.jpg';
+import webGisFeature4 from '../../assets/images/web-gis/feature4.jpg';
+import webGisFeature5 from '../../assets/images/web-gis/feature5.jpg';
+import webGisFeature6 from '../../assets/images/web-gis/feature6.jpg';
 
 // Web GIS Features data
 const webGisFeatures = [
@@ -67,7 +71,7 @@ const webGisFeatures = [
         icon: "fa-draw-polygon",
         title: "Feature Editing & Data Collection",
         description: "Web-based digitizing, form-based attribute entry, and geometry editing — perfect for collaborative mapping projects.",
-        image: webGisFeature2,
+        image: webGisFeature3,
         link: "/services/web-gis/feature-editing",
     },
     {
@@ -75,7 +79,7 @@ const webGisFeatures = [
         icon: "fa-chart-simple",
         title: "Location Analytics Dashboards",
         description: "Combine maps with charts, filters, and summary statistics. Identify hotspots, clusters, and spatial patterns at a glance.",
-        image: webGisFeature2,
+        image: webGisFeature4,
         link: "/services/web-gis/analytics",
     },
     {
@@ -83,7 +87,7 @@ const webGisFeatures = [
         icon: "fa-route",
         title: "Routing & Geocoding",
         description: "Address search, reverse geocoding, point-to-point routing, and isochrone analysis — turn locations into insights.",
-        image: webGisFeature2,
+        image: webGisFeature5,
         link: "/services/web-gis/routing",
     },
     {
@@ -91,7 +95,7 @@ const webGisFeatures = [
         icon: "fa-users",
         title: "Multi-User & Role-Based Access",
         description: "Secure login, user roles, and data-level permissions. Share sensitive layers only with authorized teams.",
-        image: webGisFeature2,
+        image: webGisFeature6,
         link: "/services/web-gis/access-control",
     },
 ];
