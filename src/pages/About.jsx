@@ -274,9 +274,38 @@ const About = () => {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div className="faqThumb">
-                                <div className="withborder"></div>
-                                <img src="/assets/images/about/3.jpg" alt="" />
+                            <div className="fqArea">
+                                <div className="subTitle">Just a Consultancy</div>
+                                <h2 className="secTitle">Bepro FAQ</h2>
+                                <div className="accordion bepAccordion" id="befAccordion01">
+                                    {faqs.map((faq, index) => (
+                                        <div className={`card ${activeFaq === faq.id ? 'activeBg' : ''}`} key={faq.id}>
+                                            <div className="faqInner">
+                                                <div className="card-header" id={`ma_ac_${index + 1}`}>
+                                                    <h2 className="mb-0">
+                                                        <button
+                                                            type="button"
+                                                            onClick={() => toggleFaq(faq.id)}
+                                                            className={activeFaq === faq.id ? '' : 'collapsed'}
+                                                            aria-expanded={activeFaq === faq.id}
+                                                        >
+                                                            <i>{index + 1}.</i> {faq.question}
+                                                            <span></span>
+                                                        </button>
+                                                    </h2>
+                                                </div>
+                                                <div
+                                                    id={faq.id}
+                                                    className={`collapse ${activeFaq === faq.id ? 'show' : ''}`}
+                                                    aria-labelledby={`ma_ac_${index + 1}`}
+                                                    data-parent="#befAccordion01"
+                                                >
+                                                    <div className="card-body">{faq.answer}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
