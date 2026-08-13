@@ -35,7 +35,7 @@ import blog1 from '../assets/images/blog/1.jpg';
 import blog2 from '../assets/images/blog/2.jpg';
 import blog3 from '../assets/images/blog/3.jpg';
 import blogAuthor1 from '../assets/images/blog/a1.jpg';
-import blogAuthor2 from '../assets/images/blog/a2.jpg'; 
+import blogAuthor2 from '../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../assets/images/blog/a3.jpg';
 import ctaImg1 from '../assets/images/home1/3.png';
 import ctaImg2 from '../assets/images/home1/4.png';
@@ -45,78 +45,87 @@ import servicesBg from '../assets/images/service/services-bg.jpg';
 
 // Service data
 const services = [
-  {
-    id: 1,
-    icon: 'fa-globe',
-    title: 'Web GIS',
-    description: 'Web-based mapping portals for land records and asset tracking.',
-    image: service1,
-    link: '/services/web-gis'
-  },
-  {
-    id: 2,
-    icon: 'fa-mobile-alt',
-    title: 'Mobile GIS',
-    description: 'Offline field applications for property surveys and data collection.',
-    image: service2,
-    link: '/services/mobile-gis'
-  },
-  {
-    id: 3,
-    icon: 'fa-map-marked-alt',
-    title: 'Spatial Revenue Intelligence',
-    description: 'Digitize buildings and parcels from aerial imagery for property tax management.',
-    image: service3,
-    link: '/services/geo-property'
-  },
-  {
-    id: 4,
-    icon: 'fa-satellite',
-    title: 'LiDAR',
-    description: 'High-precision 3D scanning for urban and infrastructure models.',
-    image: service1,
-    link: '/services/lidar'
-  },
-  {
-    id: 5,
-    icon: 'fa-camera',
-    title: 'Photogrammetry',
-    description: 'Accurate maps and 3D models generated from drone and aerial imagery.',
-    image: service2,
-    link: '/services/photogrammetry'
-  },
-  {
-    id: 6,
-    icon: 'fa-drone',
-    title: 'Drone & DGPS Survey',
-    description: 'Centimeter-level accuracy for property and infrastructure mapping.',
-    image: service3,
-    link: '/services/drone-survey'
-  },
-  {
-    id: 7,
-    icon: 'fa-map',
-    title: '2D Mapping',
-    description: 'Clear and accurate maps showing land use, boundaries and assets.',
-    image: service1,
-    link: '/services/2d-mapping'
-  },
-  {
-    id: 8,
-    icon: 'fa-clipboard-list',
-    title: 'Consultancy Services',
-    description: 'GIS strategy, workflow automation, implementation and professional training.',
-    image: service2,
-    link: '/services/consultancy'
-  },
-  {
-    id: 9,
-    icon: 'fa-laptop-code',
-    title: 'Website Development',
-    description: 'Modern responsive websites, GIS portals and enterprise web applications.',
-    image: service3,
-    link: '/services/web-development'
-  }
+    {
+        id: 1,
+        icon: "fa-globe",
+        title: "Web GIS",
+        description:
+            "Web-based mapping portals for land records and asset tracking.",
+        image: service1,
+        link: "/services/web-gis",
+    },
+    {
+        id: 2,
+        icon: "fa-mobile-alt",
+        title: "Mobile GIS",
+        description:
+            "Offline field applications for property surveys and data collection.",
+        image: service2,
+        link: "/services/mobile-gis",
+    },
+    {
+        id: 3,
+        icon: "fa-map-marked-alt",
+        title: "Spatial Revenue Intelligence",
+        description:
+            "Digitize buildings and parcels from aerial imagery for property tax management.",
+        image: service3,
+        link: "/services/geo-property",
+    },
+    {
+        id: 4,
+        icon: "fa-satellite",
+        title: "LiDAR",
+        description:
+            "High-precision 3D scanning for urban and infrastructure models.",
+        image: service1,
+        link: "/services/lidar",
+    },
+    {
+        id: 5,
+        icon: "fa-camera",
+        title: "Photogrammetry",
+        description:
+            "Accurate maps and 3D models generated from drone and aerial imagery.",
+        image: service2,
+        link: "/services/photogrammetry",
+    },
+    {
+        id: 6,
+        icon: "fa-drone",
+        title: "Drone & DGPS Survey",
+        description:
+            "Centimeter-level accuracy for property and infrastructure mapping.",
+        image: service3,
+        link: "/services/drone-survey",
+    },
+    {
+        id: 7,
+        icon: "fa-map",
+        title: "2D Mapping",
+        description:
+            "Clear and accurate maps showing land use, boundaries and assets.",
+        image: service1,
+        link: "/services/2d-mapping",
+    },
+    {
+        id: 8,
+        icon: "fa-clipboard-list",
+        title: "Consultancy Services",
+        description:
+            "GIS strategy, workflow automation, implementation and professional training.",
+        image: service2,
+        link: "/services/consultancy",
+    },
+    {
+        id: 9,
+        icon: "fa-laptop-code",
+        title: "Website Development",
+        description:
+            "Modern responsive websites, GIS portals and enterprise web applications.",
+        image: service3,
+        link: "/services/web-development",
+    },
 ];
 
 const teamMembers = [
@@ -134,14 +143,14 @@ const testimonials = [
     text: 'SGT Solutions successfully delivered the comprehensive Property Survey Mapping project for Coimbatore City Municipal Corporation. By deploying their proprietary Spatial Revenue Intelligence System (SRIS), they accurately mapped urban property boundaries andintegrated spatial data seamlessly. Their technology has been highly effective inidentifying previously unassessed commercial structures and verifying built-up areavariations.',
     img: testimonial1
   },
-   {
+  {
     id: 2,
     name: 'Marutham Foundation',
     role: 'Envato Author',
     text: 'SGT Solutions has been a vital technical partner for the Marutham Foundation. Their advanced GIS analysis and hydro-spatial mapping helped trackecological degradation, siltation levels, and natural inlet channels across projectzones. Dr. Saravani and her team successfully bridged cutting-edge technology withgrassroots environmental restoration, optimizing rainwater harvesting catchments forwater body renovation initiatives.',
     img: testimonial2
   },
-   {
+  {
     id: 3,
     name: 'Institute for Water Studies',
     role: 'Envato Author',
@@ -1041,19 +1050,55 @@ const Service = () => {
       `}</style>
 
       {/* ===== SERVICES SECTION ===== */}
-      <section className="section-padding" style={{ 
-        position: 'relative', 
+      <section className="section-padding background_img" style={{
+        backgroundImage: `url(${servicesBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        position: 'absolute',
+        position: 'relative',
         overflow: 'hidden',
-        backgroundColor: '#0a1922'
+        backgroundColor: '#dededf'
+      }}>
+
+
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0, 0, 0, 0.6)',
+            zIndex: 1
+          }}
+        />
+
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div className="text-center"><br /><br /><br /> <br />
+            <div className="subTitle" style={{ color: '#ff6b6b' }}>Our Expertise</div>
+            <h2 className="secTitle" style={{ color: '#ffffff' }}>
+              Core Geospatial <span style={{ color: '#bb0b0b' }}>Services</span>
+            </h2>
+            <p style={{ color: '#d0d0dd' }}>
+              Delivering precise, data-driven solutions for modern mapping and asset management.
+            </p>
+          </div>
+          <div className="text-center mt-5">
+            <Link to="/services" className="berpo_btn">
+              Our Services <i className="fas fa-arrow-right" style={{ marginLeft: '8px' }}></i>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="section-padding" style={{
+        position: 'relative',
+        overflow: 'hidden',
+        backgroundColor: '#fff'
       }}>
         {servicesBg && (
           <div
-            className="background_img"
             style={{
-              backgroundImage: `url(${servicesBg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              position: 'absolute',
+
               top: 0,
               left: 0,
               right: 0,
@@ -1062,7 +1107,7 @@ const Service = () => {
             }}
           />
         )}
-        
+
         <div
           style={{
             position: 'absolute',
@@ -1148,19 +1193,19 @@ const Service = () => {
           </div>
 
           <div className="beproTab">
-            <button 
+            <button
               className={`nav-link ${activeTab === 'business' ? 'active' : ''}`}
               onClick={() => setActiveTab('business')}
             >
               Business Growth
             </button>
-            <button 
+            <button
               className={`nav-link ${activeTab === 'financial' ? 'active' : ''}`}
               onClick={() => setActiveTab('financial')}
             >
               Financial Intelligence
             </button>
-            <button 
+            <button
               className={`nav-link ${activeTab === 'global' ? 'active' : ''}`}
               onClick={() => setActiveTab('global')}
             >
@@ -1209,7 +1254,7 @@ const Service = () => {
         </div>
       </section>
 
-      
+
       {/* ===== TESTIMONIALS + ACCORDION ===== */}
       <section className="section-padding">
         <div className="container">
@@ -1226,7 +1271,7 @@ const Service = () => {
                   { id: 3, q: 'What industries do we serve?', a: 'Urban planning, agriculture, real estate, infrastructure, environmental monitoring, and government.' }
                 ].map((item) => (
                   <div className="accordion-item" key={item.id}>
-                    <button 
+                    <button
                       className={`accordion-header ${openAccordion === item.id ? 'active' : ''}`}
                       onClick={() => toggleAccordion(item.id)}
                     >
@@ -1259,7 +1304,7 @@ const Service = () => {
               ))}
               <div className="testimonial-controls">
                 {testimonials.map((_, idx) => (
-                  <button 
+                  <button
                     key={idx}
                     className={activeTestimonial === idx ? 'active' : ''}
                     onClick={() => setActiveTestimonial(idx)}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ServiceDetail.css';
 
@@ -21,8 +21,7 @@ const ServiceDetailLayout = ({
   setShowModal,
   brandColor = '#2c6e9e',
   gradientColors = 'linear-gradient(100deg, #1e4a76, #2c6e9e)',
-  iconBg = 'linear-gradient(135deg, #1e4a76, #4a8fc7)',
-  extraFields = null // For additional form fields like phone, org
+  iconBg = 'linear-gradient(135deg, #1e4a76, #4a8fc7)'
 }) => {
   return (
     <div className="service-detail-page">
@@ -34,12 +33,7 @@ const ServiceDetailLayout = ({
         </div>
       </header>
 
-      <div className="service-hero" style={{
-        backgroundImage: `url('/assets/images/service/${heroIcon === 'fa-map' ? '2d' : heroIcon === 'fa-mobile-alt' ? 'mobile' : heroIcon === 'fa-camera' ? '' : heroIcon === 'fa-code' ? 'han' : heroIcon === 'fa-map-marked-alt' ? 'webgis' : heroIcon === 'fa-clipboard-list' ? 'consultancy' : heroIcon === 'fa-drone' ? 'drone' : heroIcon === 'fa-chart-line' ? 'tax2' : heroIcon === 'fa-cubes' ? 'lidar' : ''}.jpg')`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover'
-      }}>
+      <div className="service-hero">
         <div className="container">
           <i className={`fas ${heroIcon}`} style={{ color: brandColor }}></i>
           <h1 style={{ 
@@ -48,21 +42,18 @@ const ServiceDetailLayout = ({
             WebkitBackgroundClip: 'text',
             color: 'transparent'
           }}>{heroTitle}</h1>
-          <p style={{
-            borderLeftColor: brandColor,
-            borderRightColor: brandColor
-          }}>{heroDescription}</p>
+          <p>{heroDescription}</p>
         </div>
       </div>
 
       <div className="service-content">
         <div className="container">
-          <h2 className="section-title" style={{ borderLeftColor: brandColor }}>{sectionTitle}</h2>
+          <h2 className="section-title">{sectionTitle}</h2>
           <p className="lead-text">{leadText}</p>
 
           <div className="feature-grid">
             {features.map((feature, index) => (
-              <div className="feature-card" key={index} style={{ borderColor: `${brandColor}30` }}>
+              <div className="feature-card" key={index}>
                 <i 
                   className={`fas ${feature.icon}`}
                   style={{
@@ -78,7 +69,7 @@ const ServiceDetailLayout = ({
             ))}
           </div>
 
-          <hr style={{ background: `linear-gradient(90deg, #e2e8f0, ${brandColor}80, #e2e8f0)` }} />
+          <hr />
 
           <div className="cta-center">
             <button 
@@ -100,13 +91,9 @@ const ServiceDetailLayout = ({
           <h3 style={{ margin: '1rem 0 0.5rem' }}>{modalTitle}</h3>
           <p style={{ marginBottom: '1rem' }}>{modalDescription}</p>
           <form onSubmit={handleSubmit}>
-            <input type="text" id="name" placeholder="Your name" value={formData.name || ''} onChange={handleInputChange} required />
-            <input type="email" id="email" placeholder="Email address" value={formData.email || ''} onChange={handleInputChange} required />
-            
-            {/* Extra fields for GeoProperty */}
-            {extraFields && extraFields}
-            
-            <textarea id="message" placeholder="Project scope (size, location, required accuracy, deliverables)" rows="2" value={formData.message || ''} onChange={handleInputChange} />
+            <input type="text" id="name" placeholder="Your name" value={formData.name} onChange={handleInputChange} required />
+            <input type="email" id="email" placeholder="Email address" value={formData.email} onChange={handleInputChange} required />
+            <textarea id="message" placeholder="Project scope (size, location, required accuracy, deliverables)" rows="2" value={formData.message} onChange={handleInputChange} />
             <button 
               type="submit" 
               className="btn-submit"

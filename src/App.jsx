@@ -23,7 +23,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
       </Route>
-      
+
       {/* Services list with MainLayout */}
       <Route path="/services" element={<MainLayout />}>
         <Route index element={<Service />} />
@@ -31,10 +31,10 @@ function App() {
       <Route path="about" element={<MainLayout />}>
         <Route index element={<About />} />
       </Route>
-      
+
       {/* Redirect /service to /services */}
       <Route path="/service" element={<Navigate to="/services" replace />} />
-      
+
       {/* Individual service pages WITHOUT MainLayout - they have their own headers */}
       <Route path="/services/web-gis" element={<WebGis />} />
       <Route path="/services/mobile-gis" element={<MobileGis />} />
