@@ -653,6 +653,7 @@
     width: 345px;
     height: 31px;
     text-align: center;
+    opacity: 0.7;
     line-height: 31px;
     display: inline-block;
     background: url(../images/title-bg.png) no-repeat center center / cover;

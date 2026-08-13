@@ -448,7 +448,7 @@ const responsiveStyles = `
   .berpo_btn {
     display: inline-block;
     position: relative;
-    padding: 15px 35px;
+    padding: 1px 35px;
     background: #bb0b0b;
     color: #ffffff;
     text-decoration: none;
@@ -471,7 +471,9 @@ const responsiveStyles = `
 
   .berpo_btn .bp-text {
     position: relative;
-    z-index: 1;
+    z-index: 0.5;
+   
+    padding: 1px 38px 40px;
   }
 
   /* Testimonial styling */
@@ -662,7 +664,8 @@ const Home = () => {
                   display: 'flex',
                   alignItems: 'center',
                   padding: '0 15%',
-                  position: 'relative'
+                  position: 'relative',
+                  opacity:1.5
                 }}
                 className="hero-slide"
               >
@@ -678,16 +681,17 @@ const Home = () => {
                       marginBottom: '10px'
                     }}
                   >
-                   <br /><br /> <span className="bg">GEOSPATIAL & DIGITAL SOLUTIONS</span>
+                   <br /><br /><br /> <span className="bg">GEOSPATIAL & DIGITAL SOLUTIONS</span>
                   </div>
                   <h1
                     className="headFont"
                     style={{
                       color: '#ffffff',
-                      fontSize: '70px',
+                      fontSize: '50px',
                       fontWeight: 700,
                       lineHeight: '80px',
-                      marginBottom: '20px'
+                      marginBottom: '20px',
+                      opacity:'1',
                     }}
                   >
                   Mapping the World.Building Smarter<span style={{ color: '#bb0b0b' }}> Solutions.</span>
@@ -731,7 +735,8 @@ const Home = () => {
                   display: 'flex',
                   alignItems: 'center',
                   padding: '0 15%',
-                  position: 'relative'
+                  position: 'relative',
+                  opacity:1.5
                 }}
                 className="hero-slide"
               >
@@ -747,13 +752,13 @@ const Home = () => {
                       marginBottom: '10px'
                     }}
                   >
-                   <br /> <span className="bg">SGT SOLUTIONS</span>
+                   <br /><br /> <span className="bg">SGT SOLUTIONS</span>
                   </div>
                   <h1
                     className="headFont"
                     style={{
                       color: '#ffffff',
-                      fontSize: '70px',
+                      fontSize: '50px',
                       fontWeight: 700,
                       lineHeight: '80px',
                       marginBottom: '20px'
