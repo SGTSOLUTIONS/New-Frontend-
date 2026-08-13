@@ -1490,8 +1490,9 @@
 }
 .aboutPageSection01{
 	position: relative;
-	padding: 230px 0 50px;
-	background: url(../images/13.png) no-repeat left top;
+	padding: 220px 0 20px;
+	background-color: #9ea0a3;
+	
 }
 .aboutPageSection01 .secTitle{
 	font-size: 47px;

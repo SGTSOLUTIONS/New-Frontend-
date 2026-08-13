@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import bg from '../assets/images/bg/7.jpg'
+import bg from '../assets/images/bg/bannergg.jpg'
 
 const About = () => {
     const testimonialRef = useRef(null);
@@ -140,21 +140,21 @@ const About = () => {
         <>
 
 
-            <section
+           
+                <div className="overlay"></div>
+                 <section
                 className="page_banner"
                 style={{
                        backgroundImage: `url(${bg})`,
-    backgroundSize: '100% auto',
+    backgroundSize: '100% 100%',
     backgroundPosition: 'center top',
     backgroundRepeat: 'no-repeat',
     width: '100%',
-    minHeight: '800px'
-                }}  >
-                <div className="overlay"></div>
+    minHeight: '650px'                }}  >
                 <div className="container largeContainer">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <h2 className="banner-title">About Page 0001</h2>
+                            <h2 className="banner-title">About Us</h2>
 
                         </div>
                     </div>
@@ -185,9 +185,7 @@ const About = () => {
                         <div className="col-lg-7">
                             <div className="abpageThumb">
                                 <img src="/assets/images/about/1.jpg" alt="" />
-                                <div className="abInner">
-                                    <img src="/assets/images/about/2.jpg" alt="" />
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
