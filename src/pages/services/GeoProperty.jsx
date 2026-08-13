@@ -30,7 +30,7 @@ import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/service/services-bg.jpg';
+import servicesBg from '../../assets/images/Geo-property/bg.jpeg';
 
 // GeoProperty specific images
 import geoFeature1 from '../../assets/images/Geo-property/1.jpg';
@@ -295,7 +295,7 @@ const GeoProperty = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 
