@@ -37,8 +37,6 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 
 // Background image
-import servicesBg from '../../assets/images/service/services-bg.jpg';
-
 // Web GIS specific images - you'll need to add these
 import webGisHero from '../../assets/images/web-gis/hero.jpg';
 import webGisFeature1 from '../../assets/images/web-gis/feature1.jpg';
@@ -46,7 +44,7 @@ import webGisFeature2 from '../../assets/images/web-gis/feature2.jpg';
 import webGisFeature3 from '../../assets/images/web-gis/feature3.jpg';
 import webGisFeature4 from '../../assets/images/web-gis/feature4.jpg';
 import webGisFeature5 from '../../assets/images/web-gis/feature5.jpg';
-import webGisFeature6 from '../../assets/images/web-gis/feature6.jpg';
+import webGisFeature6 from '../../assets/images/web-gis/feature6.png';
 
 // Web GIS Features data
 const webGisFeatures = [
@@ -304,7 +302,7 @@ const WebGis = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: url(${servicesBg}) center/cover;
+          background: url(${webGisHero}) center/cover;
           opacity: 1;
           z-index: 0;
         }
