@@ -39,9 +39,12 @@ import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/service/services-bg.jpg';
 
 // LiDAR specific images
-import lidarFeature1 from '../../assets/images/service/1.jpg';
-import lidarFeature2 from '../../assets/images/service/2.jpg';
-import lidarFeature3 from '../../assets/images/service/3.jpg';
+import lidarFeature1 from '../../assets/images/Lidar/1.jpg';
+import lidarFeature2 from '../../assets/images/Lidar/2.jpg';
+import lidarFeature3 from '../../assets/images/Lidar/3.png';
+import lidarFeature4 from '../../assets/images/Lidar/4.jpg';
+import lidarFeature5 from '../../assets/images/Lidar/5.jpg';
+import lidarFeature6 from '../../assets/images/Lidar/6.png';
 
 // LiDAR Features data
 const lidarFeatures = [
@@ -74,7 +77,7 @@ const lidarFeatures = [
         icon: "fa-building",
         title: "3D Building & Infrastructure Modeling",
         description: "Detailed 3D building models, infrastructure extraction, and city-scale digital twins from LiDAR point clouds.",
-        image: lidarFeature1,
+        image: lidarFeature4,
         link: "/services/lidar/building",
     },
     {
@@ -82,7 +85,7 @@ const lidarFeatures = [
         icon: "fa-chart-line",
         title: "Change Detection & Monitoring",
         description: "Multi-temporal LiDAR analysis for terrain change detection, erosion monitoring, and infrastructure deformation tracking.",
-        image: lidarFeature2,
+        image: lidarFeature5,
         link: "/services/lidar/change-detection",
     },
     {
@@ -90,7 +93,7 @@ const lidarFeatures = [
         icon: "fa-water",
         title: "Bathymetric & Hydrographic LiDAR",
         description: "Near-shore bathymetric surveys and hydrographic mapping using green-wavelength LiDAR systems for coastal and inland water bodies.",
-        image: lidarFeature3,
+        image: lidarFeature6,
         link: "/services/lidar/bathymetric",
     },
 ];
