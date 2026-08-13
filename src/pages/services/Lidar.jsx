@@ -36,7 +36,7 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 
 // Background image
-import servicesBg from '../../assets/images/service/services-bg.jpg';
+import servicesBg from '../../assets/images/Lidar/bg.png';
 
 // LiDAR specific images
 import lidarFeature1 from '../../assets/images/Lidar/1.jpg';
@@ -303,7 +303,7 @@ const Lidar = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 
