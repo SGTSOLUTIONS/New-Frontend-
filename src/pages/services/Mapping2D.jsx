@@ -1088,10 +1088,10 @@ const Mapping2D = () => {
         <div className="container">
           <div className="text-center">
             <div className="hero-icon">
-              <i className="fas fa-map"></i>
+              
             </div>
             <h1 className="hero-title mt-5">
-              2D Mapping <span>•</span> Planimetric & Thematic
+              2D Mapping <span></span> Planimetric & Thematic
             </h1>
             <p className="hero-description">
               Precision orthomosaics, topographic base maps, land cover classification, and infrastructure plans — 
