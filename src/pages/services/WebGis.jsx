@@ -13,10 +13,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import slider1 from '../../assets/images/slider/1_4.jpg';
 import slider2 from '../../assets/images/slider/1_5.jpeg';
 
-// Service images
-import service1 from '../../assets/images/service/1.jpg';
-import service2 from '../../assets/images/service/2.jpg';
-import service3 from '../../assets/images/service/3.jpg';
 
 // Other images
 import aboutImg from '../../assets/images/home1/about.png';
@@ -55,7 +51,7 @@ const webGisFeatures = [
         icon: "fa-layer-group",
         title: "Interactive Map Portals",
         description: "Custom web maps with pan, zoom, layer toggles, pop-up attributes, and search functionality — intuitive for non-GIS users.",
-        image: service1,
+        image: webGisFeature1,
         link: "/services/web-gis/map-portals",
     },
     {
@@ -63,7 +59,7 @@ const webGisFeatures = [
         icon: "fa-database",
         title: "Spatial Data Publishing",
         description: "Publish shapefiles, GeoJSON, rasters, and tile layers as OGC compliant WMS, WMTS, WFS, or vector tiles. Seamless integration.",
-        image: service2,
+        image: webGisFeature2,
         link: "/services/web-gis/data-publishing",
     },
     {
@@ -71,7 +67,7 @@ const webGisFeatures = [
         icon: "fa-draw-polygon",
         title: "Feature Editing & Data Collection",
         description: "Web-based digitizing, form-based attribute entry, and geometry editing — perfect for collaborative mapping projects.",
-        image: service3,
+        image: webGisFeature2,
         link: "/services/web-gis/feature-editing",
     },
     {
@@ -79,7 +75,7 @@ const webGisFeatures = [
         icon: "fa-chart-simple",
         title: "Location Analytics Dashboards",
         description: "Combine maps with charts, filters, and summary statistics. Identify hotspots, clusters, and spatial patterns at a glance.",
-        image: service1,
+        image: webGisFeature2,
         link: "/services/web-gis/analytics",
     },
     {
@@ -87,7 +83,7 @@ const webGisFeatures = [
         icon: "fa-route",
         title: "Routing & Geocoding",
         description: "Address search, reverse geocoding, point-to-point routing, and isochrone analysis — turn locations into insights.",
-        image: service2,
+        image: webGisFeature2,
         link: "/services/web-gis/routing",
     },
     {
@@ -95,7 +91,7 @@ const webGisFeatures = [
         icon: "fa-users",
         title: "Multi-User & Role-Based Access",
         description: "Secure login, user roles, and data-level permissions. Share sensitive layers only with authorized teams.",
-        image: service3,
+        image: webGisFeature2,
         link: "/services/web-gis/access-control",
     },
 ];
@@ -293,7 +289,7 @@ const WebGis = () => {
         .hero-section {
           position: relative;
           padding: 120px 0 80px;
-          background: linear-gradient(135deg, #0a1922 0%, #1a2a3a 100%);
+          background: linear-gradient(135deg, #f1f1f1 0%, #1a2a3a 100%);
           overflow: hidden;
         }
 
@@ -305,7 +301,7 @@ const WebGis = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.1;
+          opacity: 1;
           z-index: 0;
         }
 
@@ -1262,10 +1258,8 @@ const WebGis = () => {
       <section className="hero-section">
         <div className="container">
           <div className="text-center">
-            <div className="hero-icon">
-              <i className="fas fa-map-marked-alt"></i>
-            </div>
-            <h1 className="hero-title">
+            
+            <h1 className="hero-title mt-5">
               Web GIS <span>•</span> Spatial Data Platforms
             </h1>
             <p className="hero-description">
