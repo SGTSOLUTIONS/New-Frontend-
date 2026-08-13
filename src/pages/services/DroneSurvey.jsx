@@ -1252,9 +1252,7 @@ const DroneSurvey = () => {
       <section className="hero-section">
         <div className="container">
           <div className="text-center">
-            <div className="hero-icon">
-              <i className="fas fa-drone"></i>
-            </div>
+           
             <h1 className="hero-title mt-5">
               Drone & <span>DGPS</span> Survey
             </h1>

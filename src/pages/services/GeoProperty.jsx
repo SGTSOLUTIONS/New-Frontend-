@@ -33,9 +33,12 @@ import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/service/services-bg.jpg';
 
 // GeoProperty specific images
-import geoFeature1 from '../../assets/images/service/1.jpg';
-import geoFeature2 from '../../assets/images/service/2.jpg';
-import geoFeature3 from '../../assets/images/service/3.jpg';
+import geoFeature1 from '../../assets/images/Geo-property/1.jpg';
+import geoFeature2 from '../../assets/images/Geo-property/2.jpg';
+import geoFeature3 from '../../assets/images/Geo-property/3.jpg';
+import geoFeature4 from '../../assets/images/Geo-property/4.jpeg';
+import geoFeature5 from '../../assets/images/Geo-property/5.jpg';
+import geoFeature6 from '../../assets/images/Geo-property/6.jpg';
 
 // SRIS Features
 const srisFeatures = [
@@ -68,7 +71,7 @@ const srisFeatures = [
         icon: "fa-chart-simple",
         title: "Property Tax Assessment & Monitoring",
         description: "Spatial intelligence for accurate tax calculation, revenue leakage detection, and trend analysis.",
-        image: geoFeature1,
+        image: geoFeature4,
         link: "/services/sris/tax",
     },
     {
@@ -76,7 +79,7 @@ const srisFeatures = [
         icon: "fa-search-location",
         title: "Detection of Unassessed Properties",
         description: "AI-assisted detection of unassessed, under-assessed, and unauthorized properties using imagery & algorithms.",
-        image: geoFeature2,
+        image: geoFeature5,
         link: "/services/sris/detection",
     },
     {
@@ -84,7 +87,7 @@ const srisFeatures = [
         icon: "fa-tint",
         title: "Water Connection & Revenue Tracking",
         description: "Map every water connection, track billing status, and identify defaulters via spatial dashboards.",
-        image: geoFeature3,
+        image: geoFeature6,
         link: "/services/sris/water",
     },
 ];
@@ -1089,9 +1092,7 @@ const GeoProperty = () => {
       <section className="hero-section">
         <div className="container">
           <div className="text-center">
-            <div className="hero-icon">
-              <i className="fas fa-chart-line"></i>
-            </div>
+            
             <h1 className="hero-title mt-5">
               Spatial Revenue <span>Intelligence</span> System
             </h1>

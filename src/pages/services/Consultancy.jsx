@@ -1258,9 +1258,7 @@ const Consultancy = () => {
       <section className="hero-section">
         <div className="container">
           <div className="text-center">
-            <div className="hero-icon">
-              <i className="fas fa-clipboard-list"></i>
-            </div>
+            
             <h1 className="hero-title mt-5">
               GIS Consultancy <span>•</span> Strategic Advisory
             </h1>

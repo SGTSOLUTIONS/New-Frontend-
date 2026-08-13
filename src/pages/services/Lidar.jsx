@@ -1257,9 +1257,7 @@ const Lidar = () => {
       <section className="hero-section">
         <div className="container">
           <div className="text-center">
-            <div className="hero-icon">
-              <i className="fas fa-cubes"></i>
-            </div>
+            
             <h1 className="hero-title mt-5">
               LiDAR <span>•</span> Point Cloud Solutions
             </h1>
