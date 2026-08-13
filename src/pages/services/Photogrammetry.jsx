@@ -248,7 +248,7 @@ const Photogrammetry = () => {
           background: #bb0b0b;
           color: #ffffff;
           font-weight: 600;
-          padding: 14px 38px;
+          padding: 1px 38px;
           border-radius: 50px;
           font-size: 15px;
           border: none;
@@ -1258,8 +1258,8 @@ const Photogrammetry = () => {
         <div className="container">
           <div className="text-center">
            
-            <h1 className="hero-title mt-5">
-              Photogrammetry <span>•</span> 3D from Images
+            <h1 className="hero-title mt-5"><br />
+              Photogrammetry 3D from Images
             </h1>
             <p className="hero-description">
               Turn millions of overlapping images into geospatially-accurate 3D models, orthomosaics, and digital surface models — 

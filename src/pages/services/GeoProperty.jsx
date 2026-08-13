@@ -244,7 +244,7 @@ const GeoProperty = () => {
           background: #bb0b0b;
           color: #ffffff;
           font-weight: 600;
-          padding: 14px 38px;
+          padding: 1px 38px;
           border-radius: 50px;
           font-size: 15px;
           border: none;
@@ -1093,8 +1093,8 @@ const GeoProperty = () => {
         <div className="container">
           <div className="text-center">
             
-            <h1 className="hero-title mt-5">
-              Spatial Revenue <span>Intelligence</span> System
+            <h1 className="hero-title mt-5"><br />
+              Spatial Revenue Intelligence System
             </h1>
             <p className="hero-description">
               The Spatial Revenue Intelligent System (SRIS) is a smart digital Web GIS platform developed for efficient mapping and management of municipal properties. It enables real-time visualization, monitoring, and spatial analysis of assets such as buildings, roads, water connections, tax properties, Professional Tax and UGD through an interactive map-based system.

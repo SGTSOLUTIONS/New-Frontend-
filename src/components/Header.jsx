@@ -141,7 +141,7 @@ function Header() {
 
                                         {/* Contact */}
                                         <li className="menu-item">
-                                            <Link to="/contact">
+                                            <Link to="/Contact">
                                                 Contact
                                             </Link>
                                         </li>

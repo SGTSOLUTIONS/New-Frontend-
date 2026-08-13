@@ -1491,7 +1491,7 @@
 .aboutPageSection01{
 	position: relative;
 	padding: 220px 0 20px;
-	background-color: #9ea0a3;
+	background-color: #9d85857a;
 	
 }
 .aboutPageSection01 .secTitle{
@@ -1519,7 +1519,8 @@
 }
 .service_section_09{
 	position: relative;
-	padding: 110px 0 130px;
+	padding: 70px 0 130px;
+	background-color: #9d85857a;
 }
 .abvideoSection{
 	background: url(../images/41.jpg) no-repeat center center / cover;

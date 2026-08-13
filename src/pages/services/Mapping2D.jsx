@@ -240,7 +240,7 @@ const Mapping2D = () => {
           background: #bb0b0b;
           color: #ffffff;
           font-weight: 600;
-          padding: 14px 38px;
+          padding: 1px 38px;
           border-radius: 50px;
           font-size: 15px;
           border: none;

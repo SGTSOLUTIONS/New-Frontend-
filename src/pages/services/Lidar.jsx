@@ -248,7 +248,7 @@ const Lidar = () => {
           background: #bb0b0b;
           color: #ffffff;
           font-weight: 600;
-          padding: 14px 38px;
+          padding: 1px 38px;
           border-radius: 50px;
           font-size: 15px;
           border: none;
@@ -1258,8 +1258,8 @@ const Lidar = () => {
         <div className="container">
           <div className="text-center">
             
-            <h1 className="hero-title mt-5">
-              LiDAR <span>•</span> Point Cloud Solutions
+            <h1 className="hero-title mt-5"><br />
+              LiDAR Point Cloud Solutions
             </h1>
             <p className="hero-description">
               High-density point clouds, DEM/DTM generation, vegetation analysis, and 3D infrastructure modeling — 

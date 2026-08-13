@@ -17,6 +17,7 @@ import DroneSurvey from "./pages/services/DroneSurvey";
 import Mapping2D from "./pages/services/Mapping2D";
 import Consultancy from "./pages/services/Consultancy";
 import WebDevelopment from "./pages/services/WebDevelopment";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -32,10 +33,14 @@ function App() {
 
         {/* About */}
         <Route path="about" element={<About />} />
-
+         {/* contact */}
+        <Route path="contact" element={<Contact />} />
         {/* Services */}
         <Route path="services">
           <Route index element={<Service />} />
+         
+      
+         
 
           {/* Individual Services */}
           <Route path="web-gis" element={<WebGis />} />
