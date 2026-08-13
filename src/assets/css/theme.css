@@ -10353,6 +10353,7 @@ input[type="checkbox"]:checked ~ span:before {
 / 8. About Page
 /------------------------------------------------------*/
 /*--- Page Banner ---*/
+<<<<<<< Updated upstream
 .page_banner{
     min-height: 631px;
     position: relative;
@@ -10360,27 +10361,47 @@ input[type="checkbox"]:checked ~ span:before {
     background-color: #1d1d1d;
     overflow: hidden;
     padding: 342px 0px 120px;
+=======
+.page_banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+
+    background-size: 100% 100%;
+    background-position: center;
+>>>>>>> Stashed changes
     background-repeat: no-repeat;
-    background-position: center center;
+
+    overflow: hidden;
+    padding: 0;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+<<<<<<< Updated upstream
     content: '';
     background: rgba(29, 29, 29, .74);
+=======
+>>>>>>> Stashed changes
 }
-.page_banner .containier{
+
+.page_banner .containier {
     position: relative;
     z-index: 2;
+    height: 100%;
 }
+
 .banner-title {
     font-size: 50px;
-    line-height: 58px;
-    color: #ffffff;
-    margin: 0 0 16px;
+    line-height: 28px;
+    color: white;
+   text-align: center;
+   padding-top: 40%;
+    margin-bottom: 80px;
 }
 .breadcrumbs{
     margin: 0;
