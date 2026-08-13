@@ -366,11 +366,11 @@ const Mapping2D = () => {
         }
 
         .service_item_01 .sitem_con {
-          padding: 24px 20px 28px;
+          padding: 35px 20px 28px;
           text-align: center;
         }
 
-        .service_item_01 .ibMeta {
+   .service_item_01 .ibMeta {
           width: 60px;
           height: 60px;
           background: #bb0b0b10;
@@ -378,7 +378,7 @@ const Mapping2D = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: -40px auto 16px;
+          margin: -55px 110px 16px;
           font-size: 26px;
           color: #bb0b0b;
           transition: 0.3s;
@@ -1091,7 +1091,7 @@ const Mapping2D = () => {
               
             </div>
             <h1 className="hero-title mt-5">
-              2D Mapping <span></span> Planimetric & Thematic
+              2D Mapping  Planimetric & Thematic
             </h1>
             <p className="hero-description">
               Precision orthomosaics, topographic base maps, land cover classification, and infrastructure plans — 
@@ -1254,106 +1254,6 @@ const Mapping2D = () => {
         </div>
       </section>
 
-      {/* ===== CLIENTS ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Trusted Partners</div>
-            <h2 className="secTitle">Our <span>Clients</span></h2>
-          </div>
-          <div className="client-grid">
-            <div className="client-logo-item"><img src={clientLogo1} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo2} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo3} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo4} alt="Client" /></div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TESTIMONIALS + ACCORDION ===== */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Testimonials</div>
-            <h2 className="secTitle">What Our <span>Clients</span> Say</h2>
-          </div>
-          <div className="testimonial-grid">
-            <div>
-              <div className="accordion">
-                {[
-                  { id: 1, q: 'What accuracy can 2D mapping achieve?', a: 'We deliver mapping products with accuracies ranging from 5cm to 50cm GSD depending on the source data and project requirements.' },
-                  { id: 2, q: 'What formats do we deliver?', a: 'We deliver in multiple formats including Shapefile, GeoJSON, DXF, DWG, KML, GeoTIFF, and PDF — compatible with all major GIS and CAD platforms.' },
-                  { id: 3, q: 'What is the typical turnaround time?', a: 'Turnaround time depends on area size and complexity. A typical 100-hectare mapping project can be delivered in 5-10 working days.' }
-                ].map((item) => (
-                  <div className="accordion-item" key={item.id}>
-                    <button
-                      className={`accordion-header ${openAccordion === item.id ? 'active' : ''}`}
-                      onClick={() => toggleAccordion(item.id)}
-                    >
-                      <span><i className="fas fa-question-circle"></i> {item.q}</span>
-                      <span className="arrow"><i className="fas fa-chevron-down"></i></span>
-                    </button>
-                    <div className={`accordion-body ${openAccordion === item.id ? 'open' : ''}`}>
-                      {item.a}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              {testimonials.map((t, idx) => (
-                <div key={t.id} style={{ display: activeTestimonial === idx ? 'block' : 'none' }}>
-                  <div className="testiItem01">
-                    <h5>Exceptional Service</h5>
-                    <p className="quotation">"{t.text}"</p>
-                    <div className="ts_author">
-                      <img src={t.img} alt={t.name} />
-                      <div>
-                        <h5>{t.name}</h5>
-                        <span>{t.role}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-              <div className="testimonial-controls">
-                {testimonials.map((_, idx) => (
-                  <button
-                    key={idx}
-                    className={activeTestimonial === idx ? 'active' : ''}
-                    onClick={() => setActiveTestimonial(idx)}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TEAM ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Our Experts</div>
-            <h2 className="secTitle">Meet Our <span>Mapping Team</span></h2>
-          </div>
-          <div className="team-grid">
-            {teamMembers.map(member => (
-              <div className="team_01" key={member.id}>
-                <img src={member.img} alt={member.name} />
-                <h3><Link to="/team">{member.name}</Link></h3>
-                <p>{member.role}</p>
-                <div className="tm_social">
-                  <a href="#"><i className="fab fa-facebook-f"></i></a>
-                  <a href="#"><i className="fab fa-twitter"></i></a>
-                  <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== BLOG ===== */}
       <section className="section-padding">

@@ -375,12 +375,12 @@ const Photogrammetry = () => {
           transform: scale(1.05);
         }
 
-        .service_item_01 .sitem_con {
-          padding: 24px 20px 28px;
+     .service_item_01 .sitem_con {
+          padding: 35px 20px 28px;
           text-align: center;
         }
 
-        .service_item_01 .ibMeta {
+  .service_item_01 .ibMeta {
           width: 60px;
           height: 60px;
           background: #bb0b0b10;
@@ -388,7 +388,7 @@ const Photogrammetry = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: -40px auto 16px;
+          margin: -55px 110px 16px;
           font-size: 26px;
           color: #bb0b0b;
           transition: 0.3s;
@@ -1426,106 +1426,6 @@ const Photogrammetry = () => {
         </div>
       </section>
 
-      {/* ===== CLIENTS ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Trusted Partners</div>
-            <h2 className="secTitle">Our <span>Clients</span></h2>
-          </div>
-          <div className="client-grid">
-            <div className="client-logo-item"><img src={clientLogo1} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo2} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo3} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo4} alt="Client" /></div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TESTIMONIALS + ACCORDION ===== */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Testimonials</div>
-            <h2 className="secTitle">What Our <span>Clients</span> Say</h2>
-          </div>
-          <div className="testimonial-grid">
-            <div>
-              <div className="accordion">
-                {[
-                  { id: 1, q: 'What accuracy can photogrammetry achieve?', a: 'With proper ground control, drone photogrammetry can achieve 2-5 cm horizontal and 3-8 cm vertical accuracy.' },
-                  { id: 2, q: 'What is the maximum area coverage?', a: 'For drone photogrammetry, we can cover up to 500 hectares per flight. For manned aerial, we can cover thousands of square kilometers.' },
-                  { id: 3, q: 'What outputs do we deliver?', a: 'We deliver orthomosaics, DSMs, DEMs, 3D meshes, textured models, contours, and volumetric analysis reports.' }
-                ].map((item) => (
-                  <div className="accordion-item" key={item.id}>
-                    <button
-                      className={`accordion-header ${openAccordion === item.id ? 'active' : ''}`}
-                      onClick={() => toggleAccordion(item.id)}
-                    >
-                      <span><i className="fas fa-question-circle"></i> {item.q}</span>
-                      <span className="arrow"><i className="fas fa-chevron-down"></i></span>
-                    </button>
-                    <div className={`accordion-body ${openAccordion === item.id ? 'open' : ''}`}>
-                      {item.a}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              {testimonials.map((t, idx) => (
-                <div key={t.id} style={{ display: activeTestimonial === idx ? 'block' : 'none' }}>
-                  <div className="testiItem01">
-                    <h5>Exceptional Service</h5>
-                    <p className="quotation">"{t.text}"</p>
-                    <div className="ts_author">
-                      <img src={t.img} alt={t.name} />
-                      <div>
-                        <h5>{t.name}</h5>
-                        <span>{t.role}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-              <div className="testimonial-controls">
-                {testimonials.map((_, idx) => (
-                  <button
-                    key={idx}
-                    className={activeTestimonial === idx ? 'active' : ''}
-                    onClick={() => setActiveTestimonial(idx)}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TEAM ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Our Experts</div>
-            <h2 className="secTitle">Meet Our <span>Photogrammetry Team</span></h2>
-          </div>
-          <div className="team-grid">
-            {teamMembers.map(member => (
-              <div className="team_01" key={member.id}>
-                <img src={member.img} alt={member.name} />
-                <h3><Link to="/team">{member.name}</Link></h3>
-                <p>{member.role}</p>
-                <div className="tm_social">
-                  <a href="#"><i className="fab fa-facebook-f"></i></a>
-                  <a href="#"><i className="fab fa-twitter"></i></a>
-                  <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== BLOG ===== */}
       <section className="section-padding">

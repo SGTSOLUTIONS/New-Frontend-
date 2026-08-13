@@ -375,12 +375,12 @@ const Consultancy = () => {
           transform: scale(1.05);
         }
 
-        .service_item_01 .sitem_con {
-          padding: 24px 20px 28px;
+       .service_item_01 .sitem_con {
+          padding: 35px 20px 28px;
           text-align: center;
         }
 
-        .service_item_01 .ibMeta {
+       .service_item_01 .ibMeta {
           width: 60px;
           height: 60px;
           background: #bb0b0b10;
@@ -388,13 +388,14 @@ const Consultancy = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin: -40px auto 16px;
+          margin: -55px 110px 16px;
           font-size: 26px;
           color: #bb0b0b;
           transition: 0.3s;
           background: #fff;
           box-shadow: 0 4px 15px rgba(187, 11, 11, 0.12);
         }
+
 
         .service_item_01:hover .ibMeta {
           background: #bb0b0b;
@@ -1427,106 +1428,6 @@ const Consultancy = () => {
         </div>
       </section>
 
-      {/* ===== CLIENTS ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Trusted Partners</div>
-            <h2 className="secTitle">Our <span>Clients</span></h2>
-          </div>
-          <div className="client-grid">
-            <div className="client-logo-item"><img src={clientLogo1} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo2} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo3} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo4} alt="Client" /></div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TESTIMONIALS + ACCORDION ===== */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Testimonials</div>
-            <h2 className="secTitle">What Our <span>Clients</span> Say</h2>
-          </div>
-          <div className="testimonial-grid">
-            <div>
-              <div className="accordion">
-                {[
-                  { id: 1, q: 'Why choose our consultancy services?', a: 'We provide independent, vendor-neutral advice focused on your specific needs. Our consultants have deep industry expertise and deliver practical, actionable recommendations.' },
-                  { id: 2, q: 'What industries do we serve?', a: 'We serve government, utilities, environmental agencies, real estate, infrastructure, agriculture, and many other sectors with GIS needs.' },
-                  { id: 3, q: 'How do we approach training?', a: 'We design custom training programs based on your team\'s skill levels and real-world workflows. Hands-on, practical, and job-ready skills.' }
-                ].map((item) => (
-                  <div className="accordion-item" key={item.id}>
-                    <button
-                      className={`accordion-header ${openAccordion === item.id ? 'active' : ''}`}
-                      onClick={() => toggleAccordion(item.id)}
-                    >
-                      <span><i className="fas fa-question-circle"></i> {item.q}</span>
-                      <span className="arrow"><i className="fas fa-chevron-down"></i></span>
-                    </button>
-                    <div className={`accordion-body ${openAccordion === item.id ? 'open' : ''}`}>
-                      {item.a}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              {testimonials.map((t, idx) => (
-                <div key={t.id} style={{ display: activeTestimonial === idx ? 'block' : 'none' }}>
-                  <div className="testiItem01">
-                    <h5>Exceptional Service</h5>
-                    <p className="quotation">"{t.text}"</p>
-                    <div className="ts_author">
-                      <img src={t.img} alt={t.name} />
-                      <div>
-                        <h5>{t.name}</h5>
-                        <span>{t.role}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-              <div className="testimonial-controls">
-                {testimonials.map((_, idx) => (
-                  <button
-                    key={idx}
-                    className={activeTestimonial === idx ? 'active' : ''}
-                    onClick={() => setActiveTestimonial(idx)}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== TEAM ===== */}
-      <section className="section-padding bg-light">
-        <div className="container">
-          <div className="text-center">
-            <div className="subTitle">Our Experts</div>
-            <h2 className="secTitle">Meet Our <span>Consulting Team</span></h2>
-          </div>
-          <div className="team-grid">
-            {teamMembers.map(member => (
-              <div className="team_01" key={member.id}>
-                <img src={member.img} alt={member.name} />
-                <h3><Link to="/team">{member.name}</Link></h3>
-                <p>{member.role}</p>
-                <div className="tm_social">
-                  <a href="#"><i className="fab fa-facebook-f"></i></a>
-                  <a href="#"><i className="fab fa-twitter"></i></a>
-                  <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== BLOG ===== */}
       <section className="section-padding">
