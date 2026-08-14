@@ -2149,6 +2149,7 @@ select::-ms-input-placeholder{
 .aboutWidget img{
     max-width: 100%;
     height: auto;
+    margin-left:-20px;
 }
 .aboutWidget p{
     color: #bbbbbb;

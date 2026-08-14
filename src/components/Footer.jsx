@@ -1,5 +1,5 @@
 import React from 'react';
-import logo2 from '../assets/images/logo2.png';
+import logo2 from '../assets/images/logo.png';
 import b1 from '../assets/images/blog/b1.jpg';
 import b2 from '../assets/images/blog/b2.jpg';
 import b3 from '../assets/images/blog/b3.jpg';
@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="col-md-6 col-xl-4">
             <div className="aboutWidget">
               <a href="/">
-                <img src={logo2} alt="Bepro Logo" />
+                <img src={logo2} alt="sgt solutions" />
               </a>
               <p>
                 Rem iplsum dolor sit amet, consectetuer 
@@ -30,11 +30,11 @@ const Footer = () => {
                 aliquam erat volutpat euimod....
               </p>
               <div className="abIcon">
-                <i className="twi-map-marker"></i>Washington NY, United States.
+                <i className="twi-map-marker"></i>Alandur 124, MKN Rd, Ramapuram, Alandur, Chennai.
               </div>
               <div className="abIcon">
                 <i className="twi-envelope"></i>
-                <a href="mailto:info@email.com">info@email.com</a>
+                <a href="mailto:info@email.com">sgtsolutionsinfo@gmail.com</a>
               </div>
               <div className="abIcon">
                 <i className="twi-phone"></i>(123)+ 124 45 67 678
