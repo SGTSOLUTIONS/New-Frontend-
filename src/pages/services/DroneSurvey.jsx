@@ -30,12 +30,15 @@ import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/service/services-bg.jpg';
+import servicesBg from '../../assets/images/drone-survey/bg.png';
 
 // Drone specific images
-import droneFeature1 from '../../assets/images/service/1.jpg';
-import droneFeature2 from '../../assets/images/service/2.jpg';
-import droneFeature3 from '../../assets/images/service/3.jpg';
+import droneFeature1 from '../../assets/images/drone-survey/1.png';
+import droneFeature2 from '../../assets/images/drone-survey/2.jpg';
+import droneFeature3 from '../../assets/images/drone-survey/3.jpg';
+import droneFeature4 from '../../assets/images/drone-survey/4.jpg';
+import droneFeature5 from '../../assets/images/drone-survey/5.jpg';
+import droneFeature6 from '../../assets/images/drone-survey/6.png';
 
 // Drone Survey Features
 const droneFeatures = [
@@ -68,7 +71,7 @@ const droneFeatures = [
         icon: "fa-mountain",
         title: "Volume & Cut-Fill Analysis",
         description: "Stockpile volumetrics, mine pit surveys, and construction earthwork calculations delivered as interactive 3D reports and GIS-ready surfaces.",
-        image: droneFeature1,
+        image: droneFeature4,
         link: "/services/drone-survey/volume",
     },
     {
@@ -76,7 +79,7 @@ const droneFeatures = [
         icon: "fa-border-all",
         title: "Cadastral & Boundary",
         description: "Legal boundary retracement, easement mapping, and ALTA/NSPS surveys using hybrid drone + rover methods for complex terrains.",
-        image: droneFeature2,
+        image: droneFeature5,
         link: "/services/drone-survey/cadastral",
     },
     {
@@ -84,7 +87,7 @@ const droneFeatures = [
         icon: "fa-chart-pie",
         title: "Inspection & Asset Mapping",
         description: "Powerline sag, pipeline corridors, solar farm inspections, and infrastructure deformation monitoring with automated change detection.",
-        image: droneFeature3,
+        image: droneFeature6,
         link: "/services/drone-survey/inspection",
     },
 ];
@@ -294,7 +297,7 @@ const DroneSurvey = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 
