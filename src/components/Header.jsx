@@ -1,5 +1,6 @@
 // src/components/Header.jsx
 
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
@@ -13,171 +14,394 @@ import h6 from "../assets/images/h6.png";
 import h7 from "../assets/images/h7.png";
 import h8 from "../assets/images/h8.png";
 
-// Services
+// =========================================================
+// SERVICES
+// =========================================================
+
 const services = [
     {
         id: 1,
         title: "Web GIS",
         link: "/services/web-gis",
-        image: h1
+        image: h1,
     },
     {
         id: 2,
         title: "Mobile GIS",
         link: "/services/mobile-gis",
-        image: h2
+        image: h2,
     },
     {
         id: 3,
         title: "Spatial Revenue Intelligence",
         link: "/services/geo-property",
-        image: h3
+        image: h3,
     },
     {
         id: 4,
         title: "LiDAR",
         link: "/services/lidar",
-        image: h4
+        image: h4,
     },
     {
         id: 5,
         title: "Photogrammetry",
         link: "/services/photogrammetry",
-        image: h5
+        image: h5,
     },
     {
         id: 6,
         title: "Drone & DGPS Survey",
         link: "/services/drone-survey",
-        image: h6
+        image: h6,
     },
     {
         id: 7,
         title: "2D Mapping",
         link: "/services/2d-mapping",
-        image: h7
+        image: h7,
     },
     {
         id: 8,
         title: "Consultancy Services",
         link: "/services/consultancy",
-        image: h8
+        image: h8,
     },
     {
         id: 9,
         title: "Website Development",
         link: "/services/web-development",
-        image: h1
-    }
+        image: h1,
+    },
 ];
+
+
+// =========================================================
+// HEADER
+// =========================================================
 
 function Header() {
 
+    // Mobile main menu
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    // Services dropdown
+    const [servicesOpen, setServicesOpen] = useState(false);
+
+
+    // =====================================================
+    // TOGGLE MOBILE MENU
+    // =====================================================
+
+    const toggleMenu = () => {
+        setMenuOpen((prev) => !prev);
+
+        // Close service dropdown when opening/closing menu
+        setServicesOpen(false);
+    };
+
+
+    // =====================================================
+    // TOGGLE SERVICES
+    // =====================================================
+
+    const toggleServices = (e) => {
+        e.preventDefault();
+
+        setServicesOpen((prev) => !prev);
+    };
+
+
+    // =====================================================
+    // CLOSE MENU
+    // =====================================================
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+        setServicesOpen(false);
+    };
+
+
     return (
         <>
+            {/* =================================================
+                HEADER
+            ================================================= */}
+
             <header className="header01 isSticky">
+
                 <div className="container largeContainer">
+
                     <div className="row">
+
                         <div className="col-lg-12">
 
                             <div className="navbar01">
 
-                                {/* Logo */}
+
+                                {/* =================================
+                                    LOGO
+                                ================================= */}
+
                                 <div className="logo">
-                                    <Link to="/">
-                                        <img src={logo} alt="SGT Solutions" />
+
+                                    <Link
+                                        to="/"
+                                        onClick={closeMenu}
+                                    >
+
+                                        <img
+                                            src={logo}
+                                            alt="SGT Solutions"
+                                        />
+
                                     </Link>
+
                                 </div>
 
-                                {/* Mobile Menu Button */}
-                                <a
-                                    href="#"
-                                    className="menu_btn"
-                                    onClick={(e) => e.preventDefault()}
-                                >
-                                    <i className="twi-bars2"></i>
-                                </a>
 
-                                {/* Main Menu */}
-                                <nav className="mainMenu">
+                                {/* =================================
+                                    MOBILE MENU BUTTON
+                                ================================= */}
+
+                                <button
+                                    type="button"
+                                    className={`menu_btn ${
+                                        menuOpen ? "active" : ""
+                                    }`}
+                                    onClick={toggleMenu}
+                                    aria-label="Toggle navigation menu"
+                                    aria-expanded={menuOpen}
+                                >
+
+                                    <i
+                                        className={
+                                            menuOpen
+                                                ? "twi-times"
+                                                : "twi-bars2"
+                                        }
+                                    ></i>
+
+                                </button>
+
+
+                                {/* =================================
+                                    MAIN MENU
+                                ================================= */}
+
+                                <nav
+                                    className={`mainMenu ${
+                                        menuOpen
+                                            ? "mobileMenuOpen"
+                                            : ""
+                                    }`}
+                                >
+
                                     <ul>
 
-                                        {/* Home */}
+
+                                        {/* =============================
+                                            HOME
+                                        ============================= */}
+
                                         <li className="menu-item">
-                                            <Link to="/">Home</Link>
+
+                                            <Link
+                                                to="/"
+                                                onClick={closeMenu}
+                                            >
+                                                Home
+                                            </Link>
+
                                         </li>
 
-                                        {/* Service Dropdown */}
-                                        <li className="menu-item menu-item-has-children">
 
-                                            <Link to="/service">
-                                                Service
-                                                <span className="dropdown-arrow"></span>
-                                            </Link>
+                                        {/* =============================
+                                            SERVICE
+                                        ============================= */}
+
+                                        <li
+                                            className={`menu-item menu-item-has-children ${
+                                                servicesOpen
+                                                    ? "servicesOpen"
+                                                    : ""
+                                            }`}
+                                        >
+
+                                            <div className="serviceMenuLink">
+
+
+                                                {/* SERVICE TEXT */}
+
+                                                <a
+                                                    href="#"
+                                                    onClick={
+                                                        toggleServices
+                                                    }
+                                                >
+                                                    Service
+                                                </a>
+
+
+                                                {/* SERVICE ARROW */}
+
+                                                {/* <button
+                                                    type="button"
+                                                    className="serviceDropdownBtn"
+                                                    onClick={
+                                                        toggleServices
+                                                    }
+                                                    aria-label="Toggle services"
+                                                    aria-expanded={
+                                                        servicesOpen
+                                                    }
+                                                >
+
+                                                    <span className="dropdown-arrow"></span>
+
+                                                </button> */}
+
+                                            </div>
+
+
+                                            {/* =========================
+                                                SERVICE SUB MENU
+                                            ========================= */}
 
                                             <ul className="sub-menu">
 
-                                                {services.map((service) => (
-                                                    <li
-                                                        key={service.id}
-                                                        className="menu-item"
-                                                    >
-                                                        <Link to={service.link}>
-                                                            {service.title}
-                                                        </Link>
-                                                    </li>
-                                                ))}
+                                                {services.map(
+                                                    (service) => (
+
+                                                        <li
+                                                            key={
+                                                                service.id
+                                                            }
+                                                            className="menu-item"
+                                                        >
+
+                                                            <Link
+                                                                to={
+                                                                    service.link
+                                                                }
+                                                                onClick={
+                                                                    closeMenu
+                                                                }
+                                                            >
+
+                                                                {
+                                                                    service.title
+                                                                }
+
+                                                            </Link>
+
+                                                        </li>
+
+                                                    )
+                                                )}
 
                                             </ul>
 
                                         </li>
 
-                                        {/* About */}
+
+                                        {/* =============================
+                                            ABOUT
+                                        ============================= */}
+
                                         <li className="menu-item">
-                                            <Link to="/about">
+
+                                            <Link
+                                                to="/about"
+                                                onClick={closeMenu}
+                                            >
                                                 About
                                             </Link>
+
                                         </li>
 
-                                        {/* Contact */}
+
+                                        {/* =============================
+                                            CONTACT
+                                        ============================= */}
+
                                         <li className="menu-item">
-                                            <Link to="/Contact">
+
+                                            <Link
+                                                to="/contact"
+                                                onClick={closeMenu}
+                                            >
                                                 Contact
                                             </Link>
+
                                         </li>
 
                                     </ul>
+
                                 </nav>
 
-                                {/* Right Side */}
+
+                                {/* =================================
+                                    RIGHT SIDE
+                                ================================= */}
+
                                 <div className="accessNav">
 
-                                    {/* Search */}
+
+                                    {/* =============================
+                                        SEARCH
+                                    ============================= */}
+
                                     <a
                                         className="search_btn"
                                         href="#"
-                                        onClick={(e) => e.preventDefault()}
+                                        onClick={(e) =>
+                                            e.preventDefault()
+                                        }
+                                        aria-label="Search"
                                     >
+
                                         <i className="twi-search1"></i>
+
                                     </a>
 
-                                    {/* Cart */}
+
+                                    {/* =============================
+                                        CART
+                                    ============================= */}
+
                                     <div className="shoping_cart">
+
                                         <a
                                             className="cartBtn"
                                             href="#"
-                                            onClick={(e) => e.preventDefault()}
+                                            onClick={(e) =>
+                                                e.preventDefault()
+                                            }
+                                            aria-label="Shopping cart"
                                         >
+
                                             <i className="twi-shopping-bag1"></i>
-                                            <span>4</span>
+
+                                            <span>
+                                                4
+                                            </span>
+
                                         </a>
+
                                     </div>
 
-                                    {/* Get Quote */}
+
+                                    {/* =============================
+                                        GET A QUOTE
+                                    ============================= */}
+
                                     <Link
                                         className="berpo_btn"
                                         to="/contact"
+                                        onClick={closeMenu}
                                     >
+
                                         <span className="bp-shape"></span>
                                         <span className="bp-shape"></span>
                                         <span className="bp-shape"></span>
@@ -186,20 +410,30 @@ function Header() {
                                         <span className="bp-text">
                                             Get A Quote
                                         </span>
+
                                     </Link>
 
                                 </div>
 
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </header>
 
-            {/* Search Popup */}
+
+            {/* =================================================
+                SEARCH POPUP
+            ================================================= */}
+
             <section className="popup_search_sec">
 
                 <div className="popup_search_overlay"></div>
+
 
                 <div className="pop_search_background">
 
@@ -227,8 +461,11 @@ function Header() {
                                                 placeholder="Type Words and Hit Enter"
                                             />
 
+
                                             <button type="submit">
+
                                                 <i className="twi-search1"></i>
+
                                             </button>
 
                                         </form>
@@ -246,8 +483,10 @@ function Header() {
                 </div>
 
             </section>
+
         </>
     );
 }
+
 
 export default Header;

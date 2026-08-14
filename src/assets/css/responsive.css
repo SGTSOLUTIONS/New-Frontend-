@@ -23,7 +23,662 @@
 /*------------------------------------------------------------------------------------
 / 1. Responsive For Extra large Device 2
 --------------------------------------------------------------------------------------*/
+/* =========================================================
+   MOBILE HEADER - COMPLETE FIX
+========================================================= */
 
+@media (max-width: 991px) {
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    .header01 {
+        position: relative !important;
+        width: 100% !important;
+        z-index: 9999;
+    }
+
+    .header01 .container,
+    .header01 .largeContainer {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .header01 .row {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .header01 .col-lg-12 {
+        width: 100% !important;
+        padding: 0 15px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVBAR
+    ----------------------------------------------------- */
+
+    .navbar01 {
+        position: relative !important;
+
+        width: 100% !important;
+
+        min-height: 70px;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: space-between !important;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGO
+    ----------------------------------------------------- */
+
+    .navbar01 .logo {
+        display: block !important;
+
+        width: auto !important;
+
+        max-width: 180px !important;
+
+        flex: 0 0 auto !important;
+    }
+
+    .navbar01 .logo img {
+        display: block !important;
+
+        width: auto !important;
+
+        max-width: 170px !important;
+
+        height: auto !important;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU BUTTON
+    ----------------------------------------------------- */
+
+    .menu_btn {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        min-width: 42px !important;
+
+        margin: 0 0 0 auto !important;
+
+        padding: 0 !important;
+
+        border: 0 !important;
+
+        outline: none !important;
+
+        background: #c90000 !important;
+
+        color: #ffffff !important;
+
+        cursor: pointer;
+
+        border-radius: 2px;
+
+        position: relative !important;
+
+        z-index: 10001 !important;
+    }
+
+    .menu_btn i {
+        color: #ffffff !important;
+
+        font-size: 18px !important;
+
+        line-height: 1 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       RIGHT SIDE
+    ----------------------------------------------------- */
+
+    .accessNav {
+        display: none !important;
+    }
+
+
+    /* =====================================================
+       MAIN MOBILE MENU
+    ===================================================== */
+
+    .header01 .mainMenu {
+
+        display: none !important;
+
+        position: absolute !important;
+
+        top: 100% !important;
+
+        left: 0 !important;
+
+        right: auto !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        max-height: calc(100vh - 70px) !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        background: #ffffff !important;
+
+        border: none !important;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+
+        overflow-x: hidden !important;
+
+        overflow-y: auto !important;
+
+        z-index: 10000 !important;
+    }
+
+
+    /* OPEN MENU */
+
+    .header01 .mainMenu.mobileMenuOpen {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        max-width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN UL
+    ----------------------------------------------------- */
+
+    .header01 .mainMenu > ul {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 5px 0 !important;
+
+        list-style: none !important;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN LI
+    ----------------------------------------------------- */
+
+    .header01 .mainMenu > ul > li {
+
+        display: block !important;
+
+        position: relative !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        float: none !important;
+
+        clear: both !important;
+
+        border-bottom: 1px solid #eeeeee !important;
+    }
+
+
+    /* -----------------------------------------------------
+       HOME / ABOUT / CONTACT
+    ----------------------------------------------------- */
+
+    .header01 .mainMenu > ul > li > a {
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 48px !important;
+
+        margin: 0 !important;
+
+        padding: 13px 20px !important;
+
+        box-sizing: border-box !important;
+
+        color: #333333 !important;
+
+        background: #ffffff !important;
+
+        text-decoration: none !important;
+
+        font-size: 15px !important;
+
+        line-height: 22px !important;
+
+        font-weight: 500 !important;
+
+        white-space: normal !important;
+    }
+
+    .header01 .mainMenu > ul > li > a:hover {
+
+        color: #0b73b9 !important;
+
+        background: #f7f9fb !important;
+    }
+
+
+    /* =====================================================
+       SERVICE
+    ===================================================== */
+
+    .header01 .serviceMenuLink {
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: space-between !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* Service text */
+
+    .header01 .serviceMenuLink > a {
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        flex: 1 1 auto !important;
+
+        width: auto !important;
+
+        min-width: 0 !important;
+
+        height: 48px !important;
+
+        margin: 0 !important;
+
+        padding: 13px 20px !important;
+
+        box-sizing: border-box !important;
+
+        color: #333333 !important;
+
+        background: #ffffff !important;
+
+        font-size: 15px !important;
+
+        line-height: 22px !important;
+
+        text-decoration: none !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICE ARROW
+    ----------------------------------------------------- */
+
+    .header01 .serviceDropdownBtn {
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        flex: 0 0 50px !important;
+
+        width: 50px !important;
+
+        min-width: 50px !important;
+
+        height: 48px !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        border: 0 !important;
+
+        background: #ffffff !important;
+
+        cursor: pointer !important;
+    }
+
+
+    .header01 .serviceDropdownBtn .dropdown-arrow {
+
+        display: block !important;
+
+        width: 8px !important;
+
+        height: 8px !important;
+
+        border-right: 2px solid #333333 !important;
+
+        border-bottom: 2px solid #333333 !important;
+
+        transform: rotate(45deg);
+
+        transition: all 0.25s ease;
+    }
+
+
+    /* Arrow open */
+
+    .header01
+    .menu-item-has-children.servicesOpen
+    .serviceDropdownBtn
+    .dropdown-arrow {
+
+        transform: rotate(225deg) !important;
+    }
+
+
+    /* =====================================================
+       SERVICE SUB MENU
+    ===================================================== */
+
+    .header01 .mainMenu .sub-menu {
+
+        display: none !important;
+
+        position: static !important;
+
+        left: auto !important;
+
+        top: auto !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        float: none !important;
+
+        background: #f8f9fa !important;
+
+        border: 0 !important;
+
+        box-shadow: none !important;
+
+        list-style: none !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* OPEN SERVICE */
+
+    .header01
+    .mainMenu
+    .menu-item-has-children.servicesOpen
+    > .sub-menu {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICE LI
+    ----------------------------------------------------- */
+
+    .header01 .mainMenu .sub-menu li {
+
+        display: block !important;
+
+        position: relative !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        float: none !important;
+
+        clear: both !important;
+
+        border-bottom: 1px solid #e5e5e5 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SERVICE LINKS
+    ----------------------------------------------------- */
+
+    .header01 .mainMenu .sub-menu li a {
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        width: 100% !important;
+
+        min-width: 100% !important;
+
+        min-height: 45px !important;
+
+        height: auto !important;
+
+        margin: 0 !important;
+
+        padding: 11px 20px 11px 35px !important;
+
+        box-sizing: border-box !important;
+
+        color: #555555 !important;
+
+        background: #f8f9fa !important;
+
+        font-size: 14px !important;
+
+        line-height: 20px !important;
+
+        font-weight: 400 !important;
+
+        text-decoration: none !important;
+
+        white-space: normal !important;
+
+        word-break: normal !important;
+
+        overflow-wrap: break-word !important;
+    }
+
+
+    .header01 .mainMenu .sub-menu li a:hover {
+
+        color: #0b73b9 !important;
+
+        background: #eef4f8 !important;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .header01 .col-lg-12 {
+
+        padding-left: 25px !important;
+
+        padding-right: 25px !important;
+    }
+
+    .header01 .mainMenu {
+
+        left: 0 !important;
+
+        width: 100% !important;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .header01 .navbar01 {
+
+        min-height: 65px !important;
+    }
+
+    .header01 .logo img {
+
+        max-width: 150px !important;
+    }
+
+    .menu_btn {
+
+        width: 40px !important;
+
+        min-width: 40px !important;
+
+        height: 40px !important;
+    }
+
+    .header01 .mainMenu {
+
+        top: 100% !important;
+
+        max-height: calc(100vh - 65px) !important;
+    }
+
+    .header01 .mainMenu > ul > li > a {
+
+        padding-left: 18px !important;
+
+        padding-right: 18px !important;
+    }
+
+    .header01 .serviceMenuLink > a {
+
+        padding-left: 18px !important;
+
+        padding-right: 18px !important;
+    }
+
+    .header01 .mainMenu .sub-menu li a {
+
+        padding-left: 32px !important;
+
+        padding-right: 18px !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .header01 .logo img {
+
+        max-width: 135px !important;
+    }
+
+    .header01 .mainMenu > ul > li > a {
+
+        font-size: 14px !important;
+    }
+
+    .header01 .serviceMenuLink > a {
+
+        font-size: 14px !important;
+    }
+
+    .header01 .mainMenu .sub-menu li a {
+
+        font-size: 13px !important;
+    }
+
+}
 @media (min-width: 1200px) and (max-width: 1700px){
 	.featuredSlider.owl-carousel .owl-nav button.owl-next,
 	.tmSlider03.owl-carousel .owl-nav button.owl-next,

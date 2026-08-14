@@ -30,12 +30,15 @@ import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/service/services-bg.jpg';
+import servicesBg from '../../assets/images/2d-mapping/bg.png';
 
 // 2D Mapping specific images
-import mapFeature1 from '../../assets/images/service/1.jpg';
-import mapFeature2 from '../../assets/images/service/2.jpg';
-import mapFeature3 from '../../assets/images/service/3.jpg';
+import mapFeature1 from '../../assets/images/2d-mapping/1.png';
+import mapFeature2 from '../../assets/images/2d-mapping/2.jpg';
+import mapFeature3 from '../../assets/images/2d-mapping/3.jpg';
+import mapFeature4 from '../../assets/images/2d-mapping/4.jpg';
+import mapFeature5 from '../../assets/images/2d-mapping/5.png';
+import mapFeature6 from '../../assets/images/2d-mapping/6.jpg';
 
 // 2D Mapping Features
 const mappingFeatures = [
@@ -68,7 +71,7 @@ const mappingFeatures = [
         icon: "fa-layer-group",
         title: "Thematic & Land Use Mapping",
         description: "Land cover classification, zoning maps, agricultural field boundaries, and environmental sensitivity layers — customized to your schema.",
-        image: mapFeature1,
+        image: mapFeature4,
         link: "/services/2d-mapping/thematic",
     },
     {
@@ -76,7 +79,7 @@ const mappingFeatures = [
         icon: "fa-building",
         title: "Infrastructure & Utility Mapping",
         description: "Gas, water, electric, and telecom networks mapped as accurate 2D features with attribution (diameter, material, ownership).",
-        image: mapFeature2,
+        image: mapFeature5,
         link: "/services/2d-mapping/infrastructure",
     },
     {
@@ -84,7 +87,7 @@ const mappingFeatures = [
         icon: "fa-water",
         title: "Hydrographic & Flood Mapping",
         description: "River centerlines, floodplain extents, drainage networks, and wetland boundaries from imagery and field-verified data.",
-        image: mapFeature3,
+        image: mapFeature6,
         link: "/services/2d-mapping/hydrographic",
     },
 ];
@@ -291,7 +294,7 @@ const Mapping2D = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 

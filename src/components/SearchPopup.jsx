@@ -2,7 +2,7 @@ import React from 'react'
 
 function SearchPopup(){
   return (
-        <section className="topbar01">
+        <section className="topbar01 d-none">
             <div className="container largeContainer">
                 <div className="row">
                     <div className="col-md-9">
