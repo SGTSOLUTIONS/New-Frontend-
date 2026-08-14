@@ -37,25 +37,25 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, message } = formData;
-    
+
     if (!name || !email || !message) {
       setFeedback('⚠️ Please fill all required fields.');
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3500);
       return;
     }
-    
+
     if (!email.includes('@')) {
       setFeedback('📧 Please enter a valid email address.');
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3500);
       return;
     }
-    
+
     setFeedback(`✅ Thanks ${name}! Your message has been sent. Our team will respond within 24 hours.`);
     setShowToast(true);
     setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    
+
     setTimeout(() => {
       setShowToast(false);
       setFeedback('');
@@ -648,12 +648,16 @@ const Contact = () => {
           gap: 30px;
           align-items: center;
           justify-items: center;
+          
+        
         }
 
         .client-logo-item {
-          opacity: 0.6;
+          opacity: 1;
           transition: 0.3s;
           filter: grayscale(0.3);
+          text-align:center;
+          margin-left:65px;
         }
 
         .client-logo-item:hover {
@@ -664,6 +668,9 @@ const Contact = () => {
         .client-logo-item img {
           max-height: 70px;
           object-fit: contain;
+          margin-left:110px;
+          
+          
         }
 
         /* ===== CTA ===== */
@@ -875,7 +882,7 @@ const Contact = () => {
           <div className="text-center">
             <div className="hero-icon">
               <br />
-              
+
             </div>
             <h1 className="hero-title mt-5">
               Get In <span>Touch</span>
@@ -905,7 +912,7 @@ const Contact = () => {
               Let's <span>Connect</span>
             </h2>
             <p style={{ color: '#5a5a72', maxWidth: '700px', margin: '0 auto' }}>
-              Have a question, project idea, or partnership opportunity? Reach out to us using the form below 
+              Have a question, project idea, or partnership opportunity? Reach out to us using the form below
               or through our contact details. We respond within 24 hours.
             </p>
           </div>
@@ -915,7 +922,7 @@ const Contact = () => {
             {/* ===== CONTACT INFO ===== */}
             <div className="contact-info-card" id="location">
               <h3>Contact Information</h3>
-              
+
               <div className="contact-detail-item">
                 <div className="contact-icon">
                   <i className="fas fa-map-marker-alt"></i>
@@ -988,9 +995,9 @@ const Contact = () => {
             {/* ===== MAP CARD ===== */}
             <div className="map-card">
               <h3><i className="fas fa-map-pin" style={{ color: '#bb0b0b', marginRight: '8px' }}></i> Our Location</h3>
-              
-              <div 
-                className="map-preview" 
+
+              <div
+                className="map-preview"
                 onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=124+MKN+Rd+Ramapuram+Alandur+Chennai', '_blank')}
               >
                 <div className="map-placeholder">
@@ -1003,13 +1010,13 @@ const Contact = () => {
                 </div>
               </div>
 
-              <button 
-                className="google-map-btn" 
+              <button
+                className="google-map-btn"
                 onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=124+MKN+Rd+Ramapuram+Alandur+Chennai', '_blank')}
               >
                 <i className="fab fa-google"></i> Open in Google Maps
               </button>
-              
+
               <p className="map-directions-note">
                 <i className="fas fa-directions"></i> Click on the map or button for directions
               </p>
@@ -1019,7 +1026,7 @@ const Contact = () => {
           {/* ===== CONTACT FORM ===== */}
           <div className="contact-form-card" id="contact-form">
             <h3><i className="fas fa-paper-plane" style={{ color: '#bb0b0b', marginRight: '8px' }}></i> Send us a Message</h3>
-            
+
             <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
@@ -1104,12 +1111,31 @@ const Contact = () => {
             <div className="subTitle">Trusted Partners</div>
             <h2 className="secTitle">Our <span>Clients</span></h2>
           </div>
-          <div className="client-grid">
-            <div className="client-logo-item"><img src={clientLogo1} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo2} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo3} alt="Client" /></div>
-            <div className="client-logo-item"><img src={clientLogo4} alt="Client" /></div>
+          <br />
+          <div className="row">
+
+            <div className="col-md-4">
+              <div className="client-logo-item">
+                <img src={clientLogo2} alt="Client" />
+                <p>Coimbatore Municipal Corporation</p>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="client-logo-item">
+                <img src={clientLogo3} alt="Client" />
+                <p>Marutham Foundation</p>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="client-logo-item">
+                <img src={clientLogo4} alt="Client" />
+                <p>Chennai Metro Water Supply</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </section>
 
