@@ -36,12 +36,15 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 
 // Background image
-import servicesBg from '../../assets/images/service/services-bg.jpg';
+import servicesBg from '../../assets/images/photogrammetry/bg.png';
 
 // Photogrammetry specific images
-import photoFeature1 from '../../assets/images/service/1.jpg';
-import photoFeature2 from '../../assets/images/service/2.jpg';
-import photoFeature3 from '../../assets/images/service/3.jpg';
+import photoFeature1 from '../../assets/images/photogrammetry/1.jpg';
+import photoFeature2 from '../../assets/images/photogrammetry/2.jpg';
+import photoFeature3 from '../../assets/images/photogrammetry/3.jpg';
+import photoFeature4 from '../../assets/images/photogrammetry/4.jpg';
+import photoFeature5 from '../../assets/images/photogrammetry/5.jpg';
+import photoFeature6 from '../../assets/images/photogrammetry/6.jpg';
 
 // Photogrammetry Features data
 const photogrammetryFeatures = [
@@ -74,7 +77,7 @@ const photogrammetryFeatures = [
         icon: "fa-map",
         title: "Orthomosaics & Orthophotos",
         description: "Geometrically corrected, seamless image mosaics with true orthorectification. Georeferenced and ready for GIS integration.",
-        image: photoFeature1,
+        image: photoFeature4,
         link: "/services/photogrammetry/orthomosaics",
     },
     {
@@ -82,7 +85,7 @@ const photogrammetryFeatures = [
         icon: "fa-cubes",
         title: "3D Mesh & Textured Models",
         description: "Photo-realistic 3D models for digital twins, volume visualization, and immersive stakeholder presentations.",
-        image: photoFeature2,
+        image: photoFeature5,
         link: "/services/photogrammetry/3d-models",
     },
     {
@@ -90,7 +93,7 @@ const photogrammetryFeatures = [
         icon: "fa-chart-line",
         title: "Contour & Volumetric Analysis",
         description: "Generate contours from photogrammetric DSMs and compute cut/fill volumes for earthworks and mining applications.",
-        image: photoFeature3,
+        image: photoFeature6,
         link: "/services/photogrammetry/analysis",
     },
 ];
@@ -300,7 +303,7 @@ const Photogrammetry = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 
