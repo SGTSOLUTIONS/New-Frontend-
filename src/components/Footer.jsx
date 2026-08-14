@@ -24,10 +24,10 @@ const Footer = () => {
                 <img src={logo2} alt="sgt solutions" />
               </a>
               <p>
-                Rem iplsum dolor sit amet, consectetuer 
-                adipiscingelit, sed diam nonummy nibh 
-                euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat euimod....
+                SGT Solutions is a Chennai-based geospatial
+                & digital transformation company. 
+                We bridge advanced spatial technologies with
+                real-world governance challenges.
               </p>
               <div className="abIcon">
                 <i className="twi-map-marker"></i>Alandur 124, MKN Rd, Ramapuram, Alandur, Chennai.
@@ -37,7 +37,7 @@ const Footer = () => {
                 <a href="mailto:info@email.com">sgtsolutionsinfo@gmail.com</a>
               </div>
               <div className="abIcon">
-                <i className="twi-phone"></i>(123)+ 124 45 67 678
+                <i className="twi-phone"></i>+91 89031 38792
               </div>
             </div>
           </div>
