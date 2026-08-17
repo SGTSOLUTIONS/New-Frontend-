@@ -18,7 +18,7 @@ const Footer = () => {
     <footer className="footer_01">
       <div className="container largeContainer">
         <div className="row">
-          <div className="col-md-6 col-xl-4">
+          <div className="col-md-6 col-xl-6">
             <div className="aboutWidget">
               <a href="/">
                 <img src={logo2} alt="sgt solutions" />
@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-md-6 col-xl-3 ml54">
+          {/* <div className="col-md- col-xl-3 ml54">
             <div className="widget">
               <div className="wsubtitle">Clean & Flexible</div>
               <h3 className="widget_title">Latest Post</h3>
@@ -65,9 +65,9 @@ const Footer = () => {
                 <a href="/single-blog">Finding hidden Gems of this sort</a>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="col-md-6 col-xl-2">
+          <div className="col-md-6 col-xl-6 d-flex align-item-center justify-content-center">
             <div className="widget">
               <div className="wsubtitle">Clean & Flexible</div>
               <h3 className="widget_title">Quick Links</h3>
@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="col-md-6 col-xl-3">
+          {/* <div className="col-md-6 col-xl-3">
             <div className="widget gallery">
               <div className="wsubtitle">Clean & Flexible</div>
               <h3 className="widget_title">Instagram</h3>
@@ -116,7 +116,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="row">

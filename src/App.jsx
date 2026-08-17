@@ -6,6 +6,8 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Service from "./pages/Service";
 import About from "./pages/About";
+// In your App.js or main component
+import './assets/css/responsive.css';
 
 // Service pages
 import WebGis from "./pages/services/WebGis";

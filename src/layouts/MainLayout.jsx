@@ -23,6 +23,7 @@ import "../assets/css/preset.css";
 import "../assets/css/ignore_for_wp.css";
 import "../assets/css/theme.css";
 import "../assets/css/responsive.css";
+import '../assets/css/header-fixes.css';
 
 
 function MainLayout(){

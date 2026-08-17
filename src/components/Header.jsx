@@ -166,9 +166,8 @@ function Header() {
 
                                 <button
                                     type="button"
-                                    className={`menu_btn ${
-                                        menuOpen ? "active" : ""
-                                    }`}
+                                    className={`menu_btn ${menuOpen ? "active" : ""
+                                        }`}
                                     onClick={toggleMenu}
                                     aria-label="Toggle navigation menu"
                                     aria-expanded={menuOpen}
@@ -190,11 +189,10 @@ function Header() {
                                 ================================= */}
 
                                 <nav
-                                    className={`mainMenu ${
-                                        menuOpen
+                                    className={`mainMenu ${menuOpen
                                             ? "mobileMenuOpen"
                                             : ""
-                                    }`}
+                                        }`}
                                 >
 
                                     <ul>
@@ -221,11 +219,10 @@ function Header() {
                                         ============================= */}
 
                                         <li
-                                            className={`menu-item menu-item-has-children ${
-                                                servicesOpen
+                                            className={`menu-item menu-item-has-children ${servicesOpen
                                                     ? "servicesOpen"
                                                     : ""
-                                            }`}
+                                                }`}
                                         >
 
                                             <div className="serviceMenuLink">
@@ -408,7 +405,7 @@ function Header() {
                                         <span className="bp-shape"></span>
 
                                         <span className="bp-text">
-                                            Get A Quote
+                                            Contact
                                         </span>
 
                                     </Link>

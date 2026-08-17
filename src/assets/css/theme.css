@@ -107,9 +107,10 @@
 .navbar01{
     justify-content: space-between;
     display: flex;
-    background: white;
+    background:hsl(0, 8%, 92%);
     border-radius: 3px;
     padding: 0 40px;
+   
 }
 .logo{
     line-height: 66px;
@@ -395,7 +396,8 @@
     height: 54px;
     line-height: 55px;
     font-size: 14px;
-    padding: 0 34.5px
+    padding: 0 34.5px;
+    border-radius:50px;
 }
 
 /*-- Popup Search ---*/
@@ -601,7 +603,7 @@
 /*--- Hero Slier ---*/
 .slider_01{
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
     overflow: hidden;
 }

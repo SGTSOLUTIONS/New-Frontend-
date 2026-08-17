@@ -36,7 +36,7 @@
     .header01 {
         position: relative !important;
         width: 100% !important;
-        z-index: 9999;
+        z-index: 9;
     }
 
     .header01 .container,
@@ -56,104 +56,7 @@
     }
 
 
-    /* -----------------------------------------------------
-       NAVBAR
-    ----------------------------------------------------- */
-
-    .navbar01 {
-        position: relative !important;
-
-        width: 100% !important;
-
-        min-height: 70px;
-
-        display: flex !important;
-
-        align-items: center !important;
-
-        justify-content: space-between !important;
-    }
-
-
-    /* -----------------------------------------------------
-       LOGO
-    ----------------------------------------------------- */
-
-    .navbar01 .logo {
-        display: block !important;
-
-        width: auto !important;
-
-        max-width: 180px !important;
-
-        flex: 0 0 auto !important;
-    }
-
-    .navbar01 .logo img {
-        display: block !important;
-
-        width: auto !important;
-
-        max-width: 170px !important;
-
-        height: auto !important;
-    }
-
-
-    /* -----------------------------------------------------
-       MOBILE MENU BUTTON
-    ----------------------------------------------------- */
-
-    .menu_btn {
-        display: flex !important;
-
-        align-items: center !important;
-        justify-content: center !important;
-
-        width: 42px !important;
-        height: 42px !important;
-
-        min-width: 42px !important;
-
-        margin: 0 0 0 auto !important;
-
-        padding: 0 !important;
-
-        border: 0 !important;
-
-        outline: none !important;
-
-        background: #c90000 !important;
-
-        color: #ffffff !important;
-
-        cursor: pointer;
-
-        border-radius: 2px;
-
-        position: relative !important;
-
-        z-index: 10001 !important;
-    }
-
-    .menu_btn i {
-        color: #ffffff !important;
-
-        font-size: 18px !important;
-
-        line-height: 1 !important;
-    }
-
-
-    /* -----------------------------------------------------
-       RIGHT SIDE
-    ----------------------------------------------------- */
-
-    .accessNav {
-        display: none !important;
-    }
-
-
+    
     /* =====================================================
        MAIN MOBILE MENU
     ===================================================== */
@@ -1915,13 +1818,13 @@
 		margin: 20px 0;
 	}
 
-    /*-- Mobile Menu --*/
+    -- Mobile Menu --
 	.menu_btn{
         height: 45px;
         width: 45px;
         border-radius: 3px;
         background: var(--theme-color);
-        color: #FFF;
+        color: #050505;
         line-height: 44px;
         font-size: 20px;
         display: block;
@@ -1933,7 +1836,7 @@
         line-height: inherit;
     }
     .menu_btn:hover, .menu_btn.active{
-        color: #FFF;
+        color: #0e0d0d;
     }
     .menu_btn.active .twi-bars2:before{
         content: "\fa88";
@@ -1950,8 +1853,8 @@
         left: 0;
         top: 100%;
         width: 100%;
-        background: #fff;
-        box-shadow: -2px 4px 7px 0px rgba(226, 225, 225, .79);
+        background: #0aa226;
+        box-shadow: -2px 4px 7px 0px rgba(97, 5, 5, 0.79);
         display: none;
         max-height: calc(100vh - 150px);
         overflow-y: scroll;
@@ -1980,7 +1883,7 @@
         width: 100%;
         opacity: 1;
         margin: 0;
-        background: transparent;
+        
         box-shadow: none;
         border-radius: 0;
         visibility: visible;
