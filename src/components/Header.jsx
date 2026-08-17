@@ -345,48 +345,9 @@ function Header() {
                                 <div className="accessNav">
 
 
-                                    {/* =============================
-                                        SEARCH
-                                    ============================= */}
+                          
 
-                                    <a
-                                        className="search_btn"
-                                        href="#"
-                                        onClick={(e) =>
-                                            e.preventDefault()
-                                        }
-                                        aria-label="Search"
-                                    >
-
-                                        <i className="twi-search1"></i>
-
-                                    </a>
-
-
-                                    {/* =============================
-                                        CART
-                                    ============================= */}
-
-                                    <div className="shoping_cart">
-
-                                        <a
-                                            className="cartBtn"
-                                            href="#"
-                                            onClick={(e) =>
-                                                e.preventDefault()
-                                            }
-                                            aria-label="Shopping cart"
-                                        >
-
-                                            <i className="twi-shopping-bag1"></i>
-
-                                            <span>
-                                                4
-                                            </span>
-
-                                        </a>
-
-                                    </div>
+                             
 
 
                                     {/* =============================

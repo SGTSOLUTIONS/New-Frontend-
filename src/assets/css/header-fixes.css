@@ -20,7 +20,8 @@
     align-items: center !important;
     justify-content: space-between !important;
     min-height: 70px !important;
-    background-color: white;
+    background-color: hwb(0 96% 2%);
+    border-radius: 18px;
 }
 
 .logo img {
@@ -77,7 +78,7 @@
         max-width: 400px !important;
         height: 100vh !important;
         background: white !important;
-        padding: 80px 30px 30px !important;
+        padding: 80px 30px 360px !important;
         transition: left 0.3s ease !important;
         overflow-y: auto !important;
         /* box-shadow: 0 0 30px rgba(242, 240, 240, 0.921) !important; */
