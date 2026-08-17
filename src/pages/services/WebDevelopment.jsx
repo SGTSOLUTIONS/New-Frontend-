@@ -36,12 +36,15 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 
 // Background image
-import servicesBg from '../../assets/images/service/services-bg.jpg';
+import servicesBg from '../../assets/images/web-development/bg.png';
 
 // Web Development specific images
-import webDevFeature1 from '../../assets/images/service/1.jpg';
-import webDevFeature2 from '../../assets/images/service/2.jpg';
-import webDevFeature3 from '../../assets/images/service/3.jpg';
+import webDevFeature1 from '../../assets/images/web-development/1.jpg';
+import webDevFeature2 from '../../assets/images/web-development/2.jpg';
+import webDevFeature3 from '../../assets/images/web-development/3.jpg';
+import webDevFeature4 from '../../assets/images/web-development/4.jpg';
+import webDevFeature5 from '../../assets/images/web-development/5.png';
+import webDevFeature6 from '../../assets/images/web-development/6.jpg';
 
 // Web Development Features data
 const webDevelopmentFeatures = [
@@ -74,7 +77,7 @@ const webDevelopmentFeatures = [
         icon: "fa-tachometer-alt",
         title: "CMS Development",
         description: "WordPress, custom admin panels, or headless CMS — you control your content. Easy updates without touching code.",
-        image: webDevFeature1,
+        image: webDevFeature4,
         link: "/services/web-development/cms",
     },
     {
@@ -82,7 +85,7 @@ const webDevelopmentFeatures = [
         icon: "fa-chart-line",
         title: "Web Applications & Dashboards",
         description: "Custom business tools, data dashboards, client portals, and internal systems with real-time updates and role-based access.",
-        image: webDevFeature2,
+        image: webDevFeature5,
         link: "/services/web-development/applications",
     },
     {
@@ -90,7 +93,7 @@ const webDevelopmentFeatures = [
         icon: "fa-search",
         title: "SEO & Performance Optimization",
         description: "Fast load times, Core Web Vitals compliance, meta tagging, and structured data — get discovered and keep users engaged.",
-        image: webDevFeature3,
+        image: webDevFeature6,
         link: "/services/web-development/seo",
     },
 ];
@@ -300,7 +303,7 @@ const WebDevelopment = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 

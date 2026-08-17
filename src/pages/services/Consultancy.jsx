@@ -36,12 +36,15 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 
 // Background image
-import servicesBg from '../../assets/images/service/services-bg.jpg';
+import servicesBg from '../../assets/images/consultancy/bg.png';
 
 // Consultancy specific images
-import consultancyFeature1 from '../../assets/images/service/1.jpg';
-import consultancyFeature2 from '../../assets/images/service/2.jpg';
-import consultancyFeature3 from '../../assets/images/service/3.jpg';
+import consultancyFeature1 from '../../assets/images/consultancy/1.png';
+import consultancyFeature2 from '../../assets/images/consultancy/2.png';
+import consultancyFeature3 from '../../assets/images/consultancy/3.jpg';
+import consultancyFeature4 from '../../assets/images/consultancy/4.jpg';
+import consultancyFeature5 from '../../assets/images/consultancy/5.jpg';
+import consultancyFeature6 from '../../assets/images/consultancy/6.jpeg';
 
 // Consultancy Features data
 const consultancyFeatures = [
@@ -74,7 +77,7 @@ const consultancyFeatures = [
         icon: "fa-chart-line",
         title: "Spatial Analysis & Modeling",
         description: "Advanced geospatial analysis — suitability modeling, network analysis, predictive analytics, and machine learning on spatial data to uncover insights.",
-        image: consultancyFeature1,
+        image: consultancyFeature4,
         link: "/services/consultancy/analysis",
     },
     {
@@ -82,7 +85,7 @@ const consultancyFeatures = [
         icon: "fa-users",
         title: "Capacity Building & Training",
         description: "Empower your team with custom GIS training programs. From basic map creation to advanced geoprocessing and automation.",
-        image: consultancyFeature2,
+        image: consultancyFeature5,
         link: "/services/consultancy/training",
     },
     {
@@ -90,7 +93,7 @@ const consultancyFeatures = [
         icon: "fa-building",
         title: "Implementation Support",
         description: "End-to-end support for GIS software deployment, enterprise geodatabase setup, and custom application development.",
-        image: consultancyFeature3,
+        image: consultancyFeature6,
         link: "/services/consultancy/implementation",
     },
 ];
@@ -300,7 +303,7 @@ const Consultancy = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 
