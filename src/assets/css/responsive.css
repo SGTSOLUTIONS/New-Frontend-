@@ -1834,6 +1834,7 @@
     }
     .menu_btn i{
         line-height: inherit;
+		padding: 0px 80px 80px;
     }
     .menu_btn:hover, .menu_btn.active{
         color: #0e0d0d;

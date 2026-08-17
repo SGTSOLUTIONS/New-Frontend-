@@ -1,0 +1,542 @@
+/* ============================================================
+   HEADER CSS - COMPLETE (All Responsive Designs Preserved)
+   ============================================================ */
+
+/* ============================================================
+   SERVICE LABEL - Looks like a link
+   ============================================================ */
+
+.serviceLabel {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+}
+
+.serviceLabel:hover {
+    color: #007bff;
+}
+
+/* ============================================================
+   SERVICE ARROW - Small indicator
+   ============================================================ */
+
+.serviceArrow {
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: 5px;
+    user-select: none;
+}
+
+.serviceArrow:hover {
+    color: #007bff;
+}
+
+.serviceArrow.open {
+    transform: rotate(180deg);
+}
+
+/* ============================================================
+   FOOTER TWO (Additional styling)
+   ============================================================ */
+
+.footer-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile view for footer-two */
+@media (max-width: 767px) {
+    .footer-two {
+        justify-content: flex-start;
+        padding-left: 15px;
+    }
+}
+
+/* ============================================================
+   DESKTOP STYLES (min-width: 992px)
+   ============================================================ */
+
+@media (min-width: 992px) {
+    .header01 {
+        position: relative;
+        z-index: 1000;
+        background: #fff;
+        padding: 15px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar01 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        max-height: 50px;
+        width: auto;
+    }
+
+    .mainMenu {
+        display: flex;
+        align-items: center;
+    }
+
+    .mainMenu > ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .mainMenu > ul > li {
+        position: relative;
+    }
+
+    .mainMenu > ul > li > a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        text-decoration: none;
+        padding: 10px 0;
+        transition: color 0.3s ease;
+    }
+
+    .mainMenu > ul > li > a:hover {
+        color: #007bff;
+    }
+
+    .serviceMenuLink {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        padding: 33px 7px 0;
+        color: black;
+    }
+
+    /* Desktop Dropdown */
+    .mainMenu .sub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        list-style: none;
+        border-radius: 5px;
+        z-index: 999;
+    }
+
+    .mainMenu .menu-item-has-children:hover .sub-menu {
+        display: block;
+    }
+
+    .mainMenu .sub-menu li {
+        padding: 0;
+    }
+
+    .mainMenu .sub-menu li a {
+        display: block;
+        padding: 8px 20px;
+        font-size: 14px;
+        color: #666;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .mainMenu .sub-menu li a:hover {
+        color: #007bff;
+        background: #f5f5f5;
+    }
+
+    .menu_btn {
+        display: none !important;
+    }
+
+    .accessNav {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .berpo_btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+
+    .berpo_btn:hover {
+        background: #0056b3;
+        color: #fff;
+    }
+}
+
+/* ============================================================
+   TABLET & MOBILE STYLES (max-width: 991px)
+   ============================================================ */
+
+@media (max-width: 991px) {
+    .header01 {
+        position: relative;
+        z-index: 1000;
+        background: #fff;
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar01 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .logo img {
+        max-height: 40px;
+        width: auto;
+    }
+
+    /* ==========================================================
+       MOBILE MENU BUTTON
+    ========================================================== */
+    .menu_btn {
+        display: block !important;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 5px 10px;
+        color: #333;
+        transition: all 0.3s ease;
+        z-index: 1001;
+    }
+
+    .menu_btn.active {
+        color: #007bff;
+    }
+
+    /* Menu button icon styles */
+    .menu_btn i {
+        font-size: 24px !important;
+        transition: transform 0.3s ease !important;
+        display: inline-block !important;
+    }
+
+    .menu_btn.active i {
+        transform: rotate(90deg) !important;
+    }
+
+    /* ==========================================================
+       MOBILE MAIN MENU
+    ========================================================== */
+    .mainMenu {
+        display: none !important;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-top: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .mainMenu.mobileMenuOpen {
+        display: block !important;
+    }
+
+    .mainMenu > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mainMenu > ul > li {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: 1px solid #eee;
+    }
+
+    .mainMenu > ul > li:last-child {
+        border-bottom: none;
+    }
+
+    .mainMenu > ul > li > a {
+        display: block !important;
+        padding: 12px 0 !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        color: #333 !important;
+        text-decoration: none !important;
+    }
+
+    /* ==========================================================
+       SERVICE MENU LINK - MOBILE
+    ========================================================== */
+    .serviceMenuLink {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        padding: 0 !important;
+        cursor: pointer !important;
+    }
+
+    /* ==========================================================
+       SERVICE LABEL - MOBILE (This is what you're looking for!)
+    ========================================================== */
+    .serviceLabel {
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        color: #020202 !important;
+        padding: 30px 0 !important;
+        flex: 1 !important;
+        cursor: pointer !important;
+        text-decoration: none !important;
+        background: none !important;
+        border: none !important;
+        text-align: center;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .serviceLabel:hover {
+        color: #007bff !important;
+    }
+
+    /* ==========================================================
+       SERVICE ARROW - MOBILE
+    ========================================================== */
+    .serviceArrow {
+        font-size: 12px !important;
+        color: #666 !important;
+        cursor: pointer !important;
+        padding: 12px 10px !important;
+        transition: transform 0.3s ease !important;
+        user-select: none !important;
+    }
+
+    .serviceArrow.open {
+        transform: rotate(180deg) !important;
+    }
+
+    /* ==========================================================
+       SUB-MENU - MOBILE
+    ========================================================== */
+    .mainMenu .sub-menu {
+        display: none !important;
+        padding-left: 20px !important;
+        list-style: none !important;
+        margin: 0 !important;
+        background: #f9f9f9 !important;
+        border-radius: 5px !important;
+    }
+
+    .mainMenu .menu-item-has-children.servicesOpen .sub-menu {
+        display: block !important;
+        padding: 10px 20px !important;
+    }
+
+    .mainMenu .sub-menu li {
+        padding: 0 !important;
+        border-bottom: 1px solid #eee !important;
+    }
+
+    .mainMenu .sub-menu li:last-child {
+        border-bottom: none !important;
+    }
+
+    .mainMenu .sub-menu li a {
+        display: block !important;
+        padding: 10px 0 !important;
+        font-size: 14px !important;
+        color: #666 !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .mainMenu .sub-menu li a:hover {
+        color: #007bff !important;
+        padding-left: 5px !important;
+    }
+
+    /* ==========================================================
+       ACCESS NAV - MOBILE
+    ========================================================== */
+    .accessNav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+    }
+
+    .berpo_btn {
+        display: none !important;
+    }
+}
+
+/* ============================================================
+   EXTRA SMALL DEVICES (max-width: 480px)
+   ============================================================ */
+
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 35px;
+    }
+
+    .mainMenu {
+        padding: 15px;
+    }
+
+    .serviceLabel {
+        font-size: 14px !important;
+        padding: 10px 0 !important;
+    }
+
+    .mainMenu .sub-menu li a {
+        font-size: 13px !important;
+        padding: 8px 0 !important;
+    }
+}
+
+/* ============================================================
+   DROPDOWN ANIMATION (Mobile only)
+   ============================================================ */
+
+@media (max-width: 991px) {
+    .mainMenu .sub-menu {
+        max-height: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease !important;
+        padding: 0 20px !important;
+    }
+
+    .mainMenu .menu-item-has-children.servicesOpen .sub-menu {
+        max-height: 500px !important;
+        opacity: 1 !important;
+        padding: 10px 20px !important;
+    }
+}
+
+/* ============================================================
+   ADDITIONAL UTILITY CLASSES
+   ============================================================ */
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+/* Columns */
+.col-lg-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+/* Large Container */
+.largeContainer {
+    max-width: 1400px;
+}
+
+/* Sticky Header */
+.header01.isSticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ============================================================
+   DEBUG STYLES (Remove in production)
+   ============================================================ */
+
+/* Uncomment to debug serviceLabel */
+/*
+.serviceLabel {
+    border: 2px solid red !important;
+    background: yellow !important;
+}
+*/
+
+/* ============================================================
+   ICON FONT SUPPORT (If using Font Awesome or similar)
+   ============================================================ */
+
+/* For twi-* icons (if using a custom icon font) */
+[class^="twi-"],
+[class*=" twi-"] {
+    display: inline-block;
+    font-family: 'twi' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Specific icon classes */
+.twi-bars2:before {
+    content: "\f0c9";
+}
+
+.twi-times:before {
+    content: "\f00d";
+}
+
+.twi-search1:before {
+    content: "\f002";
+}

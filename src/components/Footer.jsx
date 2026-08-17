@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
           </div> */}
 
-          <div className="col-md-6 col-xl-6 d-flex align-item-center justify-content-center">
+          <div className="col-md-6 col-xl-6 footer-two">
             <div className="widget">
               <div className="wsubtitle">Clean & Flexible</div>
               <h3 className="widget_title">Quick Links</h3>

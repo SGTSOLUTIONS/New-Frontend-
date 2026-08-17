@@ -31,7 +31,7 @@ function MainLayout(){
 
   return (
     <>
-      {/* <Preloader /> */}
+      {/* { <Preloader /> } */}
       <SearchPopup />
       <Header />
       <main>

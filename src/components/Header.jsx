@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
+import "./Header.css";
 
 // Import menu images
 import h1 from "../assets/images/h1.png";
@@ -102,12 +103,17 @@ function Header() {
 
 
     // =====================================================
-    // TOGGLE SERVICES
+    // TOGGLE SERVICES - FIXED FOR SERVICE PAGES
     // =====================================================
 
     const toggleServices = (e) => {
-        e.preventDefault();
-
+        // Prevent default behavior and stop propagation
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        // Toggle the services dropdown
         setServicesOpen((prev) => !prev);
     };
 
@@ -215,7 +221,7 @@ function Header() {
 
 
                                         {/* =============================
-                                            SERVICE
+                                            SERVICE - FIXED TOGGLE (Looks like a link)
                                         ============================= */}
 
                                         <li
@@ -227,36 +233,31 @@ function Header() {
 
                                             <div className="serviceMenuLink">
 
-
-                                                {/* SERVICE TEXT */}
-
-                                                <a
-                                                    href="#"
-                                                    onClick={
-                                                        toggleServices
-                                                    }
+                                                {/* SERVICE TEXT - Using span that looks like a link */}
+                                                <span
+                                                    className="serviceLabel"
+                                                    onClick={toggleServices}
+                                                    onTouchEnd={(e) => {
+                                                        e.preventDefault();
+                                                        e.stopPropagation();
+                                                        setServicesOpen((prev) => !prev);
+                                                    }}
                                                 >
                                                     Service
-                                                </a>
+                                                </span>
 
-
-                                                {/* SERVICE ARROW */}
-
-                                                {/* <button
-                                                    type="button"
-                                                    className="serviceDropdownBtn"
-                                                    onClick={
-                                                        toggleServices
-                                                    }
-                                                    aria-label="Toggle services"
-                                                    aria-expanded={
-                                                        servicesOpen
-                                                    }
+                                                {/* SERVICE ARROW - Small indicator */}
+                                                <span 
+                                                    className={`serviceArrow ${servicesOpen ? 'open' : ''}`}
+                                                    onClick={toggleServices}
+                                                    onTouchEnd={(e) => {
+                                                        e.preventDefault();
+                                                        e.stopPropagation();
+                                                        setServicesOpen((prev) => !prev);
+                                                    }}
                                                 >
-
-                                                    <span className="dropdown-arrow"></span>
-
-                                                </button> */}
+                                                    ▾
+                                                </span>
 
                                             </div>
 
@@ -343,12 +344,6 @@ function Header() {
                                 ================================= */}
 
                                 <div className="accessNav">
-
-
-                          
-
-                             
-
 
                                     {/* =============================
                                         GET A QUOTE

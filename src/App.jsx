@@ -20,13 +20,15 @@ import Mapping2D from "./pages/services/Mapping2D";
 import Consultancy from "./pages/services/Consultancy";
 import WebDevelopment from "./pages/services/WebDevelopment";
 import Contact from "./pages/Contact";
+import AuthLayout from "./layouts/AuthLayout";
+import Login from "./pages/auth/Login";
 
 function App() {
   return (
     <Routes>
 
       {/* ================================
-          ALL PAGES USE MAIN LAYOUT
+          ALL client  PAGES USE MAIN LAYOUT
           ================================ */}
       <Route path="/" element={<MainLayout />}>
 
@@ -35,14 +37,14 @@ function App() {
 
         {/* About */}
         <Route path="about" element={<About />} />
-         {/* contact */}
+        {/* contact */}
         <Route path="contact" element={<Contact />} />
         {/* Services */}
         <Route path="services">
           <Route index element={<Service />} />
-         
-      
-         
+
+
+
 
           {/* Individual Services */}
           <Route path="web-gis" element={<WebGis />} />
@@ -58,18 +60,12 @@ function App() {
 
       </Route>
 
-      {/* Old /service URL → /services */}
-      <Route
-        path="/service"
-        element={<Navigate to="/services" replace />}
-      />
 
-      {/* Unknown URL → Home */}
-      <Route
-        path="*"
-        element={<Navigate to="/" replace />}
-      />
 
+      {/* auth pages  */}
+      <Route path="/" element={<AuthLayout />}>
+        <Route path="login" element={<Login />} />
+      </Route>
     </Routes>
   );
 }

@@ -107,7 +107,7 @@
 .navbar01{
     justify-content: space-between;
     display: flex;
-    background:hwb(0 97% 2%);
+    background:hwb(0 28% 18%);
     border-radius: 3px;
     padding: 0 40px;
    
@@ -2149,7 +2149,7 @@ select::-ms-input-placeholder{
     margin-top: -12px;
 }
 .aboutWidget img{
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     margin-left:-20px;
 }
