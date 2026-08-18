@@ -1,6 +1,6 @@
 // src/pages/auth/Login.jsx
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -16,7 +16,7 @@ const Login = () => {
   const dispatch = useDispatch();
 
   // Redux state
-  const { isLoading, error } = useSelector((state) => state.auth);
+  const { isLoading, error ,isAuthenticated} = useSelector((state) => state.auth);
 
   // Form state
   const [formData, setFormData] = useState({
@@ -24,7 +24,17 @@ const Login = () => {
     password: "",
     remember: false,
   });
+  useEffect(() => {
 
+    if (isAuthenticated) {
+
+      navigate("/dashboard", {
+        replace: true,
+      });
+
+    }
+
+  }, []);
   // Validation errors
   const [validationErrors, setValidationErrors] = useState({});
 
