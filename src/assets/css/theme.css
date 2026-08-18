@@ -10362,14 +10362,11 @@ input[type="checkbox"]:checked ~ span:before {
 .page_banner {
     position: relative;
     width: 100%;
-    
-
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
-
     overflow: hidden;
-    padding: 0;opacity: 1;
+    padding: 0 25px;opacity: 1;
 }
 
 .overlay {

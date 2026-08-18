@@ -20,7 +20,7 @@
     align-items: center !important;
     justify-content: space-between !important;
     min-height: 70px !important;
-    background-color: hwb(0 96% 2%);
+    background-color: hwb(0deg 100% 0% / 94%);
     border-radius: 18px;
 }
 

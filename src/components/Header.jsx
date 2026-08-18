@@ -343,30 +343,7 @@ function Header() {
                                     RIGHT SIDE
                                 ================================= */}
 
-                                <div className="accessNav">
-
-                                    {/* =============================
-                                        GET A QUOTE
-                                    ============================= */}
-
-                                    <Link
-                                        className="berpo_btn"
-                                        to="/contact"
-                                        onClick={closeMenu}
-                                    >
-
-                                        <span className="bp-shape"></span>
-                                        <span className="bp-shape"></span>
-                                        <span className="bp-shape"></span>
-                                        <span className="bp-shape"></span>
-
-                                        <span className="bp-text">
-                                            Contact
-                                        </span>
-
-                                    </Link>
-
-                                </div>
+                            
 
                             </div>
 
