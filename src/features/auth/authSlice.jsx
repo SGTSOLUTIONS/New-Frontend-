@@ -27,9 +27,13 @@ export const loginUser = createAsyncThunk(
 
 export const registerUser = createAsyncThunk(
   'auth/registerUser',
-  async ({ name, email, password, role }, { rejectWithValue }) => {
+  async (formData, { rejectWithValue }) => {
     try {
-      const res = await api.post('/register', { name, email, password, role });
+      const res = await api.post('/register', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
       return res.data;
     } catch (err) {
       const errorData = err.response?.data;

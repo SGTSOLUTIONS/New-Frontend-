@@ -1,6 +1,6 @@
 // src/pages/auth/Login.jsx
 
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -8,7 +8,7 @@ import "../../assets/css/auth/AuthLayout.css";
 
 import {
   loginUser,
-  clearErrors, // Changed to match slice export
+  clearErrors,
 } from "../../features/auth/authSlice";
 
 const Login = () => {
@@ -16,7 +16,7 @@ const Login = () => {
   const dispatch = useDispatch();
 
   // Redux state
-  const { isLoading, error ,isAuthenticated} = useSelector((state) => state.auth);
+  const { isLoading, error, isAuthenticated } = useSelector((state) => state.auth);
 
   // Form state
   const [formData, setFormData] = useState({
@@ -24,41 +24,17 @@ const Login = () => {
     password: "",
     remember: false,
   });
+
   useEffect(() => {
-
     if (isAuthenticated) {
-
       navigate("/dashboard", {
         replace: true,
       });
-
     }
-
-  }, []);
-  // Validation errors
-  const [validationErrors, setValidationErrors] = useState({});
+  }, [isAuthenticated, navigate]);
 
   // Show/hide password
   const [showPassword, setShowPassword] = useState(false);
-
-  // Validate form before submission
-  const validateForm = () => {
-    const errors = {};
-    
-    if (!formData.email.trim()) {
-      errors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Please enter a valid email address";
-    }
-    
-    if (!formData.password) {
-      errors.password = "Password is required";
-    } else if (formData.password.length < 6) {
-      errors.password = "Password must be at least 6 characters";
-    }
-    
-    return errors;
-  };
 
   // Handle input change
   const handleChange = (e) => {
@@ -68,14 +44,6 @@ const Login = () => {
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
-
-    // Clear field validation error
-    if (validationErrors[name]) {
-      setValidationErrors((prev) => ({
-        ...prev,
-        [name]: "",
-      }));
-    }
 
     // Clear Redux error
     if (error && Object.keys(error).length > 0) {
@@ -89,14 +57,6 @@ const Login = () => {
 
     // Clear previous errors
     dispatch(clearErrors());
-    setValidationErrors({});
-
-    // Validate form
-    const errors = validateForm();
-    if (Object.keys(errors).length > 0) {
-      setValidationErrors(errors);
-      return;
-    }
 
     // Redux login
     const result = await dispatch(
@@ -114,13 +74,8 @@ const Login = () => {
     // Login failed - error will be in Redux state
   };
 
-  // Helper to display error messages
+  // Helper to display error messages from Redux
   const getFieldError = (fieldName) => {
-    // Check field-specific error
-    if (validationErrors[fieldName]) {
-      return validationErrors[fieldName];
-    }
-    
     // Check if error is a string (general error)
     if (typeof error === 'string') {
       return fieldName === 'general' ? error : null;

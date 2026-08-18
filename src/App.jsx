@@ -22,6 +22,7 @@ import WebDevelopment from "./pages/services/WebDevelopment";
 import Contact from "./pages/Contact";
 import AuthLayout from "./layouts/AuthLayout";
 import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Resgister";
 
 function App() {
   return (
@@ -65,6 +66,7 @@ function App() {
       {/* auth pages  */}
       <Route path="/" element={<AuthLayout />}>
         <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Route>
     </Routes>
   );
