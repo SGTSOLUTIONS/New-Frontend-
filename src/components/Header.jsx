@@ -335,7 +335,7 @@ function Header() {
                                         </li>
                                         <div className="accessNav">
                                           
-                                            <Link className="berpo_btn" to="/logon">
+                                            <Link className="berpo_btn" to="/login">
                                               
                                                 <span className="bp-text">login</span>
                                             </Link>
