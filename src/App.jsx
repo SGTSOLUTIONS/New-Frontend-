@@ -82,12 +82,14 @@ function App() {
 
       {/* ADMIN PAGES - Protected */}
       <Route element={<AuthCheck />}>
+
         <Route path="/dashboard" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
           {/* Add more admin routes here */}
           {/* <Route path="users" element={<Users />} /> */}
           {/* <Route path="services" element={<Services />} /> */}
         </Route>
+
       </Route>
     </Routes>
   );
