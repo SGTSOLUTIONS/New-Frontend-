@@ -97,13 +97,6 @@
 
 
 
-.header01{
-    position: absolute;
-    top: 58px;
-    left: 0;
-    z-index: 9;
-    width: 100%;
-}
 .navbar01{
     justify-content: space-between;
     display: flex;
