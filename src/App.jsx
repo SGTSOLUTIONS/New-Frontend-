@@ -4,7 +4,8 @@ import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import MainLayout from './layouts/MainLayout';
 import AdminLayout from './layouts/AdminLayout';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // Frontend Pages
 import Home from './pages/Home';
 import Service from './pages/Service';
