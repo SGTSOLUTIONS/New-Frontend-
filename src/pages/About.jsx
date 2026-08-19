@@ -833,7 +833,7 @@ const About = () => {
             <section className="aboutPageSection01" style={{ padding: '30px 16px 20px', background:'antiquewhite' }}>
                 <div className="container largeContainer">
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-5">
                             <div className="subTitle">Who We Are</div>
                             <h2 className="secTitle">SGT Solutions for You Business</h2>
                             <p style={{ color: '#666', lineHeight: '1.8' }}>Since 2007 we have been a visionary and a reliable software engineering partner for world-class brands. We are a boutique digital transformation consultancy.</p>
