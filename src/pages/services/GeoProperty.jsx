@@ -1273,13 +1273,7 @@ const GeoProperty = () => {
                 <div className="blogContent">
                   <span className="bmeta"><i className="fas fa-calendar-alt"></i> {blog.date}</span>
                   <h3><Link to="/blog">{blog.title}</Link></h3>
-                  <div className="bpcon">
-                    <div className="author">
-                      <img src={blog.authorImg} alt={blog.author} />
-                      {blog.author}
-                    </div>
-                    <Link to="/blog"><i className="fas fa-arrow-right"></i></Link>
-                  </div>
+                  
                 </div>
               </div>
             ))}

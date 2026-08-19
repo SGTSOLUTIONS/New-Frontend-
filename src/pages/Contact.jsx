@@ -183,7 +183,7 @@ const Contact = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 

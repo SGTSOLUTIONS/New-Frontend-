@@ -145,7 +145,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-12 text-center">
             <div className="Copyright">
-              <span>Bepro</span> - Copyright 2021. Developed by{' '}
+              <span>SGT Solutions</span> - Copyright 2021. Developed by{' '}
               <a href="https://themewar.com/" target="_blank" rel="noopener noreferrer">
                 Themewar
               </a>
