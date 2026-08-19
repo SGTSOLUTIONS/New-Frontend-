@@ -482,10 +482,12 @@
 /* Sticky Header */
 .header01.isSticky {
     position: fixed;
+    padding: 0%;
     top: 0;
     left: 0;
     width: 100%;
     animation: slideDown 0.3s ease;
+    box-shadow: none;
 }
 
 @keyframes slideDown {

@@ -621,7 +621,7 @@ const About = () => {
 
                 /* Page Banner Responsive */
                 .page_banner {
-                    min-height: 350px;
+                    min-height: 150px;
                     display: flex;
                     align-items: center;
                     position: relative;
@@ -661,7 +661,7 @@ const About = () => {
                     color: #fff;
                     font-size: 48px;
                     font-weight: 700;
-                    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+                   
                 }
 
                 @media (max-width: 768px) {
@@ -807,31 +807,33 @@ const About = () => {
             `}</style>
 
             <div className="overlay"></div>
+            
             <section
+            
                 className="page_banner"
                 style={{
                     backgroundImage: `url(${bg})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center top',
                     backgroundRepeat: 'no-repeat',
-                    width: '100%',
+                    width:'100%',
                     minHeight: '250px',
                     margin:'top'
                 }}
+                
             >
-                <div className="container largeContainer">
-                    <div className="row">
-                        <div className="col-md-12 text-center">
+                
+                   <div className="col-md-12 text-center">
                             <h2 className="banner-title">About Us</h2>
                         </div>
-                    </div>
-                </div>
+                        
+                    
+                
             </section>
-
-            <section className="aboutPageSection01" style={{ padding: '60px 0' }}>
+            <section className="aboutPageSection01" style={{ padding: '30px 16px 20px', background:'antiquewhite' }}>
                 <div className="container largeContainer">
                     <div className="row">
-                        <div className="col-lg-5">
+                        <div className="col-lg-4">
                             <div className="subTitle">Who We Are</div>
                             <h2 className="secTitle">SGT Solutions for You Business</h2>
                             <p style={{ color: '#666', lineHeight: '1.8' }}>Since 2007 we have been a visionary and a reliable software engineering partner for world-class brands. We are a boutique digital transformation consultancy.</p>

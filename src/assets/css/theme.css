@@ -10382,10 +10382,10 @@ input[type="checkbox"]:checked ~ span:before {
 
 .banner-title {
     font-size: 50px;
-    line-height: 15px;
+    line-height: 45px;
     color: white;
    text-align: center;
-   padding-top: 40%;
+   padding-top: 30%;
   margin-bottom: 20px;
 }
 .breadcrumbs{
