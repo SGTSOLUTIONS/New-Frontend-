@@ -124,15 +124,15 @@ const Footer = () => {
             <div className="ctaMail">
               <div className="row">
                 <div className="col-lg-4 col-md-5">
-                  <div className="subTitle">Updated about our Products</div>
-                  <h2 className="secTitle">Sign Up Newsletter</h2>
+                  <div className="subTitle">POWERING SMARTER GOVERNANCE</div>
+                  <h2 className="secTitle">GIS • Spatial Analytics • Revenue Intelligence</h2>
                 </div>
                 <div className="col-lg-8 col-md-7">
                   <div className="SubsrcribeForm">
                     <form className="yikes-easy-mc-form" action="#" method="post">
                       <input type="email" name="EMAIL" placeholder="Enter Your Email Address" />
                       <button className="yikes-easy-mc-submit-button" type="submit">
-                        Subscribe Now
+                        Reach Us
                       </button>
                     </form>
                   </div>
