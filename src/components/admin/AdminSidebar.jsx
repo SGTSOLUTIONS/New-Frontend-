@@ -11,14 +11,10 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
       exact: true
     },
     {
-      title: 'Services',
+      title: 'Projects',
       icon: 'fa-cubes',
-      path: '/dashboard/services',
-      children: [
-        { title: 'All Services', path: '/dashboard/services' },
-        { title: 'Add Service', path: '/dashboard/services/add' },
-        { title: 'Categories', path: '/dashboard/services/categories' }
-      ]
+      path: '/dashboard/project',
+      exact: true
     },
     {
       title: 'Users',
@@ -122,7 +118,7 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
         <div className="brand-wrapper">
           <i className="fas fa-cube brand-icon"></i>
           {!isCollapsed && (
-            <span className="brand-text">Admin Panel</span>
+            <span className="brand-text">SGT SOLUTIONS</span>
           )}
         </div>
         {isCollapsed && (

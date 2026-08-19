@@ -30,6 +30,7 @@ import Register from './pages/auth/Resgister';
 
 // Admin Pages
 import Dashboard from './pages/Admin/Dashboard';
+import Project from './pages/Admin/project';
 // Add more admin pages as needed
 // import Users from './pages/Admin/Users';
 // import Services from './pages/Admin/Services';
@@ -85,8 +86,8 @@ function App() {
 
         <Route path="/dashboard" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
-          {/* Add more admin routes here */}
-          {/* <Route path="users" element={<Users />} /> */}
+        
+          <Route path="project" element={<Project />} />
           {/* <Route path="services" element={<Services />} /> */}
         </Route>
 
