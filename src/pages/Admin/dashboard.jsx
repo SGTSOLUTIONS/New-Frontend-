@@ -204,6 +204,91 @@ const Dashboard = () => {
 
 
   // =========================================================
+  // 5. PROJECT ACTIVITY / TIMELINE
+  // =========================================================
+
+  const projectActivities = [
+    {
+      date: '20 Aug 2026',
+      time: '10:45 AM',
+      title: 'Project Progress Updated',
+      project: 'SRIS - Pallipalayam',
+      description: 'Project progress updated from 76% to 82%.',
+      icon: 'fas fa-chart-line',
+      iconBg: '#e8f1ff',
+      iconColor: '#0d6efd',
+      status: 'Updated',
+    },
+    {
+      date: '19 Aug 2026',
+      time: '04:20 PM',
+      title: 'GIS Data Uploaded',
+      project: 'SRIS - Pallipalayam',
+      description: '2,450 property records were uploaded for GIS processing.',
+      icon: 'fas fa-cloud-upload-alt',
+      iconBg: '#e8f8f0',
+      iconColor: '#198754',
+      status: 'Completed',
+    },
+    {
+      date: '18 Aug 2026',
+      time: '03:15 PM',
+      title: 'Survey Completed',
+      project: 'Property Tax Mapping',
+      description: 'Ward 12 field survey was completed successfully.',
+      icon: 'fas fa-map-marked-alt',
+      iconBg: '#fff4e5',
+      iconColor: '#f59e0b',
+      status: 'Completed',
+    },
+    {
+      date: '17 Aug 2026',
+      time: '11:30 AM',
+      title: 'Property Mapping Updated',
+      project: 'Property Tax Mapping',
+      description: 'New property boundaries and assessment information were updated.',
+      icon: 'fas fa-home',
+      iconBg: '#f0eaff',
+      iconColor: '#6f42c1',
+      status: 'Updated',
+    },
+    {
+      date: '15 Aug 2026',
+      time: '05:10 PM',
+      title: 'Drone Survey Completed',
+      project: 'Drone Survey',
+      description: 'Drone imagery collection and initial processing were completed.',
+      icon: 'fas fa-drone',
+      iconBg: '#e8f1ff',
+      iconColor: '#0d6efd',
+      status: 'Completed',
+    },
+    {
+      date: '12 Aug 2026',
+      time: '02:40 PM',
+      title: 'Project Created',
+      project: 'Property Mapping',
+      description: 'New property mapping project was created for Tiruchengode.',
+      icon: 'fas fa-folder-plus',
+      iconBg: '#e8f8f0',
+      iconColor: '#198754',
+      status: 'Created',
+    },
+    {
+      date: '10 Aug 2026',
+      time: '10:15 AM',
+      title: 'GIS Data Processing Started',
+      project: 'GIS Data Processing',
+      description: 'GIS processing workflow was started for the latest survey data.',
+      icon: 'fas fa-cogs',
+      iconBg: '#fff4e5',
+      iconColor: '#f59e0b',
+      status: 'Started',
+    },
+  ];
+
+
+  // =========================================================
   // STATUS STYLE
   // =========================================================
 
@@ -1237,8 +1322,243 @@ const Dashboard = () => {
       </div>
 
 
+
       {/* =====================================================
-          5. GIS STATISTICS
+          5. PROJECT ACTIVITY / TIMELINE
+      ===================================================== */}
+
+      <div className="row g-4 mt-1">
+
+        <div className="col-12">
+
+          <div
+            className="card border-0"
+            style={{
+              borderRadius: '12px',
+              boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
+            }}
+          >
+
+            <div
+              className="card-header bg-white border-0 px-4 pt-4 pb-2"
+              style={{
+                borderRadius: '12px 12px 0 0',
+              }}
+            >
+
+              <div className="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                  <h5
+                    className="mb-1"
+                    style={{
+                      fontSize: '17px',
+                      fontWeight: '600',
+                      color: '#212529',
+                    }}
+                  >
+                    Project Activity
+                  </h5>
+
+                  <p
+                    className="mb-0"
+                    style={{
+                      fontSize: '12px',
+                      color: '#8a8f98',
+                    }}
+                  >
+                    Latest project activities and updates
+                  </p>
+
+                </div>
+
+                <button
+                  className="btn btn-sm btn-outline-primary"
+                  style={{
+                    fontSize: '12px',
+                  }}
+                >
+                  <i className="fas fa-history me-1"></i>
+                  View All
+                </button>
+
+              </div>
+
+            </div>
+
+            <div className="card-body px-4 pb-4">
+
+              <div
+                style={{
+                  position: 'relative',
+                  paddingLeft: '4px',
+                }}
+              >
+
+                {/* Timeline vertical line */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: '20px',
+                    top: '10px',
+                    bottom: '10px',
+                    width: '2px',
+                    backgroundColor: '#e9ecef',
+                  }}
+                ></div>
+
+                {projectActivities.map((activity, index) => (
+
+                  <div
+                    key={index}
+                    className="d-flex position-relative"
+                    style={{
+                      paddingBottom:
+                        index !== projectActivities.length - 1
+                          ? '24px'
+                          : '0',
+                    }}
+                  >
+
+                    {/* Timeline icon */}
+                    <div
+                      style={{
+                        width: '40px',
+                        height: '40px',
+                        borderRadius: '50%',
+                        backgroundColor: activity.iconBg,
+                        color: activity.iconColor,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontSize: '15px',
+                        flexShrink: 0,
+                        zIndex: 1,
+                        border: '3px solid #fff',
+                        boxShadow: '0 0 0 1px #edf0f2',
+                      }}
+                    >
+                      <i className={activity.icon}></i>
+                    </div>
+
+                    {/* Timeline content */}
+                    <div
+                      className="flex-grow-1"
+                      style={{
+                        paddingLeft: '16px',
+                        paddingTop: '1px',
+                      }}
+                    >
+
+                      <div
+                        className="d-flex justify-content-between align-items-start flex-wrap"
+                        style={{
+                          gap: '8px',
+                        }}
+                      >
+
+                        <div>
+
+                          <div
+                            style={{
+                              fontSize: '14px',
+                              fontWeight: '600',
+                              color: '#343a40',
+                            }}
+                          >
+                            {activity.title}
+                          </div>
+
+                          <div
+                            style={{
+                              fontSize: '12px',
+                              fontWeight: '500',
+                              color: '#0d6efd',
+                              marginTop: '3px',
+                            }}
+                          >
+                            {activity.project}
+                          </div>
+
+                        </div>
+
+                        <div
+                          className="d-flex align-items-center"
+                          style={{
+                            gap: '8px',
+                          }}
+                        >
+
+                          <span
+                            style={{
+                              fontSize: '11px',
+                              fontWeight: '600',
+                              color: '#495057',
+                              backgroundColor: '#f5f6f8',
+                              padding: '4px 8px',
+                              borderRadius: '5px',
+                              whiteSpace: 'nowrap',
+                            }}
+                          >
+                            {activity.status}
+                          </span>
+
+                          <span
+                            style={{
+                              fontSize: '11px',
+                              color: '#8a8f98',
+                              whiteSpace: 'nowrap',
+                            }}
+                          >
+                            {activity.time}
+                          </span>
+
+                        </div>
+
+                      </div>
+
+                      <div
+                        style={{
+                          fontSize: '12px',
+                          color: '#6c757d',
+                          marginTop: '6px',
+                          lineHeight: '1.5',
+                        }}
+                      >
+                        {activity.description}
+                      </div>
+
+                      <div
+                        style={{
+                          fontSize: '11px',
+                          color: '#adb5bd',
+                          marginTop: '5px',
+                        }}
+                      >
+                        <i className="far fa-calendar-alt me-1"></i>
+                        {activity.date}
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      {/* =====================================================
+          6. GIS STATISTICS
       ===================================================== */}
 
       <div className="row g-4 mt-1">
