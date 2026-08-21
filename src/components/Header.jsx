@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import "./Header.css";
 
+
+
 // Import menu images
 import h1 from "../assets/images/h1.png";
 import h2 from "../assets/images/h2.png";
@@ -333,15 +335,15 @@ function Header() {
                                             </Link>
 
                                         </li>
-                                        <div className="accessNav">
+                                       
+                                    </ul>
+ <div className="accessNav">
                                           
                                             <Link className="berpo_btn" to="/login">
                                               
                                                 <span className="bp-text">login</span>
                                             </Link>
                                         </div>
-                                    </ul>
-
                                 </nav>
 
 

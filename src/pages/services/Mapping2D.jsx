@@ -214,12 +214,12 @@ const Mapping2D = () => {
           display: block;
         }
 
-        .container {
-          width: 100%;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
+      .service-page .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
         .subTitle {
           font-size: 17px;

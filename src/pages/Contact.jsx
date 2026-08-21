@@ -96,12 +96,13 @@ const Contact = () => {
           display: block;
         }
 
-        .container {
-          width: 100%;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
+       /* ✅ FIXED - Scope container to contact-page only */
+.contact-page .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
         /* ===== TYPOGRAPHY ===== */
         .subTitle {
