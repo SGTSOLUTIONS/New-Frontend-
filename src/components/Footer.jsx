@@ -146,8 +146,8 @@ const Footer = () => {
           <div className="col-lg-12 text-center">
             <div className="Copyright">
               <span>SGT Solutions</span> - Copyright 2021. Developed by{' '}
-              <a href="https://themewar.com/" target="_blank" rel="noopener noreferrer">
-                Themewar
+              <a href="https://sgtsolutions.in/" target="_blank" rel="noopener noreferrer">
+                SGT Solutions
               </a>
             </div>
           </div>
