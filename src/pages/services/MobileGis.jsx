@@ -380,7 +380,7 @@ const MobileGis = () => {
         }
 
         .service_item_01 .sitem_con {
-          padding: px 20px 28px;
+          padding:  30px 30px;
           text-align: center;
         }
 
