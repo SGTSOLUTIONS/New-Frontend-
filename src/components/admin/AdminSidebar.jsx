@@ -16,6 +16,12 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
       path: '/dashboard/project',
       exact: true
     },
+      {
+      title: 'Finance',
+      icon: 'fa-cubes',
+      path: '/dashboard/projectfinance',
+      exact: true
+    },
     {
       title: 'Users',
       icon: 'fa-users',

@@ -1,11 +1,9 @@
-// features/project/projectSlice.js
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '../api/axios';
 
-// =========================
+// ============================================================
 // CREATE PROJECT
-// =========================
+// ============================================================
 export const createProject = createAsyncThunk(
     'project/createProject',
     async (formData, { rejectWithValue }) => {
@@ -15,12 +13,13 @@ export const createProject = createAsyncThunk(
                 formData,
                 {
                     headers: {
-                        'Content-Type': 'multipart/form-data',
-                    },
+                        'Content-Type': 'multipart/form-data'
+                    }
                 }
             );
             return response.data;
         } catch (error) {
+            console.error('Create Project API Error:', error.response?.data);
             return rejectWithValue(
                 error.response?.data || {
                     message: 'Something went wrong'
@@ -30,9 +29,9 @@ export const createProject = createAsyncThunk(
     }
 );
 
-// =========================
+// ============================================================
 // GET PROJECTS
-// =========================
+// ============================================================
 export const getProjects = createAsyncThunk(
     'project/getProjects',
     async (_, { rejectWithValue }) => {
@@ -40,6 +39,7 @@ export const getProjects = createAsyncThunk(
             const response = await api.get('/projects');
             return response.data;
         } catch (error) {
+            console.error('Get Projects API Error:', error.response?.data);
             return rejectWithValue(
                 error.response?.data || {
                     message: 'Unable to fetch projects'
@@ -49,36 +49,35 @@ export const getProjects = createAsyncThunk(
     }
 );
 
-// =========================
+// ============================================================
 // UPDATE PROJECT
-// =========================
+// ============================================================
 export const updateProject = createAsyncThunk(
     'project/updateProject',
     async ({ id, projectData }, { rejectWithValue }) => {
         try {
-            const headers = projectData instanceof FormData 
-                ? { 'Content-Type': 'multipart/form-data' }
-                : { 'Content-Type': 'application/json' };
-                
-            const response = await api.post(
-                `/projects/${id}`,
-                projectData,
-                { headers }
-            );
+            // Always use multipart/form-data for POST with _method
+            const headers = {
+                'Content-Type': 'multipart/form-data',
+            };
+            
+            const response = await api.post(`/projects/${id}`, projectData, { headers });
             return response.data;
         } catch (error) {
+            console.error('Update API Error:', error.response?.data);
             return rejectWithValue(
-                error.response?.data || {
-                    message: 'Unable to update project'
+                error.response?.data || { 
+                    success: false,
+                    message: 'Unable to update project' 
                 }
             );
         }
     }
 );
 
-// =========================
+// ============================================================
 // DELETE PROJECT
-// =========================
+// ============================================================
 export const deleteProject = createAsyncThunk(
     'project/deleteProject',
     async (id, { rejectWithValue }) => {
@@ -89,6 +88,7 @@ export const deleteProject = createAsyncThunk(
                 ...response.data
             };
         } catch (error) {
+            console.error('Delete Project API Error:', error.response?.data);
             return rejectWithValue(
                 error.response?.data || {
                     message: 'Unable to delete project'
@@ -98,9 +98,9 @@ export const deleteProject = createAsyncThunk(
     }
 );
 
-// =========================
+// ============================================================
 // SLICE
-// =========================
+// ============================================================
 const projectSlice = createSlice({
     name: 'project',
     initialState: {
@@ -109,7 +109,7 @@ const projectSlice = createSlice({
         errors: {},
         loading: false,
         success: false,
-        message: '',
+        message: ''
     },
     reducers: {
         clearErrors: (state) => {
@@ -120,11 +120,11 @@ const projectSlice = createSlice({
         },
         clearMessage: (state) => {
             state.message = '';
-        },
+        }
     },
     extraReducers: (builder) => {
         builder
-            // CREATE PROJECT
+            // CREATE
             .addCase(createProject.pending, (state) => {
                 state.loading = true;
                 state.errors = {};
@@ -141,10 +141,11 @@ const projectSlice = createSlice({
             .addCase(createProject.rejected, (state, action) => {
                 state.loading = false;
                 state.success = false;
-                state.errors = action.payload || { message: 'Project creation failed' };
+                state.errors = action.payload?.errors || {
+                    message: action.payload?.message || 'Project creation failed'
+                };
             })
-
-            // GET PROJECTS
+            // GET
             .addCase(getProjects.pending, (state) => {
                 state.loading = true;
                 state.errors = {};
@@ -155,10 +156,11 @@ const projectSlice = createSlice({
             })
             .addCase(getProjects.rejected, (state, action) => {
                 state.loading = false;
-                state.errors = action.payload || { message: 'Unable to fetch projects' };
+                state.errors = action.payload?.errors || {
+                    message: action.payload?.message || 'Unable to fetch projects'
+                };
             })
-
-            // UPDATE PROJECT
+            // UPDATE
             .addCase(updateProject.pending, (state) => {
                 state.loading = true;
                 state.errors = {};
@@ -169,42 +171,51 @@ const projectSlice = createSlice({
                 state.success = true;
                 state.message = action.payload?.message || 'Project updated successfully';
                 if (action.payload?.project) {
+                    const updatedProject = action.payload.project;
                     const index = state.projects.findIndex(
-                        p => p.id === action.payload.project.id
+                        project => project.id === updatedProject.id
                     );
                     if (index !== -1) {
-                        state.projects[index] = action.payload.project;
+                        state.projects[index] = updatedProject;
+                    } else {
+                        state.projects.unshift(updatedProject);
                     }
                 }
             })
             .addCase(updateProject.rejected, (state, action) => {
                 state.loading = false;
                 state.success = false;
-                state.errors = action.payload || { message: 'Unable to update project' };
+                state.errors = action.payload || {
+                    message: 'Unable to update project'
+                };
             })
-
-            // DELETE PROJECT
+            // DELETE
             .addCase(deleteProject.pending, (state) => {
                 state.loading = true;
+                state.errors = {};
             })
             .addCase(deleteProject.fulfilled, (state, action) => {
                 state.loading = false;
+                state.success = true;
+                state.message = action.payload?.message || 'Project deleted successfully';
                 state.projects = state.projects.filter(
                     project => project.id !== action.payload.id
                 );
-                state.message = action.payload?.message || 'Project deleted successfully';
             })
             .addCase(deleteProject.rejected, (state, action) => {
                 state.loading = false;
-                state.errors = action.payload || { message: 'Unable to delete project' };
+                state.success = false;
+                state.errors = action.payload?.errors || {
+                    message: action.payload?.message || 'Unable to delete project'
+                };
             });
-    },
+    }
 });
 
 export const {
     clearErrors,
     clearSuccess,
-    clearMessage,
+    clearMessage
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

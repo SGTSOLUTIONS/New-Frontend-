@@ -32,6 +32,7 @@ import Register from './pages/auth/Resgister';
 // Admin Pages
 import Dashboard from './pages/Admin/Dashboard';
 import Project from './pages/Admin/project';
+import ProjectFinance from './pages/Admin/ProjectFinance';
 // Add more admin pages as needed
 // import Users from './pages/Admin/Users';
 // import Services from './pages/Admin/Services';
@@ -89,6 +90,7 @@ function App() {
           <Route index element={<Dashboard />} />
         
           <Route path="project" element={<Project />} />
+           <Route path="projectfinance" element={<ProjectFinance />} />
           {/* <Route path="services" element={<Services />} /> */}
         </Route>
 
