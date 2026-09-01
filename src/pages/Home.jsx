@@ -640,7 +640,7 @@ const Home = () => {
           id="heroCarousel"
           className="carousel slide"
           data-ride="carousel"
-          data-interval="5000"
+          data-interval="0"
           data-pause="false"
         >
           <ol className="carousel-indicators">
@@ -648,151 +648,151 @@ const Home = () => {
             <li data-target="#heroCarousel" data-slide-to="1"></li>
           </ol>
 
-          <div className="carousel-inner">
-            {/* Slide 1 */}
-            <div className="carousel-item active hero-slide">
-              <div
-                style={{
-                  backgroundImage: `url(${slider1})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center center',
-                  backgroundRepeat: 'no-repeat',
-                  minHeight: '750px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  padding: '0 15%',
-                  position: 'relative'
-                }}
-                className="hero-slide"
-              >
-                <div className="hero-content" style={{ maxWidth: '670px', width: '100%' }}>
-                  <div
-                    className="sub-title text-uppercase"
-                    style={{
-                      color: '#bb0b0b',
-                      fontSize: '14px',
-                      fontWeight: 700,
-                      lineHeight: '28px',
-                      letterSpacing: '2.8px',
-                      marginBottom: '10px'
-                    }}
-                  >
-                    <br /><br /><br /> <span className="bg">GEOSPATIAL & DIGITAL SOLUTIONS</span>
-                  </div>
-                  <h1
-                    className="headFont"
-                    style={{
-                      color: '#ffffff',
-                      fontSize: '50px',
-                      fontWeight: 700,
-                      lineHeight: '80px',
-                      marginBottom: '20px'
-                    }}
-                  >
-                    Mapping the World.Building Smarter<span style={{ color: '#bb0b0b' }}> Solutions.</span>
-                  </h1>
-                  <p
-                    style={{
-                      color: '#d9d9d9',
-                      fontSize: '18px',
-                      fontWeight: 400,
-                      lineHeight: '28px',
-                      marginBottom: '30px'
-                    }}
-                  >
-                    We deliver innovative geospatial solutions that transform location data into accurate, actionable insights. From GIS and aerial mapping to drone surveys and spatial intelligence, we help organizations make better decisions.
-                  </p>
-                  <div className="btn-wrapper">
-                    <Link className="berpo_btn" to="/services">
-                      <span className="bp-shape"></span>
-                      <span className="bp-shape"></span>
-                      <span className="bp-shape"></span>
-                      <span className="bp-shape"></span>
-                      <span className="bp-text">EXPLORE OUR SERVICES</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Slide 2 */}
-            <div className="carousel-item hero-slide">
-              <div
-                style={{
-                  backgroundImage: `url(${slider2})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center center',
-                  backgroundRepeat: 'no-repeat',
-                  minHeight: '750px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  padding: '0 15%',
-                  position: 'relative'
-                }}
-                className="hero-slide"
-              >
-                <div className="hero-content" style={{ maxWidth: '670px', width: '100%' }}>
-                  <div
-                    className="sub-title text-uppercase"
-                    style={{
-                      color: '#bb0b0b',
-                      fontSize: '14px',
-                      fontWeight: 700,
-                      lineHeight: '28px',
-                      letterSpacing: '2.8px',
-                      marginBottom: '10px'
-                    }}
-                  >
-                    <br /><br /> <span className="bg">SGT SOLUTIONS</span>
-                  </div>
-                  <h1
-                    className="headFont"
-                    style={{
-                      color: '#ffffff',
-                      fontSize: '50px',
-                      fontWeight: 700,
-                      lineHeight: '80px',
-                      marginBottom: '20px'
-                    }}
-                  >
-                    See More. Map Better.<span style={{ color: '#bb0b0b' }}>Decide Smarter.</span>
-                  </h1>
-                  <p
-                    style={{
-                      color: '#d9d9d9',
-                      fontSize: '18px',
-                      fontWeight: 400,
-                      lineHeight: '26px',
-                      marginBottom: '30px'
-                    }}
-                  >
-                    Advanced GIS, surveying, mapping, and spatial intelligence solutions designed for a connected world.
-                  </p>
-                  <div className="btn-wrapper">
-                    <Link className="berpo_btn" to="/services">
-                      <span className="bp-shape"></span>
-                      <span className="bp-shape"></span>
-                      <span className="bp-shape"></span>
-                      <span className="bp-shape"></span>
-                      <span className="bp-text">DISCOVER MORE</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <a className="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a className="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-          </a>
+<div className="carousel-inner">
+  {/* Slide 1 */}
+  <div className="carousel-item active">
+    <div
+      style={{
+        backgroundImage: `url(${slider1})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '750px',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '0 15%',
+        position: 'relative',
+        width: '100%'
+      }}
+    >
+      <div className="hero-content" style={{ maxWidth: '670px', width: '100%' }}>
+        <div
+          className="sub-title text-uppercase"
+          style={{
+            color: '#bb0b0b',
+            fontSize: '14px',
+            fontWeight: 700,
+            lineHeight: '28px',
+            letterSpacing: '2.8px',
+            marginBottom: '10px'
+          }}
+        >
+          <br /><br /><br /> <span className="bg">GEOSPATIAL & DIGITAL SOLUTIONS</span>
         </div>
-      </section>
-      {/* End:: Hero Slider */}
+        <h1
+          className="headFont"
+          style={{
+            color: '#ffffff',
+            fontSize: '50px',
+            fontWeight: 700,
+            lineHeight: '80px',
+            marginBottom: '20px'
+          }}
+        >
+          Mapping the World.Building Smarter<span style={{ color: '#bb0b0b' }}> Solutions.</span>
+        </h1>
+        <p
+          style={{
+            color: '#d9d9d9',
+            fontSize: '18px',
+            fontWeight: 400,
+            lineHeight: '28px',
+            marginBottom: '30px'
+          }}
+        >
+          We deliver innovative geospatial solutions that transform location data into accurate, actionable insights. From GIS and aerial mapping to drone surveys and spatial intelligence, we help organizations make better decisions.
+        </p>
+        <div className="btn-wrapper">
+          <Link className="berpo_btn" to="/services">
+            <span className="bp-shape"></span>
+            <span className="bp-shape"></span>
+            <span className="bp-shape"></span>
+            <span className="bp-shape"></span>
+            <span className="bp-text">EXPLORE OUR SERVICES</span>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Slide 2 */}
+  <div className="carousel-item">
+    <div
+      style={{
+        backgroundImage: `url(${slider2})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '750px',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '0 15%',
+        position: 'relative',
+        width: '100%'
+      }}
+    >
+      <div className="hero-content" style={{ maxWidth: '670px', width: '100%' }}>
+        <div
+          className="sub-title text-uppercase"
+          style={{
+            color: '#bb0b0b',
+            fontSize: '14px',
+            fontWeight: 700,
+            lineHeight: '28px',
+            letterSpacing: '2.8px',
+            marginBottom: '10px'
+          }}
+        >
+          <br /><br /> <span className="bg">SGT SOLUTIONS</span>
+        </div>
+        <h1
+          className="headFont"
+          style={{
+            color: '#ffffff',
+            fontSize: '50px',
+            fontWeight: 700,
+            lineHeight: '80px',
+            marginBottom: '20px'
+          }}
+        >
+          See More. Map Better.<span style={{ color: '#bb0b0b' }}>Decide Smarter.</span>
+        </h1>
+        <p
+          style={{
+            color: '#d9d9d9',
+            fontSize: '18px',
+            fontWeight: 400,
+            lineHeight: '26px',
+            marginBottom: '30px'
+          }}
+        >
+          Advanced GIS, surveying, mapping, and spatial intelligence solutions designed for a connected world.
+        </p>
+        <div className="btn-wrapper">
+          <Link className="berpo_btn" to="/services">
+            <span className="bp-shape"></span>
+            <span className="bp-shape"></span>
+            <span className="bp-shape"></span>
+            <span className="bp-shape"></span>
+            <span className="bp-text">DISCOVER MORE</span>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a className="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span className="sr-only">Previous</span>
+</a>
+<a className="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+  <span className="sr-only">Next</span>
+</a>
+</div>
+</section>
+{/* End:: Hero Slider */}
 
       {/* Services Start */}
       <section className="serviceSectionTitle py-5">
