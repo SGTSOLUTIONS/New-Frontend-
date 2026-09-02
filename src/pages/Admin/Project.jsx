@@ -8,6 +8,8 @@ import {
     deleteProject,
     updateProject
 } from '../../features/projectSlice';
+import ProjectIncomes from './ProjectIncomes';
+import ProjectExpenses from './ProjectExpenses';
 
 const Project = () => {
     const dispatch = useDispatch();
@@ -49,6 +51,9 @@ const Project = () => {
     const [editingProject, setEditingProject] = useState(null);
     const [showEditModal, setShowEditModal] = useState(false);
     const [editErrors, setEditErrors] = useState({});
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [showDetailModal, setShowDetailModal] = useState(false);
+    const [activeTab, setActiveTab] = useState('incomes');
 
     // ============================================================
     // FETCH PROJECTS
@@ -326,6 +331,15 @@ const Project = () => {
     };
 
     // ============================================================
+    // VIEW PROJECT DETAILS
+    // ============================================================
+    const handleViewDetails = (project) => {
+        setSelectedProject(project);
+        setShowDetailModal(true);
+        setActiveTab('incomes');
+    };
+
+    // ============================================================
     // VALIDATION
     // ============================================================
     const getValidationClass = (fieldName) => {
@@ -552,6 +566,13 @@ const Project = () => {
 
                 <div className="card-footer bg-white border-top-0">
                     <div className="d-flex justify-content-end gap-2">
+                        <button 
+                            type="button" 
+                            className="btn btn-sm btn-outline-info"
+                            onClick={() => handleViewDetails(project)}
+                        >
+                            <i className="bi bi-eye"></i> Details
+                        </button>
                         <button type="button" className="btn btn-sm btn-outline-primary" onClick={() => handleEdit(project)}>
                             <i className="bi bi-pencil"></i> Edit
                         </button>
@@ -1205,6 +1226,129 @@ const Project = () => {
                 </div>
             )}
 
+            {/* ============================================================
+                PROJECT DETAILS MODAL WITH INCOMES AND EXPENSES
+            ============================================================ */}
+            {showDetailModal && selectedProject && (
+                <div className="modal show d-block" style={{ backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1050 }}>
+                    <div className="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" style={{ maxHeight: '90vh' }}>
+                        <div className="modal-content" style={{ maxHeight: '90vh' }}>
+                            <div className="modal-header">
+                                <h5 className="modal-title">
+                                    <i className="bi bi-folder2-open me-2"></i>
+                                    {selectedProject.project_name} - Financial Details
+                                </h5>
+                                <button 
+                                    type="button" 
+                                    className="btn-close"
+                                    onClick={() => {
+                                        setShowDetailModal(false);
+                                        setSelectedProject(null);
+                                    }}
+                                ></button>
+                            </div>
+                            <div className="modal-body" style={{ overflowY: 'auto', maxHeight: 'calc(90vh - 130px)' }}>
+                                {/* Summary Cards */}
+                                <div className="row g-3 mb-4">
+                                    <div className="col-md-3">
+                                        <div className="card bg-primary text-white">
+                                            <div className="card-body">
+                                                <h6 className="card-title">Total Budget</h6>
+                                                <h4>{formatCurrency(selectedProject.total_amount)}</h4>
+                                                <small>Project Budget</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <div className="card bg-success text-white">
+                                            <div className="card-body">
+                                                <h6 className="card-title">Total Income</h6>
+                                                <h4>{formatCurrency(selectedProject.total_income)}</h4>
+                                                <small>All Incomes</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <div className="card bg-danger text-white">
+                                            <div className="card-body">
+                                                <h6 className="card-title">Total Expense</h6>
+                                                <h4>{formatCurrency(selectedProject.total_expense)}</h4>
+                                                <small>All Expenses</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <div className="card bg-info text-white">
+                                            <div className="card-body">
+                                                <h6 className="card-title">Balance</h6>
+                                                <h4>{formatCurrency(selectedProject.balance_amount)}</h4>
+                                                <small>Remaining Balance</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Tabs */}
+                                <ul className="nav nav-tabs" role="tablist">
+                                    <li className="nav-item">
+                                        <button 
+                                            className={`nav-link ${activeTab === 'incomes' ? 'active' : ''}`}
+                                            onClick={() => setActiveTab('incomes')}
+                                        >
+                                            <i className="bi bi-arrow-down-circle text-success me-1"></i> 
+                                            Incomes ({selectedProject.incomes?.length || 0})
+                                        </button>
+                                    </li>
+                                    <li className="nav-item">
+                                        <button 
+                                            className={`nav-link ${activeTab === 'expenses' ? 'active' : ''}`}
+                                            onClick={() => setActiveTab('expenses')}
+                                        >
+                                            <i className="bi bi-arrow-up-circle text-danger me-1"></i> 
+                                            Expenses ({selectedProject.expenses?.length || 0})
+                                        </button>
+                                    </li>
+                                </ul>
+
+                                <div className="tab-content mt-3">
+                                    {activeTab === 'incomes' ? (
+                                        <ProjectIncomes 
+                                            projectId={selectedProject.id} 
+                                            onClose={() => setShowDetailModal(false)}
+                                        />
+                                    ) : (
+                                        <ProjectExpenses projectId={selectedProject.id} />
+                                    )}
+                                </div>
+                            </div>
+                            <div className="modal-footer">
+                                <button 
+                                    type="button" 
+                                    className="btn btn-secondary"
+                                    onClick={() => {
+                                        setShowDetailModal(false);
+                                        setSelectedProject(null);
+                                    }}
+                                >
+                                    Close
+                                </button>
+                                <button 
+                                    type="button" 
+                                    className="btn btn-primary"
+                                    onClick={() => {
+                                        setShowDetailModal(false);
+                                        setSelectedProject(null);
+                                        dispatch(getProjects());
+                                    }}
+                                >
+                                    Refresh Data
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* CSS */}
             <style>{`
                 .hover-shadow { transition: all 0.3s ease; }
@@ -1214,6 +1358,12 @@ const Project = () => {
                 .progress { border-radius: 10px; }
                 .modal.show { background-color: rgba(0,0,0,0.5); }
                 .modal-dialog-scrollable .modal-body { overflow-y: auto; }
+                .nav-tabs .nav-link.active {
+                    font-weight: 600;
+                    border-bottom: 3px solid #0d6efd;
+                }
+                .card { transition: all 0.3s ease; }
+                .card:hover { transform: translateY(-2px); }
             `}</style>
         </div>
     );

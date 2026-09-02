@@ -1,14 +1,15 @@
 // store.js
-
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "../features/auth/authSlice";
 import projectReducer from "../features/projectSlice";
-import projectFinanceReducer from "../features/projectFinanceSlice"; // Import the finance slice
+import projectIncomeReducer from "../features/projectIncomeSlice";
+import projectExpenseReducer from "../features/projectExpenseSlice";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     project: projectReducer,
-    projectFinance: projectFinanceReducer, // Add the finance reducer
+    projectIncome: projectIncomeReducer,
+    projectExpense: projectExpenseReducer,
   },
 });

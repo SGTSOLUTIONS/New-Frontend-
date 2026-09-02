@@ -32,10 +32,7 @@ import Register from './pages/auth/Resgister';
 // Admin Pages
 import Dashboard from './pages/Admin/Dashboard';
 import Project from './pages/Admin/project';
-import ProjectFinance from './pages/Admin/ProjectFinance';
-// Add more admin pages as needed
-// import Users from './pages/Admin/Users';
-// import Services from './pages/Admin/Services';
+// ProjectFinance is no longer needed as it's integrated into Project component
 
 function App() {
   function AuthCheck() {
@@ -85,15 +82,11 @@ function App() {
 
       {/* ADMIN PAGES - Protected */}
       <Route element={<AuthCheck />}>
-
         <Route path="/dashboard" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
-        
           <Route path="project" element={<Project />} />
-           <Route path="projectfinance" element={<ProjectFinance />} />
-          {/* <Route path="services" element={<Services />} /> */}
+          {/* ProjectFinance is now integrated into Project component */}
         </Route>
-
       </Route>
     </Routes>
   );
