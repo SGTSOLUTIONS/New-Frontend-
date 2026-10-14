@@ -119,18 +119,18 @@ const About = () => {
     const faqs = [
         {
             id: 'ma_collapes_01',
-            question: 'Wte Have added a new exciting feature in v2.0',
-            answer: 'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
+            question: 'End-to-end delivery',
+            answer: ' From data capture (drone, LiDAR, satellite) to AI analysis and live dashboards, all under one roof',
         },
         {
             id: 'ma_collapes_02',
-            question: 'how Consultancy Experts Work?',
-            answer: 'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
+            question: 'Built for governance',
+            answer: 'Solutions designed around the real workflows of municipalities and government departments',
         },
         {
             id: 'ma_collapes_03',
-            question: 'Wte Have added a new exciting feature in v2.0',
-            answer: 'We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers',
+            question: 'AI-driven insight',
+            answer: 'Automated detection, change monitoring and prediction that save time and reveal what manual review misses',
         },
     ];
 
@@ -835,8 +835,9 @@ const About = () => {
                     <div className="row">
                         <div className="col-lg-5">
                             <div className="subTitle">Who We Are</div>
-                            <h2 className="secTitle">SGT Solutions for You Business</h2>
-                            <p style={{ color: '#666', lineHeight: '1.8' }}>Since 2007 we have been a visionary and a reliable software engineering partner for world-class brands. We are a boutique digital transformation consultancy.</p>
+                            <h2 className="secTitle">Where Geospatial Intelligence Meets Artificial Intelligence</h2>
+                            <p style={{ color: '#666', lineHeight: '1.8' }}>SGT Solutions is a Chennai-based geospatial technology company. We combine GIS, AI, remote sensing, drone surveys, LiDAR and spatial analytics to help governments and organisations understand their land, assets and revenue more clearly, and act on that understanding with confidence.
+From uncovering revenue leakage in municipal tax systems to predicting flood risk, we turn complex spatial data into smarter maps, automated analysis, predictive insights and decision-ready dashboards.</p>
                             <ul className="listItem">
                                 <li><i className="twi-check-circle"></i>Innovative Approach Consultancy</li>
                                 <li><i className="twi-check-circle"></i>Flexibile Involvement Consultancy</li>

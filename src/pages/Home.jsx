@@ -689,7 +689,7 @@ const Home = () => {
             marginBottom: '20px'
           }}
         >
-          Mapping the World.Building Smarter<span style={{ color: '#bb0b0b' }}> Solutions.</span>
+          Bridging the Gap Between Data and<span style={{ color: '#bb0b0b' }}> Solutions.</span>
         </h1>
         <p
           style={{
@@ -700,7 +700,7 @@ const Home = () => {
             marginBottom: '30px'
           }}
         >
-          We deliver innovative geospatial solutions that transform location data into accurate, actionable insights. From GIS and aerial mapping to drone surveys and spatial intelligence, we help organizations make better decisions.
+          Geospatial intelligence powered by GIS, AI, Remote Sensing and Drones, built for governments, cities and infrastructure teams.
         </p>
         <div className="btn-wrapper">
           <Link className="berpo_btn" to="/services">
@@ -708,7 +708,7 @@ const Home = () => {
             <span className="bp-shape"></span>
             <span className="bp-shape"></span>
             <span className="bp-shape"></span>
-            <span className="bp-text">EXPLORE OUR SERVICES</span>
+            <span className="bp-text">EXPLORE OUR SOLUTIONS</span>
           </Link>
         </div>
       </div>
