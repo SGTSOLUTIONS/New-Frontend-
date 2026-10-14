@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "../components/Header";
 import SearchPopup from "../components/SearchPopup";
-// import Preloader from "../components/Preloader";
+import Preloader from "../components/Preloader";
 import Footer from "../components/Footer";
 
 // Import CSS
@@ -31,7 +31,7 @@ function MainLayout(){
 
   return (
     <>
-      {/* { <Preloader /> } */}
+      { <Preloader /> }
       <SearchPopup />
       <Header />
       <main>
