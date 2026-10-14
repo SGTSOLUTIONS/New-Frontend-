@@ -796,68 +796,167 @@ const Home = () => {
 
       {/* Services Start */}
       <section className="serviceSectionTitle py-5">
-        <div className="container largeContainer">
-          <div className="row">
-            <div className="col-xl-12 text-center">
-              <div className="subTitle">Services</div>
-              <h2 className="secTitle">What We Do <br /> Our Geospatial & Digital Services</h2>
+  <div className="container largeContainer">
+    <div className="row">
+      <div className="col-xl-12 text-center">
+        <div className="subTitle">Services</div>
+        <h2 className="secTitle">What We Do <br /> Our Geospatial & Digital Services</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="service_section_01 pb-5">
+  <div className="container largeContainer">
+    <div className="row p-3">
+
+<div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service2} alt="" className="img-fluid" />
+          </div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-map-marked-alt"></i>
             </div>
+            <h3><Link to='/services/Photogrammatery'>Spatial Revenue Intelligence</Link></h3>
+            <p>Digitize buildings and parcels from aerial imagery.</p>
           </div>
         </div>
-      </section>
-      <section className="service_section_01 pb-5">
-        <div className="container largeContainer">
-          <div className="row p-3">
-            <div className="col-lg-4 col-md-6">
-              <div className="service_item_01">
-                <div className="siThumb">
-                  <img src={service1} alt="" className="img-fluid" />
-                </div>
-                <div className="sitem_con">
-                  <div className="ibMeta">
-                    <i className="fas fa-globe"></i>
-                  </div>
-                  <h3><Link to='/services/web-gis'>Web GIS</Link></h3>
-                  <p>Web-based mapping portals for land records and asset tracking.</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service_item_01">
-                <div className="siThumb">
-                  <img src={service2} alt="" className="img-fluid" />
-                </div>
-                <div className="sitem_con">
-                  <div className="ibMeta">
-                    <i className="fas fa-map-marked-alt"></i>
-                  </div>
-                  <h3><Link to='/services/geo-property'>Spatial Revenue Intelligence</Link></h3>
-                  <p>Digitize buildings and parcels from aerial imagery.</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service_item_01">
-                <div className="siThumb">
-                  <img src={service3} alt="" className="img-fluid" />
-                </div>
-                <div className="sitem_con">
-                  <div className="ibMeta">
-                    <i className="fas fa-handshake"></i>
-                  </div>
-                  <h3><Link to='/services/drone-survey'>Drone & DGPS Survey</Link></h3>
-                  <p>Centimeter-level accuracy for property mapping.</p>
-                </div>
-              </div>
-            </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service2} alt="" className="img-fluid" />
           </div>
-          <div className="row mt-4">
-            <div className="col-lg-12 text-center">
-              <div className="qu_link">From Web GIS and drone surveys to spatial analytics, we help organizations turn location data into actionable insights. <Link to="/about">Explore Company</Link></div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-map-marked-alt"></i>
             </div>
+            <h3><Link to='/services/Lidar'>Spatial Revenue Intelligence</Link></h3>
+            <p>Digitize buildings and parcels from aerial imagery.</p>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service2} alt="" className="img-fluid" />
+          </div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-map-marked-alt"></i>
+            </div>
+            <h3><Link to='/services/webGis'>Spatial Revenue Intelligence</Link></h3>
+            <p>Digitize buildings and parcels from aerial imagery.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service2} alt="" className="img-fluid" />
+          </div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-map-marked-alt"></i>
+            </div>
+            <h3><Link to='/services/geo-property'>Spatial Revenue Intelligence</Link></h3>
+            <p>Digitize buildings and parcels from aerial imagery.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service2} alt="" className="img-fluid" />
+          </div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-map-marked-alt"></i>
+            </div>
+            <h3><Link to='/services/MobileGis'>Spatial Revenue Intelligence</Link></h3>
+            <p>Digitize buildings and parcels from aerial imagery.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service1} alt="" className="img-fluid" />
+          </div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-globe"></i>
+            </div>
+            <h3><Link to='/services/web-gis'>Web GIS</Link></h3>
+            <p>Web-based mapping portals for land records and asset tracking.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service2} alt="" className="img-fluid" />
+          </div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-map-marked-alt"></i>
+            </div>
+            <h3><Link to='/services/Mapping2D'>Spatial Revenue Intelligence</Link></h3>
+            <p>Digitize buildings and parcels from aerial imagery.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service2} alt="" className="img-fluid" />
+          </div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-map-marked-alt"></i>
+            </div>
+            <h3><Link to='/services/Consultancy'>Spatial Revenue Intelligence</Link></h3>
+            <p>Digitize buildings and parcels from aerial imagery.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-4 col-md-6">
+        <div className="service_item_01">
+          <div className="siThumb">
+            <img src={service3} alt="" className="img-fluid" />
+          </div>
+          <div className="sitem_con">
+            <div className="ibMeta">
+              <i className="fas fa-handshake"></i>
+            </div>
+            <h3><Link to='/services/drone-survey'>Drone & DGPS Survey</Link></h3>
+            <p>Centimeter-level accuracy for property mapping.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div className="row mt-4">
+      <div className="col-lg-12 text-center">
+        <div className="qu_link">
+          From Web GIS and drone surveys to spatial analytics, we help organizations turn location data into actionable insights. <Link to="/about">Explore Company</Link>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
       {/* Services End */}
 
       {/* Achievement Start */}

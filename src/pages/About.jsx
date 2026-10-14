@@ -66,21 +66,21 @@ const About = () => {
         {
             id: 1,
             icon: '',
-            title: 'Flexible Solutions',
+            title: 'Intelligent Insights',
             description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
             link: '/single-service',
         },
         {
             id: 2,
             icon: '',
-            title: 'Premium Contact',
+            title: 'Smarter Decisions',
             description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
             link: '/single-service',
         },
         {
             id: 3,
             icon: '',
-            title: 'Creative Idea',
+            title: 'A Better Future',
             description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
             link: '/single-service',
         },
@@ -117,6 +117,19 @@ const About = () => {
     ];
 
     const faqs = [
+      
+        {
+            id: 'ma_collapes_03',
+            question: 'AI-driven insight',  
+            answer: 'Automated detection, change monitoring and prediction that save time and reveal what manual review misses',
+        },  
+        {
+            id: 'ma_collapes_04',
+            question: 'Local expertise',  
+            answer: '• A Chennai-based team that understands the ground realities of Indian cities and infrastructure.',
+        },  
+    ];
+     const faqsd = [
         {
             id: 'ma_collapes_01',
             question: 'End-to-end delivery',
@@ -127,11 +140,7 @@ const About = () => {
             question: 'Built for governance',
             answer: 'Solutions designed around the real workflows of municipalities and government departments',
         },
-        {
-            id: 'ma_collapes_03',
-            question: 'AI-driven insight',
-            answer: 'Automated detection, change monitoring and prediction that save time and reveal what manual review misses',
-        },
+        
     ];
 
     const clients = ['', '', '', ''];
@@ -337,7 +346,7 @@ const About = () => {
                 }
 
                 .bepAccordion .card.activeBg {
-                    box-shadow: 0 2px 15px rgba(187, 11, 11, 0.1);
+                    box-shadow: 0 2px 1px rgba(187, 11, 11, 0.1);
                 }
 
                 .bepAccordion .faqInner {
@@ -786,7 +795,9 @@ const About = () => {
                         padding: 6px 0;
                     }
                 }
-
+.bepAccordion .card.activeBg .card-header button {
+    color: #0a1922 !important;
+}
                 .berpo_btn .bp-shape {
                     display: none;
                 }
@@ -864,8 +875,8 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                 <div className="container largeContainer">
                     <div className="row">
                         <div className="col-xl-12 text-center">
-                            <div className="subTitle">Our Services</div>
-                            <h2 className="secTitle">Focus on Your Business</h2>
+                            <div className="subTitle">Our Vision</div>
+                            <h2 className="secTitle">To bridge the gap between data and decisions through intelligent technology.</h2>
                         </div>
                     </div>
                     <div className="row" style={{ marginTop: '30px' }}>
@@ -944,29 +955,29 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                                 <div className="subTitle">Just a Consultancy</div>
                                 <h2 className="secTitle">Bepro FAQ</h2>
                                 <div className="accordion bepAccordion" id="befAccordion01">
-                                    {faqs.map((faq, index) => (
-                                        <div className={`card ${activeFaq === faq.id ? 'activeBg' : ''}`} key={faq.id}>
+                                    {faqsd.map((faqa, index) => (
+                                        <div className={`card ${activeFaq === faqa.id ? 'activeBg' : ''}`} key={faqa.id}>
                                             <div className="faqInner">
                                                 <div className="card-header" id={`ma_ac_${index + 1}`}>
                                                     <h2 className="mb-0">
                                                         <button
                                                             type="button"
-                                                            onClick={() => toggleFaq(faq.id)}
-                                                            className={activeFaq === faq.id ? '' : 'collapsed'}
-                                                            aria-expanded={activeFaq === faq.id}
+                                                            onClick={() => toggleFaq(faqa.id)}
+                                                            className={activeFaq === faqa.id ? '' : 'collapsed'}
+                                                            aria-expanded={activeFaq === faqa.id}
                                                         >
-                                                            <i>{index + 1}.</i> {faq.question}
+                                                            <i>{index + 1}.</i> {faqa.question}
                                                             <span></span>
                                                         </button>
                                                     </h2>
                                                 </div>
                                                 <div
-                                                    id={faq.id}
-                                                    className={`collapse ${activeFaq === faq.id ? 'show' : ''}`}
+                                                    id={faqa.id}
+                                                    className={`collapse ${activeFaq === faqa.id ? 'show' : ''}`}
                                                     aria-labelledby={`ma_ac_${index + 1}`}
                                                     data-parent="#befAccordion01"
                                                 >
-                                                    <div className="card-body">{faq.answer}</div>
+                                                    <div className="card-body">{faqa.answer}</div>
                                                 </div>
                                             </div>
                                         </div>
