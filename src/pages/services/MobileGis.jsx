@@ -36,12 +36,15 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 
 // Background image
-import servicesBg from '../../assets/images/service/services-bg.jpg';
+import servicesBg from '../../assets/images/Mobile Gis/bg.png';
 
 // Mobile GIS specific images
-import mobileFeature1 from '../../assets/images/service/1.jpg';
-import mobileFeature2 from '../../assets/images/service/2.jpg';
-import mobileFeature3 from '../../assets/images/service/3.jpg';
+import mobileFeature1 from '../../assets/images/Mobile Gis/1.png';
+import mobileFeature2 from '../../assets/images/Mobile Gis/2.png';
+import mobileFeature3 from '../../assets/images/Mobile Gis/3.png';
+import mobileFeature4 from '../../assets/images/Mobile Gis/4.png';
+import mobileFeature5 from '../../assets/images/Mobile Gis/5.jpg';
+import mobileFeature6 from '../../assets/images/Mobile Gis/6.png';
 
 // Mobile GIS Features data
 const mobileFeatures = [
@@ -74,7 +77,7 @@ const mobileFeatures = [
         icon: "fa-clipboard-list",
         title: "Smart Forms & Inspection",
         description: "Dynamic dropdowns, conditional logic, photo geotagging, and barcode scanning. Replace paper forms with structured GIS-ready records.",
-        image: mobileFeature1,
+        image: mobileFeature4,
         link: "/services/mobile-gis/forms",
     },
     {
@@ -82,7 +85,7 @@ const mobileFeatures = [
         icon: "fa-route",
         title: "Asset Management & Maintenance",
         description: "Utility poles, signs, hydrants, manholes – schedule field inspections, track condition, and generate work orders directly from the map.",
-        image: mobileFeature2,
+        image: mobileFeature5,
         link: "/services/mobile-gis/asset-management",
     },
     {
@@ -90,7 +93,7 @@ const mobileFeatures = [
         icon: "fa-charging-station",
         title: "Electric & Fiber Corridor Mapping",
         description: "Mobile GIS for pole attachment surveys, vegetation risk, and as-built verification. Export reports in CSV, GeoJSON, or DXF.",
-        image: mobileFeature3,
+        image: mobileFeature6,
         link: "/services/mobile-gis/corridor-mapping",
     },
 ];
@@ -304,7 +307,7 @@ const MobileGis = () => {
           right: 0;
           bottom: 0;
           background: url(${servicesBg}) center/cover;
-          opacity: 0.15;
+          opacity: 1;
           z-index: 0;
         }
 
