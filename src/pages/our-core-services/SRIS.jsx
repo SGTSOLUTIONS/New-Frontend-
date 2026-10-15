@@ -12,32 +12,32 @@ import blog2 from '../../assets/images/blog/2.jpg';
 import blog3 from '../../assets/images/blog/3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/drone-survey/bg.png';
+import servicesBg from '../../assets/images/Lidar/bg.png';
 
-import droneFeature1 from '../../assets/images/drone-survey/1.png';
-import droneFeature2 from '../../assets/images/drone-survey/2.jpg';
-import droneFeature3 from '../../assets/images/drone-survey/3.jpg';
-import droneFeature4 from '../../assets/images/drone-survey/4.jpg';
-import droneFeature5 from '../../assets/images/drone-survey/5.jpg';
-import droneFeature6 from '../../assets/images/drone-survey/6.png';
+import srisFeature1 from '../../assets/images/Lidar/1.jpg';
+import srisFeature2 from '../../assets/images/Lidar/2.jpg';
+import srisFeature3 from '../../assets/images/Lidar/3.png';
+import srisFeature4 from '../../assets/images/Lidar/4.jpg';
+import srisFeature5 from '../../assets/images/Lidar/5.jpg';
+import srisFeature6 from '../../assets/images/Lidar/6.png';
 
-const droneFeatures = [
-  { id: 1, icon: 'fa-satellite', title: 'Orthomosaic Maps', description: 'High-resolution orthomosaic maps stitched from thousands of overlapping aerial images.', image: droneFeature1, link: '/services/drone/orthomosaic' },
-  { id: 2, icon: 'fa-mountain', title: 'DSM / DTM Models', description: 'Digital surface and terrain models for planning, volumetrics and terrain analysis.', image: droneFeature2, link: '/services/drone/dsm-dtm' },
-  { id: 3, icon: 'fa-draw-polygon', title: 'Contour & Spot Heights', description: 'Contour maps and spot heights generated from drone point clouds.', image: droneFeature3, link: '/services/drone/contour' },
-  { id: 4, icon: 'fa-cubes', title: '3D Site Models', description: '3D models of sites, buildings and structures for visualisation and design.', image: droneFeature4, link: '/services/drone/3d-models' },
-  { id: 5, icon: 'fa-calculator', title: 'Volume & Area Measurement', description: 'Stockpile volumetrics, cut-fill analysis and area calculations.', image: droneFeature5, link: '/services/drone/volumes' },
-  { id: 6, icon: 'fa-sync-alt', title: 'Progress Monitoring', description: 'Repeat surveys to track construction and infrastructure progress over time.', image: droneFeature6, link: '/services/drone/progress' },
+const srisFeatures = [
+  { id: 1, icon: 'fa-map', title: 'Map Every Property', description: 'Visualise every property and assessment status on a single GIS view.', image: srisFeature1, link: '/services/sris/property-map' },
+  { id: 2, icon: 'fa-search-dollar', title: 'Identify Unassessed Properties', description: 'Detect unassessed and under-assessed properties with AI-assisted spatial analysis.', image: srisFeature2, link: '/services/sris/unassessed' },
+  { id: 3, icon: 'fa-exclamation-triangle', title: 'Detect Anomalies', description: 'Spot revenue leakage and irregularities in property tax, professional tax and trade licence data.', image: srisFeature3, link: '/services/sris/anomalies' },
+  { id: 4, icon: 'fa-mobile-alt', title: 'Mobile Field Apps', description: 'Equip surveyors and bill collectors with mobile apps for verified, location-tagged data capture.', image: srisFeature4, link: '/services/sris/mobile' },
+  { id: 5, icon: 'fa-chart-line', title: 'Live Revenue Dashboards', description: 'Track collections and performance on live revenue dashboards for commissioners and officers.', image: srisFeature5, link: '/services/sris/dashboards' },
+  { id: 6, icon: 'fa-shield-alt', title: 'Transparent Governance', description: 'Support transparent, data-driven governance with a full audit trail and role-based access.', image: srisFeature6, link: '/services/sris/governance' },
 ];
 
 const blogs = [
-  { id: 1, title: 'RTK vs PPK: Which Drone Survey is Right for You?', date: '20 March, 2021', img: blog1 },
-  { id: 2, title: 'Drone LiDAR Applications in Forestry', date: '20 March, 2021', img: blog2 },
-  { id: 3, title: 'Volume Calculations from Drone Surveys', date: '20 March, 2021', img: blog3 },
+  { id: 1, title: 'How SRIS Helps Municipalities Recover Lost Revenue', date: '20 March, 2021', img: blog1 },
+  { id: 2, title: 'Spatial Revenue Intelligence in Practice', date: '20 March, 2021', img: blog2 },
+  { id: 3, title: 'Bridging GIS and Property Tax Administration', date: '20 March, 2021', img: blog3 },
 ];
 
-const DroneSurveyAndMapping = () => {
-  const [activeTab, setActiveTab] = useState('aerial');
+const SRIS = () => {
+  const [activeTab, setActiveTab] = useState('capabilities');
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [feedback, setFeedback] = useState('');
@@ -48,7 +48,7 @@ const DroneSurveyAndMapping = () => {
     const { name, email } = formData;
     if (!name || !email) return setFeedback('❌ Please provide name and email.');
     if (!email.includes('@')) return setFeedback('❌ Valid email required.');
-    setFeedback(`✅ Thanks ${name}! A drone survey specialist will contact ${email} within 24h.`);
+    setFeedback(`✅ Thanks ${name}! An SRIS specialist will contact ${email} within 24h.`);
     setFormData({ name: '', email: '', message: '' });
     setTimeout(() => { setShowModal(false); setFeedback(''); }, 2800);
   };
@@ -196,15 +196,15 @@ const DroneSurveyAndMapping = () => {
       <section className="hero-section">
         <div className="container">
           <div className="text-center">
-            <h1 className="hero-title mt-5">Drone Survey &amp; <span>Mapping</span></h1>
+            <h1 className="hero-title mt-5">Spatial Revenue <span>Intelligence System</span></h1>
             <p className="hero-description">
-              High-resolution aerial surveys, orthomosaic maps and terrain models for accurate planning and infrastructure development.
+              Find the revenue your municipality is missing. SRIS connects property tax, professional tax, trade licence and water charges with spatial data.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <button onClick={() => setShowModal(true)} className="berpo_btn">
-                Request Drone Survey Quote <i className="fas fa-arrow-right" style={{ marginLeft: '8px' }}></i>
+                Request a Demo <i className="fas fa-arrow-right" style={{ marginLeft: '8px' }}></i>
               </button>
-              <a href="#features" className="berpo_btn-outline">Explore Services</a>
+              <a href="#features" className="berpo_btn-outline">Explore SRIS</a>
             </div>
           </div>
         </div>
@@ -213,15 +213,15 @@ const DroneSurveyAndMapping = () => {
       <section id="features" className="section-padding">
         <div className="container">
           <div className="text-center">
-            <div className="subTitle">Drone Survey &amp; Mapping Services</div>
-            <h2 className="secTitle">Accurate Aerial Data, <span>Delivered Faster</span></h2>
+            <div className="subTitle">Featured Solution</div>
+            <h2 className="secTitle">Find the Revenue Your <span>Municipality Is Missing</span></h2>
             <p style={{ color: '#5a5a72', maxWidth: '700px', margin: '0 auto' }}>
-              Drone surveys provide current, high-detail data that is quicker to capture than conventional surveys, and safe for difficult or hazardous terrain.
+              SRIS is an integrated GIS platform that connects property tax, professional tax, trade licence and water charges with spatial data. It helps municipalities identify revenue gaps, monitor field operations and strengthen revenue administration.
             </p>
           </div>
 
           <div className="service-grid">
-            {droneFeatures.map((feature) => (
+            {srisFeatures.map((feature) => (
               <div className="service_item_01" key={feature.id}>
                 <div className="siThumb"><img src={feature.image} alt={feature.title} /></div>
                 <div className="sitem_con">
@@ -235,7 +235,7 @@ const DroneSurveyAndMapping = () => {
 
           <div className="text-center mt-5">
             <button onClick={() => setShowModal(true)} className="berpo_btn">
-              Discuss Your Project <i className="fas fa-arrow-right" style={{ marginLeft: '8px' }}></i>
+              Request an SRIS Demo <i className="fas fa-arrow-right" style={{ marginLeft: '8px' }}></i>
             </button>
           </div>
         </div>
@@ -246,21 +246,21 @@ const DroneSurveyAndMapping = () => {
           <div className="achievement-wrap">
             <div className="achievement-content">
               <div className="subTitle">Our Impact</div>
-              <h2 className="secTitle">Drone Survey <span>Excellence</span></h2>
+              <h2 className="secTitle">Revenue <span>Excellence</span></h2>
               <p style={{ color: '#4a4a62', marginBottom: '16px' }}>
-                Delivering high-resolution aerial data for property mapping, corridor planning and construction monitoring.
+                Maximise revenue potential, minimise leakage and enable transparent governance for municipalities across India.
               </p>
               <ul className="listItem">
-                <li><i className="fas fa-check-circle"></i> Property and village-level mapping</li>
-                <li><i className="fas fa-check-circle"></i> Road, rail and canal corridor planning</li>
-                <li><i className="fas fa-check-circle"></i> Construction and infrastructure progress</li>
-                <li><i className="fas fa-check-circle"></i> Industrial, solar and mining sites</li>
+                <li><i className="fas fa-check-circle"></i> Map every property and assessment status</li>
+                <li><i className="fas fa-check-circle"></i> Identify unassessed and under-assessed properties</li>
+                <li><i className="fas fa-check-circle"></i> AI-assisted spatial anomaly detection</li>
+                <li><i className="fas fa-check-circle"></i> Live revenue dashboards for officers</li>
               </ul>
-              <button onClick={() => setShowModal(true)} className="berpo_btn">Get a Drone Survey Quote</button>
+              <button onClick={() => setShowModal(true)} className="berpo_btn">Request a Demo</button>
             </div>
             <div className="achievement-image">
               <img src={achievementImg} alt="Achievement" />
-              <div className="client-badge"><h2>200<sup>+</sup></h2><h5>Survey Projects</h5></div>
+              <div className="client-badge"><h2>25<sup>+</sup></h2><h5>Municipalities</h5></div>
             </div>
           </div>
         </div>
@@ -269,131 +269,91 @@ const DroneSurveyAndMapping = () => {
       <section className="section-padding">
         <div className="container">
           <div className="text-center">
-            <div className="subTitle">Solutions</div>
-            <h2 className="secTitle">Our <span>Drone</span> Capabilities</h2>
+            <div className="subTitle">Capabilities</div>
+            <h2 className="secTitle">Key <span>Capabilities</span></h2>
           </div>
 
           <div className="beproTab">
-            <button className={`nav-link ${activeTab === 'aerial' ? 'active' : ''}`} onClick={() => setActiveTab('aerial')}>Aerial Surveys</button>
-            <button className={`nav-link ${activeTab === 'volumes' ? 'active' : ''}`} onClick={() => setActiveTab('volumes')}>Volumes &amp; Areas</button>
-            <button className={`nav-link ${activeTab === 'progress' ? 'active' : ''}`} onClick={() => setActiveTab('progress')}>Progress Monitoring</button>
+            <button className={`nav-link ${activeTab === 'capabilities' ? 'active' : ''}`} onClick={() => setActiveTab('capabilities')}>Capabilities</button>
+            <button className={`nav-link ${activeTab === 'workflow' ? 'active' : ''}`} onClick={() => setActiveTab('workflow')}>Workflow</button>
+            <button className={`nav-link ${activeTab === 'benefits' ? 'active' : ''}`} onClick={() => setActiveTab('benefits')}>Benefits</button>
           </div>
 
           <div className="tab-content">
-            {activeTab === 'aerial' && (
+            {activeTab === 'capabilities' && (
               <div className="tab-pane active">
                 <div className="tab-content-inner">
                   <div className="text-col">
-                    <h2 className="secTitle" style={{ fontSize: '28px' }}>High-Resolution <span>Aerial Surveys</span></h2>
-                    <p>Capture accurate aerial data quickly, with safe access to difficult or hazardous terrain.</p>
+                    <h2 className="secTitle" style={{ fontSize: '28px' }}>Key <span>Capabilities</span></h2>
+                    <p>SRIS brings property, tax and spatial data together on one platform for revenue administration.</p>
                     <div className="tab-info-block">
-                      <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
+                      <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What SRIS Delivers</h4>
                       <ul>
-                        <li><i className="fas fa-check"></i><span>High-resolution orthomosaic maps</span></li>
-                        <li><i className="fas fa-check"></i><span>Digital surface and terrain models (DSM / DTM)</span></li>
-                        <li><i className="fas fa-check"></i><span>Contour maps and spot heights</span></li>
-                        <li><i className="fas fa-check"></i><span>3D models of sites, buildings and structures</span></li>
+                        <li><i className="fas fa-check"></i><span>Map every property and visualise assessment status</span></li>
+                        <li><i className="fas fa-check"></i><span>Identify unassessed and under-assessed properties</span></li>
+                        <li><i className="fas fa-check"></i><span>Detect anomalies with AI-assisted spatial analysis</span></li>
+                        <li><i className="fas fa-check"></i><span>Equip surveyors with mobile apps</span></li>
+                        <li><i className="fas fa-check"></i><span>Track collections on live revenue dashboards</span></li>
+                        <li><i className="fas fa-check"></i><span>Support transparent, data-driven governance</span></li>
                       </ul>
                     </div>
                     <div className="tab-info-block">
-                      <h4><i className="fas fa-map-marker-alt" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Where It Helps</h4>
+                      <h4><i className="fas fa-star" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Our Goal</h4>
                       <ul>
-                        <li><i className="fas fa-check"></i><span>Property and village-level mapping</span></li>
-                        <li><i className="fas fa-check"></i><span>Corridor planning</span></li>
-                        <li><i className="fas fa-check"></i><span>Construction progress tracking</span></li>
-                        <li><i className="fas fa-check"></i><span>Flood and damage assessment</span></li>
+                        <li><i className="fas fa-check"></i><span>Maximise revenue potential</span></li>
+                        <li><i className="fas fa-check"></i><span>Minimise leakage</span></li>
+                        <li><i className="fas fa-check"></i><span>Enable transparent governance</span></li>
                       </ul>
                     </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-star" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Key Benefits</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Quicker turnaround than conventional surveys</span></li>
-                        <li><i className="fas fa-check"></i><span>Safe access to difficult terrain</span></li>
-                        <li><i className="fas fa-check"></i><span>Current, high-detail data</span></li>
-                        <li><i className="fas fa-check"></i><span>Ready for GIS and CAD</span></li>
-                      </ul>
-                    </div>
-                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Request an Aerial Survey</button>
+                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Request a Demo</button>
                   </div>
-                  <div className="img-col"><img src={aboutImg} alt="Aerial" /></div>
+                  <div className="img-col"><img src={aboutImg} alt="Capabilities" /></div>
                 </div>
               </div>
             )}
-            {activeTab === 'volumes' && (
+            {activeTab === 'workflow' && (
               <div className="tab-pane active">
                 <div className="tab-content-inner">
                   <div className="text-col">
-                    <h2 className="secTitle" style={{ fontSize: '28px' }}>Volume &amp; <span>Area Measurement</span></h2>
-                    <p>Accurate stockpile volumetrics, cut-fill analysis and area calculations from drone point clouds.</p>
+                    <h2 className="secTitle" style={{ fontSize: '28px' }}>How SRIS <span>Works</span></h2>
+                    <p>From mapping to collection — a connected revenue workflow.</p>
                     <div className="tab-info-block">
-                      <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
+                      <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Workflow</h4>
                       <ul>
-                        <li><i className="fas fa-check"></i><span>Stockpile volume calculations</span></li>
-                        <li><i className="fas fa-check"></i><span>Cut-fill analysis</span></li>
-                        <li><i className="fas fa-check"></i><span>Area and perimeter measurement</span></li>
-                        <li><i className="fas fa-check"></i><span>Interactive 3D reports</span></li>
+                        <li><i className="fas fa-check"></i><span>Survey properties with mobile apps</span></li>
+                        <li><i className="fas fa-check"></i><span>Digitise and validate records in the GIS</span></li>
+                        <li><i className="fas fa-check"></i><span>AI analyses anomalies and matches to tax records</span></li>
+                        <li><i className="fas fa-check"></i><span>Officers review flagged properties on dashboards</span></li>
+                        <li><i className="fas fa-check"></i><span>Field teams collect and reconcile revenue</span></li>
+                        <li><i className="fas fa-check"></i><span>Performance is tracked live, with a full audit trail</span></li>
                       </ul>
                     </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-map-marker-alt" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Where It Helps</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Mining and quarry sites</span></li>
-                        <li><i className="fas fa-check"></i><span>Construction earthworks</span></li>
-                        <li><i className="fas fa-check"></i><span>Landfill and stockpile management</span></li>
-                        <li><i className="fas fa-check"></i><span>Solar and industrial sites</span></li>
-                      </ul>
-                    </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-star" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Key Benefits</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Regular, accurate volume tracking</span></li>
-                        <li><i className="fas fa-check"></i><span>Reduced manual survey time</span></li>
-                        <li><i className="fas fa-check"></i><span>Safer measurement of large stockpiles</span></li>
-                        <li><i className="fas fa-check"></i><span>Reports ready for billing and planning</span></li>
-                      </ul>
-                    </div>
-                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Request Volume Analysis</button>
+                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Discuss SRIS</button>
                   </div>
-                  <div className="img-col"><img src={aboutImg} alt="Volumes" /></div>
+                  <div className="img-col"><img src={aboutImg} alt="Workflow" /></div>
                 </div>
               </div>
             )}
-            {activeTab === 'progress' && (
+            {activeTab === 'benefits' && (
               <div className="tab-pane active">
                 <div className="tab-content-inner">
                   <div className="text-col">
-                    <h2 className="secTitle" style={{ fontSize: '28px' }}>Construction <span>Progress Monitoring</span></h2>
-                    <p>Repeat drone surveys to track construction and infrastructure progress over time.</p>
+                    <h2 className="secTitle" style={{ fontSize: '28px' }}>Key <span>Benefits</span></h2>
+                    <p>Why municipalities choose SRIS.</p>
                     <div className="tab-info-block">
-                      <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
+                      <h4><i className="fas fa-star" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Benefits</h4>
                       <ul>
-                        <li><i className="fas fa-check"></i><span>Periodic aerial surveys</span></li>
-                        <li><i className="fas fa-check"></i><span>Change detection over time</span></li>
-                        <li><i className="fas fa-check"></i><span>Progress dashboards</span></li>
-                        <li><i className="fas fa-check"></i><span>As-built documentation</span></li>
+                        <li><i className="fas fa-check"></i><span>Higher revenue recovery from unassessed properties</span></li>
+                        <li><i className="fas fa-check"></i><span>Real-time visibility for commissioners and officers</span></li>
+                        <li><i className="fas fa-check"></i><span>Faster field surveys and reconciliations</span></li>
+                        <li><i className="fas fa-check"></i><span>Consistent, auditable revenue records</span></li>
+                        <li><i className="fas fa-check"></i><span>Greater transparency and accountability</span></li>
+                        <li><i className="fas fa-check"></i><span>A platform that grows with the municipality</span></li>
                       </ul>
                     </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-map-marker-alt" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Where It Helps</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Road and rail projects</span></li>
-                        <li><i className="fas fa-check"></i><span>Building construction</span></li>
-                        <li><i className="fas fa-check"></i><span>Solar farm installation</span></li>
-                        <li><i className="fas fa-check"></i><span>Mining and earthworks</span></li>
-                      </ul>
-                    </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-star" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Key Benefits</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Objective, visual progress records</span></li>
-                        <li><i className="fas fa-check"></i><span>Early warning of delays</span></li>
-                        <li><i className="fas fa-check"></i><span>Data for client and stakeholder reporting</span></li>
-                        <li><i className="fas fa-check"></i><span>Reduce site visits</span></li>
-                      </ul>
-                    </div>
-                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Discuss Monitoring</button>
+                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>See Benefits in Action</button>
                   </div>
-                  <div className="img-col"><img src={aboutImg} alt="Progress" /></div>
+                  <div className="img-col"><img src={aboutImg} alt="Benefits" /></div>
                 </div>
               </div>
             )}
@@ -405,7 +365,7 @@ const DroneSurveyAndMapping = () => {
         <div className="container">
           <div className="text-center">
             <div className="subTitle">Insights</div>
-            <h2 className="secTitle">Latest <span>Drone</span> Articles</h2>
+            <h2 className="secTitle">Latest <span>SRIS</span> Articles</h2>
           </div>
           <div className="blog-grid">
             {blogs.map((blog) => (
@@ -426,12 +386,12 @@ const DroneSurveyAndMapping = () => {
           <div className="cta-wrap">
             <div className="cta-content">
               <h4>We're <span className="highlight">Creative</span></h4>
-              <h2>Drone Survey</h2>
-              <h3><span className="highlight">Mapping</span> Agency</h3>
+              <h2>Spatial Revenue</h2>
+              <h3><span className="highlight">Intelligence</span> Agency</h3>
               <p style={{ color: '#b0b0c8', margin: '16px 0 24px', maxWidth: '90%' }}>
-                Ready to capture accurate aerial data faster?
+                Ready to find the revenue your municipality is missing?
               </p>
-              <button onClick={() => setShowModal(true)} className="berpo_btn">Start Your Drone Survey</button>
+              <button onClick={() => setShowModal(true)} className="berpo_btn">Request a Demo</button>
             </div>
             <div className="cta-images">
               <img src={ctaImg1} alt="CTA" />
@@ -446,9 +406,9 @@ const DroneSurveyAndMapping = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setShowModal(false)}>×</button>
             <div className="text-center mb-4">
-              <div className="subTitle">Drone Survey Inquiry</div>
-              <h2 className="secTitle">Request a <span>Drone Quote</span></h2>
-              <p style={{ color: '#5a5a72' }}>Tell us about your area, required accuracy, and deliverables.</p>
+              <div className="subTitle">SRIS Inquiry</div>
+              <h2 className="secTitle">Request an <span>SRIS Demo</span></h2>
+              <p style={{ color: '#5a5a72' }}>Tell us about your municipality and revenue goals.</p>
             </div>
             {feedback && (
               <div className={`feedback-message ${feedback.includes('✅') ? 'success' : 'error'}`}>{feedback}</div>
@@ -464,7 +424,7 @@ const DroneSurveyAndMapping = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="message">Project Details</label>
-                <textarea id="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your project..." />
+                <textarea id="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your municipality..." />
               </div>
               <button type="submit" className="berpo_btn" style={{ width: '100%' }}>
                 Submit Inquiry <i className="fas fa-paper-plane" style={{ marginLeft: '8px' }}></i>
@@ -477,4 +437,4 @@ const DroneSurveyAndMapping = () => {
   );
 };
 
-export default DroneSurveyAndMapping;
+export default SRIS;

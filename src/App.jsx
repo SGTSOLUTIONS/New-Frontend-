@@ -6,6 +6,7 @@ import MainLayout from './layouts/MainLayout';
 import AdminLayout from './layouts/AdminLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 // Frontend Pages
 import Home from './pages/Home';
 import Service from './pages/Service';
@@ -24,15 +25,12 @@ import Mapping2D from './pages/services/Mapping2D';
 import Consultancy from './pages/services/Consultancy';
 import WebDevelopment from './pages/services/WebDevelopment';
 
-// Our Core Services
-import GISSpatialAnalytics from './pages/our-core-services/GISSpatialAnalytics';
-import DroneSurveyAndMapping from './pages/our-core-services/DroneSurveyAndMapping';
-import RemoteSensingLandUseMapping from './pages/our-core-services/RemoteSensingLandUseMapping';
-import LiDAR3DMapping from './pages/our-core-services/LiDAR3DMapping';
+// Our Core Services — only the 5 files that exist
 import AIPoweredGeospatialIntelligence from './pages/our-core-services/AIPoweredGeospatialIntelligence';
 import EnterpriseGISSmartGovernance from './pages/our-core-services/EnterpriseGISSmartGovernance';
-import MobileGISFieldDataCollection from './pages/our-core-services/MobileGISFieldDataCollection';
-import GISTrainingCapacityBuilding from './pages/our-core-services/GISTrainingCapacityBuilding';
+import Rainfall from './pages/our-core-services/Rainfall';
+import RemoteSensingLandUseMapping from './pages/our-core-services/RemoteSensingLandUseMapping';
+import SRIS from './pages/our-core-services/SRIS';
 
 // Auth pages
 import AuthLayout from './layouts/AuthLayout';
@@ -79,15 +77,13 @@ function App() {
           <Route path="web-development" element={<WebDevelopment />} />
         </Route>
 
+        {/* Our Core Services */}
         <Route path="our-core-services">
-          <Route path="gis-spatial-analytics" element={<GISSpatialAnalytics />} />
-          <Route path="drone-survey-and-mapping" element={<DroneSurveyAndMapping />} />
-          <Route path="remote-sensing-land-use-mapping" element={<RemoteSensingLandUseMapping />} />
-          <Route path="lidar-3d-mapping" element={<LiDAR3DMapping />} />
           <Route path="ai-powered-geospatial-intelligence" element={<AIPoweredGeospatialIntelligence />} />
           <Route path="enterprise-gis-smart-governance" element={<EnterpriseGISSmartGovernance />} />
-          <Route path="mobile-gis-field-data-collection" element={<MobileGISFieldDataCollection />} />
-          <Route path="gis-training-capacity-building" element={<GISTrainingCapacityBuilding />} />
+          <Route path="rainfall-land-use-population" element={<Rainfall />} />
+          <Route path="remote-sensing-land-use-mapping" element={<RemoteSensingLandUseMapping />} />
+          <Route path="sris" element={<SRIS />} />
         </Route>
       </Route>
 

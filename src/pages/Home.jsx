@@ -376,6 +376,7 @@ const Home = () => {
         <div className="container largeContainer">
           <div className="row p-3">
 
+            {/* 1. AI-Powered Geospatial Intelligence */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -391,6 +392,7 @@ const Home = () => {
               </div>
             </div>
 
+            {/* 2. Rainfall, Land Use & Population Modelling */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -398,14 +400,15 @@ const Home = () => {
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
-                    <i className="fas fa-map-marked-alt"></i>
+                    <i className="fas fa-cloud-rain"></i>
                   </div>
-                  <h3><Link to='/our-core-services/lidar-3d-mapping'>LiDAR &amp; 3D Mapping</Link></h3>
-                  <p>Precise 3D terrain models, point clouds and spatial datasets for infrastructure assessment and detailed planning.</p>
+                  <h3><Link to='/our-core-services/rainfall-land-use-population'>Rainfall, Land Use &amp; Population Modelling</Link></h3>
+                  <p>Predict tomorrow's risks today with GIS, AI, remote sensing and spatial analytics modelling of rainfall, land-use and population.</p>
                 </div>
               </div>
             </div>
 
+            {/* 3. SRIS */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -413,44 +416,15 @@ const Home = () => {
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
-                    <i className="fas fa-map-marked-alt"></i>
+                    <i className="fas fa-search-dollar"></i>
                   </div>
-                  <h3><Link to='/our-core-services/gis-spatial-analytics'>GIS & Spatial Analytics</Link></h3>
-                  <p>Turn location data into clear decisions with digital mapping, spatial analysis, interactive dashboards and decision-support systems..</p>
+                  <h3><Link to='/our-core-services/sris'>Spatial Revenue Intelligence System</Link></h3>
+                  <p>Find the revenue your municipality is missing — connect property tax, professional tax and trade licence data with spatial intelligence.</p>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6">
-              <div className="service_item_01">
-                <div className="siThumb">
-                  <img src={service2} alt="" className="img-fluid" />
-                </div>
-                <div className="sitem_con">
-                  <div className="ibMeta">
-                    <i className="fas fa-map-marked-alt"></i>
-                  </div>
-                  <h3><Link to='/our-core-services/drone-survey-and-mapping'>Drone Survey & Mapping</Link></h3>
-                  <p>High-resolution aerial surveys, orthomosaic maps and terrain models for accurate planning and infrastructure development</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="service_item_01">
-                <div className="siThumb">
-                  <img src={service2} alt="" className="img-fluid" />
-                </div>
-                <div className="sitem_con">
-                  <div className="ibMeta">
-                    <i className="fas fa-map-marked-alt"></i>
-                  </div>
-                  <h3><Link to='/our-core-services/remote-sensing-land-use-mapping'>Remote Sensing & Land Use Mapping</Link></h3>
-                  <p>Satellite-based monitoring of land-use change and natural resources to support sustainable development</p>
-                </div>
-              </div>
-            </div>
-
+            {/* 4. Enterprise GIS & Smart Governance */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -460,12 +434,13 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-globe"></i>
                   </div>
-                  <h3><Link to='/our-core-services/enterprise-gis-smart-governance'>Enterprise GIS & Smart Governance</Link></h3>
+                  <h3><Link to='/our-core-services/enterprise-gis-smart-governance'>Enterprise GIS &amp; Smart Governance</Link></h3>
                   <p>Web GIS applications, integrated dashboards and digital platforms that make monitoring, planning and governance efficient and transparent.</p>
                 </div>
               </div>
             </div>
 
+            {/* 5. Remote Sensing & Land Use Mapping */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -473,40 +448,10 @@ const Home = () => {
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
-                    <i className="fas fa-map-marked-alt"></i>
+                    <i className="fas fa-satellite-dish"></i>
                   </div>
-                  <h3><Link to='/our-core-services/mobile-gis-field-data-collection'>Mobile GIS & Field Data Collection</Link></h3>
-                  <p>Replace paper forms and spreadsheets with custom mobile apps that capture location-tagged data in the field and send it straight to your GIS in real time.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="service_item_01">
-                <div className="siThumb">
-                  <img src={service2} alt="" className="img-fluid" />
-                </div>
-                <div className="sitem_con">
-                  <div className="ibMeta">
-                    <i className="fas fa-map-marked-alt"></i>
-                  </div>
-                  <h3><Link to='/our-core-services/gis-training-capacity-building'>GIS Training & Capacity Building</Link></h3>
-                  <p>Practical GIS, remote sensing and drone training for government departments, colleges and professionals, so your team can use spatial technology with confidence.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="service_item_01">
-                <div className="siThumb">
-                  <img src={service3} alt="" className="img-fluid" />
-                </div>
-                <div className="sitem_con">
-                  <div className="ibMeta">
-                    <i className="fas fa-handshake"></i>
-                  </div>
-                  <h3><Link to='/services/drone-survey'>Drone Survey & Mapping</Link></h3>
-                  <p>High-resolution aerial surveys, orthomosaic maps and terrain models for accurate planning and infrastructure development.</p>
+                  <h3><Link to='/our-core-services/remote-sensing-land-use-mapping'>Remote Sensing &amp; Land Use Mapping</Link></h3>
+                  <p>Satellite-based monitoring of land-use change and natural resources to support sustainable development.</p>
                 </div>
               </div>
             </div>

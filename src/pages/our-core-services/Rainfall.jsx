@@ -5,7 +5,6 @@ import '@fontsource/roboto';
 import '@fontsource/open-sans';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// Import images
 import achievementImg from '../../assets/images/home1/1.png';
 import aboutImg from '../../assets/images/home1/about.png';
 import blog1 from '../../assets/images/blog/1.jpg';
@@ -15,30 +14,30 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Lidar/bg.png';
 
-import mobFeature1 from '../../assets/images/Lidar/1.jpg';
-import mobFeature2 from '../../assets/images/Lidar/2.jpg';
-import mobFeature3 from '../../assets/images/Lidar/3.png';
-import mobFeature4 from '../../assets/images/Lidar/4.jpg';
-import mobFeature5 from '../../assets/images/Lidar/5.jpg';
-import mobFeature6 from '../../assets/images/Lidar/6.png';
+import rfFeature1 from '../../assets/images/Lidar/1.jpg';
+import rfFeature2 from '../../assets/images/Lidar/2.jpg';
+import rfFeature3 from '../../assets/images/Lidar/3.png';
+import rfFeature4 from '../../assets/images/Lidar/4.jpg';
+import rfFeature5 from '../../assets/images/Lidar/5.jpg';
+import rfFeature6 from '../../assets/images/Lidar/6.png';
 
-const mobFeatures = [
-  { id: 1, icon: 'fa-mobile-alt', title: 'Custom Survey Apps', description: 'Custom survey and inspection apps built around your forms and workflows.', image: mobFeature1, link: '/services/mobile/survey-apps' },
-  { id: 2, icon: 'fa-map-marker-alt', title: 'GPS-Tagged Data Capture', description: 'Location-tagged data capture with photos, notes and attachments.', image: mobFeature2, link: '/services/mobile/gps' },
-  { id: 3, icon: 'fa-wifi', title: 'Offline Data Collection', description: 'Offline data collection for areas with weak network coverage.', image: mobFeature3, link: '/services/mobile/offline' },
-  { id: 4, icon: 'fa-sync', title: 'Real-Time Sync', description: 'Real-time sync with your GIS database and dashboards.', image: mobFeature4, link: '/services/mobile/sync' },
-  { id: 5, icon: 'fa-users', title: 'Field Team Tracking', description: 'Live tracking of field team progress and performance.', image: mobFeature5, link: '/services/mobile/tracking' },
-  { id: 6, icon: 'fa-user-shield', title: 'Role-Based Access', description: 'Role-based access for surveyors, supervisors and officials.', image: mobFeature6, link: '/services/mobile/roles' },
+const rainfallFeatures = [
+  { id: 1, icon: 'fa-cloud-rain', title: 'Rainfall Modelling', description: 'Rainfall distribution, intensity analysis and runoff estimation for urban and rural planning.', image: rfFeature1, link: '/services/rainfall/modelling' },
+  { id: 2, icon: 'fa-water', title: 'Flood Risk Prediction', description: 'Flood-risk prediction combining terrain, rainfall and land-use data for climate-resilient cities.', image: rfFeature2, link: '/services/rainfall/flood-risk' },
+  { id: 3, icon: 'fa-map-marked-alt', title: 'Land Use Modelling', description: 'Land-use change detection, urban growth modelling and future land-transformation analysis.', image: rfFeature3, link: '/services/rainfall/land-use' },
+  { id: 4, icon: 'fa-users', title: 'Population Modelling', description: 'Growth forecasting, density mapping and estimates of future infrastructure demand.', image: rfFeature4, link: '/services/rainfall/population' },
+  { id: 5, icon: 'fa-brain', title: 'AI-Powered Spatial Prediction', description: 'Combine environmental and demographic data to identify risks and test scenarios.', image: rfFeature5, link: '/services/rainfall/ai-prediction' },
+  { id: 6, icon: 'fa-shield-alt', title: 'Climate Resilience Planning', description: 'Anticipate risks, plan ahead and build climate-resilient cities with predictive insight.', image: rfFeature6, link: '/services/rainfall/resilience' },
 ];
 
 const blogs = [
-  { id: 1, title: 'Mobile GIS: Field Data Collection Guide', date: '20 March, 2021', img: blog1 },
-  { id: 2, title: 'Offline-First Apps for Field Teams', date: '20 March, 2021', img: blog2 },
-  { id: 3, title: 'GPS Accuracy in Mobile Surveys', date: '20 March, 2021', img: blog3 },
+  { id: 1, title: 'Rainfall Modelling for Climate-Resilient Cities', date: '20 March, 2021', img: blog1 },
+  { id: 2, title: 'Combining GIS and AI for Flood Risk', date: '20 March, 2021', img: blog2 },
+  { id: 3, title: 'Land Use, Population and Future Demand', date: '20 March, 2021', img: blog3 },
 ];
 
-const MobileGISFieldDataCollection = () => {
-  const [activeTab, setActiveTab] = useState('apps');
+const Rainfall = () => {
+  const [activeTab, setActiveTab] = useState('rainfall');
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [feedback, setFeedback] = useState('');
@@ -49,7 +48,7 @@ const MobileGISFieldDataCollection = () => {
     const { name, email } = formData;
     if (!name || !email) return setFeedback('❌ Please provide name and email.');
     if (!email.includes('@')) return setFeedback('❌ Valid email required.');
-    setFeedback(`✅ Thanks ${name}! A mobile GIS specialist will contact ${email} within 24h.`);
+    setFeedback(`✅ Thanks ${name}! Our modelling specialist will contact ${email} within 24h.`);
     setFormData({ name: '', email: '', message: '' });
     setTimeout(() => { setShowModal(false); setFeedback(''); }, 2800);
   };
@@ -197,13 +196,13 @@ const MobileGISFieldDataCollection = () => {
       <section className="hero-section">
         <div className="container">
           <div className="text-center">
-            <h1 className="hero-title mt-5">Mobile GIS &amp; <span>Field Data Collection</span></h1>
+            <h1 className="hero-title mt-5">Rainfall, Land Use &amp; <span>Population Modelling</span></h1>
             <p className="hero-description">
-              Replace paper forms and spreadsheets with custom mobile apps that capture location-tagged data in the field and send it straight to your GIS in real time.
+              Predict tomorrow's risks today. We integrate GIS, AI, remote sensing and spatial analytics to model rainfall, land-use change and population growth.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <button onClick={() => setShowModal(true)} className="berpo_btn">
-                Request a Mobile App Demo <i className="fas fa-arrow-right" style={{ marginLeft: '8px' }}></i>
+                Talk to Our Experts <i className="fas fa-arrow-right" style={{ marginLeft: '8px' }}></i>
               </button>
               <a href="#features" className="berpo_btn-outline">Explore Services</a>
             </div>
@@ -214,15 +213,15 @@ const MobileGISFieldDataCollection = () => {
       <section id="features" className="section-padding">
         <div className="container">
           <div className="text-center">
-            <div className="subTitle">Mobile GIS Services</div>
-            <h2 className="secTitle">Capture Accurate Field Data, <span>Instantly</span></h2>
+            <div className="subTitle">Modelling Services</div>
+            <h2 className="secTitle">Predict Tomorrow's <span>Risks Today</span></h2>
             <p style={{ color: '#5a5a72', maxWidth: '700px', margin: '0 auto' }}>
-              Paper forms and spreadsheets slow down field work and lead to errors, duplicate entries and missing records. We build custom mobile apps that let your field teams collect data on a phone or tablet, tag it to an exact location, and sync it to your central GIS.
+              We integrate GIS, AI, remote sensing and spatial analytics to model rainfall patterns, land-use change and population growth.
             </p>
           </div>
 
           <div className="service-grid">
-            {mobFeatures.map((feature) => (
+            {rainfallFeatures.map((feature) => (
               <div className="service_item_01" key={feature.id}>
                 <div className="siThumb"><img src={feature.image} alt={feature.title} /></div>
                 <div className="sitem_con">
@@ -247,21 +246,21 @@ const MobileGISFieldDataCollection = () => {
           <div className="achievement-wrap">
             <div className="achievement-content">
               <div className="subTitle">Our Impact</div>
-              <h2 className="secTitle">Mobile GIS <span>Excellence</span></h2>
+              <h2 className="secTitle">Modelling <span>Excellence</span></h2>
               <p style={{ color: '#4a4a62', marginBottom: '16px' }}>
-                Delivering field data collection apps for property surveys, utility inventories and infrastructure inspections.
+                Helping cities, states and infrastructure teams anticipate risk, plan ahead and build climate-resilient futures.
               </p>
               <ul className="listItem">
-                <li><i className="fas fa-check-circle"></i> Property and tax surveys</li>
-                <li><i className="fas fa-check-circle"></i> Utility, road and asset inventories</li>
-                <li><i className="fas fa-check-circle"></i> Bill collection and field verification</li>
-                <li><i className="fas fa-check-circle"></i> Infrastructure inspections and maintenance</li>
+                <li><i className="fas fa-check-circle"></i> Rainfall distribution &amp; runoff estimation</li>
+                <li><i className="fas fa-check-circle"></i> Flood-risk prediction</li>
+                <li><i className="fas fa-check-circle"></i> Land-use change &amp; urban growth modelling</li>
+                <li><i className="fas fa-check-circle"></i> Population growth &amp; demand forecasting</li>
               </ul>
-              <button onClick={() => setShowModal(true)} className="berpo_btn">Request a Mobile Demo</button>
+              <button onClick={() => setShowModal(true)} className="berpo_btn">Talk to Our Experts</button>
             </div>
             <div className="achievement-image">
               <img src={achievementImg} alt="Achievement" />
-              <div className="client-badge"><h2>50<sup>+</sup></h2><h5>Mobile Apps</h5></div>
+              <div className="client-badge"><h2>30<sup>+</sup></h2><h5>Modelling Projects</h5></div>
             </div>
           </div>
         </div>
@@ -270,134 +269,74 @@ const MobileGISFieldDataCollection = () => {
       <section className="section-padding">
         <div className="container">
           <div className="text-center">
-            <div className="subTitle">Solutions</div>
-            <h2 className="secTitle">Our <span>Mobile GIS</span> Capabilities</h2>
+            <div className="subTitle">Capabilities</div>
+            <h2 className="secTitle">Key <span>Capabilities</span></h2>
           </div>
 
           <div className="beproTab">
-            <button className={`nav-link ${activeTab === 'apps' ? 'active' : ''}`} onClick={() => setActiveTab('apps')}>Custom Apps</button>
-            <button className={`nav-link ${activeTab === 'offline' ? 'active' : ''}`} onClick={() => setActiveTab('offline')}>Offline Collection</button>
-            <button className={`nav-link ${activeTab === 'sync' ? 'active' : ''}`} onClick={() => setActiveTab('sync')}>Real-Time Sync</button>
+            <button className={`nav-link ${activeTab === 'rainfall' ? 'active' : ''}`} onClick={() => setActiveTab('rainfall')}>Rainfall</button>
+            <button className={`nav-link ${activeTab === 'landuse' ? 'active' : ''}`} onClick={() => setActiveTab('landuse')}>Land Use</button>
+            <button className={`nav-link ${activeTab === 'population' ? 'active' : ''}`} onClick={() => setActiveTab('population')}>Population</button>
           </div>
 
           <div className="tab-content">
-            {activeTab === 'apps' && (
-              <div className="tab-pane active">
-                <div className="tab-content-inner">
-                  <div className="text-col">
-                    <h2 className="secTitle" style={{ fontSize: '28px' }}>Custom Survey <span>&amp; Inspection Apps</span></h2>
-                    <p>Custom survey and inspection apps built around your forms and workflows.</p>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Custom survey and inspection apps</span></li>
-                        <li><i className="fas fa-check"></i><span>GPS-tagged data capture with photos, notes and attachments</span></li>
-                        <li><i className="fas fa-check"></i><span>Role-based access for surveyors, supervisors and officials</span></li>
-                        <li><i className="fas fa-check"></i><span>Training, deployment and ongoing support</span></li>
-                      </ul>
-                    </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-map-marker-alt" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Where It Helps</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Property and tax surveys</span></li>
-                        <li><i className="fas fa-check"></i><span>Utility, road and asset inventories</span></li>
-                        <li><i className="fas fa-check"></i><span>Infrastructure inspections and maintenance</span></li>
-                        <li><i className="fas fa-check"></i><span>Census, health and community surveys</span></li>
-                      </ul>
-                    </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-star" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Key Benefits</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Fewer errors and no manual re-entry</span></li>
-                        <li><i className="fas fa-check"></i><span>Faster surveys and quicker reporting</span></li>
-                        <li><i className="fas fa-check"></i><span>Real-time visibility for supervisors</span></li>
-                        <li><i className="fas fa-check"></i><span>Verified, location-accurate records</span></li>
-                      </ul>
-                    </div>
-                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Request a Mobile App Demo</button>
+            <div className={`tab-pane ${activeTab === 'rainfall' ? 'active' : ''}`}>
+              <div className="tab-content-inner">
+                <div className="text-col">
+                  <h2 className="secTitle" style={{ fontSize: '28px' }}>Rainfall <span>Modelling</span></h2>
+                  <p>Understand rainfall patterns, runoff and flood risk with GIS, AI and remote sensing.</p>
+                  <div className="tab-info-block">
+                    <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
+                    <ul>
+                      <li><i className="fas fa-check"></i><span>Rainfall distribution mapping</span></li>
+                      <li><i className="fas fa-check"></i><span>Rainfall intensity analysis</span></li>
+                      <li><i className="fas fa-check"></i><span>Runoff estimation</span></li>
+                      <li><i className="fas fa-check"></i><span>Flood-risk prediction</span></li>
+                    </ul>
                   </div>
-                  <div className="img-col"><img src={aboutImg} alt="Apps" /></div>
+                  <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Discuss Rainfall Modelling</button>
                 </div>
+                <div className="img-col"><img src={aboutImg} alt="Rainfall" /></div>
               </div>
-            )}
-            {activeTab === 'offline' && (
-              <div className="tab-pane active">
-                <div className="tab-content-inner">
-                  <div className="text-col">
-                    <h2 className="secTitle" style={{ fontSize: '28px' }}>Offline <span>Data Collection</span></h2>
-                    <p>Offline data collection for areas with weak network coverage.</p>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Offline-first mobile apps</span></li>
-                        <li><i className="fas fa-check"></i><span>Local caching of forms, maps and data</span></li>
-                        <li><i className="fas fa-check"></i><span>Background sync when network returns</span></li>
-                        <li><i className="fas fa-check"></i><span>Conflict resolution and data validation</span></li>
-                      </ul>
-                    </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-map-marker-alt" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Where It Helps</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Rural and remote field surveys</span></li>
-                        <li><i className="fas fa-check"></i><span>Forestry and mining operations</span></li>
-                        <li><i className="fas fa-check"></i><span>Disaster damage assessment</span></li>
-                        <li><i className="fas fa-check"></i><span>Utility inspections in remote areas</span></li>
-                      </ul>
-                    </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-star" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Key Benefits</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Field teams work without interruption</span></li>
-                        <li><i className="fas fa-check"></i><span>No data loss when connection drops</span></li>
-                        <li><i className="fas fa-check"></i><span>Sync resumes automatically</span></li>
-                        <li><i className="fas fa-check"></i><span>Consistent data quality</span></li>
-                      </ul>
-                    </div>
-                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Discuss Offline Collection</button>
+            </div>
+            <div className={`tab-pane ${activeTab === 'landuse' ? 'active' : ''}`}>
+              <div className="tab-content-inner">
+                <div className="text-col">
+                  <h2 className="secTitle" style={{ fontSize: '28px' }}>Land Use <span>Modelling</span></h2>
+                  <p>Model how land is used, how it is changing, and what that means for the future.</p>
+                  <div className="tab-info-block">
+                    <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
+                    <ul>
+                      <li><i className="fas fa-check"></i><span>Land-use change detection</span></li>
+                      <li><i className="fas fa-check"></i><span>Urban growth modelling</span></li>
+                      <li><i className="fas fa-check"></i><span>Future land-transformation analysis</span></li>
+                      <li><i className="fas fa-check"></i><span>Analysis-ready thematic datasets</span></li>
+                    </ul>
                   </div>
-                  <div className="img-col"><img src={aboutImg} alt="Offline" /></div>
+                  <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Discuss Land Use Modelling</button>
                 </div>
+                <div className="img-col"><img src={aboutImg} alt="Land Use" /></div>
               </div>
-            )}
-            {activeTab === 'sync' && (
-              <div className="tab-pane active">
-                <div className="tab-content-inner">
-                  <div className="text-col">
-                    <h2 className="secTitle" style={{ fontSize: '28px' }}>Real-Time <span>Sync &amp; Dashboards</span></h2>
-                    <p>Real-time sync with your GIS database and dashboards so managers see progress as it happens.</p>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Real-time sync with GIS database</span></li>
-                        <li><i className="fas fa-check"></i><span>Live tracking of field team progress and performance</span></li>
-                        <li><i className="fas fa-check"></i><span>Progress dashboards for managers</span></li>
-                        <li><i className="fas fa-check"></i><span>Automated reports and alerts</span></li>
-                      </ul>
-                    </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-map-marker-alt" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Where It Helps</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Bill collection and field verification</span></li>
-                        <li><i className="fas fa-check"></i><span>Property and tax surveys</span></li>
-                        <li><i className="fas fa-check"></i><span>Infrastructure inspections</span></li>
-                        <li><i className="fas fa-check"></i><span>Disaster damage assessment</span></li>
-                      </ul>
-                    </div>
-                    <div className="tab-info-block">
-                      <h4><i className="fas fa-star" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>Key Benefits</h4>
-                      <ul>
-                        <li><i className="fas fa-check"></i><span>Real-time visibility for supervisors</span></li>
-                        <li><i className="fas fa-check"></i><span>Faster reporting and approvals</span></li>
-                        <li><i className="fas fa-check"></i><span>Better office–field coordination</span></li>
-                        <li><i className="fas fa-check"></i><span>Data-driven performance management</span></li>
-                      </ul>
-                    </div>
-                    <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Request a Sync Demo</button>
+            </div>
+            <div className={`tab-pane ${activeTab === 'population' ? 'active' : ''}`}>
+              <div className="tab-content-inner">
+                <div className="text-col">
+                  <h2 className="secTitle" style={{ fontSize: '28px' }}>Population <span>Modelling</span></h2>
+                  <p>Forecast population growth, density and future infrastructure and resource demand.</p>
+                  <div className="tab-info-block">
+                    <h4><i className="fas fa-cube" style={{ color: '#bb0b0b', marginRight: '8px' }}></i>What We Deliver</h4>
+                    <ul>
+                      <li><i className="fas fa-check"></i><span>Population growth forecasting</span></li>
+                      <li><i className="fas fa-check"></i><span>Density mapping</span></li>
+                      <li><i className="fas fa-check"></i><span>Future infrastructure demand estimates</span></li>
+                      <li><i className="fas fa-check"></i><span>Resource demand modelling</span></li>
+                    </ul>
                   </div>
-                  <div className="img-col"><img src={aboutImg} alt="Sync" /></div>
+                  <button onClick={() => setShowModal(true)} className="berpo_btn" style={{ marginTop: '16px' }}>Discuss Population Modelling</button>
                 </div>
+                <div className="img-col"><img src={aboutImg} alt="Population" /></div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </section>
@@ -406,7 +345,7 @@ const MobileGISFieldDataCollection = () => {
         <div className="container">
           <div className="text-center">
             <div className="subTitle">Insights</div>
-            <h2 className="secTitle">Latest <span>Mobile GIS</span> Articles</h2>
+            <h2 className="secTitle">Latest <span>Modelling</span> Articles</h2>
           </div>
           <div className="blog-grid">
             {blogs.map((blog) => (
@@ -427,12 +366,12 @@ const MobileGISFieldDataCollection = () => {
           <div className="cta-wrap">
             <div className="cta-content">
               <h4>We're <span className="highlight">Creative</span></h4>
-              <h2>Mobile GIS &amp;</h2>
-              <h3><span className="highlight">Field Data</span> Agency</h3>
+              <h2>Rainfall, Land Use &amp;</h2>
+              <h3><span className="highlight">Population</span> Modelling</h3>
               <p style={{ color: '#b0b0c8', margin: '16px 0 24px', maxWidth: '90%' }}>
-                Ready to replace paper forms with real-time field data collection?
+                Ready to predict tomorrow's risks today?
               </p>
-              <button onClick={() => setShowModal(true)} className="berpo_btn">Request a Mobile Demo</button>
+              <button onClick={() => setShowModal(true)} className="berpo_btn">Talk to Our Experts</button>
             </div>
             <div className="cta-images">
               <img src={ctaImg1} alt="CTA" />
@@ -447,9 +386,9 @@ const MobileGISFieldDataCollection = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setShowModal(false)}>×</button>
             <div className="text-center mb-4">
-              <div className="subTitle">Mobile GIS Inquiry</div>
-              <h2 className="secTitle">Request a <span>Demo</span></h2>
-              <p style={{ color: '#5a5a72' }}>Tell us about your field workflows and data needs.</p>
+              <div className="subTitle">Modelling Inquiry</div>
+              <h2 className="secTitle">Talk to Our <span>Experts</span></h2>
+              <p style={{ color: '#5a5a72' }}>Tell us about your area, risk scenarios, and deliverables.</p>
             </div>
             {feedback && (
               <div className={`feedback-message ${feedback.includes('✅') ? 'success' : 'error'}`}>{feedback}</div>
@@ -465,7 +404,7 @@ const MobileGISFieldDataCollection = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="message">Project Details</label>
-                <textarea id="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your field workflows..." />
+                <textarea id="message" value={formData.message} onChange={handleInputChange} placeholder="Tell us about your modelling needs..." />
               </div>
               <button type="submit" className="berpo_btn" style={{ width: '100%' }}>
                 Submit Inquiry <i className="fas fa-paper-plane" style={{ marginLeft: '8px' }}></i>
@@ -478,4 +417,4 @@ const MobileGISFieldDataCollection = () => {
   );
 };
 
-export default MobileGISFieldDataCollection;
+export default Rainfall;
