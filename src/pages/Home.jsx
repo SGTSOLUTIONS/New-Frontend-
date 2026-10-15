@@ -849,7 +849,7 @@ const Home = () => {
             <div className="ibMeta">
               <i className="fas fa-map-marked-alt"></i>
             </div>
-            <h3><Link to='/services/WebGis'>Spatial Revenue Intelligence</Link></h3>
+            <h3><Link to='/services/web-gis'>Web GIS</Link></h3>
             <p>Digitize buildings and parcels from aerial imagery.</p>
           </div>
         </div>
