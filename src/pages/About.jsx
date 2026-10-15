@@ -87,7 +87,7 @@ const About = () => {
     ];
 
     const team = [
-        { id: 1, name: 'Arnika Sorkar', role: 'Web Designer', image: '' },
+        { id: 1, name: 'Gayathri', role: 'Web Designer', image: '' },
         { id: 2, name: 'Georgie Haynes', role: 'Web Developer', image: '' },
         { id: 3, name: 'Jizz Merkel', role: 'Business Expert', image: '' },
     ];
