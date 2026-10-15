@@ -66,6 +66,49 @@ const responsiveStyles = `
     .blogItem01 { margin-bottom: 30px; }
     .team_01 { margin-bottom: 30px; }
   }
+      /* Learn More button inside service cards */
+  .service_item_01 .learn_more_btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    padding: 9px 24px;
+    background: transparent;
+    color: #bb0b0b;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 2px solid #bb0b0b;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .service_item_01 .learn_more_btn i {
+    font-size: 11px;
+    transition: transform 0.3s ease;
+  }
+
+  .service_item_01 .learn_more_btn:hover {
+    background: #bb0b0b;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(187, 11, 11, 0.25);
+  }
+
+  .service_item_01 .learn_more_btn:hover i {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 767.98px) {
+    .service_item_01 .learn_more_btn {
+      padding: 8px 18px;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+  }
   @media (max-width: 767.98px) {
     .hero-content h1 { font-size: 32px !important; line-height: 42px !important; }
     .hero-content .sub-title { font-size: 12px !important; }
@@ -198,6 +241,7 @@ const Home = () => {
 
   return (
     <>
+
       <style>{responsiveStyles}</style>
 
       {/* Begin:: Hero Slider */}
@@ -230,6 +274,7 @@ const Home = () => {
                   position: 'relative',
                   width: '100%'
                 }}
+
               >
                 <div className="hero-content" style={{ maxWidth: '670px', width: '100%' }}>
                   <div
@@ -386,13 +431,35 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
-                  <h3><Link to='/our-core-services/ai-powered-geospatial-intelligence'>AI-Powered Geospatial Intelligence</Link></h3>
+                  <h3>AI-Powered Geospatial Intelligence</h3>
                   <p>Combine AI with GIS for automated feature detection, change monitoring, predictive analytics and faster spatial decisions.</p>
+                  <Link to='/our-core-services/ai-powered-geospatial-intelligence' className="learn_more_btn">
+                    Learn More <i className="fas fa-arrow-right"></i>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            {/* 2. Rainfall, Land Use & Population Modelling */}
+            {/* 2. LiDAR & 3D Mapping */}
+            <div className="col-lg-4 col-md-6">
+              <div className="service_item_01">
+                <div className="siThumb">
+                  <img src={service2} alt="" className="img-fluid" />
+                </div>
+                <div className="sitem_con">
+                  <div className="ibMeta">
+                    <i className="fas fa-cubes"></i>
+                  </div>
+                  <h3>LiDAR &amp; 3D Mapping</h3>
+                  <p>Precision 3D terrain models, point clouds and spatial datasets for infrastructure assessment and detailed planning.</p>
+                  <Link to='/our-core-services/lidar-3d-mapping' className="learn_more_btn">
+                    Learn More <i className="fas fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* 3. Rainfall, Land Use & Population Modelling */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -402,13 +469,16 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-cloud-rain"></i>
                   </div>
-                  <h3><Link to='/our-core-services/rainfall-land-use-population'>Rainfall, Land Use &amp; Population Modelling</Link></h3>
+                  <h3>Rainfall, Land Use &amp; Population Modelling</h3>
                   <p>Predict tomorrow's risks today with GIS, AI, remote sensing and spatial analytics modelling of rainfall, land-use and population.</p>
+                  <Link to='/our-core-services/rainfall-land-use-population' className="learn_more_btn">
+                    Learn More <i className="fas fa-arrow-right"></i>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            {/* 3. SRIS */}
+            {/* 4. SRIS */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -418,13 +488,16 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-search-dollar"></i>
                   </div>
-                  <h3><Link to='/our-core-services/sris'>Spatial Revenue Intelligence System</Link></h3>
+                  <h3>Spatial Revenue Intelligence System</h3>
                   <p>Find the revenue your municipality is missing — connect property tax, professional tax and trade licence data with spatial intelligence.</p>
+                  <Link to='/our-core-services/sris' className="learn_more_btn">
+                    Learn More <i className="fas fa-arrow-right"></i>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            {/* 4. Enterprise GIS & Smart Governance */}
+            {/* 5. Enterprise GIS & Smart Governance */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -434,13 +507,16 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-globe"></i>
                   </div>
-                  <h3><Link to='/our-core-services/enterprise-gis-smart-governance'>Enterprise GIS &amp; Smart Governance</Link></h3>
+                  <h3>Enterprise GIS &amp; Smart Governance</h3>
                   <p>Web GIS applications, integrated dashboards and digital platforms that make monitoring, planning and governance efficient and transparent.</p>
+                  <Link to='/our-core-services/enterprise-gis-smart-governance' className="learn_more_btn">
+                    Learn More <i className="fas fa-arrow-right"></i>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            {/* 5. Remote Sensing & Land Use Mapping */}
+            {/* 6. Remote Sensing & Land Use Mapping */}
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
@@ -450,8 +526,11 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-satellite-dish"></i>
                   </div>
-                  <h3><Link to='/our-core-services/remote-sensing-land-use-mapping'>Remote Sensing &amp; Land Use Mapping</Link></h3>
+                  <h3>Remote Sensing &amp; Land Use Mapping</h3>
                   <p>Satellite-based monitoring of land-use change and natural resources to support sustainable development.</p>
+                  <Link to='/our-core-services/remote-sensing-land-use-mapping' className="learn_more_btn">
+                    Learn More <i className="fas fa-arrow-right"></i>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -465,7 +544,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
       {/* Services End */}
@@ -616,7 +694,7 @@ const Home = () => {
                       <div className="col-md-6">
                         <h2 className="secTitle">Accurate Surveying. Reliable Data. Smarter Decisions.</h2>
                         <p>
-                           We capture precise spatial data through advanced surveying technologies, drone mapping, GNSS, and LiDAR. From field data collection to high-resolution mapping, SGT Solutions helps organizations build reliable datasets for better planning, infrastructure development, and informed decision-making.
+                          We capture precise spatial data through advanced surveying technologies, drone mapping, GNSS, and LiDAR. From field data collection to high-resolution mapping, SGT Solutions helps organizations build reliable datasets for better planning, infrastructure development, and informed decision-making.
                         </p>
                         <Link className="berpo_btn" to="/contact">
                           <span className="bp-shape"></span>
@@ -880,4 +958,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;  

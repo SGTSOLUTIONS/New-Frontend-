@@ -973,7 +973,7 @@
 .sitem_con{
     position: relative;
     padding: 30px 3px 23px 105px;
-    height: 200px;
+    height: 260px;
 }
 .ibMeta{
     font-size: 50px;
@@ -990,13 +990,17 @@
 .sitem_con .ibMeta{
     position: absolute;
     left: 36px;
-    top: 20px;
+    top: -20px;
+    margin-left: 115px;
 }
 .service_item_01 h3{
     font-size: 22px;
     line-height: 30px;
     color: #333333;
     margin: 0 0 0;
+    margin-top: 1px;
+    padding: 7px;
+    margin-left: -45px;
 }
 .service_item_01 h3 a{
     color: inherit;
@@ -1009,6 +1013,7 @@
     font-size: 15px;
     line-height: 23px;
     margin: 0;
+    margin-left:-50px;
 }
 
 /*--- About Image ---*/

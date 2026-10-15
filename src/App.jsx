@@ -31,6 +31,7 @@ import EnterpriseGISSmartGovernance from './pages/our-core-services/EnterpriseGI
 import Rainfall from './pages/our-core-services/Rainfall';
 import RemoteSensingLandUseMapping from './pages/our-core-services/RemoteSensingLandUseMapping';
 import SRIS from './pages/our-core-services/SRIS';
+import LiDAR3DMapping from './pages/our-core-services/LiDAR3DMapping';
 
 // Auth pages
 import AuthLayout from './layouts/AuthLayout';
@@ -84,6 +85,7 @@ function App() {
           <Route path="rainfall-land-use-population" element={<Rainfall />} />
           <Route path="remote-sensing-land-use-mapping" element={<RemoteSensingLandUseMapping />} />
           <Route path="sris" element={<SRIS />} />
+          <Route path="lidar-3d-mapping" element={<LiDAR3DMapping />} />
         </Route>
       </Route>
 
