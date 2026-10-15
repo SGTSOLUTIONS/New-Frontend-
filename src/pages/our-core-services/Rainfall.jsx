@@ -12,7 +12,7 @@ import blog2 from '../../assets/images/blog/2.jpg';
 import blog3 from '../../assets/images/blog/3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/Lidar/bg.png';
+import servicesBg from '../../assets/images/Rainfall/bg.png';
 
 import rfFeature1 from '../../assets/images/Lidar/1.jpg';
 import rfFeature2 from '../../assets/images/Lidar/2.jpg';
