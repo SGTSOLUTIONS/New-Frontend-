@@ -1300,7 +1300,7 @@ const DroneSurvey = () => {
                   <div className="ibMeta">
                     <i className={`fas ${feature.icon}`}></i>
                   </div>
-                  <h3><Link to={feature.link}>{feature.title}</Link></h3>
+                  <h3>{feature.title}</h3>
                   <p>{feature.description}</p>
                 </div>
               </div>
