@@ -385,8 +385,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
-                  <h3><Link to='/our-core-services/ai-powered-geospatial-intelligence'>Spatial Revenue Intelligence</Link></h3>
-                  <p>Digitize buildings and parcels from aerial imagery.</p>
+                  <h3><Link to='/our-core-services/ai-powered-geospatial-intelligence'>AI-Powered Geospatial Intelligence</Link></h3>
+                  <p>Combine AI with GIS for automated feature detection, change monitoring, predictive analytics and faster spatial decisions.</p>
                 </div>
               </div>
             </div>
@@ -401,7 +401,7 @@ const Home = () => {
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
                   <h3><Link to='/our-core-services/lidar-3d-mapping'>LiDAR &amp; 3D Mapping</Link></h3>
-                  <p>Precision 3D terrain models, point clouds and spatial datasets.</p>
+                  <p>Precise 3D terrain models, point clouds and spatial datasets for infrastructure assessment and detailed planning.</p>
                 </div>
               </div>
             </div>
@@ -415,8 +415,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
-                  <h3><Link to='/our-core-services/gis-spatial-analytics'>GIS &amp; Spatial Analytics</Link></h3>
-                  <p>Turn location data into clear decisions.</p>
+                  <h3><Link to='/our-core-services/gis-spatial-analytics'>GIS & Spatial Analytics</Link></h3>
+                  <p>Turn location data into clear decisions with digital mapping, spatial analysis, interactive dashboards and decision-support systems..</p>
                 </div>
               </div>
             </div>
@@ -430,8 +430,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
-                  <h3><Link to='/our-core-services/drone-survey-and-mapping'>Drone Survey &amp; Mapping</Link></h3>
-                  <p>High-resolution aerial surveys and terrain models.</p>
+                  <h3><Link to='/our-core-services/drone-survey-and-mapping'>Drone Survey & Mapping</Link></h3>
+                  <p>High-resolution aerial surveys, orthomosaic maps and terrain models for accurate planning and infrastructure development</p>
                 </div>
               </div>
             </div>
@@ -445,8 +445,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
-                  <h3><Link to='/our-core-services/remote-sensing-land-use-mapping'>Remote Sensing &amp; Land Use</Link></h3>
-                  <p>Satellite-based monitoring of land-use change.</p>
+                  <h3><Link to='/our-core-services/remote-sensing-land-use-mapping'>Remote Sensing & Land Use Mapping</Link></h3>
+                  <p>Satellite-based monitoring of land-use change and natural resources to support sustainable development</p>
                 </div>
               </div>
             </div>
@@ -460,8 +460,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-globe"></i>
                   </div>
-                  <h3><Link to='/our-core-services/enterprise-gis-smart-governance'>Enterprise GIS</Link></h3>
-                  <p>Web GIS applications and integrated dashboards.</p>
+                  <h3><Link to='/our-core-services/enterprise-gis-smart-governance'>Enterprise GIS & Smart Governance</Link></h3>
+                  <p>Web GIS applications, integrated dashboards and digital platforms that make monitoring, planning and governance efficient and transparent.</p>
                 </div>
               </div>
             </div>
@@ -475,8 +475,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
-                  <h3><Link to='/our-core-services/mobile-gis-field-data-collection'>Mobile GIS &amp; Field Data</Link></h3>
-                  <p>Custom mobile apps for location-tagged data.</p>
+                  <h3><Link to='/our-core-services/mobile-gis-field-data-collection'>Mobile GIS & Field Data Collection</Link></h3>
+                  <p>Replace paper forms and spreadsheets with custom mobile apps that capture location-tagged data in the field and send it straight to your GIS in real time.</p>
                 </div>
               </div>
             </div>
@@ -490,8 +490,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-map-marked-alt"></i>
                   </div>
-                  <h3><Link to='/our-core-services/gis-training-capacity-building'>GIS Training</Link></h3>
-                  <p>Practical GIS, remote sensing and drone training.</p>
+                  <h3><Link to='/our-core-services/gis-training-capacity-building'>GIS Training & Capacity Building</Link></h3>
+                  <p>Practical GIS, remote sensing and drone training for government departments, colleges and professionals, so your team can use spatial technology with confidence.</p>
                 </div>
               </div>
             </div>
@@ -505,8 +505,8 @@ const Home = () => {
                   <div className="ibMeta">
                     <i className="fas fa-handshake"></i>
                   </div>
-                  <h3><Link to='/services/drone-survey'>Drone &amp; DGPS Survey</Link></h3>
-                  <p>Centimeter-level accuracy for property mapping.</p>
+                  <h3><Link to='/services/drone-survey'>Drone Survey & Mapping</Link></h3>
+                  <p>High-resolution aerial surveys, orthomosaic maps and terrain models for accurate planning and infrastructure development.</p>
                 </div>
               </div>
             </div>
