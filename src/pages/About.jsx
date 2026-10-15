@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import bg from '../assets/images/bg/banner.jpg'
+import video from '../assets/images/video/Video.mp4'
 
 const About = () => {
     const testimonialRef = useRef(null);
@@ -67,29 +68,29 @@ const About = () => {
             id: 1,
             icon: '',
             title: 'Intelligent Insights',
-            description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
-            link: '/single-service',
+            description: "Turn complex geographic data into meaningful insights using GIS, remote sensing, and AI-powered spatial analytics.",
+            
         },
         {
             id: 2,
             icon: '',
             title: 'Smarter Decisions',
-            description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
-            link: '/single-service',
+            description: "Empower governments and organizations with location-based intelligence for better planning, efficient resource management, and informed decisions.",
+            
         },
         {
             id: 3,
             icon: '',
             title: 'A Better Future',
-            description: "We develop the relationships that Into underpin the next phase in your Teen organisation's growth.",
-            link: '/single-service',
+            description: "Build smarter cities and resilient communities through intelligent mapping, natural resource monitoring, and sustainable land and water management.",
+            
         },
     ];
 
     const team = [
         { id: 1, name: 'Gayathri', role: 'Web Designer', image: '' },
-        { id: 2, name: 'Georgie Haynes', role: 'Web Developer', image: '' },
-        { id: 3, name: 'Jizz Merkel', role: 'Business Expert', image: '' },
+        { id: 2, name: 'Nithish', role: 'Web Developer', image: '' },
+        { id: 3, name: 'Mugesh', role: 'Business Expert', image: '' },
     ];
 
     const testimonials = [
@@ -203,7 +204,7 @@ const About = () => {
                 }
 
                 .service_item_10 {
-                    padding: 20px;
+                    padding: 30px;
                     margin-bottom: 30px;
                     border-radius: 10px;
                     box-shadow: 0 2px 15px rgba(0,0,0,0.08);
@@ -888,9 +889,9 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                                     </div>
                                     <h3><Link to={service.link}>{service.title}</Link></h3>
                                     <p>{service.description}</p>
-                                    <Link className="srm" to={service.link}>
-                                        <i className="twi-arrow-right1"></i>
-                                    </Link>
+                                    
+                                        
+                                
                                 </div>
                             </div>
                         ))}
@@ -904,7 +905,7 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                         <div className="col-lg-12 text-center">
                             <div className="subTitle">We Have added a new exciting feature in v2.0</div>
                             <h2 className="secTitle">Organizations Realize the Benefits <br /> Forming Work Teams.</h2>
-                            <a href="https://player.vimeo.com/video/213907368?h=3685456d6c" className="popup_video vbtn02">
+                            <a href={{video}} className="popup_video vbtn02">
                                 <i className="bpro-play"></i>
                             </a>
                         </div>
@@ -1018,29 +1019,7 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                 </div>
             </section>
 
-            <section className="testimonialSection02 abTest01" style={{ padding: '60px 0', background: '#f8f9fa' }}>
-                <div className="container largeContainer">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="testimonialslider02 owl-carousel" ref={testimonialRef}>
-                                {testimonials.map((testimonial) => (
-                                    <div className="testiItem02" key={testimonial.id}>
-                                        <div className="quote">
-                                            <img src="/assets/images/home2/quote.jpg" alt="" />
-                                        </div>
-                                        <img src="/assets/images/home2/t1.jpg" alt="" style={{ width: '80px', height: '80px', borderRadius: '50%', margin: '0 auto 15px', objectFit: 'cover' }} />
-                                        <p className="quotation">{testimonial.text}</p>
-                                        <div className="ts_author">
-                                            <h5>{testimonial.author}, <span>{testimonial.role}</span></h5>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+            
             <section className="clientSection03" style={{ padding: '50px 0' }}>
                 <div className="container largeContainer">
                     <div className="row">
