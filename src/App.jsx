@@ -24,6 +24,16 @@ import Mapping2D from './pages/services/Mapping2D';
 import Consultancy from './pages/services/Consultancy';
 import WebDevelopment from './pages/services/WebDevelopment';
 
+// Our Core Services
+import GISSpatialAnalytics from './pages/our-core-services/GISSpatialAnalytics';
+import DroneSurveyAndMapping from './pages/our-core-services/DroneSurveyAndMapping';
+import RemoteSensingLandUseMapping from './pages/our-core-services/RemoteSensingLandUseMapping';
+import LiDAR3DMapping from './pages/our-core-services/LiDAR3DMapping';
+import AIPoweredGeospatialIntelligence from './pages/our-core-services/AIPoweredGeospatialIntelligence';
+import EnterpriseGISSmartGovernance from './pages/our-core-services/EnterpriseGISSmartGovernance';
+import MobileGISFieldDataCollection from './pages/our-core-services/MobileGISFieldDataCollection';
+import GISTrainingCapacityBuilding from './pages/our-core-services/GISTrainingCapacityBuilding';
+
 // Auth pages
 import AuthLayout from './layouts/AuthLayout';
 import Login from './pages/auth/Login';
@@ -32,7 +42,6 @@ import Register from './pages/auth/Resgister';
 // Admin Pages
 import Dashboard from './pages/Admin/Dashboard';
 import Project from './pages/Admin/project';
-// ProjectFinance is no longer needed as it's integrated into Project component
 
 function App() {
   function AuthCheck() {
@@ -53,9 +62,6 @@ function App() {
 
   return (
     <Routes>
-      {/* ================================
-          ALL CLIENT PAGES USE MAIN LAYOUT
-          ================================ */}
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
@@ -72,20 +78,28 @@ function App() {
           <Route path="consultancy" element={<Consultancy />} />
           <Route path="web-development" element={<WebDevelopment />} />
         </Route>
+
+        <Route path="our-core-services">
+          <Route path="gis-spatial-analytics" element={<GISSpatialAnalytics />} />
+          <Route path="drone-survey-and-mapping" element={<DroneSurveyAndMapping />} />
+          <Route path="remote-sensing-land-use-mapping" element={<RemoteSensingLandUseMapping />} />
+          <Route path="lidar-3d-mapping" element={<LiDAR3DMapping />} />
+          <Route path="ai-powered-geospatial-intelligence" element={<AIPoweredGeospatialIntelligence />} />
+          <Route path="enterprise-gis-smart-governance" element={<EnterpriseGISSmartGovernance />} />
+          <Route path="mobile-gis-field-data-collection" element={<MobileGISFieldDataCollection />} />
+          <Route path="gis-training-capacity-building" element={<GISTrainingCapacityBuilding />} />
+        </Route>
       </Route>
 
-      {/* AUTH PAGES */}
       <Route path="/" element={<LoginCheck />}>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Route>
 
-      {/* ADMIN PAGES - Protected */}
       <Route element={<AuthCheck />}>
         <Route path="/dashboard" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="project" element={<Project />} />
-          {/* ProjectFinance is now integrated into Project component */}
         </Route>
       </Route>
     </Routes>
