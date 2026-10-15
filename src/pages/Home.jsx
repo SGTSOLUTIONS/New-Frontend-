@@ -27,7 +27,9 @@ import clientLogo4 from '../assets/images/client-logo/4.png';
 import price1 from '../assets/images/home1/p1.jpg';
 import price2 from '../assets/images/home1/p2.jpg';
 import price3 from '../assets/images/home1/p3.jpg';
-import tabImg from '../assets/images/home1/2.png';
+import tabImg1 from '../assets/images/home1/2.png';
+import tabImg2 from '../assets/images/home1/5.png';
+import tabImg3 from '../assets/images/home1/6.png';
 import team1 from '../assets/images/team/1.jpg';
 import team2 from '../assets/images/team/2.jpg';
 import team3 from '../assets/images/team/3.jpg';
@@ -658,7 +660,7 @@ const Home = () => {
                         </Link>
                       </div>
                       <div className="col-md-6">
-                        <img src={tabImg} alt="" className="img-fluid" />
+                        <img src={tabImg1} alt="" className="img-fluid" />
                       </div>
                     </div>
                   </div>
@@ -667,9 +669,9 @@ const Home = () => {
                   <div className="beproTabCon">
                     <div className="row align-items-center">
                       <div className="col-md-6">
-                        <h2 className="secTitle">Geospatial Solutions for a Smarter World</h2>
+                        <h2 className="secTitle">Accurate Surveying. Reliable Data. Smarter Decisions.</h2>
                         <p>
-                          We transform location data into accurate, actionable insights. From GIS and aerial mapping to drone surveys and spatial analysis, SGT Solutions helps organizations understand their environment and make better decisions.
+                           We capture precise spatial data through advanced surveying technologies, drone mapping, GNSS, and LiDAR. From field data collection to high-resolution mapping, SGT Solutions helps organizations build reliable datasets for better planning, infrastructure development, and informed decision-making.
                         </p>
                         <Link className="berpo_btn" to="/contact">
                           <span className="bp-shape"></span>
@@ -680,7 +682,7 @@ const Home = () => {
                         </Link>
                       </div>
                       <div className="col-md-6">
-                        <img src={tabImg} alt="" className="img-fluid" />
+                        <img src={tabImg2} alt="" className="img-fluid" />
                       </div>
                     </div>
                   </div>
@@ -689,9 +691,9 @@ const Home = () => {
                   <div className="beproTabCon">
                     <div className="row align-items-center">
                       <div className="col-md-6">
-                        <h2 className="secTitle">Geospatial Solutions for a Smarter World</h2>
+                        <h2 className="secTitle">Turn Spatial Data into Intelligent Decisions</h2>
                         <p>
-                          We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites, We are committed to providing our customers with exceptional service.
+                          Transform complex geographic data into actionable insights with GIS analytics, AI-powered spatial intelligence, and predictive modelling. We help organizations identify patterns, monitor changes, optimize resources, and make smarter decisions for urban planning, infrastructure, and natural resource management.
                         </p>
                         <Link className="berpo_btn" to="/contact">
                           <span className="bp-shape"></span>
@@ -702,7 +704,7 @@ const Home = () => {
                         </Link>
                       </div>
                       <div className="col-md-6">
-                        <img src={tabImg} alt="" className="img-fluid" />
+                        <img src={tabImg3} alt="" className="img-fluid" />
                       </div>
                     </div>
                   </div>
@@ -869,8 +871,8 @@ const Home = () => {
                   <img src={blog1} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>12 August, 2026</a>
-                  <h3><a href="single-blog.html">How GIS Is Transforming Modern Property Mapping</a></h3>
+                  <a className="bmeta"><i className="twi-calendar-alt1"></i>12 August, 2026</a>
+                  <h3>How GIS Is Transforming Modern Property Mapping</h3>
                 </div>
               </div>
             </div>
@@ -880,8 +882,8 @@ const Home = () => {
                   <img src={blog2} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>5 August, 2026</a>
-                  <h3><a href="single-blog.html">The Role of Drones in Modern Land Surveying</a></h3>
+                  <a className="bmeta" ><i className="twi-calendar-alt1"></i>5 August, 2026</a>
+                  <h3>The Role of Drones in Modern Land Surveying</h3>
                 </div>
               </div>
             </div>
@@ -891,8 +893,8 @@ const Home = () => {
                   <img src={blog3} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>28 July, 2026</a>
-                  <h3><a href="single-blog.html">Turning Aerial Imagery Into Actionable Insights</a></h3>
+                  <a className="bmeta"><i className="twi-calendar-alt1"></i>28 July, 2026</a>
+                  <h3>Turning Aerial Imagery Into Actionable Insights</h3>
                 </div>
               </div>
             </div>

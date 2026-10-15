@@ -1591,7 +1591,7 @@ select::-ms-input-placeholder{
 .beproTab li a.active:after{
     visibility: visible;
     opacity: 1;
-    bottom: -44px;
+    /* bottom: -44px; */
 }
 .beproTab li a:hover,
 .beproTab li a.active{
