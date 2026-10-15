@@ -27,7 +27,9 @@ import clientLogo4 from '../assets/images/client-logo/4.png';
 import price1 from '../assets/images/home1/p1.jpg';
 import price2 from '../assets/images/home1/p2.jpg';
 import price3 from '../assets/images/home1/p3.jpg';
-import tabImg from '../assets/images/home1/2.png';
+import tabImg1 from '../assets/images/home1/2.png';
+import tabImg2 from '../assets/images/home1/5.png';
+import tabImg3 from '../assets/images/home1/6.png';
 import team1 from '../assets/images/team/1.jpg';
 import team2 from '../assets/images/team/2.jpg';
 import team3 from '../assets/images/team/3.jpg';
@@ -1096,7 +1098,7 @@ const Home = () => {
                         </Link>
                       </div>
                       <div className="col-md-6">
-                        <img src={tabImg} alt="" className="img-fluid" />
+                        <img src={tabImg1} alt="" className="img-fluid" />
                       </div>
                     </div>
                   </div>
@@ -1118,7 +1120,7 @@ const Home = () => {
                         </Link>
                       </div>
                       <div className="col-md-6">
-                        <img src={tabImg} alt="" className="img-fluid" />
+                        <img src={tabImg2} alt="" className="img-fluid" />
                       </div>
                     </div>
                   </div>
@@ -1140,7 +1142,7 @@ const Home = () => {
                         </Link>
                       </div>
                       <div className="col-md-6">
-                        <img src={tabImg} alt="" className="img-fluid" />
+                        <img src={tabImg3} alt="" className="img-fluid" />
                       </div>
                     </div>
                   </div>
@@ -1310,8 +1312,8 @@ const Home = () => {
                   <img src={blog1} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>12 August, 2026</a>
-                  <h3><a href="single-blog.html">How GIS Is Transforming Modern Property Mapping</a></h3>
+                  <a className="bmeta"><i className="twi-calendar-alt1"></i>12 August, 2026</a>
+                  <h3>How GIS Is Transforming Modern Property Mapping</h3>
                 </div>
               </div>
             </div>
@@ -1321,8 +1323,8 @@ const Home = () => {
                   <img src={blog2} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>5 August, 2026</a>
-                  <h3><a href="single-blog.html">The Role of Drones in Modern Land Surveying</a></h3>
+                  <a className="bmeta" ><i className="twi-calendar-alt1"></i>5 August, 2026</a>
+                  <h3>The Role of Drones in Modern Land Surveying</h3>
                 </div>
               </div>
             </div>
@@ -1332,8 +1334,8 @@ const Home = () => {
                   <img src={blog3} alt="" className="img-fluid" />
                 </div>
                 <div className="blogContent">
-                  <a className="bmeta" href="single-blog.html"><i className="twi-calendar-alt1"></i>28 July, 2026</a>
-                  <h3><a href="single-blog.html">Turning Aerial Imagery Into Actionable Insights</a></h3>
+                  <a className="bmeta"><i className="twi-calendar-alt1"></i>28 July, 2026</a>
+                  <h3>Turning Aerial Imagery Into Actionable Insights</h3>
                 </div>
               </div>
             </div>
