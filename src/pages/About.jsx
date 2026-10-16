@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import bg from '../assets/images/bg/banner.jpg';
-import video from '../assets/images/video/Video.mp4';
+
 
 const About = () => {
     const testimonialRef = useRef(null);
