@@ -373,26 +373,26 @@ const Mapping2D = () => {
           text-align: center;
         }
 
-   .service_item_01 .ibMeta {
-          width: 60px;
-          height: 60px;
-          background: #bb0b0b10;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: -55px 110px 16px;
-          font-size: 26px;
-          color: #bb0b0b;
-          transition: 0.3s;
-          background: #fff;
-          box-shadow: 0 4px 15px rgba(187, 11, 11, 0.12);
-        }
+     .service_item_01 .ibMeta {
+    width: 60px;
+    height: 60px;
+    background: #bb0b0b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -0px 90px 20px;   /* ← centered + overlaps image above */
+    font-size: 26px;
+    color: #fff;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(187, 11, 11, 0.25);
+}
 
-        .service_item_01:hover .ibMeta {
-          background: #bb0b0b;
-          color: #fff;
-        }
+.service_item_01:hover .ibMeta {
+    background: #8f0808;
+    color: #fff;
 
         .service_item_01 h3 {
           font-size: 20px;

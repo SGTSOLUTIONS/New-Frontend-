@@ -970,16 +970,19 @@
     height: auto;
     border-radius: 5px 5px 0 0;
 }
-.sitem_con{
+.sitem_con {
     position: relative;
-    padding: 30px 3px 23px 105px;
-    height: 260px;
+    padding: 50px 20px 30px 105px;   /* ← changed top from 40px to 60px */
+    height: auto;
+    min-height: 280px;
 }
-.ibMeta{
-    font-size: 50px;
-    line-height: 50px;
+
+.ibMeta {
+    font-size: 40px;
+    line-height: 90px;
     color: var(--theme-color);
     position: relative;
+    top: 20px;
     z-index: 2;
     text-align: center;
     display: inline-block;
@@ -987,7 +990,8 @@
     -moz-transition: all ease 400ms;
     -webkit-transition: all ease 400ms;
 }
-.sitem_con .ibMeta{
+
+.sitem_con .ibMeta {
     position: absolute;
     left: 36px;
     top: -20px;

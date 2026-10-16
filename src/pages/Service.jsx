@@ -319,27 +319,27 @@ const Service = () => {
           border-radius: 0 0 15px 15px;
         }
 
-        .service_item_01 .ibMeta {
-          width: 60px;
-          height: 60px;
-          background: #bb0b0b10;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: -40px auto 16px;
-          font-size: 26px;
-          color: #bb0b0b;
-          transition: 0.3s;
-          position: sticky;
-          background: #fff;
-          box-shadow: 0 4px 15px rgba(187, 11, 11, 0.12);
-        }
+  ..service_item_01 .ibMeta {
+    width: 60px;
+    height: 60px;
+    background: #bb0b0b10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 110px 16px;   /* ← changed from -40px (moves icon DOWN) */
+    font-size: 26px;
+    color: #bb0b0b;
+    transition: 0.3s;
+    position: sticky;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(187, 11, 11, 0.12);
+}
 
-        .service_item_01:hover .ibMeta {
-          background: #bb0b0b;
-          color: #fff;
-        }
+.service_item_01:hover .ibMeta {
+    background: #bb0b0b;
+    color: #fff;
+}
 
         .service_item_01 h3 {
           font-size: 20px;
@@ -941,12 +941,22 @@ const Service = () => {
           .service_item_01 p {
             font-size: 13px;
           }
-          .service_item_01 .ibMeta {
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-            margin: -30px auto 12px;
-          }
+  
+.service_item_01 {
+    position: relative;   /* parent needs this */
+    padding-bottom: 60px; /* space so text doesn't overlap the icon */
+}
+
+.service_item_01 .ibMeta {
+    position: absolute;
+    bottom: 0;            /* sticks to the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* centers horizontally */
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 0;
+}
           .client-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
