@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import bg from '../assets/images/bg/banner.jpg'
-import video from '../assets/images/video/Video.mp4'
+import bg from '../assets/images/bg/banner.jpg';
+import video from '../assets/images/video/Video.mp4';
 
 const About = () => {
     const testimonialRef = useRef(null);
@@ -905,7 +905,7 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                         <div className="col-lg-12 text-center">
                             <div className="subTitle">We Have added a new exciting feature in v2.0</div>
                             <h2 className="secTitle">Organizations Realize the Benefits <br /> Forming Work Teams.</h2>
-                            <a href={{video}} className="popup_video vbtn02">
+                            <a href="../assets/images/video/video.mp4" className="popup_video vbtn02">
                                 <i className="bpro-play"></i>
                             </a>
                         </div>
