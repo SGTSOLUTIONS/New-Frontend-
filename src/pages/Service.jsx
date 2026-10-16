@@ -305,7 +305,7 @@ const Service = () => {
         .service_item_01 .siThumb img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: fill;
           transition: transform 0.5s ease;
         }
 

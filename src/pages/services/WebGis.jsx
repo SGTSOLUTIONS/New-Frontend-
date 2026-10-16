@@ -370,7 +370,7 @@ const WebGis = () => {
         .service_item_01 .siThumb img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: fill;
           transition: transform 0.5s ease;
         }
 
@@ -378,8 +378,9 @@ const WebGis = () => {
           transform: scale(1.05);
         }
 
-      .service_item_01 .sitem_con {
-          padding: 35px 20px 28px;
+     
+ .service_item_01 .sitem_con {
+          padding: 29px 0px 28px;
           text-align: center;
         }
 
