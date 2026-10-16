@@ -220,7 +220,7 @@ const MobileGis = () => {
           display: block;
         }
 
-     .service-page .container {
+       .service-page .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -243,10 +243,6 @@ const MobileGis = () => {
           line-height: 1.2;
           color: #0a1922;
           margin-bottom: 12px;
-        }
-
-        .secTitle span {
-          color: #bb0b0b;
         }
 
         /* ===== BUTTONS ===== */
@@ -291,57 +287,57 @@ const MobileGis = () => {
           transform: translateY(-2px);
         }
 
-        /* ===== HERO SECTION ===== */
-        .hero-section {
-          position: relative;
-          padding: 120px 0 80px;
-          background: linear-gradient(135deg, #f1f1f1 0%, #1a2a3a 100%);
-          overflow: hidden;
-        }
 
-        .hero-section::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: url(${servicesBg}) center/cover;
-          opacity: 1;
-          z-index: 0;
-        }
-
-        .hero-section .container {
-          position: relative;
-          z-index: 1;
-        }
-
-        .hero-icon {
-          font-size: 64px;
-          color: #bb0b0b;
-          margin-bottom: 20px;
-        }
-
-        .hero-title {
-          font-size: 48px;
-          font-weight: 700;
-          color: #ffffff;
-          line-height: 1.2;
-          margin-bottom: 16px;
-        }
-
-        .hero-title span {
-          color: #bb0b0b;
-        }
-
-        .hero-description {
-          font-size: 18px;
-          color: #b0b0c8;
-          max-width: 700px;
-          margin: 0 auto 30px;
-          line-height: 1.8;
-        }
-
+      /* ===== HERO SECTION ===== */
+              .hero-section {
+                position: relative;
+                padding: 120px 0 80px;
+                background: linear-gradient(135deg, #f1f1f1 0%, #1a2a3a 100%);
+                overflow: hidden;
+              }
+      
+              .hero-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url(${servicesBg}) center/cover;
+                opacity: 1;
+                z-index: 0;
+              }
+      
+              .hero-section .container {
+                position: relative;
+                z-index: 1;
+              }
+      
+              .hero-icon {
+                font-size: 64px;
+                color: #bb0b0b;
+                margin-bottom: 20px;
+              }
+      
+              .hero-title {
+                font-size: 48px;
+                font-weight: 700;
+                color: #ffffff;
+                line-height: 1.2;
+                margin-bottom: 16px;
+              }
+      
+              .hero-title span {
+                color: #bb0b0b;
+              }
+      
+              .hero-description {
+                font-size: 18px;
+                color: #b0b0c8;
+                max-width: 700px;
+                margin: 0 auto 30px;
+                line-height: 1.8;
+              }
         /* ===== SERVICE CARDS ===== */
         .service-grid {
           display: grid;
@@ -382,12 +378,12 @@ const MobileGis = () => {
           transform: scale(1.05);
         }
 
-        .service_item_01 .sitem_con {
-          padding:  30px 30px;
+      .service_item_01 .sitem_con {
+          padding: 35px 20px 28px;
           text-align: center;
         }
 
-      .service_item_01 .ibMeta {
+    .service_item_01 .ibMeta {
     width: 60px;
     height: 60px;
     background: #bb0b0b;
@@ -395,8 +391,8 @@ const MobileGis = () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -0px 90px 20px;   /* ← centered + overlaps image above */
-    font-size: 26px;
+   
+    font-size: 15px;
     color: #fff;
     transition: 0.3s;
     position: relative;
@@ -407,6 +403,7 @@ const MobileGis = () => {
 .service_item_01:hover .ibMeta {
     background: #8f0808;
     color: #fff;
+}
 
         .service_item_01 h3 {
           font-size: 20px;
@@ -426,7 +423,9 @@ const MobileGis = () => {
           color: #5a5a72;
           font-size: 15px;
           margin-bottom: 0;
+          margin-left:0; !important
         }
+
 
         /* ===== SECTION SPACING ===== */
         .section-padding {

@@ -378,31 +378,32 @@ const WebDevelopment = () => {
           transform: scale(1.05);
         }
 
-       .service_item_01 .sitem_con {
+      .service_item_01 .sitem_con {
           padding: 35px 20px 28px;
           text-align: center;
         }
 
-      .service_item_01 .ibMeta {
-          width: 60px;
-          height: 60px;
-          background: #bb0b0b10;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: -55px 110px 16px;
-          font-size: 26px;
-          color: #bb0b0b;
-          transition: 0.3s;
-          background: #fff;
-          box-shadow: 0 4px 15px rgba(187, 11, 11, 0.12);
-        }
+    .service_item_01 .ibMeta {
+    width: 60px;
+    height: 60px;
+    background: #bb0b0b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    font-size: 15px;
+    color: #fff;
+    transition: 0.3s;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(187, 11, 11, 0.25);
+}
 
-        .service_item_01:hover .ibMeta {
-          background: #bb0b0b;
-          color: #fff;
-        }
+.service_item_01:hover .ibMeta {
+    background: #8f0808;
+    color: #fff;
+}
 
         .service_item_01 h3 {
           font-size: 20px;
@@ -422,8 +423,9 @@ const WebDevelopment = () => {
           color: #5a5a72;
           font-size: 15px;
           margin-bottom: 0;
+          margin-left:0; !important
         }
-
+          
         /* ===== SECTION SPACING ===== */
         .section-padding {
           padding: 70px 0;

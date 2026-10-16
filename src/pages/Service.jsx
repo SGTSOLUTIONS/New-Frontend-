@@ -359,8 +359,8 @@ const Service = () => {
           color: #5a5a72;
           font-size: 15px;
           margin-bottom: 0;
+          margin-left:0; !important
         }
-
         /* ===== SECTION SPACING ===== */
         .section-padding {
           padding: 70px 0;

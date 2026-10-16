@@ -287,7 +287,7 @@ const WebGis = () => {
           transform: translateY(-2px);
         }
 
-        /* ===== HERO SECTION ===== */
+      /* ===== HERO SECTION ===== */
         .hero-section {
           position: relative;
           padding: 120px 0 80px;
@@ -423,8 +423,8 @@ const WebGis = () => {
           color: #5a5a72;
           font-size: 15px;
           margin-bottom: 0;
+          margin-left:0; !important
         }
-
         /* ===== SECTION SPACING ===== */
         .section-padding {
           padding: 70px 0;

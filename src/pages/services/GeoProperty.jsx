@@ -330,6 +330,7 @@ const GeoProperty = () => {
           line-height: 1.8;
         }
 
+        /* ===== SERVICE CARDS ===== */
         .service-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
@@ -369,7 +370,7 @@ const GeoProperty = () => {
           transform: scale(1.05);
         }
 
-       .service_item_01 .sitem_con {
+      .service_item_01 .sitem_con {
           padding: 35px 20px 28px;
           text-align: center;
         }
@@ -382,8 +383,8 @@ const GeoProperty = () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -0px 90px 20px;   /* ← centered + overlaps image above */
-    font-size: 26px;
+   
+    font-size: 15px;
     color: #fff;
     transition: 0.3s;
     position: relative;
@@ -394,6 +395,7 @@ const GeoProperty = () => {
 .service_item_01:hover .ibMeta {
     background: #8f0808;
     color: #fff;
+}
 
         .service_item_01 h3 {
           font-size: 20px;
@@ -413,6 +415,7 @@ const GeoProperty = () => {
           color: #5a5a72;
           font-size: 15px;
           margin-bottom: 0;
+          margin-left:0; !important
         }
 
         .section-padding {
