@@ -391,8 +391,8 @@ const WebGis = () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -0px 90px 20px;   /* ← centered + overlaps image above */
-    font-size: 26px;
+   
+    font-size: 15px;
     color: #fff;
     transition: 0.3s;
     position: relative;
