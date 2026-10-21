@@ -74,19 +74,74 @@ const Rainfall = () => {
         .hero-title{font-size:48px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:16px}
         .hero-title span{color:#bb0b0b}
         .hero-description{font-size:18px;color:#b0b0c8;max-width:700px;margin:0 auto 30px;line-height:1.8}
-        .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px}
-        .service_item_01{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06);transition:all .35s ease;border:1px solid #f0f0f5}
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .service_item_01 {
+          width: 100%;
+          height: 450px; /* Change box height here */
+          background: #fff;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 4px 20px rgba(0,0,0,.06);
+          transition: all .35s ease;
+          border: 1px solid #f0f0f5;
+        }
         .service_item_01:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(187,11,11,.10);border-color:#bb0b0b30}
-        .service_item_01 .siThumb{position:relative;overflow:hidden;height:220px}
-        .service_item_01 .siThumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+        .service_item_01 .siThumb {
+           position: relative;
+           overflow: hidden;
+           height: 200px; /* Image height */
+        }
+        .service_item_01 .siThumb img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
         .service_item_01:hover .siThumb img{transform:scale(1.05)}
-        .service_item_01 .sitem_con{padding:35px 20px 28px;text-align:center}
-        .service_item_01 .ibMeta{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:-55px auto 16px;font-size:26px;color:#bb0b0b;transition:.3s;background:#fff;box-shadow:0 4px 15px rgba(187,11,11,.12)}
+        .service_item_01 .sitem_con {
+           padding: 35px 20px 28px;
+           text-align: center;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: flex-start;
+           width: 100%;
+        }
+        .service_item_01 .ibMeta{
+           width:60px;
+           height:60px;
+           border-radius:50%;
+           display:flex;
+           align-items:center;
+           justify-content:center;
+           margin:px auto 16px;
+           font-size:26px;
+           color:#bb0b0b;
+           transition:.3s;
+           background:#fff;
+           box-shadow:0 4px 15px rgba(187,11,11,.12)
+        }
         .service_item_01:hover .ibMeta{background:#bb0b0b;color:#fff}
-        .service_item_01 h3{font-size:20px;font-weight:600;margin-bottom:10px}
+        .service_item_01 h3 {
+           width: 100%;
+           text-align: center;
+           font-size: 20px;
+           font-weight: 600;
+           margin-bottom: 10px;
+        }
         .service_item_01 h3 a{color:#0a1922}
         .service_item_01 h3 a:hover{color:#bb0b0b}
-        .service_item_01 p{color:#5a5a72;font-size:15px}
+        .service_item_01 p {
+           width: 100%;
+           text-align: center;
+           color: #5a5a72;
+           font-size: 15px;
+           margin: 0 auto;
+        }
         .section-padding{padding:70px 0}
         .bg-light{background:#f8f9fc}
         .bg-dark{background:#0a1922;color:#fff}
