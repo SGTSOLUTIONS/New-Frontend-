@@ -13,7 +13,7 @@ import blog2 from '../../assets/images/blog/2.jpg';
 import blog3 from '../../assets/images/blog/3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/Lidar/bg.png';
+import servicesBg from '../../assets/images/Enterprise-Gis/bg.png';
 
 import entFeature1 from '../../assets/images/Lidar/1.jpg';
 import entFeature2 from '../../assets/images/Lidar/2.jpg';
@@ -22,7 +22,13 @@ import entFeature4 from '../../assets/images/Lidar/4.jpg';
 import entFeature5 from '../../assets/images/Lidar/5.jpg';
 import entFeature6 from '../../assets/images/Lidar/6.png';
 const entFeatures = [
-  { id: 1, icon: 'fa-globe', title: 'Web GIS Applications', description: 'Custom browser-based map applications — no heavy software on every computer.', image: entFeature1, link: '/services/enterprise/webgis' },
+  { id: 1, 
+    icon: 'fa-globe', 
+    title: 'Web GIS Applications', 
+    description: 'Custom browser-based map applications — no heavy software on every computer.', 
+    image: entFeature1, 
+    link: '/services/enterprise/webgis' 
+  },
   { id: 2, icon: 'fa-tachometer-alt', title: 'Integrated Dashboards', description: 'Live views of key indicators, progress and performance for leadership.', image: entFeature2, link: '/services/enterprise/dashboards' },
   { id: 3, icon: 'fa-mobile-alt', title: 'Mobile Field Apps', description: 'Apps for surveyors, inspectors and collectors to capture verified data.', image: entFeature3, link: '/services/enterprise/mobile' },
   { id: 4, icon: 'fa-database', title: 'Central Geodatabase', description: 'A single, well-organised source of spatial and departmental data.', image: entFeature4, link: '/services/enterprise/geodatabase' },
@@ -69,7 +75,14 @@ const EnterpriseGISSmartGovernance = () => {
         .berpo_btn-outline{display:inline-block;background:transparent;color:#bb0b0b;font-weight:600;padding:12px 36px;border-radius:50px;font-size:15px;border:2px solid #bb0b0b;cursor:pointer;transition:all .3s ease}
         .berpo_btn-outline:hover{background:#bb0b0b;color:#fff;transform:translateY(-2px)}
         .hero-section{position:relative;padding:120px 0 80px;background:linear-gradient(135deg,#f1f1f1 0%,#1a2a3a 100%);overflow:hidden}
-        .hero-section::before{content:'';position:absolute;inset:0;background:url(${servicesBg}) center/cover;z-index:0}
+        .hero-section::before{
+           content:'';
+           position:absolute;
+           inset:0;
+           background:url(${servicesBg}) center/cover;
+           z-index:0
+           opacity:0.90;
+        }
         .hero-section .container{position:relative;z-index:1}
         .hero-title{font-size:48px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:16px}
         .hero-title span{color:#bb0b0b}

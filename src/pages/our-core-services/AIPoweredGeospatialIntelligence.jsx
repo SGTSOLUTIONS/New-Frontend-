@@ -105,7 +105,14 @@ const AIPoweredGeospatialIntelligence = () => {
         .berpo_btn-outline{display:inline-block;background:transparent;color:#bb0b0b;font-weight:600;padding:12px 36px;border-radius:50px;font-size:15px;border:2px solid #bb0b0b;cursor:pointer;transition:all .3s ease}
         .berpo_btn-outline:hover{background:#bb0b0b;color:#fff;transform:translateY(-2px)}
         .hero-section{position:relative;padding:120px 0 80px;background:linear-gradient(135deg,#f1f1f1 0%,#1a2a3a 100%);overflow:hidden}
-        .hero-section::before{content:'';position:absolute;inset:0;background:url(${servicesBg}) center/cover;z-index:0}
+        .hero-section::before{
+           content:'';
+           position:absolute;
+           inset:0;
+           background:url(${servicesBg}) center/cover;
+           opacity:0.90;
+           z-index:0
+        }
         .hero-section .container{position:relative;z-index:1}
         .hero-title{font-size:48px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:16px}
         .hero-title span{color:#bb0b0b}
