@@ -14,8 +14,8 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Rainfall/bg.png';
 
-import rfFeature1 from '../../assets/images/Lidar/1.jpg';
-import rfFeature2 from '../../assets/images/Lidar/2.jpg';
+import rfFeature1 from '../../assets/images/Rainfall/1.png';
+import rfFeature2 from '../../assets/images/Rainfall/2.png';
 import rfFeature3 from '../../assets/images/Lidar/3.png';
 import rfFeature4 from '../../assets/images/Lidar/4.jpg';
 import rfFeature5 from '../../assets/images/Lidar/5.jpg';

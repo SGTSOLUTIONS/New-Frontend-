@@ -12,9 +12,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // Import all images
 import slider1 from '../assets/images/slider/1_4.jpg';
 import slider2 from '../assets/images/slider/1_5.jpeg';
-import service1 from '../assets/images/service/1.jpg';
-import service2 from '../assets/images/service/2.jpg';
-import service3 from '../assets/images/service/3.jpg';
+import service1 from '../assets/images/home/1.png';
+import service2 from '../assets/images/home/2.png';
+import service3 from '../assets/images/home/3.png';
+import service4 from '../assets/images/home/4.png';
+import service5 from '../assets/images/home/5.png';
+import service6 from '../assets/images/home/6.png';
 import aboutImg from '../assets/images/home1/about.png';
 import client1 from '../assets/images/home1/c1.png';
 import client2 from '../assets/images/home1/c2.png';
@@ -425,7 +428,7 @@ const Home = () => {
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
-                  <img src={service2} alt="" className="img-fluid" />
+                  <img src={service1} alt="" className="img-fluid" />
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
@@ -463,7 +466,7 @@ const Home = () => {
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
-                  <img src={service2} alt="" className="img-fluid" />
+                  <img src={service3} alt="" className="img-fluid" />
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
@@ -482,7 +485,7 @@ const Home = () => {
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
-                  <img src={service2} alt="" className="img-fluid" />
+                  <img src={service4} alt="" className="img-fluid" />
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
@@ -501,7 +504,7 @@ const Home = () => {
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
-                  <img src={service1} alt="" className="img-fluid" />
+                  <img src={service5} alt="" className="img-fluid" />
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
@@ -520,7 +523,7 @@ const Home = () => {
             <div className="col-lg-4 col-md-6">
               <div className="service_item_01">
                 <div className="siThumb">
-                  <img src={service2} alt="" className="img-fluid" />
+                  <img src={service6} alt="" className="img-fluid" />
                 </div>
                 <div className="sitem_con">
                   <div className="ibMeta">
