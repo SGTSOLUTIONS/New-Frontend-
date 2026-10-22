@@ -340,18 +340,20 @@ const WebDevelopment = () => {
 
         /* ===== SERVICE CARDS ===== */
         .service-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 30px;
-          margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .service_item_01 {
-          background: #ffffff;
+          width: 100%;
+          height: 450px; /* Change box height here */
+          background: #fff;
           border-radius: 16px;
           overflow: hidden;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-          transition: all 0.35s ease;
+          box-shadow: 0 4px 20px rgba(0,0,0,.06);
+          transition: all .35s ease;
           border: 1px solid #f0f0f5;
         }
 
@@ -379,32 +381,30 @@ const WebDevelopment = () => {
         }
 
      
- .service_item_01 .sitem_con {
+        .service_item_01 .sitem_con {
           padding: 29px 0px 28px;
           text-align: center;
         }
 
-    .service_item_01 .ibMeta {
-    width: 60px;
-    height: 60px;
-    background: #bb0b0b;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-    font-size: 15px;
-    color: #fff;
-    transition: 0.3s;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 4px 15px rgba(187, 11, 11, 0.25);
-}
+        .service_item_01 .ibMeta {
+           width:60px;
+           height:60px;
+           border-radius:50%;
+           display:flex;
+           align-items:center;
+           justify-content:center;
+           margin:px auto 16px;
+           font-size:26px;
+           color:#bb0b0b;
+           transition:.3s;
+           background:#fff;
+           box-shadow:0 4px 15px rgba(187,11,11,.12)
+        }
 
-.service_item_01:hover .ibMeta {
-    background: #8f0808;
-    color: #fff;
-}
+        .service_item_01:hover .ibMeta {
+           background: #8f0808;
+           color: #fff;
+        }
 
         .service_item_01 h3 {
           font-size: 20px;

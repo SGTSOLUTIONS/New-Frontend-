@@ -13,20 +13,57 @@ import blog3 from '../../assets/images/blog/3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from "../../assets/images/AI-Powered/bg.png";
-import aiFeature1 from "../../assets/images/Lidar/1.jpg";
-import aiFeature2 from "../../assets/images/Lidar/2.jpg";
-import aiFeature3 from "../../assets/images/Lidar/3.png";
-import aiFeature4 from "../../assets/images/Lidar/4.jpg";
-import aiFeature5 from "../../assets/images/Lidar/5.jpg";
-import aiFeature6 from "../../assets/images/Lidar/6.png";
+import aiFeature1 from "../../assets/images/AI-Powered/1.jpg";
+import aiFeature2 from "../../assets/images/AI-Powered/2.jpg";
+import aiFeature3 from "../../assets/images/AI-Powered/3.png";
+import aiFeature4 from "../../assets/images/AI-Powered/4.png";
+import aiFeature5 from "../../assets/images/AI-Powered/5.png";
+import aiFeature6 from "../../assets/images/AI-Powered/6.png";
 
 const aiFeatures = [
-  { id: 1, icon: 'fa-robot', title: 'Automated Feature Detection', description: 'Detect buildings, roads, water bodies, trees and more from imagery automatically.', image: aiFeature1, link: '/services/ai/feature-detection' },
-  { id: 2, icon: 'fa-exchange-alt', title: 'Automated Change Detection', description: 'Monitor illegal construction, encroachment and land-use change at scale.', image: aiFeature2, link: '/services/ai/change-detection' },
-  { id: 3, icon: 'fa-exclamation-triangle', title: 'Anomaly Detection', description: 'Spot anomalies in spatial and administrative data for revenue and compliance.', image: aiFeature3, link: '/services/ai/anomaly' },
-  { id: 4, icon: 'fa-chart-line', title: 'Predictive Modelling', description: 'Predictive modelling and scenario analysis for flood, land-use and demand forecasting.', image: aiFeature4, link: '/services/ai/predictive' },
-  { id: 5, icon: 'fa-brain', title: 'Custom AI Models', description: 'Custom AI models trained on your own data and workflows.', image: aiFeature5, link: '/services/ai/custom' },
-  { id: 6, icon: 'fa-shield-alt', title: 'Compliance Monitoring', description: 'Smart governance and compliance monitoring powered by AI.', image: aiFeature6, link: '/services/ai/compliance' },
+  { 
+    id: 1, 
+    icon: 'fa-robot', 
+    title: 'Automated Feature Detection', 
+    description: 'Detect buildings, roads, water bodies, trees and more from imagery automatically.', 
+    image: aiFeature1, 
+    link: '/services/ai/feature-detection' 
+  },
+  { id: 2, 
+    icon: 'fa-exchange-alt', 
+    title: 'Automated Change Detection', 
+    description: 'Monitor illegal construction, encroachment and land-use change at scale.', 
+    image: aiFeature2, 
+    link: '/services/ai/change-detection' 
+  },
+  { id: 3, 
+    icon: 'fa-exclamation-triangle', 
+    title: 'Anomaly Detection', 
+    description: 'Spot anomalies in spatial and administrative data for revenue and compliance.', 
+    image: aiFeature3, 
+    link: '/services/ai/anomaly' 
+  },
+  { id: 4, 
+    icon: 'fa-chart-line', 
+    title: 'Predictive Modelling', 
+    description: 'Predictive modelling and scenario analysis for flood, land-use and demand forecasting.', 
+    image: aiFeature4, 
+    link: '/services/ai/predictive' 
+  },
+  { id: 5, 
+    icon: 'fa-brain', 
+    title: 'Custom AI Models', 
+    description: 'Custom AI models trained on your own data and workflows.', 
+    image: aiFeature5, 
+    link: '/services/ai/custom' 
+  },
+  { id: 6, 
+    icon: 'fa-shield-alt', 
+    title: 'Compliance Monitoring', 
+    description: 'Smart governance and compliance monitoring powered by AI.', 
+    image: aiFeature6, 
+    link: '/services/ai/compliance' 
+  },
 ];
 
 const blogs = [
@@ -90,7 +127,11 @@ const AIPoweredGeospatialIntelligence = () => {
           border: 1px solid #f0f0f5;
         }
 
-        .service_item_01:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(187,11,11,.10);border-color:#bb0b0b30}
+        .service_item_01:hover{
+           transform:translateY(-6px);
+           box-shadow:0 12px 40px rgba(187,11,11,.10);
+           border-color:#bb0b0b30
+        }
         .service_item_01 .siThumb {
            position: relative;
            overflow: hidden;
@@ -127,7 +168,10 @@ const AIPoweredGeospatialIntelligence = () => {
           background:#fff;
           box-shadow:0 4px 15px rgba(187,11,11,.12)
         }
-        .service_item_01:hover .ibMeta{background:#bb0b0b;color:#fff}
+        .service_item_01:hover .ibMeta{
+           background:#bb0b0b;
+           color:#fff
+        }
         .service_item_01 h3 {
            width: 100%;
            text-align: center;

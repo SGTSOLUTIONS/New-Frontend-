@@ -385,7 +385,7 @@ const MobileGis = () => {
           text-align: center;
         }
 
-     .service_item_01 .ibMeta {
+        .service_item_01 .ibMeta {
           width:60px;
           height:60px;
           border-radius:50%;
@@ -400,10 +400,10 @@ const MobileGis = () => {
           box-shadow:0 4px 15px rgba(187,11,11,.12)
         }
 
-      .service_item_01:hover .ibMeta {
+        .service_item_01:hover .ibMeta {
          background: #8f0808;
          color: #fff;
-      }
+        }
 
         .service_item_01 h3 {
           font-size: 20px;
