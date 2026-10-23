@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import bg from '../assets/images/bg/banner.jpg';
+import intelligentInsights from '../assets/images/about/intelligent-insights.png';
+import smarterDecisions from '../assets/images/about/smarter-decisions.png';
+import betterFuture from '../assets/images/about/better-future.png';
 
 
 const About = () => {
@@ -63,34 +66,37 @@ const About = () => {
         setActiveFaq(activeFaq === faqId ? '' : faqId);
     };
 
-    const services = [
-        {
-            id: 1,
-            icon: '',
-            title: 'Intelligent Insights',
-            description: "Turn complex geographic data into meaningful insights using GIS, remote sensing, and AI-powered spatial analytics.",
-            
-        },
-        {
-            id: 2,
-            icon: '',
-            title: 'Smarter Decisions',
-            description: "Empower governments and organizations with location-based intelligence for better planning, efficient resource management, and informed decisions.",
-            
-        },
-        {
-            id: 3,
-            icon: '',
-            title: 'A Better Future',
-            description: "Build smarter cities and resilient communities through intelligent mapping, natural resource monitoring, and sustainable land and water management.",
-            
-        },
-    ];
+  const services = [
+    {
+        id: 1,
+        title: 'Intelligent Insights',
+        description:
+            'Turn complex geographic data into meaningful insights using GIS, remote sensing, and AI-powered spatial analytics.',
+        image: intelligentInsights,
+        link: '/about',
+    },
+    {
+        id: 2,
+        title: 'Smarter Decisions',
+        description:
+            'Empower governments and organizations with location-based intelligence for better planning, efficient resource management, and informed decisions.',
+        image: smarterDecisions,
+        link: '/about',
+    },
+    {
+        id: 3,
+        title: 'A Better Future',
+        description:
+            'Build smarter cities and resilient communities through intelligent mapping, natural resource monitoring, and sustainable land and water management.',
+        image: betterFuture,
+        link: '/about',
+    },
+];
 
     const team = [
-        { id: 1, name: 'Gayathri', role: 'Web Designer', image: '' },
-        { id: 2, name: 'Nithish', role: 'Web Developer', image: '' },
-        { id: 3, name: 'Mugesh', role: 'Business Expert', image: '' },
+        { id: 1, name: 'Mugesh Raja.S', role: 'Web Designer' },
+        { id: 2, name: 'Nithish.J', role: 'Web Developer' },
+        { id: 3, name: 'Gowsika.M', role: 'GIS Analyst' },
     ];
 
     const testimonials = [
@@ -217,29 +223,40 @@ const About = () => {
                     box-shadow: 0 8px 30px rgba(0,0,0,0.12);
                 }
 
-                .service_item_10 .ibMeta img {
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
-                    border-radius: 8px;
+                .service_item_10 .ibMeta {
+                   width: 100%;
+                   height: 120px;
+                   display: flex;
+                   align-items: center;
+                   justify-content: flex-start;
+                   margin-bottom: 0;
+                   overflow: hidden;
                 }
 
-                @media (max-width: 576px) {
-                    .service_item_10 .ibMeta img {
-                        height: 160px;
-                    }
+                .service_item_10 .ibMeta img {
+                   display: block;
+                   width: 180px;
+                   height: 120px;
+                   object-fit: contain;
+                   object-position: left center;
+                   margin: 0;
+                   padding: 0;
+                   border-radius: 8px;
                 }
 
                 .service_item_10 h3 {
-                    font-size: 20px;
-                    margin: 15px 0 10px;
+                   font-size: 20px;
+                   line-height: 1.4;
+                   margin: 20px 0 12px !important;
+                   padding: 0;
+                   clear: both;
                 }
 
                 .service_item_10 h3 a {
-                    color: #0a1922;
-                    text-decoration: none;
+                  display: inline-block;
+                  color: #0a1922;
+                  text-decoration: none;
                 }
-
                 .service_item_10 h3 a:hover {
                     color: #bb0b0b;
                 }
@@ -248,6 +265,7 @@ const About = () => {
                     color: #666;
                     font-size: 14px;
                     line-height: 1.7;
+                    margin-top: 0;
                 }
 
                 .service_item_10 .srm {
@@ -538,6 +556,77 @@ const About = () => {
                     font-size: 14px;
                 }
 
+                /* OUR MEMBERS: simple cards matching Our Experts; no photos/social links */
+                .simple-members-section {
+                    padding: 60px 0 !important;
+                    background: #f8f9fa;
+                }
+
+                .simple-members-section .members-heading {
+                    text-align: center;
+                    margin-bottom: 35px;
+                }
+
+                .simple-members-section .members-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 22px;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                }
+
+                .simple-members-section .member-card {
+                    min-width: 0;
+                    box-sizing: border-box;
+                    padding: 25px 18px;
+                    background: #ffffff;
+                    border: 1px solid #e5e5e5;
+                    border-top: 4px solid #bb0b0b;
+                    border-radius: 12px;
+                    text-align: center;
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+                    transition: transform 0.25s ease, box-shadow 0.25s ease;
+                }
+
+                .simple-members-section .member-card:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+                }
+
+                .simple-members-section .member-card h3 {
+                    color: #111111;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 1.4;
+                    margin: 0 0 8px;
+                    overflow-wrap: anywhere;
+                }
+
+                .simple-members-section .member-card p {
+                    color: #666666;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    margin: 0;
+                }
+
+                @media (max-width: 700px) {
+                    .simple-members-section {
+                        padding: 45px 15px !important;
+                    }
+                    .simple-members-section .members-grid {
+                        grid-template-columns: minmax(0, 400px);
+                        justify-content: center;
+                        gap: 15px;
+                    }
+                }
+
+                @media (min-width: 701px) and (max-width: 900px) {
+                    .simple-members-section .members-grid {
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                        gap: 14px;
+                    }
+                }
+
                 .testimonialSection02.abTest01 {
                     padding: 60px 0;
                     background: #f8f9fa;
@@ -816,6 +905,186 @@ const About = () => {
                 .berpo_btn:hover .bp-text i {
                     transform: translateX(5px);
                 }
+                
+                /* OUR EXPERTS SECTION - SGT SOLUTIONS RED, BLACK & WHITE */
+                .experts-section {
+                    width: 100%;
+                    padding: 65px 20px;
+                    background: #f8f9fa;
+                    box-sizing: border-box;
+                }
+
+                .experts-container {
+                    width: 100%;
+                    max-width: 1100px;
+                    margin: 0 auto;
+                }
+
+                .experts-heading {
+                    text-align: center;
+                    margin: 0 auto 35px;
+                }
+
+                .experts-heading .subTitle {
+                    color: #bb0b0b;
+                    text-align: center;
+                }
+
+                .experts-heading h2 {
+                    color: #111111;
+                    font-size: 34px;
+                    font-weight: 700;
+                    line-height: 1.25;
+                    text-align: center;
+                    margin: 10px 0 12px;
+                }
+
+                .experts-heading > p {
+                    color: #555555;
+                    text-align: center;
+                    margin: 0;
+                    line-height: 1.7;
+                }
+
+                .leadership-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, 330px));
+                    justify-content: center;
+                    gap: 25px;
+                    margin: 0 auto 25px;
+                }
+
+                .experts-section .expert-card {
+                    min-width: 0;
+                    box-sizing: border-box;
+                    background: #ffffff;
+                    border: 1px solid #e5e5e5;
+                    border-top: 4px solid #bb0b0b;
+                    border-radius: 12px;
+                    padding: 25px;
+                    text-align: left;
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+                    transition: transform 0.25s ease, box-shadow 0.25s ease;
+                }
+
+                .experts-section .expert-card:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+                }
+
+                .experts-section .expert-info h3 {
+                    color: #111111;
+                    font-size: 21px;
+                    font-weight: 700;
+                    line-height: 1.4;
+                    margin: 0 0 8px;
+                }
+
+                .experts-section .expert-role {
+                    color: #bb0b0b;
+                    font-size: 15px;
+                    font-weight: 600;
+                    margin: 0 0 18px;
+                }
+
+                .experts-section .expert-badge {
+                    display: inline-block;
+                    padding: 7px 13px;
+                    background: #bb0b0b;
+                    color: #ffffff;
+                    border-radius: 4px;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 0.4px;
+                }
+
+                .team-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, minmax(0, 1fr));
+                    gap: 20px;
+                    max-width: 1100px;
+                    margin: 0 auto;
+                }
+
+                .experts-section .team-card {
+                    border: 1px solid #e2e2e2;
+                    border-bottom: 4px solid #bb0b0b;
+                    border-radius: 10px;
+                    padding: 25px 15px;
+                    text-align: center;
+                    background: #ffffff;
+                    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+                }
+
+                .experts-section .team-card h3 {
+                    color: #111111;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 1.4;
+                    margin: 0 0 8px;
+                    overflow-wrap: anywhere;
+                }
+
+                .experts-section .team-card p {
+                    color: #666666;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    margin: 0;
+                }
+
+                .experts-footer {
+                    text-align: center;
+                    margin: 30px auto 0;
+                    color: #555555;
+                    font-size: 14px;
+                    line-height: 1.8;
+                }
+
+                .experts-footer strong {
+                    color: #bb0b0b;
+                }
+
+                /* Responsive layout for Our Experts */
+                @media (max-width: 700px) {
+                    .experts-section {
+                        padding: 45px 15px;
+                    }
+
+                    .experts-heading h2 {
+                        font-size: 28px;
+                    }
+
+                    .leadership-grid {
+                        grid-template-columns: minmax(0, 400px);
+                        gap: 16px;
+                    }
+
+                    .team-grid {
+                        grid-template-columns: minmax(0, 400px);
+                        justify-content: center;
+                        gap: 15px;
+                    }
+
+                    .experts-section .expert-card {
+                        width: 100%;
+                        padding: 22px;
+                    }
+                }
+
+                @media (min-width: 701px) and (max-width: 900px) {
+                    .experts-container {
+                        max-width: 760px;
+                    }
+
+                    .team-grid {
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                        gap: 14px;
+                    }
+
+                    .experts-section .team-card {
+                        padding: 22px 10px;
+                    }
+                }
             `}</style>
 
             <div className="overlay"></div>
@@ -855,13 +1124,7 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                                 <li><i className="twi-check-circle"></i>Flexibile Involvement Consultancy</li>
                                 <li><i className="twi-check-circle"></i>Personal Manager Consultancy</li>
                             </ul>
-                            <Link className="berpo_btn with_icon04" to="/service1">
-                                <span className="bp-shape"></span>
-                                <span className="bp-shape"></span>
-                                <span className="bp-shape"></span>
-                                <span className="bp-shape"></span>
-                                <span className="bp-text">Read More <i className="twi-arrow-right"></i></span>
-                            </Link>
+                            
                         </div>
                         <div className="col-lg-7">
                             <div className="abpageThumb" style={{ marginTop: '30px' }}>
@@ -884,9 +1147,13 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                         {services.map((service) => (
                             <div className="col-lg-4 col-md-6" key={service.id}>
                                 <div className="service_item_10">
-                                    <div className="ibMeta">
-                                        <img src="/assets/images/service/4.jpg" alt="" />
-                                    </div>
+                                   <div className="ibMeta">
+                                    <img
+                                      src={service.image}
+                                      alt={service.title}
+                                      loading="lazy"
+                                      />
+                                </div>
                                     <h3><Link to={service.link}>{service.title}</Link></h3>
                                     <p>{service.description}</p>
                                     
@@ -899,19 +1166,65 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                 </div>
             </section>
 
-            <section className="abvideoSection videoSection01" style={{ padding: '60px 0', background: '#f0f1f5' }}>
-                <div className="container largeContainer">
-                    <div className="row">
-                        <div className="col-lg-12 text-center">
-                            <div className="subTitle">We Have added a new exciting feature in v2.0</div>
-                            <h2 className="secTitle">Organizations Realize the Benefits <br /> Forming Work Teams.</h2>
-                            <a href="../assets/images/video/video.mp4" className="popup_video vbtn02">
-                                <i className="bpro-play"></i>
-                            </a>
-                        </div>
-                    </div>
+            <section className="experts-section">
+              <div className="experts-container">
+
+               <div className="experts-heading">
+                <div className="subTitle">OUR TEAM</div>
+                <h2>Our Experts</h2>
+                <p>
+                   Leadership driving innovation • Specialists delivering excellence
+               </p>
+            </div>
+
+        <div className="leadership-grid">
+            <div className="expert-card leadership-card">
+                <div className="expert-info">
+                    <h3>Dr. R. Saravani</h3>
+                    <p className="expert-role">Founder &amp; CEO</p>
+                    <span className="expert-badge">★ LEADERSHIP</span>
                 </div>
-            </section>
+            </div>
+
+            <div className="expert-card leadership-card">
+                <div className="expert-info">
+                    <h3>Dr. S. Mahalingam</h3>
+                    <p className="expert-role">Director</p>
+                    <span className="expert-badge">◎ STRATEGY</span>
+                </div>
+            </div>
+        </div>
+
+        <div className="team-grid">
+            <div className="expert-card team-card">
+                <h3>M. Sheikh Dawood</h3>
+                <p>Full Stack Developer</p>
+            </div>
+
+            <div className="expert-card team-card">
+                <h3>S. Mohana</h3>
+                <p>GIS Developer</p>
+            </div>
+
+            <div className="expert-card team-card">
+                <h3>R. Gayathri</h3>
+                <p>Web Developer</p>
+            </div>
+
+            <div className="expert-card team-card">
+                <h3>A. Nirmala Devi</h3>
+                <p>Admin</p>
+            </div>
+        </div>
+
+        <p className="experts-footer">
+            <strong>10+</strong> dedicated geospatial professionals
+            <span> &amp; </span>
+            <strong>50+</strong> live work surveyors
+        </p>
+
+    </div>
+</section>
 
             <section className="abFa1Section" style={{ padding: '60px 0' }}>
                 <div className="container largeContainer">
@@ -990,29 +1303,17 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
                 </div>
             </section>
 
-            <section className="teamSection01 abtmPad" style={{ padding: '60px 0' }}>
+            <section className="simple-members-section">
                 <div className="container largeContainer">
-                    <div className="row">
-                        <div className="col-lg-12 text-center">
-                            <div className="subTitle">Our Members</div>
-                            <h2 className="secTitle">Meet Our Latest <br /> Team Member</h2>
-                        </div>
+                    <div className="members-heading">
+                        <div className="subTitle">Our Members</div>
+                        <h2 className="secTitle">Meet Our Latest Team Member</h2>
                     </div>
-                    <div className="row" style={{ marginTop: '30px' }}>
+                    <div className="members-grid">
                         {team.map((member) => (
-                            <div className="col-lg-4 col-md-6" key={member.id}>
-                                <div className="team_01 text-center">
-                                    <div className="tm_thumb">
-                                        <img src="/assets/images/team/1.jpg" alt={member.name} />
-                                        <div className="tm_social">
-                                            <a href="https://www.facebook.com/"><i className="twi-facebook-square"></i>Facebook</a>
-                                            <a href="https://twitter.com/"><i className="twi-twitter"></i>Twitter</a>
-                                            <a href="https://linkedin.com/"><i className="twi-youtube"></i>Youtube</a>
-                                        </div>
-                                    </div>
-                                    <h3><Link to="/single-team">{member.name}</Link></h3>
-                                    <p>{member.role}</p>
-                                </div>
+                            <div className="member-card" key={member.id}>
+                                <h3>{member.name}</h3>
+                                <p>{member.role}</p>
                             </div>
                         ))}
                     </div>

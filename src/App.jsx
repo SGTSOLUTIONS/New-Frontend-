@@ -17,8 +17,6 @@ import './assets/css/responsive.css';
 // Service pages
 import WebGis from './pages/services/WebGis';
 import MobileGis from './pages/services/MobileGis';
-import GeoProperty from './pages/services/GeoProperty';
-import Lidar from './pages/services/Lidar';
 import Photogrammetry from './pages/services/Photogrammetry';
 import DroneSurvey from './pages/services/DroneSurvey';
 import Mapping2D from './pages/services/Mapping2D';
@@ -69,8 +67,6 @@ function App() {
           <Route index element={<Service />} />
           <Route path="web-gis" element={<WebGis />} />
           <Route path="mobile-gis" element={<MobileGis />} />
-          <Route path="geo-property" element={<GeoProperty />} />
-          <Route path="lidar" element={<Lidar />} />
           <Route path="photogrammetry" element={<Photogrammetry />} />
           <Route path="drone-survey" element={<DroneSurvey />} />
           <Route path="2d-mapping" element={<Mapping2D />} />

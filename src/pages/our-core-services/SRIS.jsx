@@ -12,13 +12,13 @@ import blog2 from '../../assets/images/blog/2.jpg';
 import blog3 from '../../assets/images/blog/3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/Geo-property/bg.jpeg';
-import srisFeature1 from '../../assets/images/Lidar/1.jpg';
-import srisFeature2 from '../../assets/images/Lidar/2.jpg';
-import srisFeature3 from '../../assets/images/Lidar/3.png';
-import srisFeature4 from '../../assets/images/Lidar/4.jpg';
-import srisFeature5 from '../../assets/images/Lidar/5.jpg';
-import srisFeature6 from '../../assets/images/Lidar/6.png';
+import servicesBg from '../../assets/images/SRIS/bg.jpeg';
+import srisFeature1 from '../../assets/images/SRIS/1.jpeg';
+import srisFeature2 from '../../assets/images/SRIS/2.jpg';
+import srisFeature3 from '../../assets/images/SRIS/3.png';
+import srisFeature4 from '../../assets/images/SRIS/4.jpg';
+import srisFeature5 from '../../assets/images/SRIS/5.jpeg';
+import srisFeature6 from '../../assets/images/SRIS/6.png';
 
 const srisFeatures = [
   { id: 1, icon: 'fa-map', title: 'Map Every Property', description: 'Visualise every property and assessment status on a single GIS view.', image: srisFeature1, link: '/services/sris/property-map' },

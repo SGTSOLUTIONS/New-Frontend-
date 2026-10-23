@@ -10,8 +10,6 @@ import "./Header.css";
 // Import menu images
 import h1 from "../assets/images/h1.png";
 import h2 from "../assets/images/h2.png";
-import h3 from "../assets/images/h3.png";
-import h4 from "../assets/images/h4.png";
 import h5 from "../assets/images/h5.png";
 import h6 from "../assets/images/h6.png";
 import h7 from "../assets/images/h7.png";
@@ -34,18 +32,8 @@ const services = [
         link: "/services/mobile-gis",
         image: h2,
     },
-    {
-        id: 3,
-        title: "Spatial Revenue Intelligence",
-        link: "/services/geo-property",
-        image: h3,
-    },
-    {
-        id: 4,
-        title: "LiDAR",
-        link: "/services/lidar",
-        image: h4,
-    },
+   
+    
     {
         id: 5,
         title: "Photogrammetry",
