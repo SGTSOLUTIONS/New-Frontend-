@@ -987,10 +987,7 @@ const Contact = () => {
                 <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </div>
+                </div>
             </div>
 
             {/* ===== MAP CARD ===== */}

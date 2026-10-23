@@ -94,7 +94,7 @@ const About = () => {
 ];
 
     const team = [
-        { id: 1, name: 'Mugesh Raja.S', role: 'Web Designer' },
+        { id: 1, name: 'Mugesh Raja.S', role: 'Web Developer' },
         { id: 2, name: 'Nithish.J', role: 'Web Developer' },
         { id: 3, name: 'Gowsika.M', role: 'GIS Analyst' },
     ];
@@ -910,7 +910,7 @@ const About = () => {
                 .experts-section {
                     width: 100%;
                     padding: 65px 20px;
-                    background: #f8f9fa;
+                    background: #998f91;
                     box-sizing: border-box;
                 }
 
@@ -1226,82 +1226,88 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
     </div>
 </section>
 
-            <section className="abFa1Section" style={{ padding: '60px 0' }}>
-                <div className="container largeContainer">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="fqArea">
-                                <div className="subTitle">Just a Consultancy</div>
-                                <h2 className="secTitle">Bepro FAQ</h2>
-                                <div className="accordion bepAccordion" id="befAccordion01">
-                                    {faqs.map((faq, index) => (
-                                        <div className={`card ${activeFaq === faq.id ? 'activeBg' : ''}`} key={faq.id}>
-                                            <div className="faqInner">
-                                                <div className="card-header" id={`ma_ac_${index + 1}`}>
-                                                    <h2 className="mb-0">
-                                                        <button
-                                                            type="button"
-                                                            onClick={() => toggleFaq(faq.id)}
-                                                            className={activeFaq === faq.id ? '' : 'collapsed'}
-                                                            aria-expanded={activeFaq === faq.id}
-                                                        >
-                                                            <i>{index + 1}.</i> {faq.question}
-                                                            <span></span>
-                                                        </button>
-                                                    </h2>
-                                                </div>
-                                                <div
-                                                    id={faq.id}
-                                                    className={`collapse ${activeFaq === faq.id ? 'show' : ''}`}
-                                                    aria-labelledby={`ma_ac_${index + 1}`}
-                                                    data-parent="#befAccordion01"
-                                                >
-                                                    <div className="card-body">{faq.answer}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
+            
+<section className="abFa1Section" style={{ padding: '60px 0' }}>
+    <div className="container largeContainer">
+
+        {/* Centered heading */}
+        <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+            <div className="subTitle">Just a Consultancy</div>
+            <h2 className="secTitle">Bepro FAQ</h2>
+        </div>
+
+        <div className="row">
+            <div className="col-lg-6">
+                <div className="fqArea">
+                    <div className="accordion bepAccordion" id="befAccordion01">
+                        {faqs.map((faq, index) => (
+                            <div className={`card ${activeFaq === faq.id ? 'activeBg' : ''}`} key={faq.id}>
+                                <div className="faqInner">
+                                    <div className="card-header" id={`ma_ac_${index + 1}`}>
+                                        <h2 className="mb-0">
+                                            <button
+                                                type="button"
+                                                onClick={() => toggleFaq(faq.id)}
+                                                className={activeFaq === faq.id ? '' : 'collapsed'}
+                                                aria-expanded={activeFaq === faq.id}
+                                            >
+                                                <i>{index + 1}.</i> {faq.question}
+                                                <span></span>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div
+                                        id={faq.id}
+                                        className={`collapse ${activeFaq === faq.id ? 'show' : ''}`}
+                                        aria-labelledby={`ma_ac_${index + 1}`}
+                                        data-parent="#befAccordion01"
+                                    >
+                                        <div className="card-body">{faq.answer}</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="fqArea">
-                                <div className="subTitle">Just a Consultancy</div>
-                                <h2 className="secTitle">Bepro FAQ</h2>
-                                <div className="accordion bepAccordion" id="befAccordion01">
-                                    {faqsd.map((faqa, index) => (
-                                        <div className={`card ${activeFaq === faqa.id ? 'activeBg' : ''}`} key={faqa.id}>
-                                            <div className="faqInner">
-                                                <div className="card-header" id={`ma_ac_${index + 1}`}>
-                                                    <h2 className="mb-0">
-                                                        <button
-                                                            type="button"
-                                                            onClick={() => toggleFaq(faqa.id)}
-                                                            className={activeFaq === faqa.id ? '' : 'collapsed'}
-                                                            aria-expanded={activeFaq === faqa.id}
-                                                        >
-                                                            <i>{index + 1}.</i> {faqa.question}
-                                                            <span></span>
-                                                        </button>
-                                                    </h2>
-                                                </div>
-                                                <div
-                                                    id={faqa.id}
-                                                    className={`collapse ${activeFaq === faqa.id ? 'show' : ''}`}
-                                                    aria-labelledby={`ma_ac_${index + 1}`}
-                                                    data-parent="#befAccordion01"
-                                                >
-                                                    <div className="card-body">{faqa.answer}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <div className="col-lg-6">
+                <div className="fqArea">
+                    <div className="accordion bepAccordion" id="befAccordion02">
+                        {faqsd.map((faqa, index) => (
+                            <div className={`card ${activeFaq === faqa.id ? 'activeBg' : ''}`} key={faqa.id}>
+                                <div className="faqInner">
+                                    <div className="card-header" id={`ma_ac_right_${index + 1}`}>
+                                        <h2 className="mb-0">
+                                            <button
+                                                type="button"
+                                                onClick={() => toggleFaq(faqa.id)}
+                                                className={activeFaq === faqa.id ? '' : 'collapsed'}
+                                                aria-expanded={activeFaq === faqa.id}
+                                            >
+                                                <i>{index + 1}.</i> {faqa.question}
+                                                <span></span>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div
+                                        id={faqa.id}
+                                        className={`collapse ${activeFaq === faqa.id ? 'show' : ''}`}
+                                        aria-labelledby={`ma_ac_right_${index + 1}`}
+                                        data-parent="#befAccordion02"
+                                    >
+                                        <div className="card-body">{faqa.answer}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
             <section className="simple-members-section">
                 <div className="container largeContainer">
@@ -1321,21 +1327,7 @@ From uncovering revenue leakage in municipal tax systems to predicting flood ris
             </section>
 
             
-            <section className="clientSection03" style={{ padding: '50px 0' }}>
-                <div className="container largeContainer">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="client-slider owl-carousel" ref={clientRef}>
-                                {[1, 2, 3, 4].map((item, index) => (
-                                    <a href="javascript:void(0);" key={index}>
-                                        <img src={`/assets/images/client-logo/${9 + index}.png`} alt="" />
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
         </>
     );
 };
