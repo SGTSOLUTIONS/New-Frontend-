@@ -26,9 +26,9 @@ import team3 from '../../assets/images/team/3.jpg';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/web-development/blog1.png';
+import blog2 from '../../assets/images/web-development/blog2.png';
+import blog3 from '../../assets/images/web-development/blog3.png';
 import blogAuthor1 from '../../assets/images/blog/a1.jpg';
 import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
@@ -132,24 +132,24 @@ const testimonials = [
 const blogs = [
   {
     id: 1,
-    title: 'Building Modern Web Applications',
-    date: '20 March, 2021',
+    title: 'AI Is Transforming the Future of Website Development',
+    date: 'October 22, 2026',
     author: 'Keesler Smith',
     img: blog1,
     authorImg: blogAuthor1
   },
   {
     id: 2,
-    title: 'Web GIS: Bringing Maps to the Browser',
-    date: '20 March, 2021',
+    title: 'Google Introduces New Tools for Building Modern Web Applications',
+    date: 'May 19, 2026',
     author: 'Keesler Smith',
     img: blog2,
     authorImg: blogAuthor2
   },
   {
     id: 3,
-    title: 'SEO Strategies for 2024',
-    date: '20 March, 2021',
+    title: 'Critical PHP Security Updates Highlight the Importance of Website Maintenance',
+    date: 'October 21, 2026',
     author: 'Keesler Smith',
     img: blog3,
     authorImg: blogAuthor3

@@ -7,9 +7,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import achievementImg from '../../assets/images/home1/1.png';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/Rainfall/blog1.jpg';
+import blog2 from '../../assets/images/Rainfall/blog2.png';
+import blog3 from '../../assets/images/Rainfall/blog3.png';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Rainfall/bg.png';
@@ -31,9 +31,24 @@ const rainfallFeatures = [
 ];
 
 const blogs = [
-  { id: 1, title: 'Rainfall Modelling for Climate-Resilient Cities', date: '20 March, 2021', img: blog1 },
-  { id: 2, title: 'Combining GIS and AI for Flood Risk', date: '20 March, 2021', img: blog2 },
-  { id: 3, title: 'Land Use, Population and Future Demand', date: '20 March, 2021', img: blog3 },
+  { 
+    id: 1, 
+    title: 'Urban Expansion and Changing Rainfall Patterns Across Indian Cities', 
+    date: 'April 2026', 
+    img: blog1 
+  },
+  { 
+    id: 2, 
+    title: 'AI and Satellite Data Improve Urban Flood Prediction in Mumbai', 
+    date: 'October 20, 2026', 
+    img: blog2 
+  },
+  { 
+    id: 3, 
+    title: 'Land-Use Modelling Reveals Future Runoff and Flood Risks in Uttarakhand', 
+    date: 'September 2026', 
+    img: blog3 
+  },
 ];
 
 const Rainfall = () => {

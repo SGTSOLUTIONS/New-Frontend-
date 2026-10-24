@@ -7,9 +7,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import achievementImg from '../../assets/images/home1/1.png';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/AI-Powered/blog1.jpg';
+import blog2 from '../../assets/images/AI-Powered/blog2.png';
+import blog3 from '../../assets/images/AI-Powered/blog3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from "../../assets/images/AI-Powered/bg.png";
@@ -67,9 +67,23 @@ const aiFeatures = [
 ];
 
 const blogs = [
-  { id: 1, title: 'AI in Geospatial Intelligence', date: '20 March, 2021', img: blog1 },
-  { id: 2, title: 'Automated Feature Detection at Scale', date: '20 March, 2021', img: blog2 },
-  { id: 3, title: 'Predictive Flood Modelling with AI', date: '20 March, 2021', img: blog3 },
+  { 
+    id: 1, 
+    title: 'Google Advances AI-Powered Geospatial Reasoning', 
+    date: 'October 14, 2026', 
+    img: blog1 
+  },
+  { 
+    id: 2, 
+    title: 'Esri Introduces Geospatial Foundation Models for Smarter GIS', 
+    date: 'July 12, 2026', 
+    img: blog2 
+  },
+  { id: 3, 
+    title: 'NASA and IBM Geospatial AI Model Demonstrated in Orbit', 
+    date: 'May 7, 2026', 
+    img: blog3 
+  },
 ];
 
 const AIPoweredGeospatialIntelligence = () => {

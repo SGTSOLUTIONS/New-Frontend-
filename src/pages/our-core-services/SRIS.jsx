@@ -7,9 +7,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import achievementImg from '../../assets/images/home1/1.png';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/SRIS/blog1.png';
+import blog2 from '../../assets/images/SRIS/blog2.png';
+import blog3 from '../../assets/images/SRIS/blog3.png';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/SRIS/bg.jpeg';
@@ -30,9 +30,24 @@ const srisFeatures = [
 ];
 
 const blogs = [
-  { id: 1, title: 'How SRIS Helps Municipalities Recover Lost Revenue', date: '20 March, 2021', img: blog1 },
-  { id: 2, title: 'Spatial Revenue Intelligence in Practice', date: '20 March, 2021', img: blog2 },
-  { id: 3, title: 'Bridging GIS and Property Tax Administration', date: '20 March, 2021', img: blog3 },
+  { 
+    id: 1, 
+    title: 'GIS-Based Property Tax Mapping Gains Momentum Across India', 
+    date: 'September 2026', 
+    img: blog1 
+  },
+  { 
+    id: 2, 
+    title: 'Delhi Explores Drone-Based GIS Surveys to Strengthen Property Tax Revenue', 
+    date: 'July 8, 2026', 
+    img: blog2 
+  },
+  { 
+    id: 3, 
+    title: 'Bengaluru Uses Geospatial Verification to Detect Property Tax Evasion', 
+    date: 'February 24, 2026', 
+    img: blog3 
+  },
 ];
 
 const SRIS = () => {

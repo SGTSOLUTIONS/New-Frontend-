@@ -7,9 +7,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import achievementImg from '../../assets/images/home1/1.png';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/Lidar/blog1.png';
+import blog2 from '../../assets/images/Lidar/blog2.png';
+import blog3 from '../../assets/images/Lidar/blog3.png';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Lidar/bg.png';
@@ -31,9 +31,24 @@ const lidarFeatures = [
 ];
 
 const blogs = [
-  { id: 1, title: 'LiDAR Technology: A Comprehensive Guide', date: '20 March, 2021', img: blog1 },
-  { id: 2, title: 'From Point Clouds to 3D Models', date: '20 March, 2021', img: blog2 },
-  { id: 3, title: 'LiDAR Applications in Forestry', date: '20 March, 2021', img: blog3 },
+  { 
+    id: 1, 
+    title: 'AI Powers Large-Scale 3D Mapping for Germany’s Digital Twin', 
+    date: 'October 21, 2026', 
+    img: blog1 
+  },
+  { 
+    id: 2, 
+    title: 'High-Resolution LiDAR Mapping Supports Caribbean Climate Resilience', 
+    date: 'October 23, 2026', 
+    img: blog2 
+  },
+  { 
+    id: 3, 
+    title: 'Bhubaneswar Plans Advanced LiDAR Survey for New City Development', 
+    date: 'July 5, 2026', 
+    img: blog3 
+  },
 ];
 
 const LiDAR3DMapping = () => {

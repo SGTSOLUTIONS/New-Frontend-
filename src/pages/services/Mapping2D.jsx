@@ -22,9 +22,9 @@ import team3 from '../../assets/images/team/3.jpg';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/2d-mapping/blog1.png';
+import blog2 from '../../assets/images/2d-mapping/blog2.png';
+import blog3 from '../../assets/images/2d-mapping/blog3.png';
 import blogAuthor1 from '../../assets/images/blog/a1.jpg';
 import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
@@ -126,24 +126,24 @@ const testimonials = [
 const blogs = [
   {
     id: 1,
-    title: 'The Art of Planimetric Mapping',
-    date: '20 March, 2021',
+    title: 'India Advances GIS-Based Urban Master Planning',
+    date: 'August 10, 2026',
     author: 'Keesler Smith',
     img: blog1,
     authorImg: blogAuthor1
   },
   {
     id: 2,
-    title: 'Topographic Mapping for Civil Design',
-    date: '20 March, 2021',
+    title: 'NAKSHA Pushes Forward Digital Urban Land Mapping',
+    date: 'September 29, 2026',
     author: 'Keesler Smith',
     img: blog2,
     authorImg: blogAuthor2
   },
   {
     id: 3,
-    title: 'Land Use Classification Techniques',
-    date: '20 March, 2021',
+    title: 'National Geospatial Data Registry Aims to Improve Spatial Data Access',
+    date: 'October 20, 2026',
     author: 'Keesler Smith',
     img: blog3,
     authorImg: blogAuthor3

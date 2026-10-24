@@ -26,10 +26,10 @@ import team2 from '../../assets/images/team/2.jpg';
 import team3 from '../../assets/images/team/3.jpg';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
-import blog2 from '../../assets/images/blog/2.jpg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/web-gis/blog1.png';
+import blog2 from '../../assets/images/web-gis/blog2.png';
+import blog3 from '../../assets/images/web-gis/blog3.png';
 import blogAuthor1 from '../../assets/images/blog/a1.jpg';
 import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
@@ -132,24 +132,24 @@ const testimonials = [
 const blogs = [
   {
     id: 1,
-    title: 'Italic Mountains, she had a last view back',
-    date: '20 March, 2021',
+    title: 'NextGIS Frontend 4.0: More Powerful Web Maps',
+    date: 'OCTOBER 02, 2026',
     author: 'Keesler Smith',
     img: blog1,
     authorImg: blogAuthor1
   },
   {
     id: 2,
-    title: 'Styles come and go. Design language not a style.',
-    date: '20 March, 2021',
+    title: 'ArcGIS Online Introduces New Web GIS Features',
+    date: 'JUNE 25, 2026',
     author: 'Keesler Smith',
     img: blog2,
     authorImg: blogAuthor2
   },
   {
     id: 3,
-    title: 'Dharma Home Suites at Novia offers fully',
-    date: '20 March, 2021',
+    title: 'NextGIS Platform Updates Enhance Online Mapping',
+    date: 'AUGUST 05, 2026',
     author: 'Keesler Smith',
     img: blog3,
     authorImg: blogAuthor3

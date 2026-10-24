@@ -26,9 +26,9 @@ import team3 from '../../assets/images/team/3.jpg';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/Mobile Gis/blog1.png';
+import blog2 from '../../assets/images/Mobile Gis/blog2.png';
+import blog3 from '../../assets/images/Mobile Gis/blog3.png';
 import blogAuthor1 from '../../assets/images/blog/a1.jpg';
 import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
@@ -132,24 +132,24 @@ const testimonials = [
 const blogs = [
   {
     id: 1,
-    title: 'Offline GIS: Data Collection in Remote Areas',
-    date: '20 March, 2021',
+    title: 'Next-Generation Mobile GIS: Smarter Field Data Collection',
+    date: 'JULY 22, 2026',
     author: 'Keesler Smith',
     img: blog1,
     authorImg: blogAuthor1
   },
   {
     id: 2,
-    title: 'High-Accuracy GNSS for Mobile GIS',
-    date: '20 March, 2021',
+    title: 'Offline Mobile GIS: Mapping Without Network Connectivity',
+    date: 'AUGUST 11, 2026',
     author: 'Keesler Smith',
     img: blog2,
     authorImg: blogAuthor2
   },
   {
     id: 3,
-    title: 'Asset Management with Mobile GIS',
-    date: '20 March, 2021',
+    title: 'Mobile GIS Evolution: Real-Time Mapping and Field Synchronization',
+    date: 'JUNE 16, 2026',
     author: 'Keesler Smith',
     img: blog3,
     authorImg: blogAuthor3

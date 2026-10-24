@@ -26,9 +26,9 @@ import team3 from '../../assets/images/team/3.jpg';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/consultancy/blog1.png';
+import blog2 from '../../assets/images/consultancy/blog2.png';
+import blog3 from '../../assets/images/consultancy/blog3.png';
 import blogAuthor1 from '../../assets/images/blog/a1.jpg';
 import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
@@ -132,24 +132,24 @@ const testimonials = [
 const blogs = [
   {
     id: 1,
-    title: 'GIS Strategy for Modern Enterprises',
-    date: '20 March, 2021',
+    title: 'Boustead Geospatial and UDC Partner to Modernize Utility Networks',
+    date: 'October 23, 2026',
     author: 'Keesler Smith',
     img: blog1,
     authorImg: blogAuthor1
   },
   {
     id: 2,
-    title: 'Automating GIS Workflows',
-    date: '20 March, 2021',
+    title: 'SatSure and Rodic Partner to Advance Geospatial AI in India public sector',
+    date: 'April 1, 2026',
     author: 'Keesler Smith',
     img: blog2,
     authorImg: blogAuthor2
   },
   {
     id: 3,
-    title: 'Building GIS Capacity in Organizations',
-    date: '20 March, 2021',
+    title: 'Geospatial Strategy and Digital Twins Become National Priorities',
+    date: 'September 1, 2026',
     author: 'Keesler Smith',
     img: blog3,
     authorImg: blogAuthor3

@@ -22,9 +22,9 @@ import team3 from '../../assets/images/team/3.jpg';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/drone-survey/blog1.png';
+import blog2 from '../../assets/images/drone-survey/blog2.png';
+import blog3 from '../../assets/images/drone-survey/blog3.png';
 import blogAuthor1 from '../../assets/images/blog/a1.jpg';
 import blogAuthor2 from '../../assets/images/blog/a2.jpg';
 import blogAuthor3 from '../../assets/images/blog/a3.jpg';
@@ -126,24 +126,24 @@ const testimonials = [
 const blogs = [
   {
     id: 1,
-    title: 'RTK vs PPK: Which Drone Survey is Right for You?',
-    date: '20 March, 2021',
+    title: 'ideaForge Secures Survey of India Drone Mapping Order',
+    date: 'October 13, 2026',
     author: 'Keesler Smith',
     img: blog1,
     authorImg: blogAuthor1
   },
   {
     id: 2,
-    title: 'Drone LiDAR Applications in Forestry',
-    date: '20 March, 2021',
+    title: 'RTK and PPK Improve Precision in Drone Surveys',
+    date: 'April 24, 2026',
     author: 'Keesler Smith',
     img: blog2,
     authorImg: blogAuthor2
   },
   {
     id: 3,
-    title: 'Volume Calculations from Drone Surveys',
-    date: '20 March, 2021',
+    title: 'Trimble Introduces Smart Target with Integrated GNSS',
+    date: 'September 15, 2026',
     author: 'Keesler Smith',
     img: blog3,
     authorImg: blogAuthor3
