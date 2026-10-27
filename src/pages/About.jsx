@@ -156,16 +156,30 @@ const About = () => {
         <>
             <style>{`
                 /* About Page Responsive Styles */
+                .aboutPageSection01 .container.largeContainer {
+                    width: 100%;
+                    max-width: 1320px;
+                    margin-left: 0;
+                    margin-right: auto;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                }
+
                 .aboutPageSection01 .row {
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
+                    justify-content: flex-start;
+                    margin-left: 0;
+                    margin-right: 0;
                 }
 
                 .aboutPageSection01 .col-lg-5,
                 .aboutPageSection01 .col-lg-7 {
                     flex: 0 0 100%;
                     max-width: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
                 }
 
                 @media (min-width: 992px) {

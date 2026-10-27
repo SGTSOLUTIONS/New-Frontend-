@@ -27,13 +27,48 @@ const entFeatures = [
     title: 'Web GIS Applications', 
     description: 'Custom browser-based map applications — no heavy software on every computer.', 
     image: entFeature1, 
-    link: '/services/enterprise/webgis' 
+    
   },
-  { id: 2, icon: 'fa-tachometer-alt', title: 'Integrated Dashboards', description: 'Live views of key indicators, progress and performance for leadership.', image: entFeature2, link: '/services/enterprise/dashboards' },
-  { id: 3, icon: 'fa-mobile-alt', title: 'Mobile Field Apps', description: 'Apps for surveyors, inspectors and collectors to capture verified data.', image: entFeature3, link: '/services/enterprise/mobile' },
-  { id: 4, icon: 'fa-database', title: 'Central Geodatabase', description: 'A single, well-organised source of spatial and departmental data.', image: entFeature4, link: '/services/enterprise/geodatabase' },
-  { id: 5, icon: 'fa-plug', title: 'System Integration', description: 'Connect to your existing databases and departmental software.', image: entFeature5, link: '/services/enterprise/integration' },
-  { id: 6, icon: 'fa-user-shield', title: 'Role-Based Access', description: 'Secure access levels for officials, staff and field teams.', image: entFeature6, link: '/services/enterprise/roles' },
+  { 
+    id: 2, 
+    icon: 'fa-tachometer-alt', 
+    title: 'Integrated Dashboards', 
+    description: 'Live views of key indicators, progress and performance for leadership.', 
+    image: entFeature2, 
+    
+  },
+  { 
+    id: 3, 
+    icon: 'fa-mobile-alt', 
+    title: 'Mobile Field Apps', 
+    description: 'Apps for surveyors, inspectors and collectors to capture verified data.', 
+    image: entFeature3, 
+    
+  },
+  { 
+    id: 4, 
+    icon: 'fa-database', 
+    title: 'Central Geodatabase', 
+    description: 'A single, well-organised source of spatial and departmental data.', 
+    image: entFeature4, 
+     
+  },
+  { 
+    id: 5, 
+    icon: 'fa-plug', 
+    title: 'System Integration', 
+    description: 'Connect to your existing databases and departmental software.', 
+    image: entFeature5, 
+    
+  },
+  { 
+    id: 6, 
+    icon: 'fa-user-shield', 
+    title: 'Role-Based Access', 
+    description: 'Secure access levels for officials, staff and field teams.', 
+    image: entFeature6, 
+    
+   },
 ];
 
 const blogs = [

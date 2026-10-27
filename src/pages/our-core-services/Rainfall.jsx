@@ -22,12 +22,48 @@ import rfFeature5 from '../../assets/images/Lidar/5.jpg';
 import rfFeature6 from '../../assets/images/Lidar/6.png';
 
 const rainfallFeatures = [
-  { id: 1, icon: 'fa-cloud-rain', title: 'Rainfall Modelling', description: 'Rainfall distribution, intensity analysis and runoff estimation for urban and rural planning.', image: rfFeature1, link: '/services/rainfall/modelling' },
-  { id: 2, icon: 'fa-water', title: 'Flood Risk Prediction', description: 'Flood-risk prediction combining terrain, rainfall and land-use data for climate-resilient cities.', image: rfFeature2, link: '/services/rainfall/flood-risk' },
-  { id: 3, icon: 'fa-map-marked-alt', title: 'Land Use Modelling', description: 'Land-use change detection, urban growth modelling and future land-transformation analysis.', image: rfFeature3, link: '/services/rainfall/land-use' },
-  { id: 4, icon: 'fa-users', title: 'Population Modelling', description: 'Growth forecasting, density mapping and estimates of future infrastructure demand.', image: rfFeature4, link: '/services/rainfall/population' },
-  { id: 5, icon: 'fa-brain', title: 'AI-Powered Spatial Prediction', description: 'Combine environmental and demographic data to identify risks and test scenarios.', image: rfFeature5, link: '/services/rainfall/ai-prediction' },
-  { id: 6, icon: 'fa-shield-alt', title: 'Climate Resilience Planning', description: 'Anticipate risks, plan ahead and build climate-resilient cities with predictive insight.', image: rfFeature6, link: '/services/rainfall/resilience' },
+  { 
+    id: 1, 
+    icon: 'fa-cloud-rain', 
+    title: 'Rainfall Modelling', 
+    description: 'Rainfall distribution, intensity analysis and runoff estimation for urban and rural planning.', 
+    image: rfFeature1, 
+  },
+  { 
+    id: 2, 
+    icon: 'fa-water', 
+    title: 'Flood Risk Prediction', 
+    description: 'Flood-risk prediction combining terrain, rainfall and land-use data for climate-resilient cities.', 
+    image: rfFeature2, 
+  },
+  { 
+    id: 3, 
+    icon: 'fa-map-marked-alt', 
+    title: 'Land Use Modelling', 
+    description: 'Land-use change detection, urban growth modelling and future land-transformation analysis.', 
+    image: rfFeature3, 
+  },
+  { 
+    id: 4, 
+    icon: 'fa-users', 
+    title: 'Population Modelling', 
+    description: 'Growth forecasting, density mapping and estimates of future infrastructure demand.', 
+    image: rfFeature4, 
+  },
+  { 
+    id: 5, 
+    icon: 'fa-brain', 
+    title: 'AI-Powered Spatial Prediction', 
+    description: 'Combine environmental and demographic data to identify risks and test scenarios.', 
+    image: rfFeature5, 
+  },
+  { 
+    id: 6, 
+    icon: 'fa-shield-alt', 
+    title: 'Climate Resilience Planning', 
+    description: 'Anticipate risks, plan ahead and build climate-resilient cities with predictive insight.', 
+    image: rfFeature6, 
+  },
 ];
 
 const blogs = [

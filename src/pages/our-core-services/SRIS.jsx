@@ -21,12 +21,48 @@ import srisFeature5 from '../../assets/images/SRIS/5.jpeg';
 import srisFeature6 from '../../assets/images/SRIS/6.png';
 
 const srisFeatures = [
-  { id: 1, icon: 'fa-map', title: 'Map Every Property', description: 'Visualise every property and assessment status on a single GIS view.', image: srisFeature1, link: '/services/sris/property-map' },
-  { id: 2, icon: 'fa-search-dollar', title: 'Identify Unassessed Properties', description: 'Detect unassessed and under-assessed properties with AI-assisted spatial analysis.', image: srisFeature2, link: '/services/sris/unassessed' },
-  { id: 3, icon: 'fa-exclamation-triangle', title: 'Detect Anomalies', description: 'Spot revenue leakage and irregularities in property tax, professional tax and trade licence data.', image: srisFeature3, link: '/services/sris/anomalies' },
-  { id: 4, icon: 'fa-mobile-alt', title: 'Mobile Field Apps', description: 'Equip surveyors and bill collectors with mobile apps for verified, location-tagged data capture.', image: srisFeature4, link: '/services/sris/mobile' },
-  { id: 5, icon: 'fa-chart-line', title: 'Live Revenue Dashboards', description: 'Track collections and performance on live revenue dashboards for commissioners and officers.', image: srisFeature5, link: '/services/sris/dashboards' },
-  { id: 6, icon: 'fa-shield-alt', title: 'Transparent Governance', description: 'Support transparent, data-driven governance with a full audit trail and role-based access.', image: srisFeature6, link: '/services/sris/governance' },
+  { 
+    id: 1, 
+    icon: 'fa-map', 
+    title: 'Map Every Property', 
+    description: 'Visualise every property and assessment status on a single GIS view.', 
+    image: srisFeature1, 
+  },
+  { 
+    id: 2, 
+    icon: 'fa-search-dollar', 
+    title: 'Identify Unassessed Properties', 
+    description: 'Detect unassessed and under-assessed properties with AI-assisted spatial analysis.', 
+    image: srisFeature2, 
+  },
+  { 
+    id: 3, 
+    icon: 'fa-exclamation-triangle', 
+    title: 'Detect Anomalies', 
+    description: 'Spot revenue leakage and irregularities in property tax, professional tax and trade licence data.', 
+    image: srisFeature3, 
+  },
+  { 
+    id: 4, 
+    icon: 'fa-mobile-alt', 
+    title: 'Mobile Field Apps', 
+    description: 'Equip surveyors and bill collectors with mobile apps for verified, location-tagged data capture.', 
+    image: srisFeature4, 
+  },
+  { 
+    id: 5, 
+    icon: 'fa-chart-line', 
+    title: 'Live Revenue Dashboards', 
+    description: 'Track collections and performance on live revenue dashboards for commissioners and officers.', 
+    image: srisFeature5, 
+  },
+  { 
+    id: 6, 
+    icon: 'fa-shield-alt', 
+    title: 'Transparent Governance', 
+    description: 'Support transparent, data-driven governance with a full audit trail and role-based access.', 
+    image: srisFeature6, 
+  },
 ];
 
 const blogs = [

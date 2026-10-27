@@ -22,12 +22,48 @@ import lidarFeature5 from '../../assets/images/Lidar/5.jpg';
 import lidarFeature6 from '../../assets/images/Lidar/6.png';
 
 const lidarFeatures = [
-  { id: 1, icon: 'fa-cubes', title: 'Point Cloud Acquisition', description: 'High-density point clouds from drone, aerial or terrestrial LiDAR systems with sub-centimetre accuracy.', image: lidarFeature1, link: '/services/lidar/acquisition' },
-  { id: 2, icon: 'fa-layer-group', title: 'DEM / DTM Generation', description: 'High-resolution Digital Elevation and Terrain Models for topographic mapping, flood modelling and design.', image: lidarFeature2, link: '/services/lidar/dem' },
-  { id: 3, icon: 'fa-tree', title: 'Vegetation & Canopy Analysis', description: 'Forest structure analysis, biomass estimation and canopy height models for environmental monitoring.', image: lidarFeature3, link: '/services/lidar/vegetation' },
-  { id: 4, icon: 'fa-building', title: '3D Building & Infrastructure', description: 'Detailed 3D building models, infrastructure extraction and city-scale digital twins.', image: lidarFeature4, link: '/services/lidar/building' },
-  { id: 5, icon: 'fa-chart-line', title: 'Change Detection & Monitoring', description: 'Multi-temporal LiDAR analysis for terrain change detection, erosion monitoring and deformation tracking.', image: lidarFeature5, link: '/services/lidar/change-detection' },
-  { id: 6, icon: 'fa-water', title: 'Bathymetric & Hydrographic LiDAR', description: 'Near-shore bathymetric surveys and hydrographic mapping using green-wavelength LiDAR systems.', image: lidarFeature6, link: '/services/lidar/bathymetric' },
+  { 
+    id: 1, 
+    icon: 'fa-cubes', 
+    title: 'Point Cloud Acquisition', 
+    description: 'High-density point clouds from drone, aerial or terrestrial LiDAR systems with sub-centimetre accuracy.', 
+    image: lidarFeature1,   
+  },
+  { 
+    id: 2, 
+    icon: 'fa-layer-group',
+    title: 'DEM / DTM Generation', 
+    description: 'High-resolution Digital Elevation and Terrain Models for topographic mapping, flood modelling and design.', 
+    image: lidarFeature2, 
+  },
+  { 
+    id: 3, 
+    icon: 'fa-tree', 
+    title: 'Vegetation & Canopy Analysis', 
+    description: 'Forest structure analysis, biomass estimation and canopy height models for environmental monitoring.', 
+    image: lidarFeature3, 
+  },
+  { 
+    id: 4, 
+    icon: 'fa-building', 
+    title: '3D Building & Infrastructure', 
+    description: 'Detailed 3D building models, infrastructure extraction and city-scale digital twins.', 
+    image: lidarFeature4, 
+  },
+  { 
+    id: 5, 
+    icon: 'fa-chart-line', 
+    title: 'Change Detection & Monitoring', 
+    description: 'Multi-temporal LiDAR analysis for terrain change detection, erosion monitoring and deformation tracking.', 
+    image: lidarFeature5, 
+  },
+  { 
+    id: 6, 
+    icon: 'fa-water', 
+    title: 'Bathymetric & Hydrographic LiDAR', 
+    description: 'Near-shore bathymetric surveys and hydrographic mapping using green-wavelength LiDAR systems.', 
+    image: lidarFeature6, 
+  },
 ];
 
 const blogs = [

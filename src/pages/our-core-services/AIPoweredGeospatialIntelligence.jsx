@@ -27,42 +27,42 @@ const aiFeatures = [
     title: 'Automated Feature Detection', 
     description: 'Detect buildings, roads, water bodies, trees and more from imagery automatically.', 
     image: aiFeature1, 
-    link: '/services/ai/feature-detection' 
+    
   },
   { id: 2, 
     icon: 'fa-exchange-alt', 
     title: 'Automated Change Detection', 
     description: 'Monitor illegal construction, encroachment and land-use change at scale.', 
     image: aiFeature2, 
-    link: '/services/ai/change-detection' 
+   
   },
   { id: 3, 
     icon: 'fa-exclamation-triangle', 
     title: 'Anomaly Detection', 
     description: 'Spot anomalies in spatial and administrative data for revenue and compliance.', 
     image: aiFeature3, 
-    link: '/services/ai/anomaly' 
+    
   },
   { id: 4, 
     icon: 'fa-chart-line', 
     title: 'Predictive Modelling', 
     description: 'Predictive modelling and scenario analysis for flood, land-use and demand forecasting.', 
     image: aiFeature4, 
-    link: '/services/ai/predictive' 
+    
   },
   { id: 5, 
     icon: 'fa-brain', 
     title: 'Custom AI Models', 
     description: 'Custom AI models trained on your own data and workflows.', 
     image: aiFeature5, 
-    link: '/services/ai/custom' 
+     
   },
   { id: 6, 
     icon: 'fa-shield-alt', 
     title: 'Compliance Monitoring', 
     description: 'Smart governance and compliance monitoring powered by AI.', 
     image: aiFeature6, 
-    link: '/services/ai/compliance' 
+    
   },
 ];
 

@@ -981,10 +981,10 @@ const Contact = () => {
                 <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <i className="fab fa-linkedin-in"></i>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=61595828765104" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/sgtsolutions24/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <i className="fab fa-instagram"></i>
                 </a>
                 </div>

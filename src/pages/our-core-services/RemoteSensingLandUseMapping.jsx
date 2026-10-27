@@ -23,12 +23,48 @@ import rsFeature5 from '../../assets/images/Lidar/5.jpg';
 import rsFeature6 from '../../assets/images/Lidar/6.png';
 
 const rsFeatures = [
-  { id: 1, icon: 'fa-satellite-dish', title: 'LULC Classification', description: 'Land use and land cover classification using multi-spectral satellite imagery.', image: rsFeature1, link: '/services/remote/lulc' },
-  { id: 2, icon: 'fa-exchange-alt', title: 'Change Detection', description: 'Detect change across years or seasons — urban growth, encroachment and degradation.', image: rsFeature2, link: '/services/remote/change' },
-  { id: 3, icon: 'fa-city', title: 'Urban Expansion Monitoring', description: 'Track urban expansion and encroachment to inform master plans and policy.', image: rsFeature3, link: '/services/remote/urban' },
-  { id: 4, icon: 'fa-leaf', title: 'Vegetation & Wetland Monitoring', description: 'Vegetation, water body and wetland monitoring for environmental management.', image: rsFeature4, link: '/services/remote/vegetation' },
-  { id: 5, icon: 'fa-gem', title: 'Natural Resource Assessment', description: 'Assess natural resources to support sustainable development reporting.', image: rsFeature5, link: '/services/remote/resources' },
-  { id: 6, icon: 'fa-map-marked-alt', title: 'Thematic Maps', description: 'Thematic maps and analysis-ready datasets for policy and planning.', image: rsFeature6, link: '/services/remote/thematic' },
+  { 
+    id: 1, 
+    icon: 'fa-satellite-dish', 
+    title: 'LULC Classification', 
+    description: 'Land use and land cover classification using multi-spectral satellite imagery.', 
+    image: rsFeature1, 
+  },
+  { 
+    id: 2, 
+    icon: 'fa-exchange-alt', 
+    title: 'Change Detection', 
+    description: 'Detect change across years or seasons — urban growth, encroachment and degradation.', 
+    image: rsFeature2, 
+  },
+  { 
+    id: 3, 
+    icon: 'fa-city', 
+    title: 'Urban Expansion Monitoring', 
+    description: 'Track urban expansion and encroachment to inform master plans and policy.', 
+    image: rsFeature3, 
+  },
+  { 
+    id: 4, 
+    icon: 'fa-leaf', 
+    title: 'Vegetation & Wetland Monitoring', 
+    description: 'Vegetation, water body and wetland monitoring for environmental management.', 
+    image: rsFeature4, 
+  },
+  { 
+    id: 5, 
+    icon: 'fa-gem', 
+    title: 'Natural Resource Assessment', 
+    description: 'Assess natural resources to support sustainable development reporting.', 
+    image: rsFeature5, 
+  },
+  { 
+    id: 6, 
+    icon: 'fa-map-marked-alt', 
+    title: 'Thematic Maps', 
+    description: 'Thematic maps and analysis-ready datasets for policy and planning.', 
+    image: rsFeature6, 
+  },
 ];
 
 const blogs = [
