@@ -15,12 +15,12 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Remote-Sensing/bg.png';
 
-import rsFeature1 from '../../assets/images/Lidar/1.jpg';
-import rsFeature2 from '../../assets/images/Lidar/2.jpg';
-import rsFeature3 from '../../assets/images/Lidar/3.png';
-import rsFeature4 from '../../assets/images/Lidar/4.jpg';
-import rsFeature5 from '../../assets/images/Lidar/5.jpg';
-import rsFeature6 from '../../assets/images/Lidar/6.png';
+import rsFeature1 from '../../assets/images/Remote-Sensing/1.WEBP';
+import rsFeature2 from '../../assets/images/Remote-Sensing/2.WEBP';
+import rsFeature3 from '../../assets/images/Remote-Sensing/3.WEBP';
+import rsFeature4 from '../../assets/images/Remote-Sensing/4.WEBP';
+import rsFeature5 from '../../assets/images/Remote-Sensing/5.WEBP';
+import rsFeature6 from '../../assets/images/Remote-Sensing/6.WEBP';
 
 const rsFeatures = [
   { 

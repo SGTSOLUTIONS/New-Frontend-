@@ -15,12 +15,12 @@ import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Enterprise-Gis/bg.png';
 
-import entFeature1 from '../../assets/images/Lidar/1.jpg';
-import entFeature2 from '../../assets/images/Lidar/2.jpg';
-import entFeature3 from '../../assets/images/Lidar/3.png';
-import entFeature4 from '../../assets/images/Lidar/4.jpg';
-import entFeature5 from '../../assets/images/Lidar/5.jpg';
-import entFeature6 from '../../assets/images/Lidar/6.png';
+import entFeature1 from '../../assets/images/Enterprise-Gis/1.WEBP';
+import entFeature2 from '../../assets/images/Enterprise-Gis/2.WEBP';
+import entFeature3 from '../../assets/images/Enterprise-Gis/3.WEBP';
+import entFeature4 from '../../assets/images/Enterprise-Gis/4.WEBP';
+import entFeature5 from '../../assets/images/Enterprise-Gis/5.WEBP';
+import entFeature6 from '../../assets/images/Enterprise-Gis/6.WEBP';
 const entFeatures = [
   { id: 1, 
     icon: 'fa-globe', 
