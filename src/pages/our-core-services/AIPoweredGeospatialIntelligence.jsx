@@ -12,13 +12,13 @@ import blog2 from '../../assets/images/AI-Powered/blog2.png';
 import blog3 from '../../assets/images/AI-Powered/blog3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from "../../assets/images/AI-Powered/bg.png";
-import aiFeature1 from "../../assets/images/AI-Powered/1.jpg";
-import aiFeature2 from "../../assets/images/AI-Powered/2.jpg";
+import servicesBg from "../../assets/images/AI-Powered/bg.WEBP";
+import aiFeature1 from "../../assets/images/AI-Powered/1.WEBP";
+import aiFeature2 from "../../assets/images/AI-Powered/2.WEBP";
 import aiFeature3 from "../../assets/images/AI-Powered/3.png";
 import aiFeature4 from "../../assets/images/AI-Powered/4.png";
-import aiFeature5 from "../../assets/images/AI-Powered/5.png";
-import aiFeature6 from "../../assets/images/AI-Powered/6.png";
+import aiFeature5 from "../../assets/images/AI-Powered/5.WEBP";
+import aiFeature6 from "../../assets/images/AI-Powered/6.WEBP";
 
 const aiFeatures = [
   { 
