@@ -96,13 +96,13 @@ const Contact = () => {
           display: block;
         }
 
-       /* ✅ FIXED - Scope container to contact-page only */
-.contact-page .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+        /* ✅ FIXED - Scope container to contact-page only */
+        .contact-page .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
 
         /* ===== TYPOGRAPHY ===== */
         .subTitle {
@@ -978,7 +978,7 @@ const Contact = () => {
               </div>
 
               <div className="social-links-contact">
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/saravani-ramaiya-385b11373/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <i className="fab fa-linkedin-in"></i>
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61595828765104" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
