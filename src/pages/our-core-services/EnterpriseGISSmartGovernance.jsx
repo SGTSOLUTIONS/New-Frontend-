@@ -6,7 +6,7 @@ import '@fontsource/open-sans';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Import images
-import achievementImg from '../../assets/images/home1/1.png';
+import achievementImg from '../../assets/images/home1/1.WEBP';
 import aboutImg from '../../assets/images/home1/about.png';
 import blog1 from '../../assets/images/blog/1.jpg';
 import blog2 from '../../assets/images/blog/2.jpg';

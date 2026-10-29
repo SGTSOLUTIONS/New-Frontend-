@@ -5,7 +5,7 @@ import '@fontsource/roboto';
 import '@fontsource/open-sans';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import achievementImg from '../../assets/images/home1/1.png';
+import achievementImg from '../../assets/images/home1/1.WEBP';
 import aboutImg from '../../assets/images/home1/about.png';
 import blog1 from '../../assets/images/Lidar/blog1.png';
 import blog2 from '../../assets/images/Lidar/blog2.png';

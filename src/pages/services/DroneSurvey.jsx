@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 // Import images
 import aboutImg from '../../assets/images/home1/about.png';
-import achievementImg from '../../assets/images/home1/1.png';
+import achievementImg from '../../assets/images/home1/1.WEBP';
 import clientLogo1 from '../../assets/images/client-logo/1.png';
 import clientLogo2 from '../../assets/images/client-logo/2.png';
 import clientLogo3 from '../../assets/images/client-logo/3.png';
