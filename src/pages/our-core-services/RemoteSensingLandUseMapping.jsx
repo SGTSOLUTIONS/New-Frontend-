@@ -8,12 +8,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // Import images
 import achievementImg from '../../assets/images/home1/1.WEBP';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/Remote-Sensing/blog1.WEBP';
+import blog2 from '../../assets/images/Remote-Sensing/blog2.WEBP';
+import blog3 from '../../assets/images/Remote-Sensing/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/Remote-Sensing/bg.png';
+import servicesBg from '../../assets/images/Remote-Sensing/bg.WEBP';
 
 import rsFeature1 from '../../assets/images/Remote-Sensing/1.WEBP';
 import rsFeature2 from '../../assets/images/Remote-Sensing/2.WEBP';
@@ -68,9 +68,24 @@ const rsFeatures = [
 ];
 
 const blogs = [
-  { id: 1, title: 'Remote Sensing for Urban Growth', date: '20 March, 2021', img: blog1 },
-  { id: 2, title: 'Change Detection with Satellite Imagery', date: '20 March, 2021', img: blog2 },
-  { id: 3, title: 'Monitoring Wetlands from Space', date: '20 March, 2021', img: blog3 },
+  { 
+    id: 1, 
+    title: 'Satellite Imagery Enables Smarter Land Use Change Detection', 
+    date: 'May 12, 2026', 
+    img: blog1 
+  },
+  { 
+    id: 2, 
+    title: 'Karnataka Adopts Satellite Imagery and AI for Smart Crop Monitoring', 
+    date: 'October 19, 2026', 
+    img: blog2 
+  },
+  { 
+    id: 3, 
+    title: 'Remote Sensing Reveals Four Decades of Land Use Change in the Nilgiris', 
+    date: 'October 8, 2026', 
+    img: blog3 
+  },
 ];
 
 const RemoteSensingLandUseMapping = () => {

@@ -8,12 +8,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // Import images
 import achievementImg from '../../assets/images/home1/1.WEBP';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/blog/1.jpg';
-import blog2 from '../../assets/images/blog/2.jpg';
-import blog3 from '../../assets/images/blog/3.jpg';
+import blog1 from '../../assets/images/Enterprise-Gis/blog1.WEBP';
+import blog2 from '../../assets/images/Enterprise-Gis/blog2.WEBP';
+import blog3 from '../../assets/images/Enterprise-Gis/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/Enterprise-Gis/bg.png';
+import servicesBg from '../../assets/images/Enterprise-Gis/bg.WEBP';
 
 import entFeature1 from '../../assets/images/Enterprise-Gis/1.WEBP';
 import entFeature2 from '../../assets/images/Enterprise-Gis/2.WEBP';
@@ -72,9 +72,24 @@ const entFeatures = [
 ];
 
 const blogs = [
-  { id: 1, title: 'Enterprise GIS: A Complete Guide', date: '20 March, 2021', img: blog1 },
-  { id: 2, title: 'Smart Governance with Web GIS', date: '20 March, 2021', img: blog2 },
-  { id: 3, title: 'Building Dashboards for Municipalities', date: '20 March, 2021', img: blog3 },
+  { 
+    id: 1, 
+    title: 'Smart City GIS Powers Real-Time Urban Governance', 
+    date: '4 August 2026', 
+    img: blog1 
+  },
+  { 
+    id: 2, 
+    title: 'India Advances Integrated GIS-Based Land Records', 
+    date: '10 September 2026', 
+    img: blog2 
+  },
+  { 
+    id: 3, 
+    title: 'GeoSARAL Expands Access to Enterprise GIS in India', 
+    date: '4 September 2026', 
+    img: blog3 
+  },
 ];
 
 const EnterpriseGISSmartGovernance = () => {

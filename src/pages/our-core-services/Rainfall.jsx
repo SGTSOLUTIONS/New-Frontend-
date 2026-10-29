@@ -7,19 +7,19 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import achievementImg from '../../assets/images/home1/1.WEBP';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/Rainfall/blog1.jpg';
-import blog2 from '../../assets/images/Rainfall/blog2.png';
-import blog3 from '../../assets/images/Rainfall/blog3.png';
+import blog1 from '../../assets/images/Rainfall/blog1.WEBP';
+import blog2 from '../../assets/images/Rainfall/blog2.WEBP';
+import blog3 from '../../assets/images/Rainfall/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/Rainfall/bg.png';
+import servicesBg from '../../assets/images/Rainfall/bg.WEBP';
 
 import rfFeature1 from '../../assets/images/Rainfall/1.png';
-import rfFeature2 from '../../assets/images/Rainfall/2.png';
-import rfFeature3 from '../../assets/images/Lidar/3.png';
-import rfFeature4 from '../../assets/images/Lidar/4.jpg';
-import rfFeature5 from '../../assets/images/Lidar/5.jpg';
-import rfFeature6 from '../../assets/images/Lidar/6.png';
+import rfFeature2 from '../../assets/images/Rainfall/2.WEBP';
+import rfFeature3 from '../../assets/images/Rainfall/3.WEBP';
+import rfFeature4 from '../../assets/images/Rainfall/4.WEBP';
+import rfFeature5 from '../../assets/images/Rainfall/5.WEBP';
+import rfFeature6 from '../../assets/images/Rainfall/6.WEBP';
 
 const rainfallFeatures = [
   { 

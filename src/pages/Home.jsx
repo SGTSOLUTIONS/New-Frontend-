@@ -14,10 +14,10 @@ import slider1 from '../assets/images/slider/1_4.WEBP';
 import slider2 from '../assets/images/slider/1_5.WEBP';
 import service1 from '../assets/images/home/1.jpeg';
 import service2 from '../assets/images/home/2.jpeg';
-import service3 from '../assets/images/home/3.png';
+import service3 from '../assets/images/home/3.WEBP';
 import service4 from '../assets/images/home/4.png';
 import service5 from '../assets/images/home/5.png';
-import service6 from '../assets/images/home/6.png';
+import service6 from '../assets/images/home/6.WEBP';
 import aboutImg from '../assets/images/home1/about.png';
 import client1 from '../assets/images/home1/c1.png';
 import client2 from '../assets/images/home1/c2.png';
@@ -317,13 +317,13 @@ const Home = () => {
                     Geospatial intelligence powered by GIS, AI, Remote Sensing and Drones, built for governments, cities and infrastructure teams.
                   </p>
                   <div className="btn-wrapper">
-                    <Link className="berpo_btn" to="/services">
+                    <a className="berpo_btn" href="#Explore">
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
                       <span className="bp-text">EXPLORE OUR SOLUTIONS</span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -383,13 +383,13 @@ const Home = () => {
                     Advanced GIS, surveying, mapping, and spatial intelligence solutions designed for a connected world.
                   </p>
                   <div className="btn-wrapper">
-                    <Link className="berpo_btn" to="/services">
+                    <a className="berpo_btn" href="#Explore">
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
                       <span className="bp-shape"></span>
                       <span className="bp-text">DISCOVER MORE</span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -421,7 +421,7 @@ const Home = () => {
       </section>
 
       <section className="service_section_01 pb-5">
-        <div className="container largeContainer">
+        <div className="container largeContainer" id="Explore">
           <div className="row p-3">
 
             {/* 1. AI-Powered Geospatial Intelligence */}
@@ -566,13 +566,13 @@ const Home = () => {
                 <li><span><i className="twi-check-circle"></i>Drone &amp; DGPS Surveying</span></li>
                 <li><span><i className="twi-check-circle"></i>Spatial Data &amp; Remote Sensing</span></li>
               </ul>
-              <Link className="berpo_btn" to="/contact">
+              <a className="berpo_btn" href="#Explore">
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
                 <span className="bp-shape"></span>
                 <span className="bp-text">Explore Our Services</span>
-              </Link>
+              </a>
             </div>
             <div className="col-xl-7 col-lg-6">
               <div className="clinetWorlwide position-relative">
@@ -677,13 +677,13 @@ const Home = () => {
                         <p>
                           We transform location data into accurate, actionable insights. From GIS and aerial mapping to drone surveys and spatial analysis, SGT Solutions helps organizations understand their environment and make better decisions.
                         </p>
-                        <Link className="berpo_btn" to="/contact">
+                        <a className="berpo_btn" href="#Explore">
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-text">EXPLORE OUR SERVICES</span>
-                        </Link>
+                        </a>
                       </div>
                       <div className="col-md-6">
                         <img src={tabImg1} alt="" className="img-fluid" />
@@ -699,13 +699,13 @@ const Home = () => {
                         <p>
                           We capture precise spatial data through advanced surveying technologies, drone mapping, GNSS, and LiDAR. From field data collection to high-resolution mapping, SGT Solutions helps organizations build reliable datasets for better planning, infrastructure development, and informed decision-making.
                         </p>
-                        <Link className="berpo_btn" to="/contact">
+                        <a className="berpo_btn" href="#Explore">
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-text">EXPLORE OUR SERVICES</span>
-                        </Link>
+                        </a>
                       </div>
                       <div className="col-md-6">
                         <img src={tabImg2} alt="" className="img-fluid" />
@@ -721,13 +721,13 @@ const Home = () => {
                         <p>
                           Transform complex geographic data into actionable insights with GIS analytics, AI-powered spatial intelligence, and predictive modelling. We help organizations identify patterns, monitor changes, optimize resources, and make smarter decisions for urban planning, infrastructure, and natural resource management.
                         </p>
-                        <Link className="berpo_btn" to="/contact">
+                        <a className="berpo_btn" href="#Explore">
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-shape"></span>
                           <span className="bp-text">EXPLORE OUR SERVICES</span>
-                        </Link>
+                        </a>
                       </div>
                       <div className="col-md-6">
                         <img src={tabImg3} alt="" className="img-fluid" />
