@@ -1255,6 +1255,144 @@ const MobileGis = () => {
             font-size: 22px;
           }
         }
+
+        /* Mobile-only icon positioning: centered and overlapping the image edge.
+           Desktop icon positioning remains exactly as in the original page. */
+        @media (max-width: 767.98px) {
+          .service-page .service_item_01 .ibMeta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -25px auto 12px !important;
+            position: relative;
+            left: auto !important;
+            right: auto !important;
+            float: none !important;
+            transform: none !important;
+            z-index: 2;
+          }
+        }
+
+        /* ===== MOBILE CTA: match the approved Home/WebGIS mobile layout ===== */
+        @media (max-width: 767.98px) {
+          .service-page .mobilegis-cta-layout .cta-wrap {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 8px !important;
+            width: 100%;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-content {
+            width: 54% !important;
+            max-width: 54% !important;
+            flex: 0 0 54% !important;
+            min-width: 0;
+            text-align: left !important;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-content h4,
+          .service-page .mobilegis-cta-layout .cta-content h2,
+          .service-page .mobilegis-cta-layout .cta-content h3 {
+            text-align: left !important;
+            overflow-wrap: normal;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-content h4 {
+            font-size: 12px !important;
+            line-height: 1.25 !important;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-content h2 {
+            font-size: 21px !important;
+            line-height: 1.12 !important;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-content h3 {
+            font-size: 18px !important;
+            line-height: 1.15 !important;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-content p {
+            max-width: 100% !important;
+            margin: 10px 0 12px !important;
+            font-size: 12px;
+            line-height: 1.55;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-content .berpo_btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            margin-top: 8px !important;
+            padding: 7px 11px !important;
+            font-size: 10px !important;
+            line-height: 1.2 !important;
+            white-space: normal;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-images {
+            position: relative !important;
+            width: 44% !important;
+            max-width: 44% !important;
+            height: 145px !important;
+            flex: 0 0 44% !important;
+            display: block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            min-width: 0;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-images img {
+            position: absolute !important;
+            display: block !important;
+            max-width: none !important;
+            height: auto !important;
+            margin: 0 !important;
+            object-fit: contain !important;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-images img:first-child {
+            width: 100% !important;
+            top: 0 !important;
+            right: 0 !important;
+            z-index: 1;
+          }
+
+          .service-page .mobilegis-cta-layout .cta-images img:last-child {
+            width: 92% !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            z-index: 2;
+            border-radius: 10px !important;
+          }
+
+          /* Keep the icon centered on mobile without changing card/image heights. */
+          .service-page .service_item_01 .ibMeta {
+            margin: -25px auto 12px !important;
+          }
+        }
+
+        @media (max-width: 380px) {
+          .service-page .mobilegis-cta-layout .cta-content h4 {
+            font-size: 11px !important;
+          }
+          .service-page .mobilegis-cta-layout .cta-content h2 {
+            font-size: 18px !important;
+          }
+          .service-page .mobilegis-cta-layout .cta-content h3 {
+            font-size: 16px !important;
+          }
+          .service-page .mobilegis-cta-layout .cta-images {
+            height: 125px !important;
+          }
+          .service-page .mobilegis-cta-layout .cta-content .berpo_btn {
+            padding: 6px 9px !important;
+            font-size: 9px !important;
+          }
+        }
+
       `}</style>
 
       {/* ===== HERO SECTION ===== */}
@@ -1457,7 +1595,7 @@ const MobileGis = () => {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="section-padding bg-dark">
+      <section className="section-padding bg-dark mobilegis-cta-layout">
         <div className="container">
           <div className="cta-wrap">
             <div className="cta-content">

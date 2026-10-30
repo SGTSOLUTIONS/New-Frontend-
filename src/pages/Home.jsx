@@ -219,6 +219,914 @@ const responsiveStyles = `
     .video-wrapper .play-button-overlay .play-icon i { font-size: 20px; }
     .video-wrapper .play-button-overlay .play-icon { box-shadow: 0 0 0 8px rgba(187, 11, 11, 0.3); }
   }
+
+  /* =========================================================
+     RESPONSIVE HOME PAGE FIXES
+     These rules intentionally use !important where needed to
+     override inline desktop styles in the JSX above.
+  ========================================================= */
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img, video {
+    max-width: 100%;
+  }
+
+  .slider_01,
+  .slider_01 .carousel,
+  .slider_01 .carousel-inner,
+  .slider_01 .carousel-item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .slider_01 .hero-slide {
+    width: 100%;
+    min-height: 680px !important;
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .slider_01 .hero-content {
+    max-width: 670px;
+    width: 100%;
+  }
+
+  .service_item_01,
+  .blogItem01,
+  .pricing-item-01,
+  .testiItem01 {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .service_item_01 img,
+  .blogItem01 img,
+  .beproTabCon img,
+  .achievement-img,
+  .ctaThumb img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .carousel-testimonial {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  .carousel-testimonial .testiItem01 {
+    height: 100%;
+  }
+
+  .video-wrapper {
+    width: 100%;
+  }
+
+  .video-wrapper video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .beproTab {
+    gap: 8px;
+  }
+
+  .beproTab .nav-item {
+    margin: 0;
+  }
+
+  .beproTab .nav-link {
+    white-space: normal;
+    text-align: center;
+  }
+
+  @media (max-width: 1199.98px) {
+    .slider_01 .hero-slide {
+      min-height: 620px !important;
+      padding-left: 7% !important;
+      padding-right: 7% !important;
+    }
+
+    .slider_01 .hero-content h1 {
+      font-size: 46px !important;
+      line-height: 1.2 !important;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .slider_01 .hero-slide {
+      min-height: 570px !important;
+      padding-left: 6% !important;
+      padding-right: 6% !important;
+      background-position: center center !important;
+    }
+
+    .slider_01 .hero-content {
+      max-width: 590px !important;
+    }
+
+    .slider_01 .hero-content h1 {
+      font-size: 40px !important;
+      line-height: 1.2 !important;
+    }
+
+    .slider_01 .hero-content p {
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+    }
+
+    .achivementSection01 .row,
+    .ctaSectiont01 .row {
+      row-gap: 25px;
+    }
+
+    .ClientNumber {
+      right: 15px !important;
+      bottom: 15px !important;
+      padding: 15px 20px !important;
+    }
+
+    .ClientNumber h2 {
+      font-size: 34px !important;
+    }
+
+    .testimonialSection01 .row {
+      row-gap: 25px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .container.largeContainer {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 18px !important;
+      padding-right: 18px !important;
+    }
+
+    .slider_01 .hero-slide {
+      min-height: 560px !important;
+      padding: 70px 22px 65px !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      background-position: 60% center !important;
+    }
+
+    .slider_01 .hero-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.42);
+      pointer-events: none;
+    }
+
+    .slider_01 .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 100% !important;
+      margin: 0 auto;
+      text-align: center !important;
+    }
+
+    .slider_01 .hero-content .sub-title {
+      font-size: 11px !important;
+      line-height: 1.5 !important;
+      letter-spacing: 1.5px !important;
+      margin-bottom: 14px !important;
+    }
+
+    .slider_01 .hero-content .sub-title br {
+      display: none !important;
+    }
+
+    .slider_01 .hero-content h1 {
+      font-size: clamp(28px, 6vw, 38px) !important;
+      line-height: 1.2 !important;
+      margin: 0 0 16px !important;
+      overflow-wrap: break-word;
+    }
+
+    .slider_01 .hero-content p {
+      max-width: 540px;
+      margin: 0 auto 22px !important;
+      font-size: 14px !important;
+      line-height: 1.65 !important;
+    }
+
+    .slider_01 .hero-content .btn-wrapper {
+      text-align: center !important;
+    }
+
+    .slider_01 .hero-content .berpo_btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      padding: 12px 20px !important;
+      font-size: 12px !important;
+      line-height: 1.4;
+      white-space: normal;
+    }
+
+    .slider_01 .carousel-control-prev,
+    .slider_01 .carousel-control-next {
+      display: none !important;
+    }
+
+    .slider_01 .carousel-indicators {
+      bottom: 12px !important;
+    }
+
+    .secTitle {
+      font-size: 27px !important;
+      line-height: 1.25 !important;
+    }
+
+    .subTitle {
+      font-size: 12px !important;
+      letter-spacing: 1px;
+    }
+
+    .serviceSectionTitle,
+    .service_section_01,
+    .achivementSection01,
+    .clientSection01,
+    .videoSection01,
+    .tabSection01,
+    .testimonialSection01,
+    .blogSectiont01,
+    .ctaSectiont01 {
+      padding-top: 38px !important;
+      padding-bottom: 38px !important;
+    }
+
+    .service_section_01 .row.p-3 {
+      padding: 0 !important;
+      row-gap: 22px;
+    }
+
+    .service_section_01 [class*="col-"],
+    .blogSectiont01 [class*="col-"] {
+      margin-bottom: 0 !important;
+    }
+
+    .service_item_01 {
+      margin: 0 !important;
+    }
+
+    .service_item_01 .sitem_con {
+      padding: 20px !important;
+    }
+
+    .service_item_01 h3 {
+      font-size: 19px !important;
+      line-height: 1.35 !important;
+    }
+
+    .service_item_01 p {
+      font-size: 14px !important;
+      line-height: 1.65 !important;
+    }
+
+    .achievement-img {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    .ClientNumber {
+      position: relative !important;
+      display: inline-block;
+      right: auto !important;
+      bottom: auto !important;
+      margin: 16px auto 0 !important;
+      transform: none !important;
+    }
+
+    .clinetWorlwide {
+      text-align: center;
+    }
+
+    .client-logo-item img {
+      max-width: 85% !important;
+      max-height: 65px !important;
+    }
+
+    .videoSection01 .secTitle {
+      margin-bottom: 22px;
+    }
+
+    .beproTab {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .beproTab .nav-item,
+    .beproTab .nav-link {
+      width: 100%;
+    }
+
+    .beproTab .nav-link {
+      padding: 11px 14px !important;
+      font-size: 13px !important;
+    }
+
+    .beproTabCon .row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .beproTabCon .row > [class*="col-"] {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .beproTabCon .row > [class*="col-"]:last-child {
+      margin-top: 22px;
+    }
+
+    .beproTabCon .secTitle {
+      font-size: 24px !important;
+    }
+
+    .beproTabCon p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .testimonialSection01 .row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonialSection01 .row > [class*="col-"] {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .testimonialSection01 .row > [class*="col-"]:first-child {
+      order: 2;
+      margin-top: 0 !important;
+    }
+
+    .testimonialSection01 .row > [class*="col-"]:last-child {
+      order: 1;
+    }
+
+    .testiItem01 {
+      padding: 20px !important;
+    }
+
+    .testiItem01 .quotation {
+      font-size: 13px !important;
+      line-height: 1.7 !important;
+    }
+
+    .ts_author {
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .ts_author img {
+      flex: 0 0 55px;
+      width: 55px !important;
+      height: 55px !important;
+    }
+
+    .ts_author h5 {
+      font-size: 14px !important;
+      line-height: 1.4;
+    }
+
+    .blogItem01 {
+      margin-bottom: 22px !important;
+    }
+
+    .blogContent {
+      padding: 17px !important;
+    }
+
+    .blogContent h3 {
+      font-size: 18px !important;
+      line-height: 1.4;
+    }
+
+    .ctaSectiont01 .ctaCon {
+      text-align: center;
+    }
+
+    .ctaSectiont01 .ctaCon h2 {
+      font-size: 36px !important;
+      line-height: 1.2;
+    }
+
+    .ctaSectiont01 .ctaCon h3 {
+      font-size: 28px !important;
+      line-height: 1.2;
+    }
+
+    .ctaSectiont01 .ctaThumb img {
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .qu_link {
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .slider_01 .hero-slide {
+      min-height: 520px !important;
+      padding: 60px 18px 58px !important;
+    }
+
+    .slider_01 .hero-content h1 {
+      font-size: 29px !important;
+      line-height: 1.22 !important;
+    }
+
+    .slider_01 .hero-content p {
+      font-size: 13px !important;
+      line-height: 1.65 !important;
+    }
+
+    .slider_01 .hero-content .berpo_btn {
+      width: auto;
+      max-width: 100%;
+      padding: 11px 16px !important;
+      font-size: 11px !important;
+    }
+
+    .secTitle {
+      font-size: 23px !important;
+    }
+
+    .service_item_01 .sitem_con {
+      padding: 18px !important;
+    }
+
+    .accordion .card-header button {
+      font-size: 13px !important;
+      line-height: 1.45;
+      padding: 13px 14px !important;
+    }
+
+    .accordion .card-body {
+      font-size: 13px !important;
+      line-height: 1.65;
+      padding: 15px !important;
+    }
+
+    .video-wrapper {
+      border-radius: 7px;
+    }
+
+    .video-wrapper video {
+      border-radius: 7px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+
+  /* =========================================================
+     MOBILE ALIGNMENT FIX — SERVICE CARDS & CTA
+     Overrides inherited desktop positioning on small screens.
+  ========================================================= */
+
+  @media (max-width: 767.98px) {
+    html, body, #root {
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: 100% !important;
+      overflow-x: clip !important;
+    }
+
+    .service_section_01,
+    .service_section_01 .container,
+    .service_section_01 .row,
+    .service_section_01 [class*="col-"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    .service_section_01 .row.p-3 {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .service_section_01 [class*="col-"] {
+      flex: 0 0 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin-bottom: 22px !important;
+    }
+
+    .service_item_01 {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      height: auto !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+      position: relative !important;
+      left: auto !important;
+      right: auto !important;
+      transform: none !important;
+      border-radius: 8px !important;
+    }
+
+    .service_item_01 .siThumb {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+      position: relative !important;
+    }
+
+    .service_item_01 .siThumb img {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: 190px !important;
+      object-fit: cover !important;
+      margin: 0 !important;
+    }
+
+    .service_item_01 .sitem_con {
+      display: block !important;
+      position: relative !important;
+      inset: auto !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      height: auto !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 22px 20px !important;
+      text-align: left !important;
+      transform: none !important;
+      overflow: visible !important;
+      box-sizing: border-box !important;
+    }
+
+    .service_item_01 .ibMeta {
+      position: static !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 42px !important;
+      height: 42px !important;
+      margin: 0 0 13px !important;
+      transform: none !important;
+      float: none !important;
+    }
+
+    .service_item_01 .sitem_con h3 {
+      display: block !important;
+      position: static !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 12px !important;
+      padding: 0 !important;
+      font-size: 18px !important;
+      line-height: 1.4 !important;
+      text-align: left !important;
+      overflow-wrap: anywhere !important;
+      word-break: normal !important;
+    }
+
+    .service_item_01 .sitem_con p {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 0 16px !important;
+      padding: 0 !important;
+      font-size: 13px !important;
+      line-height: 1.65 !important;
+      text-align: left !important;
+      overflow-wrap: anywhere !important;
+    }
+
+    .service_item_01 .learn_more_btn {
+      display: inline-flex !important;
+      width: auto !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      position: static !important;
+      transform: none !important;
+    }
+
+    /* CTA content and images */
+    .ctaSectiont01,
+    .ctaSectiont01 .container,
+    .ctaSectiont01 .row,
+    .ctaSectiont01 [class*="col-"] {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+    }
+
+    .ctaSectiont01 .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .ctaSectiont01 .ctaCon {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 8px !important;
+      text-align: center !important;
+      overflow-wrap: anywhere !important;
+    }
+
+    .ctaSectiont01 .ctaCon h4 {
+      font-size: 19px !important;
+      line-height: 1.3 !important;
+    }
+
+    .ctaSectiont01 .ctaCon h2 {
+      font-size: 34px !important;
+      line-height: 1.15 !important;
+      margin: 8px 0 !important;
+    }
+
+    .ctaSectiont01 .ctaCon h3 {
+      font-size: 27px !important;
+      line-height: 1.2 !important;
+      margin: 0 0 15px !important;
+    }
+
+    .ctaSectiont01 .ctaThumb {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 25px auto 0 !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .ctaSectiont01 .ctaThumb img {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      margin: 15px auto 0 !important;
+      object-fit: contain !important;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .container.largeContainer {
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+    }
+
+    .service_item_01 .siThumb img {
+      height: 165px !important;
+    }
+
+    .service_item_01 .sitem_con {
+      padding: 18px 16px !important;
+    }
+
+    .service_item_01 .sitem_con h3 {
+      font-size: 16px !important;
+    }
+
+    .ctaSectiont01 .ctaCon h2 {
+      font-size: 30px !important;
+    }
+  }
+
+
+
+  /* =========================================================
+     HOME CTA — RESPONSIVE LAYOUT
+     Desktop remains side-by-side; mobile stacks content and images.
+  ========================================================= */
+  .home-cta-aligned {
+    width: 100%;
+    padding: 70px 0 !important;
+    background: #1a1a1a !important;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .home-cta-aligned .cta-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-cta-aligned .cta-content {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .home-cta-aligned .cta-content h4 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .home-cta-aligned .cta-content h2 {
+    margin: 0;
+    font-size: 48px !important;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .home-cta-aligned .cta-content h3 {
+    margin: 0;
+    font-size: 36px !important;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .home-cta-aligned .cta-images {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home-cta-aligned .cta-images img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: contain;
+  }
+
+  .home-cta-aligned .cta-content .berpo_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px !important;
+  }
+
+  @media (max-width: 1024px) {
+    .home-cta-aligned .cta-wrap {
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    /* Match the Contact page's compact two-column mobile CTA.
+       Keep all Home page wording and images unchanged. */
+    .home-cta-aligned {
+      padding: 28px 0 !important;
+      min-height: 0;
+    }
+
+    .home-cta-aligned .container.largeContainer {
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+    }
+
+    .home-cta-aligned .cta-wrap {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 8px !important;
+      width: 100%;
+    }
+
+    .home-cta-aligned .cta-content {
+      width: 54% !important;
+      max-width: 54% !important;
+      flex: 0 0 54% !important;
+      padding: 0 !important;
+      text-align: left !important;
+      min-width: 0;
+    }
+
+    .home-cta-aligned .cta-content h4,
+    .home-cta-aligned .cta-content h2,
+    .home-cta-aligned .cta-content h3 {
+      text-align: left !important;
+      overflow-wrap: normal;
+    }
+
+    .home-cta-aligned .cta-content h4 {
+      font-size: 12px !important;
+      line-height: 1.25 !important;
+      margin: 0 0 5px !important;
+    }
+
+    .home-cta-aligned .cta-content h2 {
+      font-size: 21px !important;
+      line-height: 1.12 !important;
+      margin: 0 !important;
+    }
+
+    .home-cta-aligned .cta-content h3 {
+      font-size: 18px !important;
+      line-height: 1.15 !important;
+      margin: 0 0 8px !important;
+    }
+
+    .home-cta-aligned .cta-content .berpo_btn {
+      display: inline-flex !important;
+      margin-top: 8px !important;
+      padding: 7px 11px !important;
+      font-size: 10px !important;
+      line-height: 1.2 !important;
+      white-space: nowrap;
+    }
+
+    .home-cta-aligned .cta-images {
+      position: relative !important;
+      width: 44% !important;
+      max-width: 44% !important;
+      height: 145px !important;
+      flex: 0 0 44% !important;
+      display: block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      min-width: 0;
+    }
+
+    .home-cta-aligned .cta-images img {
+      position: absolute !important;
+      display: block !important;
+      max-width: none !important;
+      height: auto !important;
+      margin: 0 !important;
+      object-fit: contain !important;
+    }
+
+    /* First image is the curved dotted arrow; second is the GIS screen image. */
+    .home-cta-aligned .cta-images img:first-child {
+      width: 100% !important;
+      top: 0 !important;
+      right: 0 !important;
+      z-index: 1;
+    }
+
+    .home-cta-aligned .cta-images img:last-child {
+      width: 92% !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      z-index: 2;
+      border-radius: 10px !important;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .home-cta-aligned .cta-content h4 { font-size: 11px !important; }
+    .home-cta-aligned .cta-content h2 { font-size: 18px !important; }
+    .home-cta-aligned .cta-content h3 { font-size: 16px !important; }
+    .home-cta-aligned .cta-images { height: 125px !important; }
+    .home-cta-aligned .cta-content .berpo_btn {
+      padding: 6px 9px !important;
+      font-size: 9px !important;
+    }
+  }
 `;
 
 const Home = () => {
@@ -265,6 +1173,7 @@ const Home = () => {
             {/* Slide 1 */}
             <div className="carousel-item active">
               <div
+                className="hero-slide"
                 style={{
                   backgroundImage: `url(${slider1})`,
                   backgroundSize: 'cover',
@@ -332,6 +1241,7 @@ const Home = () => {
             {/* Slide 2 */}
             <div className="carousel-item">
               <div
+                className="hero-slide"
                 style={{
                   backgroundImage: `url(${slider2})`,
                   backgroundSize: 'cover',
@@ -930,28 +1840,24 @@ const Home = () => {
       {/* Blog End */}
 
       {/* Call To Action Start */}
-      <section className="ctaSectiont01 py-5" style={{ background: '#1a1a1a', color: '#fff' }}>
+      <section className="ctaSectiont01 home-cta-aligned">
         <div className="container largeContainer">
-          <div className="row align-items-center">
-            <div className="col-md-5">
-              <div className="ctaCon">
-                <h4><span style={{ color: '#bb0b0b' }}>Mapping</span>Data.</h4>
-                <h2 style={{ fontSize: '48px', fontWeight: 700 }}>Creating</h2>
-                <h3 style={{ fontSize: '36px', fontWeight: 700 }}><span style={{ color: '#bb0b0b' }}></span> Impact</h3>
-                <Link className="berpo_btn" to="/contact" style={{ marginTop: '20px' }}>
-                  <span className="bp-shape"></span>
-                  <span className="bp-shape"></span>
-                  <span className="bp-shape"></span>
-                  <span className="bp-shape"></span>
-                  <span className="bp-text">Contact Us</span>
-                </Link>
-              </div>
+          <div className="cta-wrap">
+            <div className="cta-content">
+              <h4><span style={{ color: '#bb0b0b' }}>Mapping</span>Data.</h4>
+              <h2 style={{ fontSize: '48px', fontWeight: 700 }}>Creating</h2>
+              <h3 style={{ fontSize: '36px', fontWeight: 700 }}><span style={{ color: '#bb0b0b' }}></span> Impact</h3>
+              <Link className="berpo_btn" to="/contact" style={{ marginTop: '20px' }}>
+                <span className="bp-shape"></span>
+                <span className="bp-shape"></span>
+                <span className="bp-shape"></span>
+                <span className="bp-shape"></span>
+                <span className="bp-text">Contact Us</span>
+              </Link>
             </div>
-            <div className="col-md-7">
-              <div className="ctaThumb text-center cta-thumb">
-                <img className="ctaborder" src={ctaImg1} alt="" style={{ maxWidth: '100%' }} />
-                <img src={ctaImg2} alt="" style={{ maxWidth: '100%', marginTop: '20px' }} />
-              </div>
+            <div className="cta-images">
+              <img src={ctaImg1} alt="" />
+              <img src={ctaImg2} alt="" />
             </div>
           </div>
         </div>

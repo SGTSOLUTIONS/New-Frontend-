@@ -167,6 +167,7 @@ function Header() {
                                     onClick={toggleMenu}
                                     aria-label="Toggle navigation menu"
                                     aria-expanded={menuOpen}
+                                    aria-controls="primary-navigation"
                                 >
 
                                     <i
@@ -185,10 +186,8 @@ function Header() {
                                 ================================= */}
 
                                 <nav
-                                    className={`mainMenu ${menuOpen
-                                        ? "mobileMenuOpen"
-                                        : ""
-                                        }`}
+                                    id="primary-navigation"
+                                    className={`mainMenu ${menuOpen ? "mobileMenuOpen" : ""}`}
                                 >
 
                                     <ul>
@@ -222,41 +221,25 @@ function Header() {
                                         >
 
                                             <div className="serviceMenuLink">
-
-                                                {/* SERVICE TEXT - Using span that looks like a link */}
-                                                <span
-                                                    className="serviceLabel"
+                                                <button
+                                                    type="button"
+                                                    className="serviceToggle"
                                                     onClick={toggleServices}
-                                                    onTouchEnd={(e) => {
-                                                        e.preventDefault();
-                                                        e.stopPropagation();
-                                                        setServicesOpen((prev) => !prev);
-                                                    }}
+                                                    aria-expanded={servicesOpen}
+                                                    aria-controls="header-services-submenu"
                                                 >
-                                                    Service
-                                                </span>
-
-                                                {/* SERVICE ARROW - Small indicator */}
-                                                <span
-                                                    className={`serviceArrow ${servicesOpen ? 'open' : ''}`}
-                                                    onClick={toggleServices}
-                                                    onTouchEnd={(e) => {
-                                                        e.preventDefault();
-                                                        e.stopPropagation();
-                                                        setServicesOpen((prev) => !prev);
-                                                    }}
-                                                >
-                                                    ▾
-                                                </span>
-
+                                                    <span>Service</span>
+                                                    <span className={`serviceArrow ${servicesOpen ? "open" : ""}`} aria-hidden="true">
+                                                        ▾
+                                                    </span>
+                                                </button>
                                             </div>
-
 
                                             {/* =========================
                                                 SERVICE SUB MENU
                                             ========================= */}
 
-                                            <ul className="sub-menu">
+                                            <ul id="header-services-submenu" className="sub-menu">
 
                                                 {services.map(
                                                     (service) => (
@@ -327,7 +310,7 @@ function Header() {
                                     </ul>
  <div className="accessNav">
                                           
-                                            <Link className="berpo_btn" to="/login">
+                                            <Link className="berpo_btn" to="/login" onClick={closeMenu}>
                                               
                                                 <span className="bp-text">login</span>
                                             </Link>

@@ -1050,10 +1050,38 @@ const Mapping2D = () => {
           .hero-section { padding: 80px 0 60px; }
           .service-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
           .service_item_01 .siThumb { height: 150px; }
-          .service_item_01 .sitem_con { padding: 16px 14px 20px; }
+          .service_item_01 .sitem_con {
+            position: relative;
+            padding: 44px 14px 20px;
+          }
           .service_item_01 h3 { font-size: 16px; }
           .service_item_01 p { font-size: 13px; }
-          .service_item_01 .ibMeta { width: 50px; height: 50px; font-size: 20px; margin: -30px auto 12px; }
+          .service_item_01 .ibMeta {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 0;
+            z-index: 2;
+          }
+          .cta-wrap {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+          }
+          .cta-content,
+          .cta-images {
+            width: 100%;
+          }
+          .cta-content p {
+            max-width: 100% !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
           .client-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
           .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
           .blog-grid { grid-template-columns: 1fr; }
@@ -1088,6 +1116,116 @@ const Mapping2D = () => {
           .cta-content h2 { font-size: 28px; }
           .cta-content h3 { font-size: 22px; }
         }
+        /* ===== 2D MAPPING CTA: APPROVED MOBILE GIS / WEBGIS MOBILE LAYOUT ===== */
+        /* Mobile only: keep text on the left and CTA imagery on the right. */
+        @media (max-width: 767.98px) {
+          .service-page .mapping2d-cta-layout .cta-wrap {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 8px !important;
+            width: 100%;
+            text-align: left !important;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-content {
+            width: 54% !important;
+            max-width: 54% !important;
+            flex: 0 0 54% !important;
+            min-width: 0;
+            text-align: left !important;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-content h4,
+          .service-page .mapping2d-cta-layout .cta-content h2,
+          .service-page .mapping2d-cta-layout .cta-content h3 {
+            text-align: left !important;
+            overflow-wrap: normal;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-content h4 {
+            font-size: 12px !important;
+            line-height: 1.25 !important;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-content h2 {
+            font-size: 21px !important;
+            line-height: 1.12 !important;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-content h3 {
+            font-size: 18px !important;
+            line-height: 1.15 !important;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-content p {
+            max-width: 100% !important;
+            margin: 10px 0 12px !important;
+            font-size: 12px !important;
+            line-height: 1.55 !important;
+            text-align: left !important;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-content .berpo_btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            margin-top: 8px !important;
+            padding: 7px 11px !important;
+            font-size: 10px !important;
+            line-height: 1.2 !important;
+            white-space: normal;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-images {
+            position: relative !important;
+            width: 44% !important;
+            max-width: 44% !important;
+            height: 145px !important;
+            flex: 0 0 44% !important;
+            display: block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            min-width: 0;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-images img {
+            position: absolute !important;
+            display: block !important;
+            max-width: none !important;
+            height: auto !important;
+            margin: 0 !important;
+            object-fit: contain !important;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-images img:first-child {
+            width: 100% !important;
+            top: 0 !important;
+            right: 0 !important;
+            z-index: 1;
+          }
+
+          .service-page .mapping2d-cta-layout .cta-images img:last-child {
+            width: 92% !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            z-index: 2;
+            border-radius: 10px !important;
+          }
+        }
+
+        @media (max-width: 380px) {
+          .service-page .mapping2d-cta-layout .cta-content h4 { font-size: 11px !important; }
+          .service-page .mapping2d-cta-layout .cta-content h2 { font-size: 18px !important; }
+          .service-page .mapping2d-cta-layout .cta-content h3 { font-size: 16px !important; }
+          .service-page .mapping2d-cta-layout .cta-images { height: 125px !important; }
+          .service-page .mapping2d-cta-layout .cta-content .berpo_btn {
+            padding: 6px 9px !important;
+            font-size: 9px !important;
+          }
+        }
+
       `}</style>
 
       {/* ===== HERO SECTION ===== */}
@@ -1287,7 +1425,7 @@ const Mapping2D = () => {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="section-padding bg-dark">
+      <section className="section-padding bg-dark mapping2d-cta-layout">
         <div className="container">
           <div className="cta-wrap">
             <div className="cta-content">
