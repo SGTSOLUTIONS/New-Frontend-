@@ -298,6 +298,135 @@ const RemoteSensingLandUseMapping = () => {
           .beproTab .nav-link{padding:6px 14px;font-size:12px}
           .berpo_btn{padding:10px 22px;font-size:13px}
         }
+
+        /* ===== REMOTE SENSING MOBILE SERVICE ICON ALIGNMENT ===== */
+        @media (max-width: 767.98px) {
+          .service-page .service_item_01 .sitem_con {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+          }
+          .service-page .service_item_01 .sitem_con .ibMeta {
+            position: relative !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 50px !important;
+            height: 50px !important;
+            margin: -30px auto 12px auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            left: auto !important;
+            right: auto !important;
+            float: none !important;
+            transform: none !important;
+            z-index: 5 !important;
+          }
+          .service-page .service_item_01 h3,
+          .service-page .service_item_01 p {
+            width: 100% !important;
+            text-align: center !important;
+          }
+        }
+
+        /* ===== SAME APPROVED SRIS MOBILE CTA LAYOUT ===== */
+        @media (max-width: 767.98px) {
+          .service-page .remote-sensing-cta .cta-wrap {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            gap: 8px !important;
+            width: 100%;
+            text-align: left !important;
+          }
+          .service-page .remote-sensing-cta .cta-content {
+            width: 54% !important;
+            max-width: 54% !important;
+            flex: 0 0 54% !important;
+            min-width: 0;
+            text-align: left !important;
+          }
+          .service-page .remote-sensing-cta .cta-content h4,
+          .service-page .remote-sensing-cta .cta-content h2,
+          .service-page .remote-sensing-cta .cta-content h3 {
+            text-align: left !important;
+            overflow-wrap: normal;
+          }
+          .service-page .remote-sensing-cta .cta-content h4 {
+            font-size: 12px !important;
+            line-height: 1.25 !important;
+          }
+          .service-page .remote-sensing-cta .cta-content h2 {
+            font-size: 21px !important;
+            line-height: 1.12 !important;
+          }
+          .service-page .remote-sensing-cta .cta-content h3 {
+            font-size: 18px !important;
+            line-height: 1.15 !important;
+          }
+          .service-page .remote-sensing-cta .cta-content p {
+            max-width: 100% !important;
+            margin: 10px 0 12px !important;
+            font-size: 12px !important;
+            line-height: 1.55 !important;
+            text-align: left !important;
+          }
+          .service-page .remote-sensing-cta .cta-content .berpo_btn {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            margin-top: 8px !important;
+            padding: 7px 11px !important;
+            font-size: 10px !important;
+            line-height: 1.2 !important;
+            white-space: normal;
+          }
+          .service-page .remote-sensing-cta .cta-images {
+            position: relative !important;
+            width: 44% !important;
+            max-width: 44% !important;
+            height: 145px !important;
+            flex: 0 0 44% !important;
+            display: block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            min-width: 0;
+          }
+          .service-page .remote-sensing-cta .cta-images img {
+            position: absolute !important;
+            display: block !important;
+            max-width: none !important;
+            height: auto !important;
+            margin: 0 !important;
+            object-fit: contain !important;
+          }
+          .service-page .remote-sensing-cta .cta-images img:first-child {
+            width: 100% !important;
+            top: 0 !important;
+            right: 0 !important;
+            z-index: 1;
+          }
+          .service-page .remote-sensing-cta .cta-images img:last-child {
+            width: 92% !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            z-index: 2;
+            border-radius: 10px !important;
+          }
+        }
+        @media (max-width: 380px) {
+          .service-page .remote-sensing-cta .cta-content h4 { font-size: 11px !important; }
+          .service-page .remote-sensing-cta .cta-content h2 { font-size: 18px !important; }
+          .service-page .remote-sensing-cta .cta-content h3 { font-size: 16px !important; }
+          .service-page .remote-sensing-cta .cta-images { height: 125px !important; }
+          .service-page .remote-sensing-cta .cta-content .berpo_btn {
+            padding: 6px 9px !important;
+            font-size: 9px !important;
+          }
+        }
+
       `}</style>
 
       <section className="hero-section">
@@ -520,7 +649,7 @@ const RemoteSensingLandUseMapping = () => {
                 <div className="blogThumb"><img src={blog.img} alt={blog.title} /></div>
                 <div className="blogContent">
                   <span className="bmeta"><i className="fas fa-calendar-alt"></i> {blog.date}</span>
-                  <h3><Link to="/blog">{blog.title}</Link></h3>
+                  <h3>{blog.title}</h3>
                 </div>
               </div>
             ))}
@@ -528,7 +657,7 @@ const RemoteSensingLandUseMapping = () => {
         </div>
       </section>
 
-      <section className="section-padding bg-dark">
+      <section className="section-padding bg-dark remote-sensing-cta">
         <div className="container">
           <div className="cta-wrap">
             <div className="cta-content">

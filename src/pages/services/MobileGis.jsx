@@ -1585,7 +1585,7 @@ const MobileGis = () => {
                 </div>
                 <div className="blogContent">
                   <span className="bmeta"><i className="fas fa-calendar-alt"></i> {blog.date}</span>
-                  <h3><Link to="/blog">{blog.title}</Link></h3>
+                  <h3>{blog.title}</h3>
                  
                 </div>
               </div>
