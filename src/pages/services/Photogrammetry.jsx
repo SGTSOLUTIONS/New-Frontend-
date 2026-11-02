@@ -14,22 +14,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 // Other images
 import aboutImg from '../../assets/images/home1/about.png';
 import achievementImg from '../../assets/images/home1/1.WEBP';
-import clientLogo1 from '../../assets/images/client-logo/1.png';
-import clientLogo2 from '../../assets/images/client-logo/2.png';
-import clientLogo3 from '../../assets/images/client-logo/3.png';
-import clientLogo4 from '../../assets/images/client-logo/4.png';
-import team1 from '../../assets/images/team/1.jpg';
-import team2 from '../../assets/images/team/2.jpg';
-import team3 from '../../assets/images/team/3.jpg';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
 import blog1 from '../../assets/images/photogrammetry/blog1.png';
 import blog2 from '../../assets/images/photogrammetry/blog2.png';
 import blog3 from '../../assets/images/photogrammetry/blog3.png';
-import blogAuthor1 from '../../assets/images/blog/a1.jpg';
-import blogAuthor2 from '../../assets/images/blog/a2.jpg';
-import blogAuthor3 from '../../assets/images/blog/a3.jpg';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 
@@ -96,13 +86,6 @@ const photogrammetryFeatures = [
     },
 ];
 
-const teamMembers = [
-  { id: 1, name: 'Arnika Sorkar', role: 'Web Designer', img: team1 },
-  { id: 2, name: 'Georgie Haynes', role: 'Web Developer', img: team2 },
-  { id: 3, name: 'Jizz Merkel', role: 'Business Expert', img: team3 },
-  { id: 4, name: 'Sarah Chen', role: 'GIS Specialist', img: team1 }
-];
-
 const testimonials = [
   {
     id: 1,
@@ -133,24 +116,21 @@ const blogs = [
     title: 'Photogrammetry Meets 3D Gaussian Splatting',
     date: '10 SEPTEMBER 2026',
     author: 'Keesler Smith',
-    img: blog1,
-    authorImg: blogAuthor1
+    img: blog1,  
   },
   {
     id: 2,
     title: 'WebODM Adds Gaussian Splatting Support',
     date: '15 SEPTEMBER 2026',
     author: 'Keesler Smith',
-    img: blog2,
-    authorImg: blogAuthor2
+    img: blog2, 
   },
   {
     id: 3,
     title: 'Improving Photogrammetry for Corridor Mapping',
     date: '20 OCTOBER 2026',
     author: 'Keesler Smith',
-    img: blog3,
-    authorImg: blogAuthor3
+    img: blog3, 
   }
 ];
 

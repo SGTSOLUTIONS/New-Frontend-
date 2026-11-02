@@ -13,7 +13,6 @@ import blog3 from '../../assets/images/Rainfall/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Rainfall/bg.WEBP';
-
 import rfFeature1 from '../../assets/images/Rainfall/1.png';
 import rfFeature2 from '../../assets/images/Rainfall/2.WEBP';
 import rfFeature3 from '../../assets/images/Rainfall/3.WEBP';

@@ -14,7 +14,6 @@ import blog3 from '../../assets/images/Remote-Sensing/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Remote-Sensing/bg.WEBP';
-
 import rsFeature1 from '../../assets/images/Remote-Sensing/1.WEBP';
 import rsFeature2 from '../../assets/images/Remote-Sensing/2.WEBP';
 import rsFeature3 from '../../assets/images/Remote-Sensing/3.WEBP';

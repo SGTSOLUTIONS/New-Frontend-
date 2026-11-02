@@ -14,7 +14,6 @@ import blog3 from '../../assets/images/Enterprise-Gis/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from '../../assets/images/Enterprise-Gis/bg.WEBP';
-
 import entFeature1 from '../../assets/images/Enterprise-Gis/1.WEBP';
 import entFeature2 from '../../assets/images/Enterprise-Gis/2.WEBP';
 import entFeature3 from '../../assets/images/Enterprise-Gis/3.WEBP';

@@ -5,16 +5,6 @@ import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import "./Header.css";
 
-
-
-// Import menu images
-import h1 from "../assets/images/h1.png";
-import h2 from "../assets/images/h2.png";
-import h5 from "../assets/images/h5.png";
-import h6 from "../assets/images/h6.png";
-import h7 from "../assets/images/h7.png";
-import h8 from "../assets/images/h8.png";
-
 // =========================================================
 // SERVICES
 // =========================================================
@@ -24,45 +14,43 @@ const services = [
         id: 1,
         title: "Web GIS",
         link: "/services/web-gis",
-        image: h1,
+        
     },
     {
         id: 2,
         title: "Mobile GIS",
         link: "/services/mobile-gis",
-        image: h2,
+        
     },
-   
-    
     {
         id: 5,
         title: "Photogrammetry",
         link: "/services/photogrammetry",
-        image: h5,
+        
     },
     {
         id: 6,
         title: "Drone & DGPS Survey",
         link: "/services/drone-survey",
-        image: h6,
+        
     },
     {
         id: 7,
         title: "2D Mapping",
         link: "/services/2d-mapping",
-        image: h7,
+        
     },
     {
         id: 8,
         title: "Consultancy Services",
         link: "/services/consultancy",
-        image: h8,
+        
     },
     {
         id: 9,
         title: "Website Development",
         link: "/services/web-development",
-        image: h1,
+        
     },
 ];
 

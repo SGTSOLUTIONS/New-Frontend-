@@ -1,17 +1,6 @@
 import React from 'react';
 import logo2 from '../assets/images/logo.png';
-import b1 from '../assets/images/blog/b1.jpg';
-import b2 from '../assets/images/blog/b2.jpg';
-import b3 from '../assets/images/blog/b3.jpg';
-import insta1 from '../assets/images/instagram/1.jpg';
-import insta2 from '../assets/images/instagram/2.jpg';
-import insta3 from '../assets/images/instagram/3.jpg';
-import insta4 from '../assets/images/instagram/4.jpg';
-import insta5 from '../assets/images/instagram/5.jpg';
-import insta6 from '../assets/images/instagram/6.jpg';
-import insta7 from '../assets/images/instagram/7.jpg';
-import insta8 from '../assets/images/instagram/8.jpg';
-import insta9 from '../assets/images/instagram/9.jpg';
+
 
 const Footer = () => {
   return (

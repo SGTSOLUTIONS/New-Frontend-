@@ -19,22 +19,12 @@ import service3 from '../assets/images/service/3.jpg';
 // Other images
 import aboutImg from '../assets/images/home1/about.png';
 import achievementImg from '../assets/images/home1/1.WEBP';
-import clientLogo1 from '../assets/images/client-logo/1.png';
-import clientLogo2 from '../assets/images/client-logo/2.png';
-import clientLogo3 from '../assets/images/client-logo/3.png';
-import clientLogo4 from '../assets/images/client-logo/4.png';
-import team1 from '../assets/images/team/1.jpg';
-import team2 from '../assets/images/team/2.jpg';
-import team3 from '../assets/images/team/3.jpg';
 import testimonial1 from '../assets/images/home1/t1.jpg';
 import testimonial2 from '../assets/images/home1/t2.jpeg';
 import testimonial3 from '../assets/images/home1/t3.jpeg';
 import blog1 from '../assets/images/blog/1.jpg';
 import blog2 from '../assets/images/blog/2.jpg';
 import blog3 from '../assets/images/blog/3.jpg';
-import blogAuthor1 from '../assets/images/blog/a1.jpg';
-import blogAuthor2 from '../assets/images/blog/a2.jpg';
-import blogAuthor3 from '../assets/images/blog/a3.jpg';
 import ctaImg1 from '../assets/images/home1/3.png';
 import ctaImg2 from '../assets/images/home1/4.png';
 
@@ -126,13 +116,6 @@ const services = [
     },
 ];
 
-const teamMembers = [
-  { id: 1, name: 'Arnika Sorkar', role: 'Web Designer', img: team1 },
-  { id: 2, name: 'Georgie Haynes', role: 'Web Developer', img: team2 },
-  { id: 3, name: 'Jizz Merkel', role: 'Business Expert', img: team3 },
-  { id: 4, name: 'Sarah Chen', role: 'GIS Specialist', img: team1 }
-];
-
 const testimonials = [
   {
     id: 1,
@@ -164,7 +147,6 @@ const blogs = [
     date: '20 March, 2021',
     author: 'Keesler Smith',
     img: blog1,
-    authorImg: blogAuthor1
   },
   {
     id: 2,
@@ -172,7 +154,6 @@ const blogs = [
     date: '20 March, 2021',
     author: 'Keesler Smith',
     img: blog2,
-    authorImg: blogAuthor2
   },
   {
     id: 3,
@@ -180,7 +161,6 @@ const blogs = [
     date: '20 March, 2021',
     author: 'Keesler Smith',
     img: blog3,
-    authorImg: blogAuthor3
   }
 ];
 
