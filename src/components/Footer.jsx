@@ -131,10 +131,8 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-12 text-center">
             <div className="Copyright">
-              <span>SGT Solutions</span> - Copyright 2021. Developed by{' '}
-              <a href="https://sgtsolutions.in/" target="_blank" rel="noopener noreferrer">
-                SGT Solutions
-              </a>
+              <span>SGT Solutions</span> - &copy; 2026 
+            
             </div>
           </div>
         </div>
