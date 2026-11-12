@@ -15,19 +15,19 @@ import achievementImg from '../../assets/images/home1/1.WEBP';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
-import blog1 from '../../assets/images/2d-mapping/blog1.png';
-import blog2 from '../../assets/images/2d-mapping/blog2.png';
-import blog3 from '../../assets/images/2d-mapping/blog3.png';
+import blog1 from '../../assets/images/2d-mapping/blog1.WEBP';
+import blog2 from '../../assets/images/2d-mapping/blog2.WEBP';
+import blog3 from '../../assets/images/2d-mapping/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/2d-mapping/bg.png';
+import servicesBg from '../../assets/images/2d-mapping/bg.WEBP';
 
 // 2D Mapping specific images
 import mapFeature1 from '../../assets/images/2d-mapping/1.png';
 import mapFeature2 from '../../assets/images/2d-mapping/2.jpg';
 import mapFeature3 from '../../assets/images/2d-mapping/3.jpg';
 import mapFeature4 from '../../assets/images/2d-mapping/4.jpg';
-import mapFeature5 from '../../assets/images/2d-mapping/5.png';
+import mapFeature5 from '../../assets/images/2d-mapping/5.WEBP';
 import mapFeature6 from '../../assets/images/2d-mapping/6.jpg';
 
 // 2D Mapping Features

@@ -17,22 +17,22 @@ import achievementImg from '../../assets/images/home1/1.WEBP';
 import testimonial1 from '../../assets/images/home1/t1.jpg';
 import testimonial2 from '../../assets/images/home1/t2.jpeg';
 import testimonial3 from '../../assets/images/home1/t3.jpeg';
-import blog1 from '../../assets/images/Mobile Gis/blog1.png';
-import blog2 from '../../assets/images/Mobile Gis/blog2.png';
-import blog3 from '../../assets/images/Mobile Gis/blog3.png';
+import blog1 from '../../assets/images/Mobile Gis/blog1.WEBP';
+import blog2 from '../../assets/images/Mobile Gis/blog2.WEBP';
+import blog3 from '../../assets/images/Mobile Gis/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 
 // Background image
-import servicesBg from '../../assets/images/Mobile Gis/bg.png';
+import servicesBg from '../../assets/images/Mobile Gis/bg.WEBP';
 
 // Mobile GIS specific images
 import mobileFeature1 from '../../assets/images/Mobile Gis/1.png';
-import mobileFeature2 from '../../assets/images/Mobile Gis/2.png';
+import mobileFeature2 from '../../assets/images/Mobile Gis/2.WEBP';
 import mobileFeature3 from '../../assets/images/Mobile Gis/3.png';
-import mobileFeature4 from '../../assets/images/Mobile Gis/4.png';
+import mobileFeature4 from '../../assets/images/Mobile Gis/4.WEBP';
 import mobileFeature5 from '../../assets/images/Mobile Gis/5.jpg';
-import mobileFeature6 from '../../assets/images/Mobile Gis/6.png';
+import mobileFeature6 from '../../assets/images/Mobile Gis/6.WEBP';
 
 // Mobile GIS Features data
 const mobileFeatures = [
