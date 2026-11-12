@@ -418,7 +418,7 @@ const WebDevelopment = () => {
         }
 
         .bg-dark {
-          background: #0a1922;
+          background: #0D364F;
           color: #fff;
         }
 
