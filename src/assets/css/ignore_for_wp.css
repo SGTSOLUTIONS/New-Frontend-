@@ -262,7 +262,7 @@
 }
 .ctaMail{
 	position: relative;
-	background: url(../images/3_2.png) no-repeat center center / cover;
+	background: url(../images/3_2.WEBP) no-repeat center center / cover;
 	border-radius: 100px;
 	padding: 45px 175px 45px 110px;
 	margin: 65px 0 0;
@@ -278,7 +278,7 @@
 }
 .ctaMail .subTitle{
 	font-size: 12px;
-	color: #131212;
+	color: #FFFFFF !important;
 	font-weight: 700;
 	text-transform: none;
 	letter-spacing: .36px;

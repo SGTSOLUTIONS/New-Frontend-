@@ -7,9 +7,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import achievementImg from '../../assets/images/home1/1.WEBP';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/AI-Powered/blog1.jpg';
-import blog2 from '../../assets/images/AI-Powered/blog2.png';
-import blog3 from '../../assets/images/AI-Powered/blog3.jpg';
+import blog1 from '../../assets/images/AI-Powered/blog1.WEBP';
+import blog2 from '../../assets/images/AI-Powered/blog2.WEBP';
+import blog3 from '../../assets/images/AI-Powered/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
 import servicesBg from "../../assets/images/AI-Powered/bg.WEBP";

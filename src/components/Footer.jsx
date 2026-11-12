@@ -1,5 +1,6 @@
 import React from 'react';
 import logo2 from '../assets/images/logo.png';
+import '../assets/css/footer.css';
 
 
 const Footer = () => {
@@ -19,7 +20,7 @@ const Footer = () => {
                 real-world governance challenges.
               </p>
               <div className="abIcon">
-                <i className="twi-map-marker"></i>Alandur 124, MKN Rd, Ramapuram, Alandur, Chennai.
+                <i className="twi-map-marker"></i>New no 124,first floor,MKN Road,Alandur,Chennai -16
               </div>
               <div className="abIcon">
                 <i className="twi-envelope"></i>

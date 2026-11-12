@@ -900,7 +900,7 @@ const About = () => {
                     }
                 }
                 .bepAccordion .card.activeBg .card-header button {
-                   color: #0a1922 !important;
+                    color: #0a1922 !important;
                 }
                 .berpo_btn .bp-shape {
                     display: none;

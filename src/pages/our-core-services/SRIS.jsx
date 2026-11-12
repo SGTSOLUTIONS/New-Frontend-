@@ -7,17 +7,17 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import achievementImg from '../../assets/images/home1/1.WEBP';
 import aboutImg from '../../assets/images/home1/about.png';
-import blog1 from '../../assets/images/SRIS/blog1.png';
-import blog2 from '../../assets/images/SRIS/blog2.png';
-import blog3 from '../../assets/images/SRIS/blog3.png';
+import blog1 from '../../assets/images/SRIS/blog1.WEBP';
+import blog2 from '../../assets/images/SRIS/blog2.WEBP';
+import blog3 from '../../assets/images/SRIS/blog3.WEBP';
 import ctaImg1 from '../../assets/images/home1/3.png';
 import ctaImg2 from '../../assets/images/home1/4.png';
-import servicesBg from '../../assets/images/SRIS/bg.jpeg';
+import servicesBg from '../../assets/images/SRIS/bg.WEBP';
 import srisFeature1 from '../../assets/images/SRIS/1.jpeg';
 import srisFeature2 from '../../assets/images/SRIS/2.jpg';
-import srisFeature3 from '../../assets/images/SRIS/3.png';
-import srisFeature4 from '../../assets/images/SRIS/4.jpg';
-import srisFeature5 from '../../assets/images/SRIS/5.jpeg';
+import srisFeature3 from '../../assets/images/SRIS/3.WEBP';
+import srisFeature4 from '../../assets/images/SRIS/4.WEBP';
+import srisFeature5 from '../../assets/images/SRIS/5.WEBP';
 import srisFeature6 from '../../assets/images/SRIS/6.png';
 
 const srisFeatures = [

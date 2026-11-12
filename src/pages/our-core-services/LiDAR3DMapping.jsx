@@ -18,7 +18,7 @@ import lidarFeature2 from '../../assets/images/Lidar/2.jpg';
 import lidarFeature3 from '../../assets/images/Lidar/3.png';
 import lidarFeature4 from '../../assets/images/Lidar/4.jpg';
 import lidarFeature5 from '../../assets/images/Lidar/5.jpg';
-import lidarFeature6 from '../../assets/images/Lidar/6.png';
+import lidarFeature6 from '../../assets/images/Lidar/6.WEBP';
 
 const lidarFeatures = [
   { 
