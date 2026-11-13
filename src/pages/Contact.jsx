@@ -233,7 +233,7 @@ const Contact = () => {
         }
 
         .bg-dark {
-          background: #0a1922;
+          background: #0D364F !important;
           color: #fff;
         }
 

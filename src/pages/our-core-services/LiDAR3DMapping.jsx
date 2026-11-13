@@ -195,7 +195,10 @@ const LiDAR3DMapping = () => {
         }
         .section-padding{padding:70px 0}
         .bg-light{background:#f8f9fc}
-        .bg-dark{background:#0a1922;color:#fff}
+        .bg-dark{
+           background: #0D364F !important;
+           color:#fff
+           }
         .text-center{text-align:center}
         .mt-5{margin-top:40px}
         .mb-4{margin-bottom:30px}

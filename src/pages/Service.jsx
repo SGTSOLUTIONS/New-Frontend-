@@ -354,7 +354,7 @@ const Service = () => {
         }
 
         .bg-dark {
-          background: #0D364F;
+          background: #0a1922;
           color: #fff;
         }
 

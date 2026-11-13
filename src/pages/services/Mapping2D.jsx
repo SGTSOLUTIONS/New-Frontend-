@@ -407,7 +407,7 @@ const Mapping2D = () => {
         }
 
         .bg-dark {
-          background: #0D364F;
+          background: #0D364F !important;
           color: #fff;
         }
 

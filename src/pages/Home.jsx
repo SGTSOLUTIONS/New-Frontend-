@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Link } from 'react-router-dom';
 
 // Import Google Fonts from @fontsource
@@ -1147,13 +1148,13 @@ const Home = () => {
         <div
           id="heroCarousel"
           className="carousel slide"
-          data-ride="carousel"
-          data-interval="0"
-          data-pause="false"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+          data-bs-pause="false"
         >
           <ol className="carousel-indicators">
-            <li data-target="#heroCarousel" data-slide-to="0" className="active"></li>
-            <li data-target="#heroCarousel" data-slide-to="1"></li>
+            <li data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active"></li>
+            <li data-bs-target="#heroCarousel" data-bs-slide-to="1"></li>
           </ol>
 
           <div className="carousel-inner">
@@ -1293,11 +1294,11 @@ const Home = () => {
             </div>
           </div>
 
-          <a className="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+          <a className="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+          <a className="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>
@@ -1556,13 +1557,13 @@ const Home = () => {
             <div className="col-lg-12">
               <ul className="nav beproTab justify-content-center flex-wrap" id="beproTab" role="tablist">
                 <li role="presentation" className="nav-item">
-                  <a id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="false" className="nav-link">GIS &amp; MAPPING</a>
+                  <a id="business-tab" data-bs-toggle="tab" data-bs-target="#business" href="#business" role="tab" aria-controls="business" aria-selected="false" className="nav-link">GIS &amp; MAPPING</a>
                 </li>
                 <li role="presentation" className="nav-item">
-                  <a className="nav-link active" id="financial-tab" data-toggle="tab" href="#financial" role="tab" aria-controls="financial" aria-selected="true">SURVEYING &amp; DATA</a>
+                  <a className="nav-link active" id="financial-tab" data-bs-toggle="tab" data-bs-target="#financial" href="#financial" role="tab" aria-controls="financial" aria-selected="true">SURVEYING &amp; DATA</a>
                 </li>
                 <li role="presentation" className="nav-item">
-                  <a id="global-tab" data-toggle="tab" href="#global" role="tab" aria-controls="global" aria-selected="false" className="nav-link">SPATIAL INTELLIGENCE</a>
+                  <a id="global-tab" data-bs-toggle="tab" data-bs-target="#global" href="#global" role="tab" aria-controls="global" aria-selected="false" className="nav-link">SPATIAL INTELLIGENCE</a>
                 </li>
               </ul>
               <div className="tab-content mt-4">
@@ -1664,13 +1665,13 @@ const Home = () => {
                 <div className="card">
                   <div className="card-header" id="ma_ac_01">
                     <h2 className="mb-0">
-                      <button className="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_01" data-aria-expanded="false" data-aria-controls="ma_collapes_01">
+                      <button className="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ma_collapes_01" aria-expanded="false" aria-controls="ma_collapes_01">
                         <i>1.</i> Why Choose Our Sgt Solutions?
                         <span></span>
                       </button>
                     </h2>
                   </div>
-                  <div id="ma_collapes_01" className="collapse" aria-labelledby="ma_ac_01" data-parent="#befAccordion01">
+                  <div id="ma_collapes_01" className="collapse" aria-labelledby="ma_ac_01" data-bs-parent="#befAccordion01">
                     <div className="card-body">
                       We combine cutting-edge technology with deep domain expertise to deliver accurate, actionable spatial intelligence.
                     </div>
@@ -1679,13 +1680,13 @@ const Home = () => {
                 <div className="card">
                   <div className="card-header" id="ma_ac_02">
                     <h2 className="mb-0">
-                      <button type="button" data-toggle="collapse" data-target="#ma_collapes_02" data-aria-expanded="true" data-aria-controls="ma_collapes_02">
+                      <button type="button" data-bs-toggle="collapse" data-bs-target="#ma_collapes_02" aria-expanded="true" aria-controls="ma_collapes_02">
                         <i>2.</i> How Do We Ensure Accuracy
                         <span></span>
                       </button>
                     </h2>
                   </div>
-                  <div id="ma_collapes_02" className="collapse show" aria-labelledby="ma_ac_02" data-parent="#befAccordion01">
+                  <div id="ma_collapes_02" className="collapse show" aria-labelledby="ma_ac_02" data-bs-parent="#befAccordion01">
                     <div className="card-body">
                       We use high-precision LiDAR, DGPS, and photogrammetry with rigorous quality control at every stage.
                     </div>
@@ -1694,13 +1695,13 @@ const Home = () => {
                 <div className="card">
                   <div className="card-header" id="ma_ac_03">
                     <h2 className="mb-0">
-                      <button className="collapsed" type="button" data-toggle="collapse" data-target="#ma_collapes_03" data-aria-expanded="false" data-aria-controls="ma_collapes_03">
+                      <button className="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ma_collapes_03" aria-expanded="false" aria-controls="ma_collapes_03">
                         <i>3.</i> What Industries Do We Serve?
                         <span></span>
                       </button>
                     </h2>
                   </div>
-                  <div id="ma_collapes_03" className="collapse" aria-labelledby="ma_ac_03" data-parent="#befAccordion01">
+                  <div id="ma_collapes_03" className="collapse" aria-labelledby="ma_ac_03" data-bs-parent="#befAccordion01">
                     <div className="card-body">
                       Urban planning, agriculture, real estate, infrastructure, environmental monitoring, and government.
                     </div>
@@ -1712,9 +1713,9 @@ const Home = () => {
               <div
                 id="testimonialCarousel"
                 className="carousel slide"
-                data-ride="carousel"
-                data-interval="4000"
-                data-pause="false"
+                data-bs-ride="carousel"
+                data-bs-interval="4000"
+                data-bs-pause="false"
               >
                 <div className="carousel-inner">
                   <div className="carousel-item carousel-testimonial active">
@@ -1767,9 +1768,9 @@ const Home = () => {
                 </div>
 
                 <ol className="carousel-indicators" style={{ position: 'relative', marginTop: '20px' }}>
-                  <li data-target="#testimonialCarousel" data-slide-to="0" className="active" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#bb0b0b', border: 'none' }}></li>
-                  <li data-target="#testimonialCarousel" data-slide-to="1" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ccc', border: 'none' }}></li>
-                  <li data-target="#testimonialCarousel" data-slide-to="2" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ccc', border: 'none' }}></li>
+                  <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" className="active" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#bb0b0b', border: 'none' }}></li>
+                  <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ccc', border: 'none' }}></li>
+                  <li data-bs-target="#testimonialCarousel" data-bs-slide-to="2" style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#ccc', border: 'none' }}></li>
                 </ol>
               </div>
             </div>
