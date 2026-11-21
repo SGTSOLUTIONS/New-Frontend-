@@ -1,4 +1,3 @@
-// src/components/admin/AdminSidebar.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -16,12 +15,54 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
       path: '/dashboard/project',
       exact: true
     },
-      {
+    {
       title: 'Finance',
-      icon: 'fa-cubes',
+      icon: 'fa-coins',
       path: '/dashboard/projectfinance',
       exact: true
     },
+
+    // Employee Management
+    {
+      title: 'Employee Management',
+      icon: 'fa-user-tie',
+      path: '/dashboard/employees',
+      children: [
+        {
+          title: 'Employee List',
+          path: '/dashboard/employees'
+        },
+        {
+          title: 'Add Employee',
+          path: '/dashboard/employees/create'
+        },
+        {
+          title: 'Attendance',
+          path: '/dashboard/attendance'
+        },
+        {
+          title: 'Leave Records',
+          path: '/dashboard/leaves'
+        },
+        {
+          title: 'Holidays',
+          path: '/dashboard/holidays'
+        },
+        {
+          title: 'Documents',
+          path: '/dashboard/documents'
+        },
+        {
+          title: 'Payslips',
+          path: '/dashboard/payslips'
+        },
+        {
+          title: 'Salary Details',
+          path: '/dashboard/salary-details'
+        }
+      ]
+    },
+
     {
       title: 'Users',
       icon: 'fa-users',
@@ -63,20 +104,27 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
     const hasChildren = item.children && item.children.length > 0;
 
     return (
-      <li key={index} className={`nav-item ${hasChildren ? 'has-dropdown' : ''}`}>
+      <li
+        key={index}
+        className={`nav-item ${hasChildren ? 'has-dropdown' : ''}`}
+      >
         {hasChildren ? (
           <>
             <NavLink
               to={item.path}
-              className={({ isActive }) => 
-                `nav-link ${isActive ? 'active' : ''} ${isCollapsed ? 'collapsed' : ''}`
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'active' : ''} ${
+                  isCollapsed ? 'collapsed' : ''
+                }`
               }
               data-bs-toggle={!isCollapsed ? 'collapse' : undefined}
               data-bs-target={`#menu-${index}`}
               aria-expanded="false"
               aria-controls={`menu-${index}`}
+              title={isCollapsed ? item.title : undefined}
             >
               <i className={`fas ${item.icon}`}></i>
+
               {!isCollapsed && (
                 <>
                   <span className="menu-title">{item.title}</span>
@@ -86,13 +134,15 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
                 </>
               )}
             </NavLink>
+
             {!isCollapsed && (
               <ul className="collapse sub-menu" id={`menu-${index}`}>
                 {item.children.map((child, childIndex) => (
                   <li key={childIndex} className="nav-item">
                     <NavLink
                       to={child.path}
-                      className={({ isActive }) => 
+                      end={child.path === '/dashboard/employees'}
+                      className={({ isActive }) =>
                         `nav-link ${isActive ? 'active' : ''}`
                       }
                     >
@@ -106,12 +156,17 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
         ) : (
           <NavLink
             to={item.path}
-            className={({ isActive }) => 
+            end={item.exact}
+            className={({ isActive }) =>
               `nav-link ${isActive ? 'active' : ''}`
             }
+            title={isCollapsed ? item.title : undefined}
           >
             <i className={`fas ${item.icon}`}></i>
-            {!isCollapsed && <span className="menu-title">{item.title}</span>}
+
+            {!isCollapsed && (
+              <span className="menu-title">{item.title}</span>
+            )}
           </NavLink>
         )}
       </li>
@@ -119,14 +174,20 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
   };
 
   return (
-    <aside className={`admin-sidebar ${isOpen ? 'open' : 'closed'} ${isCollapsed ? 'collapsed' : ''}`}>
+    <aside
+      className={`admin-sidebar ${
+        isOpen ? 'open' : 'closed'
+      } ${isCollapsed ? 'collapsed' : ''}`}
+    >
       <div className="sidebar-header">
         <div className="brand-wrapper">
           <i className="fas fa-cube brand-icon"></i>
+
           {!isCollapsed && (
             <span className="brand-text">SGT SOLUTIONS</span>
           )}
         </div>
+
         {isCollapsed && (
           <div className="brand-icon-small">
             <i className="fas fa-cube"></i>
@@ -142,6 +203,7 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
           width="40"
           height="40"
         />
+
         {!isCollapsed && (
           <div className="user-details">
             <h6 className="mb-0">Admin User</h6>
@@ -152,7 +214,9 @@ const AdminSidebar = ({ isOpen, isCollapsed }) => {
 
       <nav className="sidebar-nav">
         <ul className="nav flex-column">
-          {menuItems.map((item, index) => renderMenuItem(item, index))}
+          {menuItems.map((item, index) =>
+            renderMenuItem(item, index)
+          )}
         </ul>
       </nav>
 

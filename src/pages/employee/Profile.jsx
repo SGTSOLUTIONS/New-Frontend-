@@ -15,6 +15,10 @@ const EmployeeProfile = () => {
         fetchProfile();
     }, []);
 
+    // ======================================================
+    // FETCH EMPLOYEE PROFILE
+    // ======================================================
+
     const fetchProfile = async () => {
         try {
             setLoading(true);
@@ -24,9 +28,10 @@ const EmployeeProfile = () => {
 
             const profileData = response.data?.data || response.data;
 
-            setProfile(profileData?.employee
-                ? { ...profileData, ...profileData.employee }
-                : profileData
+            setProfile(
+                profileData?.employee
+                    ? { ...profileData, ...profileData.employee }
+                    : profileData
             );
 
         } catch (err) {
@@ -41,6 +46,10 @@ const EmployeeProfile = () => {
         }
     };
 
+    // ======================================================
+    // FORMAT DATE
+    // ======================================================
+
     const formatDate = (date) => {
         if (!date) return "Not provided";
 
@@ -51,6 +60,10 @@ const EmployeeProfile = () => {
         });
     };
 
+    // ======================================================
+    // PROFILE DETAILS
+    // ======================================================
+
     const employeeName = profile?.name || user?.name || "Employee";
 
     const profileImage =
@@ -60,6 +73,7 @@ const EmployeeProfile = () => {
         user?.avatar ||
         `https://ui-avatars.com/api/?name=${encodeURIComponent(employeeName)}&background=14532D&color=fff&size=200`;
 
+    // Reusable detail component
     const DetailItem = ({ label, value, icon }) => (
         <div className="profile-detail-item">
             <div className="profile-detail-icon">
@@ -73,6 +87,10 @@ const EmployeeProfile = () => {
         </div>
     );
 
+    // ======================================================
+    // LOADING
+    // ======================================================
+
     if (loading) {
         return (
             <div className="employee-profile-loading">
@@ -82,10 +100,15 @@ const EmployeeProfile = () => {
         );
     }
 
+    // ======================================================
+    // PROFILE UI
+    // ======================================================
+
     return (
         <div className="employee-profile-page">
 
-            {/* Page Heading */}
+            {/* PAGE HEADING */}
+
             <div className="employee-page-heading">
                 <div>
                     <h4>My Profile</h4>
@@ -101,6 +124,8 @@ const EmployeeProfile = () => {
                 </button>
             </div>
 
+            {/* ERROR MESSAGE */}
+
             {error && (
                 <div className="alert alert-warning">
                     <i className="fas fa-circle-exclamation me-2"></i>
@@ -108,7 +133,8 @@ const EmployeeProfile = () => {
                 </div>
             )}
 
-            {/* Profile Overview */}
+            {/* PROFILE OVERVIEW */}
+
             <div className="profile-overview-card">
                 <div className="profile-overview-content">
 
@@ -125,6 +151,7 @@ const EmployeeProfile = () => {
                     </div>
 
                     <div className="profile-overview-details">
+
                         <span className="profile-status">
                             <i className="fas fa-circle"></i>
                             {profile.employment_status || "Employee"}
@@ -137,6 +164,7 @@ const EmployeeProfile = () => {
                         </p>
 
                         <div className="profile-overview-meta">
+
                             <span>
                                 <i className="fas fa-building"></i>
                                 {profile.department || "Department not assigned"}
@@ -146,24 +174,29 @@ const EmployeeProfile = () => {
                                 <i className="fas fa-id-card"></i>
                                 {profile.employee_code || "Employee ID not assigned"}
                             </span>
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Personal Information */}
+            {/* PERSONAL INFORMATION */}
+
             <div className="profile-information-card">
+
                 <div className="profile-section-heading">
                     <div>
                         <h5>
                             <i className="fas fa-user me-2"></i>
                             Personal Information
                         </h5>
+
                         <p>Your basic personal details</p>
                     </div>
                 </div>
 
                 <div className="row g-3">
+
                     <div className="col-lg-4 col-md-6">
                         <DetailItem
                             label="Full Name"
@@ -211,22 +244,27 @@ const EmployeeProfile = () => {
                             icon="fa-location-dot"
                         />
                     </div>
+
                 </div>
             </div>
 
-            {/* Employment Information */}
+            {/* EMPLOYMENT INFORMATION */}
+
             <div className="profile-information-card">
+
                 <div className="profile-section-heading">
                     <div>
                         <h5>
                             <i className="fas fa-briefcase me-2"></i>
                             Employment Information
                         </h5>
+
                         <p>Your company and job details</p>
                     </div>
                 </div>
 
                 <div className="row g-3">
+
                     <div className="col-lg-4 col-md-6">
                         <DetailItem
                             label="Employee ID"
@@ -266,22 +304,27 @@ const EmployeeProfile = () => {
                             icon="fa-circle-check"
                         />
                     </div>
+
                 </div>
             </div>
 
-            {/* Emergency Contact */}
+            {/* EMERGENCY CONTACT */}
+
             <div className="profile-information-card">
+
                 <div className="profile-section-heading">
                     <div>
                         <h5>
                             <i className="fas fa-phone-volume me-2"></i>
                             Emergency Contact
                         </h5>
+
                         <p>Emergency contact information</p>
                     </div>
                 </div>
 
                 <div className="row g-3">
+
                     <div className="col-lg-4 col-md-6">
                         <DetailItem
                             label="Contact Person"
@@ -293,7 +336,7 @@ const EmployeeProfile = () => {
                     <div className="col-lg-4 col-md-6">
                         <DetailItem
                             label="Contact Number"
-                            value={profile.emergency_contact_phone}
+                            value={profile.emergency_contact}
                             icon="fa-phone"
                         />
                     </div>
@@ -305,8 +348,11 @@ const EmployeeProfile = () => {
                             icon="fa-people-arrows"
                         />
                     </div>
+
                 </div>
             </div>
+
+            {/* PROFILE NOTE */}
 
             <div className="profile-note">
                 <i className="fas fa-info-circle me-2"></i>

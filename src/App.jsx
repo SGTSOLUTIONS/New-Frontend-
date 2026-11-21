@@ -12,11 +12,15 @@ import Preloader from './components/Preloader';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-// Frontend Pages
+// ==========================================
+// PUBLIC WEBSITE PAGES
+// ==========================================
+
 import Home from './pages/Home';
 import Service from './pages/Service';
 import About from './pages/About';
 import Contact from './pages/Contact';
+
 import './assets/css/responsive.css';
 
 // Service pages
@@ -36,14 +40,36 @@ import RemoteSensingLandUseMapping from './pages/our-core-services/RemoteSensing
 import SRIS from './pages/our-core-services/SRIS';
 import LiDAR3DMapping from './pages/our-core-services/LiDAR3DMapping';
 
-// Auth pages
+// ==========================================
+// AUTH PAGES
+// ==========================================
+
 import Login from './pages/auth/Login';
 
-// Admin Pages
+// ==========================================
+// ADMIN PAGES
+// ==========================================
+
 import AdminDashboard from './pages/Admin/Dashboard';
 import Project from './pages/Admin/project';
 
-// Employee Pages
+// Admin Employee Management
+import EmployeeList from './pages/Admin/employees/EmployeeList';
+import EmployeeCreate from './pages/Admin/employees/EmployeeCreate';
+import EmployeeDetails from './pages/Admin/employees/EmployeeDetails';
+import EmployeeEdit from './pages/Admin/employees/EmployeeEdit';
+
+import AdminAttendance from './pages/Admin/employees/Attendance';
+import AdminLeaveRecords from './pages/Admin/employees/LeaveRecords';
+import AdminHolidays from './pages/Admin/employees/Holidays';
+import AdminDocuments from './pages/Admin/employees/Documents';
+import AdminPayslips from './pages/Admin/employees/Payslips';
+import SalaryDetails from './pages/Admin/employees/SalaryDetails';
+
+// ==========================================
+// EMPLOYEE PAGES
+// ==========================================
+
 import EmployeeDashboard from './pages/employee/Dashboard';
 import EmployeeProfile from './pages/employee/Profile';
 import EmployeeAttendance from './pages/employee/Attendance';
@@ -172,7 +198,7 @@ function App() {
                         </Route>
 
 
-                        {/* Our Core Services */}
+                        {/* OUR CORE SERVICES */}
 
                         <Route path="our-core-services">
 
@@ -223,7 +249,7 @@ function App() {
 
                     {/* ======================================
                         ADMIN ROUTES
-                        leader / admin
+                        Roles: leader, admin
                     ====================================== */}
 
                     <Route
@@ -234,9 +260,98 @@ function App() {
 
                         <Route path="/dashboard" element={<AdminLayout />}>
 
+                            {/* ADMIN DASHBOARD */}
+
                             <Route index element={<AdminDashboard />} />
 
+                            {/* EXISTING PROJECT PAGE */}
+
                             <Route path="project" element={<Project />} />
+
+
+                            {/* ==================================
+                                EMPLOYEE MANAGEMENT
+                            ================================== */}
+
+                            <Route
+                                path="employees"
+                                element={<EmployeeList />}
+                            />
+
+                            <Route
+                                path="employees/create"
+                                element={<EmployeeCreate />}
+                            />
+
+                            <Route
+                                path="employees/:id"
+                                element={<EmployeeDetails />}
+                            />
+
+                            <Route
+                                path="employees/:id/edit"
+                                element={<EmployeeEdit />}
+                            />
+
+
+                            {/* ==================================
+                                ATTENDANCE MANAGEMENT
+                            ================================== */}
+
+                            <Route
+                                path="attendance"
+                                element={<AdminAttendance />}
+                            />
+
+
+                            {/* ==================================
+                                LEAVE MANAGEMENT
+                            ================================== */}
+
+                            <Route
+                                path="leaves"
+                                element={<AdminLeaveRecords />}
+                            />
+
+
+                            {/* ==================================
+                                HOLIDAY MANAGEMENT
+                            ================================== */}
+
+                            <Route
+                                path="holidays"
+                                element={<AdminHolidays />}
+                            />
+
+
+                            {/* ==================================
+                                DOCUMENT MANAGEMENT
+                            ================================== */}
+
+                            <Route
+                                path="documents"
+                                element={<AdminDocuments />}
+                            />
+
+
+                            {/* ==================================
+                                PAYSLIP MANAGEMENT
+                            ================================== */}
+
+                            <Route
+                                path="payslips"
+                                element={<AdminPayslips />}
+                            />
+
+
+                            {/* ==================================
+                                SALARY DETAILS
+                            ================================== */}
+
+                            <Route
+                                path="salary-details"
+                                element={<SalaryDetails />}
+                            />
 
                         </Route>
 
@@ -245,7 +360,7 @@ function App() {
 
                     {/* ======================================
                         EMPLOYEE ROUTES
-                        employee
+                        Role: employee
                     ====================================== */}
 
                     <Route

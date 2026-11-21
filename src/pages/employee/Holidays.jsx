@@ -11,9 +11,41 @@ const EmployeeHolidays = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
-    useEffect(() => {
-        fetchHolidays();
-    }, [selectedYear]);
+    // ==========================================
+    // HOLIDAY TYPE LABELS
+    // ==========================================
+
+    const holidayTypeLabels = {
+        public: "Public Holiday",
+        company: "Company Holiday",
+        optional: "Optional Holiday",
+    };
+
+    // ==========================================
+    // NORMALIZE API RESPONSE
+    // ==========================================
+
+    const normalizeHoliday = (holiday) => {
+        const type = String(
+            holiday.holiday_type || holiday.category || "public"
+        ).toLowerCase();
+
+        return {
+            id: holiday.id,
+            date: holiday.holiday_date || holiday.date || "",
+            name: holiday.holiday_name || holiday.name || "",
+            category:
+                holidayTypeLabels[type] ||
+                holiday.holiday_type ||
+                holiday.category ||
+                "Public Holiday",
+            description: holiday.description || "",
+        };
+    };
+
+    // ==========================================
+    // FETCH EMPLOYEE HOLIDAYS
+    // ==========================================
 
     const fetchHolidays = async () => {
         try {
@@ -26,14 +58,23 @@ const EmployeeHolidays = () => {
                 },
             });
 
-            const data = response.data?.data || response.data;
+            const responseData =
+                response.data?.data || response.data;
 
-            setHolidays(data.holidays || []);
+            const holidayRecords =
+                Array.isArray(responseData)
+                    ? responseData
+                    : responseData?.holidays || [];
+
+            setHolidays(
+                holidayRecords.map(normalizeHoliday)
+            );
 
         } catch (err) {
             console.error("Holiday fetch error:", err);
 
             setHolidays([]);
+
             setError(
                 err.response?.data?.message ||
                 "Unable to load holiday information."
@@ -43,10 +84,22 @@ const EmployeeHolidays = () => {
         }
     };
 
+    useEffect(() => {
+        fetchHolidays();
+    }, [selectedYear]);
+
+    // ==========================================
+    // YEAR FILTER
+    // ==========================================
+
     const years = Array.from(
         { length: 5 },
         (_, index) => currentYear - 2 + index
     );
+
+    // ==========================================
+    // DATE FORMATTING
+    // ==========================================
 
     const formatDate = (date) => {
         if (!date) return "-";
@@ -77,8 +130,14 @@ const EmployeeHolidays = () => {
             });
     };
 
+    // ==========================================
+    // GROUP HOLIDAYS BY MONTH
+    // ==========================================
+
     const groupedHolidays = holidays.reduce((groups, holiday) => {
         const month = getMonth(holiday.date);
+
+        if (!month) return groups;
 
         if (!groups[month]) {
             groups[month] = [];
@@ -89,18 +148,32 @@ const EmployeeHolidays = () => {
         return groups;
     }, {});
 
+    // ==========================================
+    // UPCOMING HOLIDAYS
+    // ==========================================
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
     const upcomingHolidays = holidays.filter((holiday) => {
-        const holidayDate = new Date(`${holiday.date}`.slice(0, 10) + "T00:00:00");
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        if (!holiday.date) return false;
+
+        const holidayDate = new Date(
+            `${holiday.date}`.slice(0, 10) + "T00:00:00"
+        );
 
         return holidayDate >= today;
     });
 
+    // ==========================================
+    // RENDER
+    // ==========================================
+
     return (
         <div className="employee-holidays-page">
 
-            {/* Page Heading */}
+            {/* PAGE HEADING */}
+
             <div className="employee-page-heading">
                 <div>
                     <h4>Holiday Calendar</h4>
@@ -117,7 +190,8 @@ const EmployeeHolidays = () => {
                 </button>
             </div>
 
-            {/* Holiday Summary */}
+            {/* HOLIDAY SUMMARY */}
+
             <div className="row g-3 holiday-summary-row">
 
                 <div className="col-md-4">
@@ -161,10 +235,13 @@ const EmployeeHolidays = () => {
 
             </div>
 
-            {/* Year Filter */}
+            {/* YEAR FILTER */}
+
             <div className="holiday-filter-card">
                 <div>
-                    <label htmlFor="holidayYear">Select Calendar Year</label>
+                    <label htmlFor="holidayYear">
+                        Select Calendar Year
+                    </label>
 
                     <select
                         id="holidayYear"
@@ -186,7 +263,8 @@ const EmployeeHolidays = () => {
                 </div>
             </div>
 
-            {/* Error */}
+            {/* ERROR */}
+
             {error && (
                 <div className="alert alert-warning">
                     <i className="fas fa-circle-exclamation me-2"></i>
@@ -194,7 +272,8 @@ const EmployeeHolidays = () => {
                 </div>
             )}
 
-            {/* Holiday Calendar */}
+            {/* HOLIDAY CALENDAR */}
+
             <div className="holiday-calendar-card">
 
                 <div className="holiday-calendar-heading">
@@ -204,7 +283,9 @@ const EmployeeHolidays = () => {
                             Holiday List
                         </h5>
 
-                        <p>Official company holidays for {selectedYear}</p>
+                        <p>
+                            Official company holidays for {selectedYear}
+                        </p>
                     </div>
 
                     <span className="holiday-count">
@@ -217,80 +298,101 @@ const EmployeeHolidays = () => {
                         <div className="spinner-border text-success"></div>
                         <p>Loading holiday calendar...</p>
                     </div>
+
                 ) : holidays.length > 0 ? (
 
                     <div className="holiday-month-list">
 
-                        {Object.entries(groupedHolidays).map(([month, records]) => (
-                            <div className="holiday-month-section" key={month}>
+                        {Object.entries(groupedHolidays).map(
+                            ([month, records]) => (
+                                <div
+                                    className="holiday-month-section"
+                                    key={month}
+                                >
 
-                                <div className="holiday-month-heading">
-                                    <h6>{month}</h6>
-                                    <span>{records.length} Holidays</span>
-                                </div>
+                                    <div className="holiday-month-heading">
+                                        <h6>{month}</h6>
+                                        <span>
+                                            {records.length} Holidays
+                                        </span>
+                                    </div>
 
-                                <div className="table-responsive">
-                                    <table className="table holiday-table mb-0">
-                                        <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Day</th>
-                                                <th>Holiday Name</th>
-                                                <th>Category</th>
-                                                <th>Description</th>
-                                            </tr>
-                                        </thead>
+                                    <div className="table-responsive">
+                                        <table className="table holiday-table mb-0">
 
-                                        <tbody>
-                                            {records.map((holiday) => (
-                                                <tr key={holiday.id || holiday.date + holiday.name}>
-                                                    <td>
-                                                        <strong>
-                                                            {formatDate(holiday.date)}
-                                                        </strong>
-                                                    </td>
-
-                                                    <td>{getDay(holiday.date)}</td>
-
-                                                    <td className="holiday-name">
-                                                        {holiday.name}
-                                                    </td>
-
-                                                    <td>
-                                                        <span className="holiday-category">
-                                                            {holiday.category || "General"}
-                                                        </span>
-                                                    </td>
-
-                                                    <td>
-                                                        {holiday.description || "-"}
-                                                    </td>
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Day</th>
+                                                    <th>Holiday Name</th>
+                                                    <th>Category</th>
+                                                    <th>Description</th>
                                                 </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
+                                            </thead>
 
-                            </div>
-                        ))}
+                                            <tbody>
+                                                {records.map((holiday) => (
+                                                    <tr key={holiday.id}>
+
+                                                        <td>
+                                                            <strong>
+                                                                {formatDate(holiday.date)}
+                                                            </strong>
+                                                        </td>
+
+                                                        <td>
+                                                            {getDay(holiday.date)}
+                                                        </td>
+
+                                                        <td className="holiday-name">
+                                                            {holiday.name}
+                                                        </td>
+
+                                                        <td>
+                                                            <span className="holiday-category">
+                                                                {holiday.category}
+                                                            </span>
+                                                        </td>
+
+                                                        <td>
+                                                            {holiday.description || "-"}
+                                                        </td>
+
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+
+                                </div>
+                            )
+                        )}
 
                     </div>
 
                 ) : (
+
                     <div className="holiday-empty">
                         <i className="fas fa-calendar-xmark"></i>
                         <h6>No Holidays Found</h6>
-                        <p>No company holidays are available for {selectedYear}.</p>
+                        <p>
+                            No company holidays are available for {selectedYear}.
+                        </p>
                     </div>
+
                 )}
 
             </div>
 
-            {/* Holiday Information */}
+            {/* HOLIDAY INFORMATION */}
+
             <div className="holiday-information-note">
                 <i className="fas fa-circle-info"></i>
+
                 <div>
                     <strong>Important Information</strong>
+
                     <p>
                         This calendar displays holidays published by the
                         company. Please contact HR or the Administrator

@@ -1,0 +1,509 @@
+import React, { useCallback, useEffect, useState } from "react";
+import api from "../../../api/axios";
+
+const Attendance = () => {
+    const [records, setRecords] = useState([]);
+    const [employees, setEmployees] = useState([]);
+    const [statistics, setStatistics] = useState({
+        total: 0,
+        present: 0,
+        absent: 0,
+        half_day: 0,
+        leave: 0,
+        holiday: 0,
+    });
+
+    const [filters, setFilters] = useState({
+        employee_id: "",
+        date: "",
+        status: "",
+    });
+
+    const [page, setPage] = useState(1);
+    const [pagination, setPagination] = useState({
+        current_page: 1,
+        last_page: 1,
+        total: 0,
+        per_page: 15,
+    });
+
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
+
+    // Fetch employee dropdown data.
+    const fetchEmployees = useCallback(async () => {
+        try {
+            const response = await api.get("/admin/employees", {
+                params: { per_page: 100 },
+            });
+
+            setEmployees(response.data?.data?.data || []);
+        } catch (err) {
+            console.error("Employee dropdown error:", err);
+        }
+    }, []);
+
+    // Fetch attendance records.
+    const fetchAttendance = useCallback(async () => {
+        setLoading(true);
+        setError("");
+
+        try {
+            const response = await api.get("/admin/attendance", {
+                params: {
+                    employee_id: filters.employee_id || undefined,
+                    date: filters.date || undefined,
+                    status: filters.status || undefined,
+                    page,
+                },
+            });
+
+            const result = response.data?.data;
+
+            setRecords(result?.data || []);
+
+            setPagination({
+                current_page: result?.current_page || 1,
+                last_page: result?.last_page || 1,
+                total: result?.total || 0,
+                per_page: result?.per_page || 15,
+            });
+
+        } catch (err) {
+            console.error("Attendance error:", err);
+
+            setRecords([]);
+            setError(
+                err.response?.data?.message ||
+                "Unable to load attendance records."
+            );
+        } finally {
+            setLoading(false);
+        }
+    }, [filters, page]);
+
+    // Fetch attendance statistics.
+    const fetchStatistics = useCallback(async () => {
+        try {
+            const response = await api.get(
+                "/admin/attendance/statistics"
+            );
+
+            const data = response.data?.data || {};
+
+            setStatistics({
+                total: data.total || 0,
+                present: data.present || 0,
+                absent: data.absent || 0,
+                half_day: data.half_day || 0,
+                leave: data.leave || 0,
+                holiday: data.holiday || 0,
+            });
+        } catch (err) {
+            console.error("Attendance statistics error:", err);
+        }
+    }, []);
+
+    useEffect(() => {
+        fetchEmployees();
+    }, [fetchEmployees]);
+
+    useEffect(() => {
+        fetchAttendance();
+    }, [fetchAttendance]);
+
+    useEffect(() => {
+        fetchStatistics();
+    }, [fetchStatistics]);
+
+    const handleFilterChange = (e) => {
+        const { name, value } = e.target;
+
+        setFilters((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+
+        setPage(1);
+    };
+
+    const resetFilters = () => {
+        setFilters({
+            employee_id: "",
+            date: "",
+            status: "",
+        });
+
+        setPage(1);
+    };
+
+    const statusBadge = (status) => {
+        const styles = {
+            present: "bg-success-subtle text-success",
+            absent: "bg-danger-subtle text-danger",
+            half_day: "bg-warning-subtle text-warning-emphasis",
+            leave: "bg-primary-subtle text-primary",
+            holiday: "bg-info-subtle text-info-emphasis",
+        };
+
+        return styles[status?.toLowerCase()] || "bg-light text-dark";
+    };
+
+    const formatTime = (time) => {
+        if (!time) return "-";
+
+        if (/^\d{1,2}:\d{2}(:\d{2})?$/.test(time)) {
+            const [hours, minutes] = time.split(":");
+            const date = new Date();
+            date.setHours(Number(hours), Number(minutes), 0);
+
+            return date.toLocaleTimeString("en-IN", {
+                hour: "2-digit",
+                minute: "2-digit",
+            });
+        }
+
+        return time;
+    };
+
+    const formatDate = (date) => {
+        if (!date) return "-";
+
+        const parsed = new Date(`${date}T00:00:00`);
+
+        if (Number.isNaN(parsed.getTime())) return date;
+
+        return parsed.toLocaleDateString("en-IN", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+        });
+    };
+
+    const changePage = (newPage) => {
+        if (
+            newPage >= 1 &&
+            newPage <= pagination.last_page
+        ) {
+            setPage(newPage);
+        }
+    };
+
+    const cards = [
+        {
+            label: "Total Records",
+            value: statistics.total,
+            icon: "bi-calendar-check",
+            color: "primary",
+        },
+        {
+            label: "Present",
+            value: statistics.present,
+            icon: "bi-person-check",
+            color: "success",
+        },
+        {
+            label: "Absent",
+            value: statistics.absent,
+            icon: "bi-person-x",
+            color: "danger",
+        },
+        {
+            label: "Half Day",
+            value: statistics.half_day,
+            icon: "bi-clock-history",
+            color: "warning",
+        },
+        {
+            label: "Leave",
+            value: statistics.leave,
+            icon: "bi-calendar-minus",
+            color: "info",
+        },
+        {
+            label: "Holiday",
+            value: statistics.holiday,
+            icon: "bi-calendar-event",
+            color: "secondary",
+        },
+    ];
+
+    const startRecord = pagination.total
+        ? (pagination.current_page - 1) * pagination.per_page + 1
+        : 0;
+
+    const endRecord = Math.min(
+        pagination.current_page * pagination.per_page,
+        pagination.total
+    );
+
+    return (
+        <div className="container-fluid py-4">
+
+            {/* Header */}
+            <div className="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                <div>
+                    <h3 className="fw-bold mb-1">
+                        Attendance Management
+                    </h3>
+                    <p className="text-muted mb-0">
+                        Monitor and manage employee attendance.
+                    </p>
+                </div>
+
+                <button
+                    className="btn btn-outline-success"
+                    onClick={() => {
+                        fetchAttendance();
+                        fetchStatistics();
+                    }}
+                    disabled={loading}
+                >
+                    <i className="bi bi-arrow-clockwise me-2"></i>
+                    Refresh
+                </button>
+            </div>
+
+            {/* Statistics */}
+            <div className="row g-3 mb-4">
+                {cards.map((card) => (
+                    <div className="col-6 col-md-4 col-xl-2" key={card.label}>
+                        <div className="card border-0 shadow-sm h-100">
+                            <div className="card-body">
+                                <div className={`text-${card.color} mb-2`}>
+                                    <i className={`bi ${card.icon} fs-3`}></i>
+                                </div>
+                                <h4 className="fw-bold mb-1">
+                                    {card.value}
+                                </h4>
+                                <small className="text-muted">
+                                    {card.label}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Filters */}
+            <div className="card border-0 shadow-sm mb-4">
+                <div className="card-body">
+                    <div className="row g-3 align-items-end">
+
+                        <div className="col-md-4">
+                            <label className="form-label fw-semibold">
+                                Employee
+                            </label>
+
+                            <select
+                                name="employee_id"
+                                className="form-select"
+                                value={filters.employee_id}
+                                onChange={handleFilterChange}
+                            >
+                                <option value="">All Employees</option>
+
+                                {employees.map((employee) => (
+                                    <option
+                                        key={employee.id}
+                                        value={employee.id}
+                                    >
+                                        {employee.user?.name || "Employee"}
+                                        {" - "}
+                                        {employee.employee_code}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <div className="col-md-3">
+                            <label className="form-label fw-semibold">
+                                Attendance Date
+                            </label>
+
+                            <input
+                                type="date"
+                                name="date"
+                                className="form-control"
+                                value={filters.date}
+                                onChange={handleFilterChange}
+                            />
+                        </div>
+
+                        <div className="col-md-3">
+                            <label className="form-label fw-semibold">
+                                Status
+                            </label>
+
+                            <select
+                                name="status"
+                                className="form-select"
+                                value={filters.status}
+                                onChange={handleFilterChange}
+                            >
+                                <option value="">All Status</option>
+                                <option value="present">Present</option>
+                                <option value="absent">Absent</option>
+                                <option value="half_day">Half Day</option>
+                                <option value="leave">Leave</option>
+                                <option value="holiday">Holiday</option>
+                            </select>
+                        </div>
+
+                        <div className="col-md-2">
+                            <button
+                                className="btn btn-outline-secondary w-100"
+                                onClick={resetFilters}
+                            >
+                                <i className="bi bi-arrow-counterclockwise me-1"></i>
+                                Reset
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {/* Attendance Table */}
+            <div className="card border-0 shadow-sm">
+
+                <div className="card-header bg-white py-3">
+                    <h5 className="fw-bold mb-0">
+                        Attendance Records
+                    </h5>
+                </div>
+
+                {error && (
+                    <div className="alert alert-danger m-3">
+                        {error}
+                    </div>
+                )}
+
+                <div className="table-responsive">
+                    <table className="table table-hover align-middle mb-0">
+
+                        <thead className="table-light">
+                            <tr>
+                                <th className="ps-3">#</th>
+                                <th>Employee</th>
+                                <th>Employee Code</th>
+                                <th>Date</th>
+                                <th>Check In</th>
+                                <th>Check Out</th>
+                                <th>Status</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {loading ? (
+                                <tr>
+                                    <td colSpan="8" className="text-center py-5">
+                                        <div className="spinner-border text-success"></div>
+                                        <p className="text-muted mt-2 mb-0">
+                                            Loading attendance...
+                                        </p>
+                                    </td>
+                                </tr>
+                            ) : records.length === 0 ? (
+                                <tr>
+                                    <td colSpan="8" className="text-center py-5">
+                                        <i className="bi bi-calendar-x fs-1 text-muted"></i>
+                                        <h6 className="mt-2">
+                                            No Attendance Records
+                                        </h6>
+                                        <p className="text-muted mb-0">
+                                            No records match the selected filters.
+                                        </p>
+                                    </td>
+                                </tr>
+                            ) : (
+                                records.map((record, index) => (
+                                    <tr key={record.id}>
+                                        <td className="ps-3">
+                                            {startRecord + index}
+                                        </td>
+
+                                        <td className="fw-semibold">
+                                            {record.employee?.user?.name ||
+                                                record.employee?.name ||
+                                                "N/A"}
+                                        </td>
+
+                                        <td>
+                                            {record.employee?.employee_code || "N/A"}
+                                        </td>
+
+                                        <td>
+                                            {formatDate(
+                                                record.attendance_date || record.date
+                                            )}
+                                        </td>
+
+                                        <td>
+                                            {formatTime(record.check_in)}
+                                        </td>
+
+                                        <td>
+                                            {formatTime(record.check_out)}
+                                        </td>
+
+                                        <td>
+                                            <span className={`badge rounded-pill px-3 py-2 ${statusBadge(record.status)}`}>
+                                                {record.status?.replace("_", " ") || "N/A"}
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            {record.remarks || "-"}
+                                        </td>
+                                    </tr>
+                                ))
+                            )}
+                        </tbody>
+
+                    </table>
+                </div>
+
+                {/* Pagination */}
+                {!loading && records.length > 0 && (
+                    <div className="card-footer bg-white py-3">
+                        <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
+
+                            <small className="text-muted">
+                                Showing {startRecord} to {endRecord} of {pagination.total} records
+                            </small>
+
+                            <div className="btn-group btn-group-sm">
+                                <button
+                                    className="btn btn-outline-secondary"
+                                    disabled={page <= 1}
+                                    onClick={() => changePage(page - 1)}
+                                >
+                                    Previous
+                                </button>
+
+                                <button className="btn btn-success" disabled>
+                                    {pagination.current_page} / {pagination.last_page}
+                                </button>
+
+                                <button
+                                    className="btn btn-outline-secondary"
+                                    disabled={page >= pagination.last_page}
+                                    onClick={() => changePage(page + 1)}
+                                >
+                                    Next
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                )}
+
+            </div>
+
+        </div>
+    );
+};
+
+export default Attendance;

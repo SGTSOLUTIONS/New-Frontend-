@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -34,7 +33,6 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // Redux state
   const {
     loading,
     error,
@@ -42,14 +40,12 @@ const Login = () => {
     user,
   } = useSelector((state) => state.auth);
 
-  // Form state
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     remember: false,
   });
 
-  // Password visibility
   const [showPassword, setShowPassword] = useState(false);
 
   // ======================================================
@@ -92,12 +88,10 @@ const Login = () => {
 
     await dispatch(
       loginUser({
-        email: formData.email,
+        email: formData.email.trim(),
         password: formData.password,
       })
     );
-
-    // useEffect handles role-based redirection.
   };
 
   // ======================================================
@@ -135,20 +129,19 @@ const Login = () => {
         noValidate
       >
 
-        {/* HEADING */}
-
         <h3>Welcome Back</h3>
 
         <p className="login-subtitle">
           Sign in to access your account
         </p>
 
-        {/* EMAIL */}
+        {/* EMAIL / EMPLOYEE CODE */}
 
         <div className="form-group">
 
           <label htmlFor="email">
-            Email Address <span className="required">*</span>
+            Email Address / Employee Code
+            <span className="required"> *</span>
           </label>
 
           <div className="input-wrapper">
@@ -162,23 +155,23 @@ const Login = () => {
                 stroke="currentColor"
                 strokeWidth="2"
               >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4
-                  c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
-                <polyline points="22,6 12,13 2,6" />
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <path d="M3 9h18" />
+                <path d="M8 4v5" />
               </svg>
             </span>
 
             <input
-              type="email"
+              type="text"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Enter email or employee code"
               value={formData.email}
               onChange={handleChange}
               className={getFieldError("email") ? "error" : ""}
-              autoComplete="email"
+              autoComplete="username"
+              autoCapitalize="none"
+              spellCheck={false}
               required
               aria-invalid={!!getFieldError("email")}
               aria-describedby="email-error"
@@ -239,8 +232,6 @@ const Login = () => {
               aria-describedby="password-error"
             />
 
-            {/* SHOW / HIDE PASSWORD */}
-
             <button
               type="button"
               className="toggle-password"
@@ -249,6 +240,7 @@ const Login = () => {
                 showPassword ? "Hide password" : "Show password"
               }
             >
+
               {showPassword ? (
 
                 <svg
@@ -286,6 +278,7 @@ const Login = () => {
                 </svg>
 
               )}
+
             </button>
 
           </div>
@@ -311,7 +304,6 @@ const Login = () => {
         <div className="form-options">
 
           <label className="checkbox-label">
-
             <input
               type="checkbox"
               name="remember"
@@ -320,7 +312,6 @@ const Login = () => {
             />
 
             <span>Remember me</span>
-
           </label>
 
           <Link
