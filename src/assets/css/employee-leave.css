@@ -1,0 +1,445 @@
+
+/* =====================================================
+   EMPLOYEE LEAVE MANAGEMENT
+===================================================== */
+
+.employee-leave-page {
+    width: 100%;
+    color: #334155;
+}
+
+/* =====================================================
+   LEAVE SUMMARY CARDS
+===================================================== */
+
+.leave-summary-row {
+    margin-bottom: 22px;
+}
+
+.leave-summary-card {
+    min-height: 105px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 19px;
+    background: #ffffff;
+    border: 1px solid #edf0ee;
+    border-radius: 11px;
+    transition: all 0.2s ease;
+}
+
+.leave-summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.leave-summary-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.leave-summary-icon.primary {
+    background: #e0e7ff;
+    color: #4f46e5;
+}
+
+.leave-summary-icon.warning {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.leave-summary-icon.success {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.leave-summary-icon.info {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.leave-summary-card span {
+    display: block;
+    color: #64748b;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.leave-summary-card h3 {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* =====================================================
+   COMMON LEAVE CARDS
+===================================================== */
+
+.leave-application-card,
+.leave-history-card {
+    height: 100%;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #edf0ee;
+    border-radius: 11px;
+}
+
+.leave-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.leave-section-heading h5 {
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.leave-section-heading h5 i {
+    color: #15803d;
+}
+
+.leave-section-heading p {
+    color: #94a3b8;
+    font-size: 11px;
+    margin: 0;
+}
+
+/* =====================================================
+   LEAVE APPLICATION FORM
+===================================================== */
+
+.leave-application-card form label {
+    display: block;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.leave-application-card form label span {
+    color: #dc2626;
+}
+
+.leave-application-card .form-control,
+.leave-application-card .form-select {
+    min-height: 42px;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    color: #334155;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.leave-application-card textarea.form-control {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.leave-application-card .form-control:focus,
+.leave-application-card .form-select:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.leave-application-card .form-control::placeholder {
+    color: #b0bac7;
+    font-size: 11px;
+}
+
+.leave-application-card button[type="submit"] {
+    min-height: 43px;
+    background: #15803d;
+    border-color: #15803d;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.leave-application-card button[type="submit"]:hover {
+    background: #14532d;
+    border-color: #14532d;
+}
+
+.leave-application-card button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* =====================================================
+   REQUESTED LEAVE DAYS PREVIEW
+===================================================== */
+
+.leave-days-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    background: #f0fdf4;
+    border: 1px solid #dcfce7;
+    border-radius: 8px;
+}
+
+.leave-days-preview i {
+    color: #15803d;
+    font-size: 15px;
+}
+
+.leave-days-preview span {
+    flex: 1;
+    color: #64748b;
+    font-size: 11px;
+}
+
+.leave-days-preview strong {
+    color: #15803d;
+    font-size: 13px;
+}
+
+/* =====================================================
+   LEAVE HISTORY
+===================================================== */
+
+.leave-record-count {
+    padding: 6px 10px;
+    background: #f0fdf4;
+    color: #15803d;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.leave-history-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.leave-history-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.leave-history-item:first-child {
+    padding-top: 0;
+}
+
+.leave-history-item:last-child {
+    border-bottom: none;
+}
+
+.leave-history-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ecfdf5;
+    color: #15803d;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.leave-history-details {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.leave-history-details strong {
+    color: #334155;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.leave-history-details span {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.leave-history-details small {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.leave-history-details p {
+    color: #64748b;
+    font-size: 10px;
+    margin: 3px 0 0;
+    overflow-wrap: anywhere;
+}
+
+.leave-history-details .leave-admin-remarks {
+    padding: 8px 10px;
+    background: #f8fafc;
+    border-radius: 6px;
+    color: #475569;
+}
+
+/* =====================================================
+   LEAVE STATUS BADGES
+===================================================== */
+
+.leave-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.leave-status.approved {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+.leave-status.rejected {
+    color: #dc2626;
+    background: #fee2e2;
+}
+
+.leave-status.pending {
+    color: #b45309;
+    background: #fef3c7;
+}
+
+.leave-status.cancelled {
+    color: #64748b;
+    background: #f1f5f9;
+}
+
+.leave-status.default {
+    color: #64748b;
+    background: #f1f5f9;
+}
+
+/* =====================================================
+   LOADING AND EMPTY STATES
+===================================================== */
+
+.leave-loading {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #64748b;
+}
+
+.leave-loading p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.leave-empty {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #94a3b8;
+    padding: 20px;
+}
+
+.leave-empty > i {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.leave-empty h6 {
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.leave-empty p {
+    font-size: 11px;
+    margin: 0;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .leave-application-card,
+    .leave-history-card {
+        padding: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .leave-summary-card {
+        min-height: 95px;
+    }
+
+    .leave-history-item {
+        flex-wrap: wrap;
+    }
+
+    .leave-status {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .leave-summary-card {
+        min-height: 85px;
+        padding: 14px;
+    }
+
+    .leave-summary-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 15px;
+    }
+
+    .leave-summary-card h3 {
+        font-size: 21px;
+    }
+
+    .leave-application-card,
+    .leave-history-card {
+        padding: 15px;
+    }
+
+    .leave-section-heading {
+        align-items: flex-start;
+    }
+
+    .leave-section-heading h5 {
+        font-size: 14px;
+    }
+}

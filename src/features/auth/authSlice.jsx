@@ -2,6 +2,43 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '../../api/axios';
 
 // ======================================================
+// STORAGE HELPERS
+// ======================================================
+
+const getStoredUser = () => {
+    try {
+        const user = sessionStorage.getItem('user');
+        return user ? JSON.parse(user) : null;
+    } catch (error) {
+        sessionStorage.removeItem('user');
+        return null;
+    }
+};
+
+const getStoredToken = () => {
+    return sessionStorage.getItem('token') || null;
+};
+
+const getErrorResponse = (err, fallbackMessage) => {
+    const errorData = err.response?.data;
+
+    if (errorData?.errors) {
+        return errorData.errors;
+    }
+
+    if (errorData?.message) {
+        return {
+            general: errorData.message,
+        };
+    }
+
+    return {
+        general: fallbackMessage,
+    };
+};
+
+
+// ======================================================
 // LOGIN
 // ======================================================
 
@@ -14,24 +51,33 @@ export const loginUser = createAsyncThunk(
                 password,
             });
 
-            return res.data;
+            const { token, user } = res.data || {};
 
-        } catch (err) {
-            const errorData = err.response?.data;
-
-            if (errorData?.errors) {
-                return rejectWithValue(errorData.errors);
-            }
-
-            if (errorData?.message) {
+            if (!token || !user) {
                 return rejectWithValue({
-                    general: errorData.message,
+                    general: 'Invalid login response from server.',
                 });
             }
 
-            return rejectWithValue({
-                general: 'Login failed. Please try again.',
-            });
+            if (!user.role) {
+                return rejectWithValue({
+                    general: 'User role is missing. Contact administrator.',
+                });
+            }
+
+            // Save authentication details
+            sessionStorage.setItem('user', JSON.stringify(user));
+            sessionStorage.setItem('token', token);
+
+            return {
+                token,
+                user,
+            };
+
+        } catch (err) {
+            return rejectWithValue(
+                getErrorResponse(err, 'Login failed. Please try again.')
+            );
         }
     }
 );
@@ -50,21 +96,9 @@ export const forgetPassword = createAsyncThunk(
             return { success: true };
 
         } catch (err) {
-            const errorData = err.response?.data;
-
-            if (errorData?.errors) {
-                return rejectWithValue(errorData.errors);
-            }
-
-            if (errorData?.message) {
-                return rejectWithValue({
-                    general: errorData.message,
-                });
-            }
-
-            return rejectWithValue({
-                general: 'Failed to send reset email.',
-            });
+            return rejectWithValue(
+                getErrorResponse(err, 'Failed to send reset email.')
+            );
         }
     }
 );
@@ -86,21 +120,9 @@ export const submitOtp = createAsyncThunk(
             return { success: true };
 
         } catch (err) {
-            const errorData = err.response?.data;
-
-            if (errorData?.errors) {
-                return rejectWithValue(errorData.errors);
-            }
-
-            if (errorData?.message) {
-                return rejectWithValue({
-                    general: errorData.message,
-                });
-            }
-
-            return rejectWithValue({
-                general: 'Failed to verify OTP.',
-            });
+            return rejectWithValue(
+                getErrorResponse(err, 'Failed to verify OTP.')
+            );
         }
     }
 );
@@ -122,21 +144,9 @@ export const resetPassword = createAsyncThunk(
             return res.data;
 
         } catch (err) {
-            const errorData = err.response?.data;
-
-            if (errorData?.errors) {
-                return rejectWithValue(errorData.errors);
-            }
-
-            if (errorData?.message) {
-                return rejectWithValue({
-                    general: errorData.message,
-                });
-            }
-
-            return rejectWithValue({
-                general: 'Password reset failed.',
-            });
+            return rejectWithValue(
+                getErrorResponse(err, 'Password reset failed.')
+            );
         }
     }
 );
@@ -148,14 +158,14 @@ export const resetPassword = createAsyncThunk(
 
 export const logoutUser = () => async (dispatch) => {
     try {
-        // Revoke current Sanctum token
+        // Revoke the current Sanctum token
         await api.post('/logout');
 
     } catch (error) {
         console.error('Logout API error:', error);
 
     } finally {
-        // Clear local authentication even if API fails
+        // Clear browser authentication
         sessionStorage.removeItem('user');
         sessionStorage.removeItem('token');
 
@@ -168,14 +178,18 @@ export const logoutUser = () => async (dispatch) => {
 // INITIAL AUTH STATE
 // ======================================================
 
-const getStoredUser = () => {
-    try {
-        const user = sessionStorage.getItem('user');
-        return user ? JSON.parse(user) : null;
-    } catch {
-        sessionStorage.removeItem('user');
-        return null;
-    }
+const storedUser = getStoredUser();
+const storedToken = getStoredToken();
+
+const initialState = {
+    user: storedUser,
+    token: storedToken,
+
+    // Both user and token must exist
+    isAuthenticated: Boolean(storedUser && storedToken),
+
+    loading: false,
+    error: {},
 };
 
 
@@ -186,29 +200,20 @@ const getStoredUser = () => {
 const authSlice = createSlice({
     name: 'auth',
 
-    initialState: {
-        user: getStoredUser(),
-        token: sessionStorage.getItem('token') || null,
-        isAuthenticated: !!sessionStorage.getItem('token'),
-        loading: false,
-        error: {},
-    },
+    initialState,
 
     reducers: {
 
-        // Logout state
+        // LOGOUT STATE
         logoutSuccess: (state) => {
             state.user = null;
             state.token = null;
             state.isAuthenticated = false;
             state.loading = false;
             state.error = {};
-
-            sessionStorage.removeItem('user');
-            sessionStorage.removeItem('token');
         },
 
-        // Clear errors
+        // CLEAR ERRORS
         clearErrors: (state) => {
             state.error = {};
         },
@@ -219,9 +224,9 @@ const authSlice = createSlice({
 
         builder
 
-            // ==================================================
+            // ==========================================
             // LOGIN
-            // ==================================================
+            // ==========================================
 
             .addCase(loginUser.pending, (state) => {
                 state.loading = true;
@@ -235,28 +240,23 @@ const authSlice = createSlice({
                 state.token = action.payload.token;
                 state.isAuthenticated = true;
 
-                sessionStorage.setItem(
-                    'user',
-                    JSON.stringify(action.payload.user)
-                );
-
-                sessionStorage.setItem(
-                    'token',
-                    action.payload.token
-                );
+                state.error = {};
             })
 
             .addCase(loginUser.rejected, (state, action) => {
                 state.loading = false;
+
                 state.error = action.payload || {
                     general: 'Login failed.',
                 };
+
+                state.isAuthenticated = false;
             })
 
 
-            // ==================================================
+            // ==========================================
             // FORGOT PASSWORD
-            // ==================================================
+            // ==========================================
 
             .addCase(forgetPassword.pending, (state) => {
                 state.loading = true;
@@ -269,15 +269,16 @@ const authSlice = createSlice({
 
             .addCase(forgetPassword.rejected, (state, action) => {
                 state.loading = false;
+
                 state.error = action.payload || {
                     general: 'Failed to send reset email.',
                 };
             })
 
 
-            // ==================================================
+            // ==========================================
             // SUBMIT OTP
-            // ==================================================
+            // ==========================================
 
             .addCase(submitOtp.pending, (state) => {
                 state.loading = true;
@@ -290,15 +291,16 @@ const authSlice = createSlice({
 
             .addCase(submitOtp.rejected, (state, action) => {
                 state.loading = false;
+
                 state.error = action.payload || {
                     general: 'OTP verification failed.',
                 };
             })
 
 
-            // ==================================================
+            // ==========================================
             // RESET PASSWORD
-            // ==================================================
+            // ==========================================
 
             .addCase(resetPassword.pending, (state) => {
                 state.loading = true;
@@ -311,6 +313,7 @@ const authSlice = createSlice({
 
             .addCase(resetPassword.rejected, (state, action) => {
                 state.loading = false;
+
                 state.error = action.payload || {
                     general: 'Password reset failed.',
                 };

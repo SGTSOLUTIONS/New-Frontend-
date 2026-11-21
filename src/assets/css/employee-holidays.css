@@ -1,0 +1,413 @@
+/* =====================================================
+   EMPLOYEE HOLIDAYS PAGE
+===================================================== */
+
+.employee-holidays-page {
+    width: 100%;
+    color: #334155;
+}
+
+/* =====================================================
+   HOLIDAY SUMMARY CARDS
+===================================================== */
+
+.holiday-summary-row {
+    margin-bottom: 20px;
+}
+
+.holiday-summary-card {
+    min-height: 105px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 19px;
+    background: #ffffff;
+    border: 1px solid #edf0ee;
+    border-radius: 11px;
+    transition: all 0.2s ease;
+}
+
+.holiday-summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.holiday-summary-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.holiday-summary-icon.green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.holiday-summary-icon.blue {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.holiday-summary-icon.orange {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.holiday-summary-card span {
+    display: block;
+    color: #64748b;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.holiday-summary-card h3 {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* =====================================================
+   YEAR FILTER
+===================================================== */
+
+.holiday-filter-card {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border: 1px solid #edf0ee;
+    border-radius: 11px;
+}
+
+.holiday-filter-card > div:first-child {
+    width: 220px;
+}
+
+.holiday-filter-card label {
+    display: block;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.holiday-filter-card .form-select {
+    min-height: 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    color: #334155;
+    font-size: 12px;
+    box-shadow: none;
+}
+
+.holiday-filter-card .form-select:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.holiday-filter-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-left: auto;
+    padding: 11px 14px;
+    background: #f0fdf4;
+    color: #15803d;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* =====================================================
+   HOLIDAY CALENDAR CARD
+===================================================== */
+
+.holiday-calendar-card {
+    background: #ffffff;
+    border: 1px solid #edf0ee;
+    border-radius: 11px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.holiday-calendar-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 22px;
+    border-bottom: 1px solid #edf0ee;
+}
+
+.holiday-calendar-heading h5 {
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.holiday-calendar-heading h5 i {
+    color: #15803d;
+}
+
+.holiday-calendar-heading p {
+    color: #94a3b8;
+    font-size: 11px;
+    margin: 0;
+}
+
+.holiday-count {
+    padding: 7px 11px;
+    background: #f0fdf4;
+    color: #15803d;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* =====================================================
+   MONTH SECTIONS
+===================================================== */
+
+.holiday-month-section {
+    border-bottom: 1px solid #edf0ee;
+}
+
+.holiday-month-section:last-child {
+    border-bottom: none;
+}
+
+.holiday-month-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 22px;
+    background: #f8fafc;
+}
+
+.holiday-month-heading h6 {
+    color: #14532d;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.holiday-month-heading span {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+/* =====================================================
+   HOLIDAY TABLE
+===================================================== */
+
+.holiday-table {
+    min-width: 700px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.holiday-table thead th {
+    padding: 13px 16px;
+    background: #ffffff;
+    color: #64748b;
+    border-bottom: 1px solid #edf0ee;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.holiday-table tbody td {
+    padding: 14px 16px;
+    color: #64748b;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 11px;
+}
+
+.holiday-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.holiday-table tbody tr:hover {
+    background: #fafffb;
+}
+
+.holiday-table tbody td strong {
+    color: #334155;
+    font-weight: 600;
+}
+
+.holiday-table .holiday-name {
+    color: #334155;
+    font-weight: 600;
+}
+
+.holiday-category {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    background: #ecfdf5;
+    color: #15803d;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* =====================================================
+   LOADING AND EMPTY STATES
+===================================================== */
+
+.holiday-loading {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #64748b;
+}
+
+.holiday-loading p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.holiday-empty {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #94a3b8;
+    padding: 25px;
+}
+
+.holiday-empty > i {
+    font-size: 32px;
+    margin-bottom: 13px;
+}
+
+.holiday-empty h6 {
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.holiday-empty p {
+    font-size: 11px;
+    margin: 0;
+}
+
+/* =====================================================
+   INFORMATION NOTE
+===================================================== */
+
+.holiday-information-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    margin-bottom: 15px;
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-radius: 9px;
+}
+
+.holiday-information-note > i {
+    color: #2563eb;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.holiday-information-note strong {
+    display: block;
+    color: #334155;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.holiday-information-note p {
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .holiday-filter-card {
+        flex-wrap: wrap;
+    }
+
+    .holiday-filter-card > div:first-child {
+        width: 100%;
+    }
+
+    .holiday-filter-note {
+        margin-left: 0;
+    }
+
+    .holiday-calendar-heading {
+        padding: 16px;
+    }
+
+    .holiday-month-heading {
+        padding: 13px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .holiday-summary-card {
+        min-height: 90px;
+        padding: 14px;
+    }
+
+    .holiday-summary-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 15px;
+    }
+
+    .holiday-summary-card h3 {
+        font-size: 21px;
+    }
+
+    .holiday-filter-card {
+        padding: 15px;
+    }
+
+    .holiday-filter-note {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .holiday-calendar-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .holiday-information-note {
+        padding: 13px;
+    }
+}
