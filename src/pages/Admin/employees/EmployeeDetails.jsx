@@ -122,12 +122,12 @@ const EmployeeDetails = () => {
 
     const initials = user.name
         ? user.name
-              .split(" ")
-              .filter(Boolean)
-              .slice(0, 2)
-              .map((part) => part[0])
-              .join("")
-              .toUpperCase()
+            .split(" ")
+            .filter(Boolean)
+            .slice(0, 2)
+            .map((part) => part[0])
+            .join("")
+            .toUpperCase()
         : "E";
 
     return (
@@ -168,7 +168,6 @@ const EmployeeDetails = () => {
             {/* Employee Profile Header */}
             <div className="card border-0 shadow-sm mb-4">
                 <div className="card-body p-4">
-
                     <div className="d-flex flex-wrap align-items-center gap-3">
 
                         <div
@@ -204,13 +203,11 @@ const EmployeeDetails = () => {
                         </div>
 
                     </div>
-
                 </div>
             </div>
 
             {/* Personal Information */}
             <div className="card border-0 shadow-sm mb-4">
-
                 <div className="card-header bg-white py-3">
                     <h5 className="fw-bold mb-0">
                         <i className="bi bi-person me-2 text-success"></i>
@@ -220,44 +217,18 @@ const EmployeeDetails = () => {
 
                 <div className="card-body p-4">
                     <div className="row">
-
-                        <InfoItem
-                            label="Full Name"
-                            value={user.name}
-                        />
-
-                        <InfoItem
-                            label="Email Address"
-                            value={user.email}
-                        />
-
-                        <InfoItem
-                            label="Phone Number"
-                            value={user.phone}
-                        />
-
-                        <InfoItem
-                            label="Date of Birth"
-                            value={formatDate(employee.date_of_birth)}
-                        />
-
-                        <InfoItem
-                            label="Gender"
-                            value={employee.gender}
-                        />
-
-                        <InfoItem
-                            label="Address"
-                            value={user.address}
-                        />
-
+                        <InfoItem label="Full Name" value={user.name} />
+                        <InfoItem label="Email Address" value={user.email} />
+                        <InfoItem label="Phone Number" value={user.phone} />
+                        <InfoItem label="Date of Birth" value={formatDate(employee.date_of_birth)} />
+                        <InfoItem label="Gender" value={employee.gender} />
+                        <InfoItem label="Address" value={user.address} />
                     </div>
                 </div>
             </div>
 
             {/* Employment Information */}
             <div className="card border-0 shadow-sm mb-4">
-
                 <div className="card-header bg-white py-3">
                     <h5 className="fw-bold mb-0">
                         <i className="bi bi-briefcase me-2 text-success"></i>
@@ -267,44 +238,18 @@ const EmployeeDetails = () => {
 
                 <div className="card-body p-4">
                     <div className="row">
-
-                        <InfoItem
-                            label="Employee Code"
-                            value={employee.employee_code}
-                        />
-
-                        <InfoItem
-                            label="Department"
-                            value={employee.department}
-                        />
-
-                        <InfoItem
-                            label="Designation"
-                            value={employee.designation}
-                        />
-
-                        <InfoItem
-                            label="Joining Date"
-                            value={formatDate(employee.joining_date)}
-                        />
-
-                        <InfoItem
-                            label="Employment Status"
-                            value={employee.employment_status}
-                        />
-
-                        <InfoItem
-                            label="Employee ID"
-                            value={employee.id}
-                        />
-
+                        <InfoItem label="Employee Code" value={employee.employee_code} />
+                        <InfoItem label="Department" value={employee.department} />
+                        <InfoItem label="Designation" value={employee.designation} />
+                        <InfoItem label="Joining Date" value={formatDate(employee.joining_date)} />
+                        <InfoItem label="Employment Status" value={employee.employment_status} />
+                        <InfoItem label="Employee ID" value={employee.id} />
                     </div>
                 </div>
             </div>
 
-            {/* Emergency Contact */}
+            {/* Emergency Contact Information */}
             <div className="card border-0 shadow-sm mb-4">
-
                 <div className="card-header bg-white py-3">
                     <h5 className="fw-bold mb-0">
                         <i className="bi bi-telephone me-2 text-success"></i>
@@ -325,6 +270,12 @@ const EmployeeDetails = () => {
                             value={employee.emergency_contact}
                         />
 
+                        {/* Newly added relationship field */}
+                        <InfoItem
+                            label="Relationship"
+                            value={employee.emergency_contact_relationship}
+                        />
+
                         <InfoItem
                             label="Permanent Address"
                             value={employee.permanent_address}
@@ -336,7 +287,6 @@ const EmployeeDetails = () => {
 
             {/* Salary History */}
             <div className="card border-0 shadow-sm mb-4">
-
                 <div className="card-header bg-white py-3">
                     <h5 className="fw-bold mb-0">
                         <i className="bi bi-currency-rupee me-2 text-success"></i>
@@ -345,7 +295,6 @@ const EmployeeDetails = () => {
                 </div>
 
                 <div className="card-body p-0">
-
                     {salaries.length === 0 ? (
                         <div className="text-center py-5">
                             <i className="bi bi-wallet2 fs-1 text-muted"></i>
@@ -359,7 +308,6 @@ const EmployeeDetails = () => {
                     ) : (
                         <div className="table-responsive">
                             <table className="table table-hover align-middle mb-0">
-
                                 <thead className="table-light">
                                     <tr>
                                         <th className="ps-3">#</th>
@@ -402,11 +350,9 @@ const EmployeeDetails = () => {
                                         </tr>
                                     ))}
                                 </tbody>
-
                             </table>
                         </div>
                     )}
-
                 </div>
             </div>
 

@@ -20,6 +20,7 @@ const EmployeeEdit = () => {
         employment_status: "active",
         emergency_contact: "",
         emergency_contact_name: "",
+        emergency_contact_relationship: "",
         permanent_address: "",
     });
 
@@ -29,14 +30,16 @@ const EmployeeEdit = () => {
     const [message, setMessage] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
 
-    // Fetch employee details
+    // ======================================================
+    // FETCH EMPLOYEE DETAILS
+    // ======================================================
+
     const fetchEmployee = useCallback(async () => {
         setLoading(true);
         setErrorMessage("");
 
         try {
             const response = await api.get(`/admin/employees/${id}`);
-
             const employee = response.data?.data;
 
             if (!employee) {
@@ -50,19 +53,28 @@ const EmployeeEdit = () => {
                 address: employee.user?.address || "",
 
                 employee_code: employee.employee_code || "",
+
                 date_of_birth: employee.date_of_birth
                     ? employee.date_of_birth.substring(0, 10)
                     : "",
+
                 gender: employee.gender || "",
                 department: employee.department || "",
                 designation: employee.designation || "",
+
                 joining_date: employee.joining_date
                     ? employee.joining_date.substring(0, 10)
                     : "",
+
                 employment_status: employee.employment_status || "active",
 
                 emergency_contact: employee.emergency_contact || "",
                 emergency_contact_name: employee.emergency_contact_name || "",
+
+                // NEW: Emergency contact relationship
+                emergency_contact_relationship:
+                    employee.emergency_contact_relationship || "",
+
                 permanent_address: employee.permanent_address || "",
             });
 
@@ -84,7 +96,10 @@ const EmployeeEdit = () => {
         fetchEmployee();
     }, [fetchEmployee]);
 
-    // Handle input changes
+    // ======================================================
+    // HANDLE INPUT CHANGES
+    // ======================================================
+
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -102,7 +117,10 @@ const EmployeeEdit = () => {
         setErrorMessage("");
     };
 
-    // Submit employee update
+    // ======================================================
+    // SUBMIT EMPLOYEE UPDATE
+    // ======================================================
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -122,6 +140,9 @@ const EmployeeEdit = () => {
                     response.data.message ||
                     "Employee updated successfully."
                 );
+
+                // Refresh form with saved information
+                await fetchEmployee();
             }
 
         } catch (error) {
@@ -141,12 +162,21 @@ const EmployeeEdit = () => {
         }
     };
 
+    // ======================================================
+    // FIELD ERROR
+    // ======================================================
+
     const fieldError = (field) => errors[field]?.[0] || "";
+
+    // ======================================================
+    // LOADING
+    // ======================================================
 
     if (loading) {
         return (
             <div className="container-fluid py-5 text-center">
                 <div className="spinner-border text-success"></div>
+
                 <p className="text-muted mt-3">
                     Loading employee information...
                 </p>
@@ -154,9 +184,14 @@ const EmployeeEdit = () => {
         );
     }
 
+    // ======================================================
+    // FETCH ERROR
+    // ======================================================
+
     if (errorMessage && !form.name && !form.email) {
         return (
             <div className="container-fluid py-4">
+
                 <div className="alert alert-danger">
                     {errorMessage}
                 </div>
@@ -167,14 +202,20 @@ const EmployeeEdit = () => {
                 >
                     Back to Employees
                 </button>
+
             </div>
         );
     }
 
+    // ======================================================
+    // UI
+    // ======================================================
+
     return (
         <div className="container-fluid py-4">
 
-            {/* Header */}
+            {/* HEADER */}
+
             <div className="d-flex flex-wrap justify-content-between align-items-center mb-4">
 
                 <div>
@@ -198,7 +239,8 @@ const EmployeeEdit = () => {
 
             </div>
 
-            {/* Success Message */}
+            {/* SUCCESS MESSAGE */}
+
             {message && (
                 <div className="alert alert-success alert-dismissible fade show">
                     <i className="bi bi-check-circle me-2"></i>
@@ -212,7 +254,8 @@ const EmployeeEdit = () => {
                 </div>
             )}
 
-            {/* Error Message */}
+            {/* ERROR MESSAGE */}
+
             {errorMessage && (
                 <div className="alert alert-danger">
                     {errorMessage}
@@ -221,7 +264,10 @@ const EmployeeEdit = () => {
 
             <form onSubmit={handleSubmit}>
 
-                {/* Personal Information */}
+                {/* ==========================================
+                    PERSONAL INFORMATION
+                ========================================== */}
+
                 <div className="card border-0 shadow-sm mb-4">
 
                     <div className="card-header bg-white py-3">
@@ -232,6 +278,7 @@ const EmployeeEdit = () => {
                     </div>
 
                     <div className="card-body p-4">
+
                         <div className="row g-3">
 
                             <div className="col-md-6">
@@ -340,7 +387,10 @@ const EmployeeEdit = () => {
                     </div>
                 </div>
 
-                {/* Employment Information */}
+                {/* ==========================================
+                    EMPLOYMENT INFORMATION
+                ========================================== */}
+
                 <div className="card border-0 shadow-sm mb-4">
 
                     <div className="card-header bg-white py-3">
@@ -351,6 +401,7 @@ const EmployeeEdit = () => {
                     </div>
 
                     <div className="card-body p-4">
+
                         <div className="row g-3">
 
                             <div className="col-md-4">
@@ -438,7 +489,10 @@ const EmployeeEdit = () => {
                     </div>
                 </div>
 
-                {/* Emergency Contact */}
+                {/* ==========================================
+                    EMERGENCY CONTACT
+                ========================================== */}
+
                 <div className="card border-0 shadow-sm mb-4">
 
                     <div className="card-header bg-white py-3">
@@ -449,9 +503,12 @@ const EmployeeEdit = () => {
                     </div>
 
                     <div className="card-body p-4">
+
                         <div className="row g-3">
 
-                            <div className="col-md-6">
+                            {/* CONTACT PERSON */}
+
+                            <div className="col-md-4">
                                 <label className="form-label">
                                     Contact Person
                                 </label>
@@ -459,13 +516,20 @@ const EmployeeEdit = () => {
                                 <input
                                     type="text"
                                     name="emergency_contact_name"
-                                    className="form-control"
+                                    className={`form-control ${fieldError("emergency_contact_name") ? "is-invalid" : ""}`}
                                     value={form.emergency_contact_name}
                                     onChange={handleChange}
+                                    placeholder="Contact person's name"
                                 />
+
+                                <div className="invalid-feedback">
+                                    {fieldError("emergency_contact_name")}
+                                </div>
                             </div>
 
-                            <div className="col-md-6">
+                            {/* CONTACT NUMBER */}
+
+                            <div className="col-md-4">
                                 <label className="form-label">
                                     Contact Number
                                 </label>
@@ -473,11 +537,54 @@ const EmployeeEdit = () => {
                                 <input
                                     type="tel"
                                     name="emergency_contact"
-                                    className="form-control"
+                                    className={`form-control ${fieldError("emergency_contact") ? "is-invalid" : ""}`}
                                     value={form.emergency_contact}
                                     onChange={handleChange}
+                                    placeholder="Emergency phone number"
                                 />
+
+                                <div className="invalid-feedback">
+                                    {fieldError("emergency_contact")}
+                                </div>
                             </div>
+
+                            {/* NEW: RELATIONSHIP */}
+
+                            <div className="col-md-4">
+                                <label className="form-label">
+                                    Relationship
+                                </label>
+
+                                <select
+                                    name="emergency_contact_relationship"
+                                    className={`form-select ${fieldError("emergency_contact_relationship") ? "is-invalid" : ""}`}
+                                    value={form.emergency_contact_relationship}
+                                    onChange={handleChange}
+                                >
+                                    <option value="">
+                                        Select Relationship
+                                    </option>
+
+                                    <option value="Father">Father</option>
+                                    <option value="Mother">Mother</option>
+                                    <option value="Spouse">Spouse</option>
+                                    <option value="Husband">Husband</option>
+                                    <option value="Wife">Wife</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Sister">Sister</option>
+                                    <option value="Son">Son</option>
+                                    <option value="Daughter">Daughter</option>
+                                    <option value="Guardian">Guardian</option>
+                                    <option value="Friend">Friend</option>
+                                    <option value="Other">Other</option>
+                                </select>
+
+                                <div className="invalid-feedback">
+                                    {fieldError("emergency_contact_relationship")}
+                                </div>
+                            </div>
+
+                            {/* PERMANENT ADDRESS */}
 
                             <div className="col-12">
                                 <label className="form-label">
@@ -487,17 +594,25 @@ const EmployeeEdit = () => {
                                 <textarea
                                     name="permanent_address"
                                     rows="3"
-                                    className="form-control"
+                                    className={`form-control ${fieldError("permanent_address") ? "is-invalid" : ""}`}
                                     value={form.permanent_address}
                                     onChange={handleChange}
+                                    placeholder="Enter permanent address"
                                 ></textarea>
+
+                                <div className="invalid-feedback">
+                                    {fieldError("permanent_address")}
+                                </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
 
-                {/* Actions */}
+                {/* ==========================================
+                    ACTIONS
+                ========================================== */}
+
                 <div className="d-flex justify-content-end gap-2 mb-4">
 
                     <button

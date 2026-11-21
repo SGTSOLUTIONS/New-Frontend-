@@ -17,6 +17,7 @@ const initialForm = {
     joining_date: "",
     emergency_contact: "",
     emergency_contact_name: "",
+    emergency_contact_relationship: "",
     permanent_address: "",
 };
 
@@ -27,6 +28,10 @@ const EmployeeCreate = () => {
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({});
     const [message, setMessage] = useState("");
+
+    // ======================================================
+    // HANDLE INPUT CHANGE
+    // ======================================================
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -44,12 +49,27 @@ const EmployeeCreate = () => {
         setMessage("");
     };
 
+    // ======================================================
+    // SUBMIT EMPLOYEE
+    // ======================================================
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         setLoading(true);
         setErrors({});
         setMessage("");
+
+        if (form.password !== form.password_confirmation) {
+            setErrors({
+                password_confirmation: [
+                    "Passwords do not match.",
+                ],
+            });
+
+            setLoading(false);
+            return;
+        }
 
         try {
             const response = await api.post(
@@ -67,6 +87,8 @@ const EmployeeCreate = () => {
             }
 
         } catch (error) {
+            console.error("Employee creation error:", error);
+
             if (error.response?.status === 422) {
                 setErrors(error.response.data.errors || {});
             }
@@ -81,14 +103,23 @@ const EmployeeCreate = () => {
         }
     };
 
+    // ======================================================
+    // FIELD ERROR
+    // ======================================================
+
     const fieldError = (field) => {
         return errors[field]?.[0] || "";
     };
 
+    // ======================================================
+    // UI
+    // ======================================================
+
     return (
         <div className="container-fluid py-4">
 
-            {/* Page Header */}
+            {/* PAGE HEADER */}
+
             <div className="d-flex flex-wrap justify-content-between align-items-center mb-4">
 
                 <div>
@@ -112,7 +143,8 @@ const EmployeeCreate = () => {
 
             </div>
 
-            {/* Response Message */}
+            {/* RESPONSE MESSAGE */}
+
             {message && (
                 <div
                     className={`alert ${
@@ -134,7 +166,10 @@ const EmployeeCreate = () => {
 
             <form onSubmit={handleSubmit}>
 
-                {/* Account Information */}
+                {/* ==========================================
+                    LOGIN ACCOUNT INFORMATION
+                ========================================== */}
+
                 <div className="card border-0 shadow-sm mb-4">
 
                     <div className="card-header bg-white py-3">
@@ -147,6 +182,8 @@ const EmployeeCreate = () => {
                     <div className="card-body p-4">
 
                         <div className="row g-3">
+
+                            {/* Employee Name */}
 
                             <div className="col-md-6">
                                 <label className="form-label">
@@ -168,6 +205,8 @@ const EmployeeCreate = () => {
                                 </div>
                             </div>
 
+                            {/* Email */}
+
                             <div className="col-md-6">
                                 <label className="form-label">
                                     Email Address <span className="text-danger">*</span>
@@ -187,6 +226,8 @@ const EmployeeCreate = () => {
                                     {fieldError("email")}
                                 </div>
                             </div>
+
+                            {/* Password */}
 
                             <div className="col-md-6">
                                 <label className="form-label">
@@ -209,6 +250,8 @@ const EmployeeCreate = () => {
                                 </div>
                             </div>
 
+                            {/* Confirm Password */}
+
                             <div className="col-md-6">
                                 <label className="form-label">
                                     Confirm Password <span className="text-danger">*</span>
@@ -217,7 +260,7 @@ const EmployeeCreate = () => {
                                 <input
                                     type="password"
                                     name="password_confirmation"
-                                    className="form-control"
+                                    className={`form-control ${fieldError("password_confirmation") ? "is-invalid" : ""}`}
                                     value={form.password_confirmation}
                                     onChange={handleChange}
                                     placeholder="Re-enter password"
@@ -225,13 +268,16 @@ const EmployeeCreate = () => {
                                     required
                                 />
 
-                                {form.password_confirmation &&
-                                    form.password !== form.password_confirmation && (
-                                        <small className="text-danger">
-                                            Passwords do not match.
-                                        </small>
-                                    )}
+                                <div className="invalid-feedback">
+                                    {fieldError("password_confirmation") ||
+                                        (form.password_confirmation &&
+                                        form.password !== form.password_confirmation
+                                            ? "Passwords do not match."
+                                            : "")}
+                                </div>
                             </div>
+
+                            {/* Phone */}
 
                             <div className="col-md-6">
                                 <label className="form-label">
@@ -251,6 +297,8 @@ const EmployeeCreate = () => {
                                     {fieldError("phone")}
                                 </div>
                             </div>
+
+                            {/* Address */}
 
                             <div className="col-md-6">
                                 <label className="form-label">
@@ -272,7 +320,10 @@ const EmployeeCreate = () => {
                     </div>
                 </div>
 
-                {/* Employee Information */}
+                {/* ==========================================
+                    EMPLOYEE INFORMATION
+                ========================================== */}
+
                 <div className="card border-0 shadow-sm mb-4">
 
                     <div className="card-header bg-white py-3">
@@ -285,6 +336,8 @@ const EmployeeCreate = () => {
                     <div className="card-body p-4">
 
                         <div className="row g-3">
+
+                            {/* Employee Code */}
 
                             <div className="col-md-4">
                                 <label className="form-label">
@@ -306,6 +359,8 @@ const EmployeeCreate = () => {
                                 </div>
                             </div>
 
+                            {/* Date of Birth */}
+
                             <div className="col-md-4">
                                 <label className="form-label">
                                     Date of Birth
@@ -323,6 +378,8 @@ const EmployeeCreate = () => {
                                     {fieldError("date_of_birth")}
                                 </div>
                             </div>
+
+                            {/* Gender */}
 
                             <div className="col-md-4">
                                 <label className="form-label">
@@ -342,6 +399,8 @@ const EmployeeCreate = () => {
                                 </select>
                             </div>
 
+                            {/* Department */}
+
                             <div className="col-md-4">
                                 <label className="form-label">
                                     Department
@@ -357,6 +416,8 @@ const EmployeeCreate = () => {
                                 />
                             </div>
 
+                            {/* Designation */}
+
                             <div className="col-md-4">
                                 <label className="form-label">
                                     Designation
@@ -371,6 +432,8 @@ const EmployeeCreate = () => {
                                     placeholder="Enter designation"
                                 />
                             </div>
+
+                            {/* Joining Date */}
 
                             <div className="col-md-4">
                                 <label className="form-label">
@@ -395,7 +458,10 @@ const EmployeeCreate = () => {
                     </div>
                 </div>
 
-                {/* Emergency Information */}
+                {/* ==========================================
+                    EMERGENCY CONTACT INFORMATION
+                ========================================== */}
+
                 <div className="card border-0 shadow-sm mb-4">
 
                     <div className="card-header bg-white py-3">
@@ -409,7 +475,9 @@ const EmployeeCreate = () => {
 
                         <div className="row g-3">
 
-                            <div className="col-md-6">
+                            {/* Emergency Contact Name */}
+
+                            <div className="col-md-4">
                                 <label className="form-label">
                                     Emergency Contact Name
                                 </label>
@@ -417,14 +485,20 @@ const EmployeeCreate = () => {
                                 <input
                                     type="text"
                                     name="emergency_contact_name"
-                                    className="form-control"
+                                    className={`form-control ${fieldError("emergency_contact_name") ? "is-invalid" : ""}`}
                                     value={form.emergency_contact_name}
                                     onChange={handleChange}
                                     placeholder="Contact person's name"
                                 />
+
+                                <div className="invalid-feedback">
+                                    {fieldError("emergency_contact_name")}
+                                </div>
                             </div>
 
-                            <div className="col-md-6">
+                            {/* Emergency Contact Number */}
+
+                            <div className="col-md-4">
                                 <label className="form-label">
                                     Emergency Contact Number
                                 </label>
@@ -432,12 +506,54 @@ const EmployeeCreate = () => {
                                 <input
                                     type="tel"
                                     name="emergency_contact"
-                                    className="form-control"
+                                    className={`form-control ${fieldError("emergency_contact") ? "is-invalid" : ""}`}
                                     value={form.emergency_contact}
                                     onChange={handleChange}
                                     placeholder="Emergency phone number"
                                 />
+
+                                <div className="invalid-feedback">
+                                    {fieldError("emergency_contact")}
+                                </div>
                             </div>
+
+                            {/* NEW: Relationship */}
+
+                            <div className="col-md-4">
+                                <label className="form-label">
+                                    Relationship
+                                </label>
+
+                                <select
+                                    name="emergency_contact_relationship"
+                                    className={`form-select ${fieldError("emergency_contact_relationship") ? "is-invalid" : ""}`}
+                                    value={form.emergency_contact_relationship}
+                                    onChange={handleChange}
+                                >
+                                    <option value="">
+                                        Select Relationship
+                                    </option>
+
+                                    <option value="Father">Father</option>
+                                    <option value="Mother">Mother</option>
+                                    <option value="Spouse">Spouse</option>
+                                    <option value="Husband">Husband</option>
+                                    <option value="Wife">Wife</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Sister">Sister</option>
+                                    <option value="Son">Son</option>
+                                    <option value="Daughter">Daughter</option>
+                                    <option value="Guardian">Guardian</option>
+                                    <option value="Friend">Friend</option>
+                                    <option value="Other">Other</option>
+                                </select>
+
+                                <div className="invalid-feedback">
+                                    {fieldError("emergency_contact_relationship")}
+                                </div>
+                            </div>
+
+                            {/* Permanent Address */}
 
                             <div className="col-12">
                                 <label className="form-label">
@@ -446,12 +562,16 @@ const EmployeeCreate = () => {
 
                                 <textarea
                                     name="permanent_address"
-                                    className="form-control"
+                                    className={`form-control ${fieldError("permanent_address") ? "is-invalid" : ""}`}
                                     rows="3"
                                     value={form.permanent_address}
                                     onChange={handleChange}
                                     placeholder="Enter permanent address"
                                 ></textarea>
+
+                                <div className="invalid-feedback">
+                                    {fieldError("permanent_address")}
+                                </div>
                             </div>
 
                         </div>
@@ -459,13 +579,20 @@ const EmployeeCreate = () => {
                     </div>
                 </div>
 
-                {/* Submit Buttons */}
+                {/* ==========================================
+                    SUBMIT BUTTONS
+                ========================================== */}
+
                 <div className="d-flex justify-content-end gap-2 mb-4">
 
                     <button
                         type="button"
                         className="btn btn-light border"
-                        onClick={() => setForm(initialForm)}
+                        onClick={() => {
+                            setForm(initialForm);
+                            setErrors({});
+                            setMessage("");
+                        }}
                         disabled={loading}
                     >
                         Reset
