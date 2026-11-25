@@ -297,10 +297,10 @@ function Header() {
                                        
                                     </ul>
  <div className="accessNav">
-                                          
                                             <Link className="berpo_btn" to="/login" onClick={closeMenu}>
-                                              
-                                                <span className="bp-text">login</span>
+                                                <span className="bp-text">
+                                                    <i className="fas fa-lock"></i> PORTAL ACCESS
+                                                </span>
                                             </Link>
                                         </div>
                                 </nav>

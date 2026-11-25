@@ -1115,6 +1115,30 @@ const responsiveStyles = `
       font-size: 9px !important;
     }
   }
+
+  /* HERO CAROUSEL: smooth cross-fade without exposing a white frame */
+  .slider_01,
+  .slider_01 #heroCarousel,
+  .slider_01 .carousel-inner {
+    background-color: #111 !important;
+  }
+
+  .slider_01 .carousel-item,
+  .slider_01 .carousel-item .hero-slide {
+    background-color: #111;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .slider_01 .carousel-fade .carousel-item {
+    transform: none !important;
+  }
+
+  .slider_01 .carousel-fade .carousel-item,
+  .slider_01 .carousel-fade .active.carousel-item-start,
+  .slider_01 .carousel-fade .active.carousel-item-end {
+    transition: opacity 0.8s ease-in-out !important;
+  }
 `;
 
 const Home = () => {
@@ -1143,11 +1167,15 @@ const Home = () => {
 
       <style>{responsiveStyles}</style>
 
+      {/* Preload both hero images so the next slide is ready before transition. */}
+      <link rel="preload" as="image" href={slider1} />
+      <link rel="preload" as="image" href={slider2} />
+
       {/* Begin:: Hero Slider */}
       <section className="slider_01">
         <div
           id="heroCarousel"
-          className="carousel slide"
+          className="carousel slide carousel-fade"
           data-bs-ride="carousel"
           data-bs-interval="5000"
           data-bs-pause="false"
