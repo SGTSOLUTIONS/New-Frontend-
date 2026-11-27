@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import api from "../../api/axios";
 
 import "../../assets/css/employee-leave.css";
@@ -8,16 +8,17 @@ const EmployeeLeave = () => {
 
     const [summary, setSummary] = useState({
         total: 0,
-        used: 0,
-        remaining: 0,
         pending: 0,
+        approved: 0,
+        rejected: 0,
+        approved_days: 0,
     });
 
     const [form, setForm] = useState({
         leave_type: "",
         start_date: "",
         end_date: "",
-        reason: "",
+        remarks: "",
     });
 
     const [loading, setLoading] = useState(true);
@@ -25,28 +26,23 @@ const EmployeeLeave = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
-    useEffect(() => {
-        fetchLeaves();
-    }, []);
-
-    const fetchLeaves = async () => {
+    const fetchLeaves = useCallback(async () => {
         try {
             setLoading(true);
             setError("");
 
             const response = await api.get("/employee/leaves");
-
             const data = response.data?.data || response.data;
 
             setLeaveApplications(data.leaves || []);
 
             setSummary({
-                total: data.summary?.total || 0,
-                used: data.summary?.used || 0,
-                remaining: data.summary?.remaining || 0,
-                pending: data.summary?.pending || 0,
+                total: Number(data.summary?.total || 0),
+                pending: Number(data.summary?.pending || 0),
+                approved: Number(data.summary?.approved || 0),
+                rejected: Number(data.summary?.rejected || 0),
+                approved_days: Number(data.summary?.approved_days || 0),
             });
-
         } catch (err) {
             console.error("Leave fetch error:", err);
 
@@ -57,7 +53,11 @@ const EmployeeLeave = () => {
         } finally {
             setLoading(false);
         }
-    };
+    }, []);
+
+    useEffect(() => {
+        fetchLeaves();
+    }, [fetchLeaves]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -78,7 +78,9 @@ const EmployeeLeave = () => {
 
         if (difference < 0) return 0;
 
-        return Math.floor(difference / (1000 * 60 * 60 * 24)) + 1;
+        return Math.floor(
+            difference / (1000 * 60 * 60 * 24)
+        ) + 1;
     };
 
     const handleSubmit = async (e) => {
@@ -87,7 +89,12 @@ const EmployeeLeave = () => {
         setError("");
         setSuccess("");
 
-        if (!form.leave_type || !form.start_date || !form.end_date || !form.reason.trim()) {
+        if (
+            !form.leave_type ||
+            !form.start_date ||
+            !form.end_date ||
+            !form.remarks.trim()
+        ) {
             setError("Please complete all leave application fields.");
             return;
         }
@@ -104,20 +111,21 @@ const EmployeeLeave = () => {
                 leave_type: form.leave_type,
                 start_date: form.start_date,
                 end_date: form.end_date,
-                reason: form.reason.trim(),
+                remarks: form.remarks.trim(),
             });
 
-            setSuccess("Your leave application has been submitted successfully.");
+            setSuccess(
+                "Your leave application has been submitted successfully."
+            );
 
             setForm({
                 leave_type: "",
                 start_date: "",
                 end_date: "",
-                reason: "",
+                remarks: "",
             });
 
             await fetchLeaves();
-
         } catch (err) {
             console.error("Leave submission error:", err);
 
@@ -141,7 +149,7 @@ const EmployeeLeave = () => {
     const formatDate = (date) => {
         if (!date) return "-";
 
-        return new Date(`${date}`.slice(0, 10) + "T00:00:00")
+        return new Date(`${String(date).slice(0, 10)}T00:00:00`)
             .toLocaleDateString("en-IN", {
                 day: "2-digit",
                 month: "short",
@@ -150,9 +158,7 @@ const EmployeeLeave = () => {
     };
 
     const getStatusClass = (status) => {
-        const value = String(status || "").toLowerCase();
-
-        switch (value) {
+        switch (String(status || "").toLowerCase()) {
             case "approved":
                 return "approved";
             case "rejected":
@@ -166,23 +172,28 @@ const EmployeeLeave = () => {
         }
     };
 
+    const getCategoryClass = (category) => {
+        switch (String(category || "").toLowerCase()) {
+            case "paid":
+                return "text-success";
+            case "unpaid":
+                return "text-danger";
+            default:
+                return "text-muted";
+        }
+    };
+
     const leaveCards = [
         {
-            title: "Total Leave",
+            title: "Total Applications",
             value: summary.total,
             icon: "fa-calendar-days",
             color: "primary",
         },
         {
-            title: "Used Leave",
-            value: summary.used,
+            title: "Approved Leave Days",
+            value: summary.approved_days,
             icon: "fa-calendar-check",
-            color: "warning",
-        },
-        {
-            title: "Available Balance",
-            value: summary.remaining,
-            icon: "fa-calendar-plus",
             color: "success",
         },
         {
@@ -190,6 +201,12 @@ const EmployeeLeave = () => {
             value: summary.pending,
             icon: "fa-hourglass-half",
             color: "info",
+        },
+        {
+            title: "Rejected Requests",
+            value: summary.rejected,
+            icon: "fa-calendar-xmark",
+            color: "warning",
         },
     ];
 
@@ -251,6 +268,7 @@ const EmployeeLeave = () => {
                 {/* Apply Leave Form */}
                 <div className="col-lg-5">
                     <div className="leave-application-card">
+
                         <div className="leave-section-heading">
                             <div>
                                 <h5>
@@ -296,7 +314,7 @@ const EmployeeLeave = () => {
                                         name="start_date"
                                         className="form-control"
                                         value={form.start_date}
-                                        min={new Date().toISOString().split("T")[0]}
+                                        min={new Date().toLocaleDateString("en-CA")}
                                         onChange={handleChange}
                                         required
                                     />
@@ -313,7 +331,10 @@ const EmployeeLeave = () => {
                                         name="end_date"
                                         className="form-control"
                                         value={form.end_date}
-                                        min={form.start_date || new Date().toISOString().split("T")[0]}
+                                        min={
+                                            form.start_date ||
+                                            new Date().toLocaleDateString("en-CA")
+                                        }
                                         onChange={handleChange}
                                         required
                                     />
@@ -324,25 +345,32 @@ const EmployeeLeave = () => {
                                 <i className="fas fa-calendar-check"></i>
                                 <span>Requested Duration</span>
                                 <strong>
-                                    {calculateDays()} {calculateDays() === 1 ? "Day" : "Days"}
+                                    {calculateDays()}{" "}
+                                    {calculateDays() === 1 ? "Day" : "Days"}
                                 </strong>
                             </div>
 
                             <div className="mb-3">
-                                <label htmlFor="reason">
+                                <label htmlFor="remarks">
                                     Reason for Leave <span>*</span>
                                 </label>
 
                                 <textarea
-                                    id="reason"
-                                    name="reason"
+                                    id="remarks"
+                                    name="remarks"
                                     className="form-control"
                                     rows="4"
                                     placeholder="Enter your reason for leave..."
-                                    value={form.reason}
+                                    value={form.remarks}
                                     onChange={handleChange}
                                     required
                                 ></textarea>
+                            </div>
+
+                            <div className="alert alert-light border small">
+                                <i className="fas fa-info-circle me-2"></i>
+                                Leave category (Paid or Unpaid) will be
+                                assigned by the Admin.
                             </div>
 
                             <button
@@ -370,6 +398,7 @@ const EmployeeLeave = () => {
                 {/* Leave History */}
                 <div className="col-lg-7">
                     <div className="leave-history-card">
+
                         <div className="leave-section-heading">
                             <div>
                                 <h5>
@@ -391,50 +420,72 @@ const EmployeeLeave = () => {
                             </div>
                         ) : leaveApplications.length > 0 ? (
                             <div className="leave-history-list">
-                                {leaveApplications.map((leave, index) => (
-                                    <div
-                                        className="leave-history-item"
-                                        key={leave.id || index}
-                                    >
-                                        <div className="leave-history-icon">
-                                            <i className="fas fa-calendar-day"></i>
-                                        </div>
 
-                                        <div className="leave-history-details">
-                                            <strong>{leave.leave_type}</strong>
+                                {leaveApplications.map((leave, index) => {
+                                    const category = leave.leave_category;
 
-                                            <span>
-                                                {formatDate(leave.start_date)}
-                                                {" - "}
-                                                {formatDate(leave.end_date)}
+                                    return (
+                                        <div
+                                            className="leave-history-item"
+                                            key={leave.id || index}
+                                        >
+                                            <div className="leave-history-icon">
+                                                <i className="fas fa-calendar-day"></i>
+                                            </div>
+
+                                            <div className="leave-history-details">
+                                                <strong>{leave.leave_type}</strong>
+
+                                                <span>
+                                                    {formatDate(
+                                                        leave.start_date || leave.from_date
+                                                    )}
+                                                    {" - "}
+                                                    {formatDate(
+                                                        leave.end_date || leave.to_date
+                                                    )}
+                                                </span>
+
+                                                <small>
+                                                    {leave.total_days ?? "-"} Days
+                                                </small>
+
+                                                <div className="mt-1">
+                                                    <small>
+                                                        Category:{" "}
+                                                        <strong className={getCategoryClass(category)}>
+                                                            {category
+                                                                ? category.charAt(0).toUpperCase() +
+                                                                  category.slice(1).toLowerCase()
+                                                                : "Awaiting Admin Classification"}
+                                                        </strong>
+                                                    </small>
+                                                </div>
+
+                                                {(leave.remarks || leave.reason) && (
+                                                    <p>
+                                                        {leave.remarks || leave.reason}
+                                                    </p>
+                                                )}
+                                            </div>
+
+                                            <span
+                                                className={`leave-status ${getStatusClass(leave.status)}`}
+                                            >
+                                                {leave.status || "Unknown"}
                                             </span>
-
-                                            <small>
-                                                {leave.total_days ?? "-"} Days
-                                            </small>
-
-                                            {leave.reason && (
-                                                <p>{leave.reason}</p>
-                                            )}
-
-                                            {leave.admin_remarks && (
-                                                <p className="leave-admin-remarks">
-                                                    Admin Remarks: {leave.admin_remarks}
-                                                </p>
-                                            )}
                                         </div>
+                                    );
+                                })}
 
-                                        <span className={`leave-status ${getStatusClass(leave.status)}`}>
-                                            {leave.status || "Unknown"}
-                                        </span>
-                                    </div>
-                                ))}
                             </div>
                         ) : (
                             <div className="leave-empty">
                                 <i className="fas fa-calendar-minus"></i>
                                 <h6>No Leave Applications</h6>
-                                <p>You haven't submitted any leave requests yet.</p>
+                                <p>
+                                    You haven't submitted any leave requests yet.
+                                </p>
                             </div>
                         )}
                     </div>
